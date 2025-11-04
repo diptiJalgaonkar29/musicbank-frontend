@@ -1,0 +1,29 @@
+.common_footer {
+  height: min-content;
+  min-height: 5rem;
+  width: 100%;
+  background-color: transparent;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.common_footer .footer--text {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding-top: 0.04271em;
+  padding-bottom: 0.19571em;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.common_footer .footer--text a {
+  color: #999;
+}
+
+.common_footer .footer--text span:hover {
+  cursor: pointer;
+  color: var(--color-primary);
+}

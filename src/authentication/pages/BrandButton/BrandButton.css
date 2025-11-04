@@ -1,0 +1,74 @@
+.BrandButton_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brandLogo_container.pending {
+  opacity: 25%;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.brandLogo_container.notexits {
+  filter: grayscale(100%) !important;
+}
+
+.brandLogo_container {
+  box-sizing: border-box;
+  width: 12rem;
+  height: 12rem;
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.brandLogo_container.selectedBrand {
+  border: 2px solid var(--color-primary);
+}
+
+.brandLogo_container .brandLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.BrandButton_container .brand_text {
+  font-size: 1.6rem;
+  color: var(--color-white);
+  white-space: nowrap;
+  text-align: center;
+  width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding-top: 0.75rem;
+}
+
+.skeleton-loader {
+  width: 9rem;
+  height: 9rem;
+  background: linear-gradient(90deg, #eee, #ddd, #eee);
+  animation: shimmer 1.2s infinite;
+  border-radius: 8px;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100px;
+  }
+  100% {
+    background-position: 100px;
+  }
+}
+.brandLogo_container:hover {
+  border: 4px solid var(--color-primary);
+}

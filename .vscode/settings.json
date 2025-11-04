@@ -1,0 +1,25 @@
+{
+  "github.gitAuthentication": false,
+  "javascript.preferences.quoteStyle": "single",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#15202b",
+    "activityBar.background": "#15202b",
+    "activityBar.foreground": "#fff",
+    "activityBar.inactiveForeground": "#ffffff99",
+    "activityBarBadge.background": "#359268",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#15202b",
+    "statusBar.background": "#359268",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#15202b",
+    "statusBarItem.remoteBackground": "#15202b",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#359268",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#42b883",
+  "reactSnippets.settings.importReactOnTop": true
+}

@@ -1,0 +1,56 @@
+{
+  "data": {
+    "libraryTrack": {
+      "__typename": "LibraryTrack",
+      "id": "1249401",
+      "audioAnalysisV6": {
+        "__typename": "AudioAnalysisV6Finished",
+        "result": {
+          "mood": {
+            "aggressive": 0.00401637377217412,
+            "calm": 0.6773748397827148,
+            "chilled": 0.9194656014442444,
+            "dark": 0.061390314251184464,
+            "energetic": 0.040153663605451584,
+            "epic": 0.0292096808552742,
+            "happy": 0.5068144202232361,
+            "romantic": 0.7204733490943909,
+            "sad": 0.3597148358821869,
+            "scary": 0.006621117237955332,
+            "sexy": 0.251095712184906,
+            "ethereal": 0.4160152077674866,
+            "uplifting": 0.07636960595846176
+          },
+          "moodTags": [
+            "calm",
+            "chilled",
+            "happy",
+            "romantic"
+          ],
+          "moodMaxTimes": [
+            {
+              "mood": "calm",
+              "start": 30,
+              "end": 60
+            },
+            {
+              "mood": "happy",
+              "start": 60,
+              "end": 90
+            },
+            {
+              "mood": "chilled",
+              "start": 90,
+              "end": 120
+            },
+            {
+              "mood": "romantic",
+              "start": 30,
+              "end": 60
+            }
+          ]
+        }
+      }
+    }
+  }
+}

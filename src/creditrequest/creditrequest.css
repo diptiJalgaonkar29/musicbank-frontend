@@ -1,0 +1,111 @@
+.credit-request {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  margin: 0;
+  padding: 20px;
+}
+
+.credit-request .credit-request-container {
+  width: 50rem;
+  /* height: 58.5rem; */
+  max-width: 60rem;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.credit-request .credits-header {
+  margin-bottom: 0.8rem;
+}
+
+.credit-request .credits-header h1 {
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin: 0;
+  line-height: 29.05px;
+  color: var(--color-white);
+}
+
+.credit-request .credits-value {
+  font-weight: bold;
+}
+
+.credit-request .subtitle {
+  color: #666;
+  margin-bottom: 4rem;
+  font-size: 16px;
+  line-height: 19.36px;
+  color: #9e9e9e;
+}
+
+.credit-request .form-group {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.credit-request label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.credit-request input,
+textarea {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  border-radius: 2.5rem;
+  color: var(--color-white);
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
+.credit-request input[type="number"] {
+  width: 20rem;
+}
+
+.credit-request textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.credit-request .button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 3.2rem 0;
+  padding-bottom: 3.2rem;
+}
+
+.credit-request button {
+  padding: 1rem;
+  border-radius: 10rem;
+  font-size: 1.4rem;
+  /* font-weight: 500; */
+  cursor: pointer;
+  border: none;
+  width: 23rem;
+  height: 3.6rem;
+}
+
+.credit-request .button-cancel.sonicButton {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+}
+
+.credit-request .button-request {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.credit-request .credit-request-error {
+  color: var(--color-error);
+  padding: 1rem 0rem 0.5rem;
+  font-size: 1.4rem;
+  margin: 0;
+}

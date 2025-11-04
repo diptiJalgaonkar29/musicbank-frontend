@@ -1,0 +1,94 @@
+.RecentlyAddedTracksList {
+  background-color: #262529;
+  max-height: 480px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.RecentlyAddedTracksList_skeleton {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RecentlyAddedTracksList_title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 0;
+  color: var(--color-white);
+  margin-bottom: 15px;
+}
+
+.RecentlyAddedTracksList_container
+  .search_results_card_info_container
+  .search_results_card_title {
+  color: var(--color-white);
+  font-weight: normal;
+}
+
+.RecentlyAddedTracksList_container .search_results_card_container {
+  margin: 12px;
+}
+
+.RecentlyAddedTracksList_container .search_results_card_info_container {
+  width: calc(100% - 75px);
+  flex: none !important;
+}
+.RecentlyAddedTracksList_container
+  .audioPlayer_container.TrackCard__audio_tctp {
+  display: flex;
+  align-items: center;
+  width: auto;
+  border: none;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background-color: transparent;
+  color: transparent;
+}
+.wpp .playButtonWrapper.playButton__container_tctp {
+  align-items: center;
+  border: none;
+  border-radius: 48px;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 56px;
+}
+.RecentlyAddedTracksList_container .playButton__container_tctp {
+  position: relative;
+  display: inline-block;
+}
+.RecentlyAddedTracksList_container .sonic_icon_button.play,
+.RecentlyAddedTracksList_container .play.wpp-icon-button {
+  background-color: transparent;
+  padding: 0px 10px 12px 1px;
+}
+.RecentlyAddedTracksList_container .sonic_icon_button.play svg,
+.RecentlyAddedTracksList_container .play.wpp-icon-button svg {
+  width: 31px;
+  height: 36px;
+}
+.RecentlyAddedTracksList_container .playButton__container_tctp {
+  position: relative;
+  display: inline-block;
+}
+
+.RecentlyAddedTracksList_container .playButton__container_tctp #pButton {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.RecentlyAddedTracksList_container .playButton__container_tctp:hover #pButton {
+  opacity: 1;
+}
+
+.RecentlyAddedTracksList_container
+  .playButton__container_tctp.is-playing
+  #pButton {
+  opacity: 1 !important;
+}

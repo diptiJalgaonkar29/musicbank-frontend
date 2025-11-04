@@ -1,0 +1,8 @@
+.waveImageloading {
+  background-color: var(--color-bg);
+  width: 100%;
+}
+
+.waveformJs wave {
+  z-index: 1;
+}

@@ -1,0 +1,52 @@
+.whatsnext-container {
+  width: 100%;
+  color: var(--color-white);
+}
+
+.whatsnext-container .whatsnext-header {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--color-white);
+}
+
+.whatsnext-container .whatsnext-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  margin-top: 35px;
+  width: 1001px;
+  height: 72px;
+  gap: 24px;
+  border-radius: 10px;
+}
+
+.whatsnext-container .sonicButton.filled.download_btn {
+  width: 600px;
+  height: 55px;
+  gap: 10px;
+  border-radius: 43px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--color-white) !important;
+  color: var(--color-bg) !important;
+  margin-top: 35px;
+}
+.whatsnext-container .download-loader {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin-right: 450px;
+  /* match your button height or preferred space */
+}

@@ -1,0 +1,19 @@
+/* #pButton.loading,
+#PlayPauseButton.loading {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: not-allowed;
+} */
+
+.card-spinnerContainer .lds-default {
+  align-items: center;
+  width: 56px;
+}
+
+.TrackPageHeader_track_title_player_container
+  .card-spinnerContainer
+  .lds-default {
+  margin: 0 !important;
+  scale: 0.9 !important;
+  height: 65px !important;
+}

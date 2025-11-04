@@ -1,0 +1,27 @@
+{
+  "APP_VERSION": "V 12.0.0",
+  "BRAND_MEDIA_PATH_PREFIX":"mastercard",
+  "LOGOUTTIME": "86400",
+  "BRANDING": "adac",
+  "BRAND_NAME": "ADAC",
+  "BRAND_NAME_SECONDARY": "ADAC",
+  "BRAND_NAME_TERTIARY": "ADAC",
+
+  "INTRO_VIDEO_RELATIVE_PATH": "",
+  "NAV_LOGO_PATH": "/images/navLogo.png",
+  "FAVICON_PATH": "/images/favicon.png",
+  "FALLBACK_LOGO_PATH": "/images/fallback.png",
+  "AUTH_RIGHT_BLOCK_IMAGE_PATH": "/images/fallback.png",
+  "LIGHT_FONT_PATH": "/fonts/MiloADACMob-Regular.ttf",
+  "MEDIUM_FONT_PATH": "/fonts/MiloADACMob-Regular.ttf",
+  "BOLD_FONT_PATH": "/fonts/MiloADACMob-Regular.ttf",
+  "CSS_PATH": "/css/style.css",
+
+  "APP_SUPPORTED_BROWSER_LIST": ["Chrome", "Firefox"],
+  "SHOW_SPLASH_SCREEN": false,
+  "SPLASH_SCREEN_TEXT": "Please note, for the best experience, our tool is optimized for use on Chrome and Firefox browsers. Thank you for choosing Sonic Hub for your needs.",
+  "SUPPORT_FORM_FILE_SIZE": 10,
+  "OVERTIME_GRAPH_MAX_LIMIT": 0.6,
+  "RADAR_CHART_MAIN_MOOD_MAX_LIMIT": 0.5,
+  "RADAR_CHART_SONIC_LOGO_MAX_LIMIT": 100
+}

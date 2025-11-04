@@ -1,0 +1,63 @@
+.download-Basket-track-card-container {
+  height: 55px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background-color: var(--color-card);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.download-Basket-track-card-container .st-tbl-logo-holder {
+  width: 45px !important;
+  height: 45px !important;
+  position: relative;
+}
+
+.download-Basket-track-card-right {
+  width: calc(100% - 45px);
+  float: left;
+  /* padding: 5px 0px; */
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.download-Basket-track-card-container img {
+  width: auto !important;
+  height: 100%;
+  border-radius: 10px !important;
+}
+
+.download-Basket-track-card-container .searchRowImgLoader {
+  width: 45px !important;
+  height: 45px !important;
+  position: absolute;
+  top: -5px;
+  left: -10px;
+}
+
+.download-Basket-track-card-container .trackTitle {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  display: block;
+  padding-left: 10px;
+  white-space: nowrap;
+  /* width: 185px; */
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 5px 0px;
+}
+
+.download-Basket-track-card-container .trackArtist {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  display: block;
+  padding-left: 10px;
+  white-space: nowrap;
+  /* width: 185px; */
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

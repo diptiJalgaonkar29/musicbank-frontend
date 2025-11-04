@@ -1,0 +1,184 @@
+.Activeproject_list_item {
+  display: flex;
+  color: var(--color-white);
+  height: 35px;
+  width: 100%;
+}
+
+.Activeproject_list_item .ActiveprojectName_container {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  gap: 10px;
+  /* justify-content: space-between; */
+  /* height: 64px; */
+  padding: 0px 12px;
+  box-sizing: border-box;
+}
+
+.Activeproject_list_item .ActiveprojectName_container .img_container {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  overflow: hidden;
+  background-color: var(--color-card-shade2);
+}
+
+.Activeproject_list_item .loading_cover_image {
+  background-color: var(--color-card-shade2);
+  width: 100%;
+  height: 100%;
+}
+
+.Activeproject_list_item .projectName_container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  object-fit: cover;
+  transform: scale(1.05);
+}
+
+.Activeproject_list_item .projectName {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.Activeproject_list_item .projectName.Archive {
+  cursor: auto;
+}
+
+.Activeproject_list_item .projectName.My_Projects:hover {
+  color: var(--color-primary);
+}
+
+.Activeproject_list_item .projectattr {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  width: 15%;
+  height: 64px;
+  /* justify-content: center; */
+  height: 50px;
+  align-self: center;
+}
+
+.Activeproject_list_item .projectattr p {
+  white-space: nowrap;
+  width: 275px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 20px;
+}
+
+.Activeproject_list_item #description {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  height: 64px;
+  height: 50px;
+  align-self: center;
+  width: 25%;
+  padding: 0px 0px 0px 10px;
+}
+
+.Activeproject_list_item #description p {
+  display: -webkit-box;
+  width: 100%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.Activeproject_list_item .projectDelete .sonic_icon_button {
+  background-color: transparent;
+}
+.Activeproject_list_item .projectDelete {
+  display: flex;
+  width: 79px;
+  /* height: 64px; */
+  background: var(--color-card);
+  align-items: center;
+  font-size: large;
+  justify-content: center;
+  cursor: pointer;
+  /* margin-left: 40px; */
+}
+
+.Activeproject_list_item .list_archive_btn_container {
+  width: 80px;
+  width: auto;
+  align-self: center;
+  margin: 0px 5px;
+}
+
+.projectName_container .edit_icon_project_list {
+  /* margin-right: 1rem; */
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.Activeproject_list_item .projectIcons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Activeproject_list_item .active_project_view {
+  fill: var(--color-icon-active);
+  color: var(--color-icon-active);
+}
+
+.Activeproject_list_item .inactive_project_view {
+  fill: var(--color-icon-inactive);
+  color: var(--color-icon-inactive);
+}
+
+.Activeproject_list_item .activeSS_project_view path {
+  fill: white !important;
+  color: white !important;
+}
+
+@media only screen and (max-width: 1520px) {
+  .Activeproject_list_item .projectName {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .Activeproject_list_item .projectName {
+    /* background-color: aqua; */
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .Activeproject_list_item .projectName_container {
+    gap: 10px;
+    padding: 0px 10px;
+  }
+
+  .Activeproject_list_item .projectName {
+    width: 80px;
+  }
+
+  .projectName_container .edit_icon_project_list {
+    margin: 0;
+  }
+
+  .project_table_header_item_title {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Activeproject_list_item .projectName {
+    width: 70px;
+  }
+}

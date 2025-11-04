@@ -1,0 +1,2048 @@
+.TrackPage__container {
+  box-sizing: border-box;
+  min-width: 100%;
+  max-width: 100%;  
+  color: var(--color-text-light, var(--color-white)) !important;
+  background-color: var(--color-bg);
+  /* overflow: hidden; */
+  height: 82vh;
+    overflow-y: auto;
+}
+
+.usedInTitle {
+  font-size: 22px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.usedInMessage {
+  font-size: 16px;
+  display: block;
+  position: absolute;
+  left: 42%;
+  top: 45%;
+}
+
+.TrackPage__container .TpTc__downloads__container .lds-default {
+  transform: scale(0.5);
+  position: relative;
+  bottom: -1px;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--usedin
+  .outer-web
+  .swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.TrackPage__container .TrackPage__wrapper {
+  /* height: calc(100vh - 108px) !important; */
+  /* padding-top: 108px !important; */
+  /* margin-top: -108px !important; */
+  overflow: initial !important;
+}
+
+/* .similarity_search_container.TrackPage__container .TrackPage__wrapper {
+  overflow: initial !important; 
+} */
+
+.TrackPage__container .TrackPage__wrapper .video-card {
+  box-shadow: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* .TrackPage__container .TrackPage__wrapper .video-iframe-container {
+  flex: 6 !important;
+}
+.TrackPage__container .TrackPage__wrapper .video-overlay {
+  flex: 6 !important;
+}
+.TrackPage__container .TrackPage__wrapper .video-card--title {
+  flex: 4 !important;
+  background-color: red !important;
+} */
+
+.TrackPage__container .TrackPage__wrapper .video-card:hover img {
+  transform: scale(1);
+}
+
+.TpTc__container_siderbar .accordian .MuiAccordionSummary-root.Mui-expanded {
+  color: var(--color-primary);
+}
+
+.TpTc__container_siderbar .accordian .usedInPlaylistContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.TpTc__container_siderbar .accordian .usedInPlaylistItems span {
+  font-size: 1.4rem;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.TpTc__container_siderbar
+  .accordian
+  .usedInPlaylistContainer
+  span.usedInPlaylistHeading {
+  font-size: 1.4rem;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 30px;
+}
+
+.TpTc__container_siderbar .accordian .usedInPlaylistHeading {
+  font-size: 1.6rem;
+  margin: 10px 0px;
+  font-weight: normal;
+  margin-left: 15px;
+}
+
+.TpTc__container_siderbar .accordian .usedInPlaylistHeading:first-child {
+  margin-top: 0px !important;
+}
+
+.TpTc__container_siderbar .accordian .usedInPlaylistItemsContainer {
+  position: relative;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 8px;
+  margin-left: -20px;
+}
+
+.TpTc__container_siderbar .accordian .usedInPlaylistItems {
+  padding: 5px 0px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px !important;
+}
+
+.TpTc__container_siderbar
+  .accordian
+  .usedInPlaylistItemsContainer
+  .PlayListCoverPicture__container {
+  width: 60px !important;
+}
+
+.TpTc__container_siderbar
+  .accordian
+  .usedInPlaylistItemsContainer
+  .PlayListCoverPicture {
+  width: 50px !important;
+  height: 50px !important;
+  margin-right: 10px !important;
+  border-radius: 10px;
+  overflow: hidden !important;
+  border: none !important;
+}
+
+.usedInPlaylistContainer .playlist_name {
+  text-decoration: none;
+  color: var(--color-white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 1.6rem;
+}
+
+.usedInPlaylistContainer .playlist_name p:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.TrackPage__wrapper .TpTc__container__main .TrackCard__player #playhead_tctp {
+  border: none !important;
+}
+
+.TrackPage__wrapper
+  .TpTc__container__main
+  .TrackCard__player
+  #TimeLineComponent:before {
+  filter: contrast(150%) !important;
+  -webkit-filter: contrast(150%) !important;
+  -moz-filter: contrast(150%) !important;
+  -o-filter: contrast(150%) !important;
+}
+
+.TrackPage__wrapper .audioEditorBlock {
+  width: calc(100% - 40px);
+  margin-bottom: 40px !important;
+  min-height: 30px !important;
+}
+.TrackPage__wrapper .audTrimCancel {
+  /* margin-bottom: 20px !important; */
+  /* margin-left: 0px !important; */
+}
+.TrackPage__wrapper .audioEditorBlock #waveform {
+  display: inline-block;
+  position: relative;
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+.TrackPage__wrapper .audioEditorBlock #waveform {
+  display: inline-block;
+  position: relative;
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+.TrackPage__wrapper .cs_edit_btn {
+  padding: 5px 15px !important;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid var(--color-primary) !important;
+  color: var(--color-primary);
+  border-radius: 18px !important;
+  background-color: transparent;
+  /* width: 150px; */
+  font-size: 1.6rem !important;
+}
+
+.TrackPage__wrapper .audioEditorBlock #waveform wave {
+  height: 60px !important;
+  overflow-x: hidden !important;
+}
+
+.TrackPage__wrapper .audioEditorBlock.Loading #waveform wave {
+  height: 0px !important;
+}
+
+/* .TrackPage__wrapper .cyaniteGraphsV2 .audioEditorBlock #waveform {
+  margin-left: 30px !important;
+  width: calc(100% - 40px) !important;
+} */
+
+.TrackPage__wrapper .audTrim {
+  /* margin-bottom: 20px;
+  margin-top: -5px;
+  color: #a5a5a5 !important;
+  margin-right: 0 !important; */
+}
+
+/* .TrackPage__wrapper .audTrim:disabled {
+  background-color: red;
+} */
+
+.MuiPaper-root .MuiList-root .MuiButtonBase-root .TpTc__dl-btn {
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 8rem !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.TpTc__container_siderbar .accordian .usedInPlaylistContainer {
+  padding-bottom: 15px !important;
+}
+
+.TrackPage__wrapper .TpTc__container_siderbar .accordian .MuiPaper-rounded {
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+.TrackPage__wrapper .TpTc__tags .TrackCard__item__tags span {
+  border-radius: 18px !important;
+}
+
+.TrackPage__wrapper .TpTc__tags .TrackCard__item__tags {
+  width: 100% !important;
+}
+
+.TrackPage__wrapper .accordian .MuiAccordionSummary-content {
+  font-size: 1.6rem !important;
+  margin: 0px -15px !important;
+}
+.TrackPage__wrapper .accordian .TrackCard__item__tags--divider h4 {
+  font-size: 1.6rem !important;
+  margin-bottom: 10px !important;
+}
+
+.TrackPage__wrapper .accordian .MuiAccordionDetails-root {
+  display: flex;
+  padding: 0px !important;
+}
+
+.TrackPage__wrapper .trackButtonAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.detailsPage__BackButton {
+  margin-bottom: 10px;
+}
+.TrackPage__wrapper .addToPlaylistButton,
+.TrackPage__wrapper .downloadButton,
+.TrackPage__wrapper .similarTracksButton,
+.detailsPage__BackButton .backButton {
+  /* background-color: var(--color-primary); */
+  width: 56px;
+  height: 30px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* .TrackPage__wrapper .addToPlaylistButton {
+  margin-left: 5px;
+} */
+/* .TrackPage__wrapper .similarTracksButton {
+  margin-left: 10px;
+} */
+
+.TrackPage__wrapper .similarTracksButton .similarTracksBtn {
+  background-size: 24px;
+  margin-top: 4px;
+}
+.TrackPage__wrapper .addToPlaylistButton svg {
+  padding-top: 2px !important;
+  fill: var(--color-white);
+}
+
+.TrackPage__wrapper .downloadButton svg {
+  stroke: var(--color-white);
+  width: 20px;
+}
+.TrackPage__wrapper .similarTracksButton svg {
+  scale: 1.1;
+}
+
+/* .TrackPage__wrapper .downloadButton {
+  margin-right: 5px;
+} */
+.TrackPage__wrapper .downloadButton img {
+  position: relative;
+  top: 1px;
+}
+
+.TrackPage__container .TpTc__description,
+.TrackPage__Mobile__container .TpTc__description {
+  flex-direction: column !important;
+}
+
+.TrackPage__wrapper .TpTc__descBlocks {
+  width: 100% !important;
+  display: block;
+  margin: 0px !important;
+  padding: 0px !important;
+  border: none !important;
+  font-size: 1.6rem !important;
+  color: var(--color-white) !important;
+}
+
+.TrackPage__wrapper .TpTc__descriptionHolder {
+  background-color: transparent !important;
+}
+
+.TrackPage__wrapper .TpTc__img {
+  float: none !important;
+
+  display: block !important;
+  margin: 0 auto 20px;
+}
+
+.TrackPage__wrapper .TpTc__img--holder img {
+  border-radius: 25px;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+}
+
+.TrackPage__container .TpTc__tags {
+  width: 100% !important;
+  min-width: 100%;
+  display: block;
+  width: 60%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+/* .TrackPage__wrapper .MuiAccordion-rounded {
+  width: calc(100%-50px) !important;
+
+  padding: 0px 25px !important;
+  border-radius: 25px !important;
+  border: 1px solid var(--color-white) !important;
+  background-color: transparent !important;
+  color: var(--color-white);
+  font-size: 1.6rem;
+} */
+
+.TrackPage__wrapper .TpTc__img--holder {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.TrackPage__container .TpTc__img--holderSpinner {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 25px;
+  margin: auto !important;
+}
+
+.TrackPage__wrapper .TpTc__container__trackDetails {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.TrackPage__wrapper .TpTc__container_siderbar {
+  display: inline-block;
+  width: 25%;
+  margin-left: 0;
+  margin-bottom: 50px;
+}
+
+.TrackPage__wrapper .TpTc__container__main {
+  display: inline-block;
+  width: 73%;
+  margin-right: 0;
+  margin-left: 2%;
+  /* position: absolute;
+  top: 0; */
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TpTc__description
+  .TpTc__description--h4 {
+  font-size: 1.6rem !important;
+  margin-bottom: 0px !important;
+}
+
+.TrackPage__container .TrackPage__wrapper .TpTc__description span {
+  padding: 0rem 1rem !important;
+}
+
+.TrackPage__wrapper #pButton {
+  /* background-color: var(--color-bg) !important;
+  border: none !important; */
+  background-color: transparent;
+  scale: 2;
+}
+
+.TrackPage__wrapper .tctp__time {
+  left: calc(100% - 30px) !important;
+}
+
+.TrackPage__wrapper .cyaniteGraphsV2 .tctp__time {
+  left: 95% !important;
+}
+
+.TrackPage__wrapper .TrackCard__player {
+  padding: 30px 25px;
+  border-radius: 25px;
+  border: 1px solid var(--color-white);
+  margin-bottom: 2rem !important;
+}
+
+.TrackPage__container .Cyanite_AudioPlayer {
+  width: 100% !important;
+  display: inline-block;
+}
+
+.TrackPage__container .Cyanite_AudioPlayer .TrackCard__audio_tctp {
+  box-sizing: border-box;
+  margin-left: 0px !important;
+  padding: 0 10px;
+  background-color: transparent;
+  border: none !important;
+}
+
+.TrackPage__container .moodProfileBlock .MuiCollapse-container {
+  background-color: var(--color-bg) !important;
+}
+
+.TrackPage__wrapper .TrackCard__audio_tctp {
+  width: 100% !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.TrackPage__container .TrackPage__footer--text {
+  position: fixed !important;
+  bottom: 0px !important;
+  background-color: var(--color-bg) !important;
+  z-index: 988 !important;
+  display: block;
+  max-width: 100vw;
+  width: 88vw;
+  margin: auto !important;
+  padding: 10px !important;
+  color: var(--color-footer);
+}
+
+.TrackPage__container .TrackPage__footer--text a {
+  color: var(--color-footer);
+}
+
+.TrackPage__wrapper .TrackTitle {
+  text-align: left;
+
+  font-size: 22px;
+  letter-spacing: 0px;
+  color: var(--color-white);
+  opacity: 1;
+  margin-bottom: 10px;
+}
+
+.TrackPage__wrapper .TrackPage__wrapper--edits {
+  margin-top: 10px !important;
+  padding: 0px !important;
+}
+
+.TrackPage__wrapper .trackDetails_V3 .TrackPage__wrapper--edits {
+  margin: 0px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.TrackPage__wrapper .MuiAccordion-rounded {
+  width: calc(100% - 50px) !important;
+  padding: 0px 10px !important;
+  border-radius: 25px;
+  border: 1px solid var(--color-white) !important;
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+.TrackPage__wrapper .moodProfileBlock {
+  display: block !important;
+}
+
+.TrackPage__wrapper .moodProfileBlock .MuiAccordionSummary-root,
+.TrackPage__wrapper .TpTc__container__main .MuiAccordionSummary-root {
+  background-color: transparent !important;
+  /* width: 97%; */
+}
+
+.TrackPage__wrapper .CyaniteProfileSection .moodProfileBlock .MuiSvgIcon-root,
+.TrackPage__wrapper .TpTc__container__main .MuiSvgIcon-root {
+  fill: var(--color-white) !important;
+  font-size: large;
+}
+
+.TrackPage__wrapper .moodProfileBlock .MuiAccordionDetails-root {
+  padding: 0px !important;
+  display: block !important;
+}
+
+.TrackPage__wrapper .cyaniteGraphs .lineChart {
+  width: 99% !important;
+  margin: 0px;
+}
+
+.TrackPage__wrapper .cyaniteGraphs {
+  margin-top: 0px !important;
+}
+
+.TrackPage__container #apexchartsmoodColumn {
+  padding-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+.TrackPage__container #apexchartsmoodColumn {
+  width: 100% !important;
+}
+
+.TrackPage__container .radarBlock {
+  justify-content: center !important;
+}
+
+.TrackPage__wrapper .UserInAndMasterContainer {
+  position: relative;
+  height: 500px !important;
+}
+
+.TrackPage__container .UsedInOuterContainer {
+  height: 475px !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 49%;
+  display: inline-block;
+  border: 1px solid var(--color-white);
+  border-radius: 28px;
+}
+
+.TrackPage__container .UsedInInnerContainer {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 100%;
+  border-radius: 28px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  max-height: 435px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0px 15px 0px 25px;
+  box-sizing: border-box;
+  margin: 0 5px 0 0px;
+  /* 
+  width: 100%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  max-height: 445px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box; */
+}
+
+.TrackPage__container .masterOuterContainer {
+  height: 475px !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 49%;
+  display: inline-block;
+  border: 1px solid var(--color-white);
+  border-radius: 28px;
+}
+
+.TrackPage__container .masterInnerContainer {
+  width: 100%;
+  display: inline-block;
+  border-radius: 28px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  max-height: 435px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* padding: 0px 15px 0px 35px; */
+  padding: 0px 15px 0px 25px;
+  box-sizing: border-box;
+  /* margin: 15px; */
+  margin: 0 5px 0 0px;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits
+  .TrackPage__wrapper--headline--container {
+  margin-top: -10px !important;
+  width: 0%;
+}
+
+.TrackPage__container .TrackPage__wrapper--headline--container h3,
+.usedin--specs h3 {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 0 0 0px !important;
+  margin: 0 !important;
+  text-align: left !important;
+  color: var(--color-primary) !important;
+}
+.usedin--specs h3 {
+  margin: -5px 0px 0px 0px !important;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard {
+  position: relative !important;
+  background-color: var(--color-card);
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  #TimeLineComponent:before {
+  filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg) brightness(20%)
+    contrast(73%);
+  -webkit-filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg)
+    brightness(20%) contrast(73%);
+  -moz-filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg)
+    brightness(20%) contrast(73%);
+  -o-filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg)
+    brightness(20%) contrast(73%);
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--middle
+  h3 {
+  cursor: pointer;
+  color: var(--color-white) !important;
+  z-index: 1;
+  position: absolute !important;
+  top: 0.5rem !important;
+  left: 13rem !important;
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--middle
+  h3:hover {
+  color: var(--color-primary) !important;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--middle {
+  width: 32% !important;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--audio {
+  width: 70% !important;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--audio
+  .card-spinnerContainer
+  .lds-default {
+  scale: 0.75;
+  margin: 0;
+  position: relative;
+  right: 2px;
+  top: 1px;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .TrackCard__audio {
+  width: 100% !important;
+  border: none !important;
+  position: relative;
+  top: 32px !important;
+  right: 20px !important;
+}
+
+.TrackPage__container .EditTrackCard .EditTrackCard--right {
+  position: relative;
+  left: 11rem;
+  color: var(--color-white);
+}
+
+.TrackPage__container .EditTrackCard .TrackCard__audio .TrackCard__time {
+  left: 90% !important;
+  top: 75% !important;
+}
+
+.TrackPage__container .EditTrackCard .TrackCard__audio #audioplayer {
+  padding: 8px 0px;
+}
+
+.TrackPage__container .EditTrackCard .TrackCard__audio #pButton {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard__img {
+  border-radius: 10px;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard {
+  display: block !important;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--left {
+  display: block !important;
+  width: 65% !important;
+  float: left !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--audio {
+  position: absolute !important;
+  right: auto !important;
+  left: 14rem !important;
+  display: block !important;
+  float: left !important;
+  width: 65% !important;
+  top: 0 !important;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--middle {
+  width: 65% !important;
+  display: inline-block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-left: 20px !important;
+}
+
+.TrackPage__container .TrackPage__wrapper--edits--content .EditTrackCard {
+  border: none !important;
+  border-radius: 15px;
+  max-width: 50rem !important;
+  /* margin-bottom: 15px !important; */
+}
+
+.TrackPage__wrapper .swiper-slide {
+  flex-direction: column !important;
+  width: 100% !important;
+  margin: 0 !important;
+  margin-bottom: 20px !important;
+  position: relative;
+  /* height: auto !important; */
+}
+
+.TrackPage__wrapper .swiper-button-prev.swiper-button-disabled,
+.TrackPage__wrapper .swiper-button-next.swiper-button-disabled {
+  display: none !important;
+}
+
+.TrackPage__wrapper .swiper-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.TrackPage__wrapper .lyricsAccordion {
+  margin: 0px 0 20px !important;
+}
+
+.TrackPage__wrapper .MuiAccordionSummary-content {
+  margin: 8px 0px;
+}
+
+.TrackPage__wrapper .lyricsHeader {
+  /* font-weight: 500 !important; */
+  font-size: 20px;
+  font-family: var(--font-primary-bold);
+  color: var(--color-white);
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--usedin
+  .outer-web {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+
+.TrackPage__wrapper .video-card {
+  width: 100% !important;
+  align-self: flex-start !important;
+  position: relative;
+  height: 50%;
+  border-radius: 25px !important;
+  background-color: var(--color-bg) !important;
+}
+
+/* .TrackPage__wrapper .fullWidth .video-card {
+  max-width: 360px;
+  max-height: 200px;
+} */
+
+.TrackPage__wrapper .fullWidth iframe {
+  /* width: 40% !important; */
+  max-height: 200px;
+}
+
+.TrackPage__wrapper .video-card video {
+  border-radius: 25px !important;
+}
+
+.TrackPage__wrapper--usedin .outer-web .swiper-wrapper {
+  flex-direction: column !important;
+}
+
+.TrackPage__wrapper .video-overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px !important;
+}
+
+.TrackPage__wrapper .video-card--img {
+  box-sizing: border-box;
+  border-radius: 25px !important;
+  max-width: 100% !important;
+  border: 1px solid var(--color-white) !important;
+  cursor: pointer;
+}
+
+.TrackPage__wrapper .video-iframe-container iframe {
+  border-radius: 25px !important;
+  min-height: 250px !important;
+  height: 100%;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--usedin
+  .outer-web
+  .video-card
+  .video-card--title {
+  max-width: 100% !important;
+  background-color: transparent !important;
+  width: 95% !important;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+/* Start Mobile Version */
+.TrackPage__Mobile__container {
+  box-sizing: border-box;
+  display: grid;
+  position: relative;
+
+  min-width: 100%;
+  max-width: 100%;
+
+  grid-template-rows: 10.8rem min-content;
+
+  grid-template-columns:
+    [full-start] 2.5rem [center-start] repeat(9, [col-start] 1fr [col-end])
+    [center-end] 2.5rem [full-end];
+  color: var(--color-white) !important;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+/* .TrackPage__Mobile__wrapper {
+  padding-top: 5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  box-sizing: content-box;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  flex-direction: column;
+  overflow: auto;
+  background: var(--color-bg) !important;
+} */
+
+.TpTc__Mobile__container {
+  display: grid;
+  grid-template-columns: min-content 1fr 1fr 1fr;
+  grid-template-rows: min-content 6rem min-content;
+  grid-gap: 2.5rem;
+
+  align-content: center;
+}
+
+/* image */
+.TpTc__Mobile__img {
+  width: 30rem;
+  height: 30rem;
+
+  grid-column: 1 / 2;
+  grid-row: 1 /2;
+}
+.TpTc__Mobile__img .TpTc__img--holder {
+  width: 100%;
+  height: 100%;
+}
+
+.TpTc__Mobile__img .TpTc__img--holderSpinner {
+  width: 30rem;
+  height: 30rem;
+}
+
+/*image end */
+.TpTc__Mobile__title {
+  grid-row: 1 /2;
+  grid-column: 2 / 5;
+}
+
+.TpTc__Mobile__title--btn {
+  transform: translateX(-15rem) translateY(-50%);
+  width: 100%;
+  background-color: var(--color-primary);
+  -webkit-box-shadow: inset 0 0 0 2px var(--color-primary);
+  box-shadow: inset 0 0 0 2px var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-white);
+  border: none;
+
+  font-family: inherit;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.TpTc__Mobile__tags {
+  grid-column: 1 / 5;
+  grid-row: 3 /4;
+  border-bottom: 2px solid #b3b3b3;
+}
+
+/* .TpTc__Mobile__tags .TrackCard__item__tags {
+  width: 95% !important;
+  padding-bottom: 3rem !important;
+  padding-top: 0rem !important;
+  font-size: 1.6rem;
+} */
+
+.TpTc__Mobile__description {
+  grid-row: 1 /2;
+  grid-column: 2 / 5;
+  padding-top: 5rem;
+  width: 95%;
+  font-size: 1.5rem;
+}
+
+.TpTc__Mobile__player {
+  grid-column: 1 / 5;
+  grid-row: 2 /3;
+}
+
+.TpTc__Mobile__downloads {
+  grid-row: 1 /2;
+  grid-column: 2 / 5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 80%;
+}
+
+.TpTc__Mobile__downloads .TpTc__downloads__container--button {
+  margin: 0;
+}
+.TpTc__Mobile__downloads .TpTc__downloads__container--button--disabled {
+  margin: 0;
+}
+
+/* End Mobile Version */
+
+.TrackPage__wrapper {
+  display: flex;
+  /* overflow-y: auto; */
+  /* overflow-x: auto; */
+  /* overflow-x: hidden; */
+  flex-direction: column;
+  background: var(--color-bg) !important;
+}
+
+/* @media screen and (max-width: 1120px) {
+  .TrackPage__wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+  } 
+} */
+
+.TrackPage__wrapper--track {
+  flex: 1;
+  position: relative;
+  margin: auto;
+}
+
+.TrackPage__wrapper--usedin {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content min-content;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.usedin--mobile--specs {
+  position: relative;
+  grid-row: 1 / 2;
+}
+
+/* .TrackPage__usedin--headline {
+  width: 1680px;
+  margin: auto;
+} */
+
+.usedin--specs {
+  margin-left: -100px;
+  transform-origin: center left;
+}
+
+.TrackPage__wrapper--edits {
+  margin: auto;
+  flex: 1 1 100%;
+
+  height: auto;
+  align-items: stretch;
+  align-content: stretch;
+  min-height: fit-content; /*height or min-height both work */
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.TrackPage__wrapper--edits--content {
+  width: 1680px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px 0px 100px;
+
+  margin-bottom: 0px !important;
+}
+
+.TrackPage__wrapper--headline--container {
+  width: 1680px;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -200px;
+  padding-bottom: 10px;
+  transform-origin: center left;
+}
+
+.TrackPage__wrapper--headline {
+  max-width: 270px;
+  top: 0px;
+  color: var(--color-white);
+  border: none;
+  transform-origin: center left;
+}
+
+.TrackPage__wrapper--edits--list {
+  max-height: 400px;
+  padding-right: 10px;
+  padding-top: 2px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+}
+
+.TrackPage__Mobile__wrapper--headline h3,
+.TrackPage__wrapper--headline h3 {
+  font-family: inherit;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  box-shadow: inset 0 0 0 2px var(--color-primary);
+  padding: 10px 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.TrackPage__footer {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  min-height: 5rem;
+  box-sizing: border-box;
+  width: 100%;
+
+  min-height: 5rem;
+  background-color: transparent;
+  color: #999;
+  justify-self: flex-end;
+  text-align: center;
+  max-width: 100vw !important;
+  width: 88vw !important;
+  margin: auto !important;
+}
+
+.TrackPage__footer--text {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding-top: 0.04271em;
+  padding-bottom: 0.19571em;
+  display: inline-block;
+}
+
+.TrackPage__footer--text a {
+  color: #999;
+}
+
+.TrackPage__footer--text span:hover {
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+/* Start Custom Code */
+.TrackPage__container .navbar__container,
+.TrackPage__Mobile__container .navbar__container {
+  width: 100vw;
+}
+
+.TrackPage__container .navbar__container {
+  width: 98vw !important;
+  background-color: var(--color-bg) !important;
+  position: relative !important;
+  z-index: 1111 !important;
+}
+
+.TrackPage__container .TrackPage__wrapper,
+.TrackPage__Mobile__container .TrackPage__Mobile__wrapper {
+  display: block;
+}
+
+.TrackPage__container .TrackPage__wrapper--track .TpTc__wrapper,
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__wrapper--track
+  .TpTc__wrapper {
+  padding: 0;
+}
+.TrackPage__container
+  .TrackPage__wrapper--track
+  .TpTc__wrapper
+  .TpTc__container {
+  display: block;
+  max-width: 1600px;
+  padding: 0px 10px;
+}
+.TrackPage__container .TrackPage__wrapper--edits,
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__wrapper--edits {
+  display: block !important;
+  width: 100% !important;
+}
+.TrackPage__container .TrackPage__wrapper--headline--container {
+  display: block !important;
+  width: 100% !important;
+  height: auto;
+  margin: auto;
+}
+.TrackPage__container .TrackPage__wrapper--edits--content {
+  display: block !important;
+  width: 100% !important;
+  padding: 0 !important;
+  /* max-width: 50rem !important; */
+}
+.TrackPage__container .TpTc__title,
+.TrackPage__Mobile__container .TpTc__title {
+  top: 0px;
+  left: 10px;
+  max-width: 40rem;
+  width: 100%;
+  margin-left: 0px;
+}
+.TrackPage__Mobile__container .TpTc__title {
+  left: 0px;
+}
+.TrackPage__container .TpTc__title--btn,
+.TrackPage__Mobile__container .TpTc__title--btn {
+  right: auto;
+  top: 0px;
+  left: 0px;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 12px 15px;
+  font-size: 2rem;
+  -webkit-transform: translate(0%);
+  transform: translate(0%);
+}
+
+.TrackPage__container .TpTc__img--addToPlaylist,
+.TrackPage__Mobile__container .TpTc__img--addToPlaylist {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  bottom: 5px;
+  right: 10px;
+}
+
+.TrackPage__container .TpTc__img--addToPlaylist div,
+.TrackPage__Mobile__container .TpTc__img--addToPlaylist div {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.TrackPage__container .TpTc__img--addToPlaylist div div,
+.TrackPage__Mobile__container .TpTc__img--addToPlaylist div div {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  transform: none !important;
+}
+
+.TrackPage__container .TpTc__img--addToPlaylist div div .MuiSvgIcon-root,
+.TrackPage__Mobile__container
+  .TpTc__img--addToPlaylist
+  div
+  div
+  .MuiSvgIcon-root {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.TrackPage__container .TpTc__description,
+.TrackPage__Mobile__container .TpTc__description {
+  display: flex;
+  width: 100%;
+  clear: both;
+}
+
+.TrackPage__container .TpTc__container .TpTc__description .TpTc__descBlocks,
+.TrackPage__Mobile__container
+  .TpTc__container
+  .TpTc__description
+  .TpTc__descBlocks {
+  float: left;
+  display: block;
+  width: 48%;
+  padding: 10px;
+  margin: 0px;
+}
+
+.TrackPage__container .TpTc__container .TpTc__downloads,
+.TrackPage__Mobile__container .TpTc__container .TpTc__downloads {
+  display: block;
+  width: 100%;
+}
+.TrackPage__container
+  .TpTc__container
+  .TpTc__downloads__container
+  div:first-child
+  .TpTc__dl-btn,
+.TrackPage__Mobile__container
+  .TpTc__container
+  .TpTc__downloads__container
+  div:first-child
+  .TpTc__dl-btn {
+  margin-left: 0px;
+}
+
+.TrackPage__container .TpTc__container .TpTc__player .custom_hr,
+.TrackPage__Mobile__container .TpTc__container .TpTc__player .custom_hr {
+  margin: 0px 0px 20px 0px;
+}
+.TrackPage__container
+  .TpTc__container
+  .TpTc__player
+  .TrackCard__player
+  .TrackCard__audio_tctp,
+.TrackPage__Mobile__container
+  .TpTc__container
+  .TpTc__player
+  .TrackCard__player
+  .TrackCard__audio_tctp {
+  max-width: 1250px;
+  width: 100%;
+}
+.TrackPage__container
+  .TpTc__container
+  .TpTc__player
+  .TrackCard__player
+  .TrackCard__audio_tctp
+  #audioplayer_tctp,
+.TrackPage__Mobile__container
+  .TpTc__container
+  .TpTc__player
+  .TrackCard__player
+  .TrackCard__audio_tctp
+  #audioplayer_tctp {
+  display: flex;
+}
+.TrackPage__container
+  .TpTc__container
+  .TpTc__player
+  .TrackCard__player
+  .TrackCard__audio_tctp
+  #TimeLineComponent,
+.TrackPage__Mobile__container
+  .TpTc__container
+  .TpTc__player
+  .TrackCard__player
+  .TrackCard__audio_tctp
+  #TimeLineComponent {
+  max-width: 1200px;
+  width: 100% !important;
+}
+.TrackPage__container
+  .TpTc__container
+  .TpTc__player
+  .TrackCard__player
+  .TrackCard__audio_tctp
+  .tctp__time,
+.TrackPage__Mobile__container
+  .TpTc__container
+  .TpTc__player
+  .TrackCard__player
+  .TrackCard__audio_tctp
+  .tctp__time {
+  left: auto;
+  right: 0;
+}
+
+.TrackPage__container .TrackPage__wrapper .TrackPage__wrapper--edits,
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__Mobile__wrapper--edits {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1580px;
+  padding: 0px 10px;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__Mobile__wrapper--edits {
+  padding: 0px 0px;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits
+  .TrackPage__wrapper--headline--container,
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__Mobile__wrapper--edits
+  .TrackPage__Mobile__wrapper--headline--container {
+  margin-top: 50px;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits
+  .TrackPage__wrapper--headline--container
+  h3,
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__Mobile__wrapper--edits
+  .TrackPage__Mobile__wrapper--headline--container
+  h3 {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackCard__item__tags
+  .TrackCard__item__tags--divider
+  h4,
+.TrackPage__container
+  .TrackPage__wrapper
+  .TpTc__description
+  .TpTc__description--h4 {
+  font-weight: 500;
+  font-size: 20px;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .MuiAccordionSummary-content
+  .MuiTypography-body1 {
+  font-weight: 500 !important;
+  font-size: 2rem;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard {
+  display: grid;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--left {
+  padding-top: 2rem !important;
+  padding-left: 15px !important;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--middle
+  h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__wrapper--edits--content {
+  padding: 0px;
+}
+.TrackPage__container .TrackPage__wrapper .TrackPage__wrapper--usedin {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1580px;
+  /* padding: 0px 10px; */
+  height: auto;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--usedin
+  .TrackPage__usedin--headline
+  h3 {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--usedin
+  .outer-web {
+  padding-top: 15px;
+  width: 100%;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--usedin
+  .outer-web
+  .video-card {
+  display: block;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--usedin
+  .outer-web
+  .video-card
+  .video-card--title {
+  max-width: 100%;
+}
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard--audio {
+  position: absolute;
+  right: auto;
+  left: 14rem;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__wrapper--usedin {
+  height: auto;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__wrapper--headline--container {
+  margin-left: 0px;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackCard__item__tags {
+  padding-top: 0rem !important;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackCard__item__tags
+  .TrackCard__item__tags--divider:first-child
+  h4 {
+  margin-top: 0px;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackCard__item__tags
+  .TrackCard__item__tags--divider
+  h4 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TpTc__description
+  h4.TpTc__description--h4 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__wrapper--edits
+  .TrackPage__wrapper--headline
+  h3 {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 50px 0px 5px 0px;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__wrapper--edits
+  .TrackPage__wrapper--edits--content
+  .moodProfileBlock
+  p.MuiTypography-root {
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.TrackPage__Mobile__container
+  .TrackPage__Mobile__wrapper
+  .TrackPage__wrapper--usedin
+  .TrackPage__wrapper--headline
+  h3 {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 10px 0px 20px 0px;
+}
+/* Code of Track Details */
+.custTrackDetails_TitleHolder {
+  display: block;
+  margin-bottom: 10px;
+}
+.custTrackDetails_TitleHolder .TrackTitle {
+  display: block;
+  float: left;
+  width: calc(100% - 60px);
+  margin-bottom: 0px;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.custTrackDetails_TitleHolder .searchHolder {
+  display: block;
+  float: right;
+  width: 350px;
+  margin-bottom: 0px;
+  position: absolute;
+  right: 0;
+}
+.custTrackDetails_TitleHolder
+  .searchHolder
+  .custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data1,
+.custTrackDetails_TitleHolder
+  .searchHolder
+  .custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data2,
+.custTrackDetails_TitleHolder
+  .searchHolder
+  .custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data3 {
+  text-align: right;
+}
+
+.TrackPage__wrapper .CyaniteProfileSection #TimeLineComponent:before {
+  filter: contrast(150%);
+  -webkit-filter: contrast(150%);
+  -moz-filter: contrast(150%);
+  -o-filter: contrast(150%);
+}
+.TrackPage__wrapper .EditTrackCard--audio #TimeLineComponent {
+  width: 100% !important;
+}
+
+.TrackPage__container .TrackPage_backBtn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.TrackPage__container .TrackPage_backBtn span {
+  font-weight: 400;
+  /* line-height: 18.75px; */
+  font-size: 16px;
+}
+
+/* End Code of Track Details */
+@media only screen and (max-width: 1850px) {
+  .TrackPage__wrapper .video-iframe-container iframe {
+    min-height: 310px !important;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .TrackPage__container
+    .TrackPage__wrapper--track
+    .TpTc__wrapper
+    .TpTc__container {
+    max-width: 1400px;
+    padding: 0px 10px;
+  }
+
+  .TrackPage__container .TrackPage__wrapper .TrackPage__wrapper--edits {
+    width: 100% !important;
+    max-width: 1380px;
+    padding: 0px 10px;
+  }
+
+  .TrackPage__container .TrackPage__wrapper .TrackPage__wrapper--usedin {
+    width: 100% !important;
+    max-width: 1380px;
+    /* padding: 0px 0px; */
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .TrackPage__container
+    .TrackPage__wrapper--track
+    .TpTc__wrapper
+    .TpTc__container {
+    padding: 0px 20px;
+  }
+  .TrackPage__container .TrackPage__wrapper .TrackPage__wrapper--edits {
+    padding: 0px 20px;
+  }
+  /* .TrackPage__container .TrackPage__wrapper .TrackPage__wrapper--usedin {
+    padding: 0px 20px;
+  } */
+  .TrackPage__container .TpTc__title {
+    left: 20px;
+  }
+  .TrackPage__wrapper .video-iframe-container iframe {
+    min-height: 240px !important;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .TrackPage__container
+    .TrackPage__wrapper
+    .TrackPage__wrapper--edits
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--audio,
+  .TrackPage__container
+    .TrackPage__wrapper
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--left,
+  .TrackPage__container
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--middle {
+    width: 60% !important;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .TrackPage__container
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--middle {
+    margin-top: 30px !important;
+  }
+
+  .TrackPage__container
+    .TrackPage__wrapper
+    .TrackPage__wrapper--edits
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--audio {
+    left: 11rem !important;
+  }
+
+  .TrackPage__container
+    .TrackPage__wrapper
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--middle
+    h3 {
+    left: 10rem !important;
+  }
+
+  .TrackPage__container .EditTrackCard .EditTrackCard--right {
+    left: 8rem !important;
+  }
+
+  .TrackPage__container
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard__img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .TrackPage__wrapper .video-iframe-container iframe {
+    min-height: 200px !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .TrackPage__container .TpTc__tags {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .TrackPage__container
+    .TrackPage__wrapper
+    .TrackPage__wrapper--edits
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--audio {
+    left: 10rem !important;
+  }
+
+  .TrackPage__container
+    .TrackPage__wrapper
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--middle
+    h3 {
+    left: 9rem !important;
+  }
+
+  .TrackPage__container .EditTrackCard .EditTrackCard--right {
+    left: 7rem !important;
+  }
+}
+
+/* End Custom Code */
+@media only screen and (max-width: 1800px), screen and (max-height: 1200px) {
+  /* .TrackPage__wrapper--edits--content {
+    width: 1400px;
+    padding: 0px 10px 0px 10px;
+  } */
+  .TrackPage__wrapper--headline--container {
+    margin-left: 0px;
+    width: 1400px;
+  }
+  .TrackPage__usedin--headline {
+    margin: unset;
+  }
+  .outer-web {
+    /* width: 100vw; */
+    /* padding: 0px 100px 0px 100px; */
+    box-sizing: border-box;
+  }
+  .usedin--specs {
+    margin-left: 0px;
+  }
+  .TrackPage__wrapper--edits {
+    grid-row: 2;
+  }
+}
+
+@media only screen and (min-width: 1801px), screen and (min-height: 1201px) {
+  /* .TrackPage__wrapper--edits--content {
+    width: 1680px;
+    padding: 0px 100px 0px 100px;
+  } */
+  .TrackPage__wrapper--headline--container {
+    margin-left: -200px;
+    width: 1680px;
+  }
+  .TrackPage__wrapper--edits {
+    grid-row: 2;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .TrackPage__container .TpTc__img--holderSpinner {
+    width: 15rem !important;
+    height: 15rem !important;
+  }
+  #audioplayer_tctp {
+    align-items: center;
+    background-color: var(--color-bg) !important;
+  }
+  .TrackPage__wrapper .TpTc__container_siderbar .MuiAccordion-rounded {
+    padding: 0px 16px !important;
+  }
+
+  .TrackPage__wrapper .TpTc__container_siderbar .MuiIconButton-edgeEnd {
+    margin-right: -28px;
+  }
+
+  /* .TrackPage__wrapper .TpTc__container_siderbar {
+    width: 22%;
+    margin-left: 6%;
+    margin-right: 4%;
+  }
+  .TrackPage__wrapper .TpTc__container__main {
+    width: 61%;
+  } */
+  .TrackPage__wrapper .addToPlaylistButton,
+  .TrackPage__wrapper .downloadButton,
+  .TrackPage__wrapper .similarTracksButton,
+  .detailsPage__BackButton .backButton {
+    width: 48px;
+    height: 30px;
+  }
+
+  .TrackPage__container .columnChart {
+    width: 100%;
+  }
+
+  .TrackPage__container .radarBlock {
+    width: 100% !important;
+    flex-direction: column;
+  }
+
+  .TrackPage__container .radarBlock > svg {
+    width: 100% !important;
+  }
+  .TrackPage__container .radarBlock > .bar {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .TrackPage__container .radarBlock > .pieChart {
+    width: 100% !important;
+  }
+
+  .TrackPage__wrapper .UserInAndMasterContainer {
+    height: 1000px !important;
+  }
+
+  .TrackPage__container .UsedInOuterContainer {
+    width: 100%;
+  }
+  .TrackPage__container .masterOuterContainer {
+    width: 100%;
+    position: relative;
+    top: 498px;
+  }
+  .TrackPage__container
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--middle {
+    width: 55% !important;
+    margin-left: 70px !important;
+    margin-top: 0px !important;
+  }
+  .TrackPage__container
+    .TrackPage__wrapper
+    .TrackPage__wrapper--edits
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--audio {
+    left: 15rem !important;
+  }
+
+  .TrackPage__container
+    .TrackPage__wrapper
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--middle
+    h3 {
+    left: 14rem !important;
+    width: 50% !important;
+  }
+
+  .TrackPage__container
+    .TrackPage__wrapper
+    .TrackPage__wrapper--edits
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard--audio {
+    width: 50% !important;
+  }
+
+  .TrackPage__container
+    .TrackPage__wrapper--edits--content
+    .EditTrackCard
+    .EditTrackCard__img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .TrackPage__container .navbar__container {
+    z-index: 1000;
+  }
+  .TrackPage__wrapper .video-iframe-container iframe {
+    min-height: 280px !important;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .TrackPage__footer--text {
+    font-size: 1.4rem;
+    margin: auto;
+  }
+  .TrackPage__wrapper .TpTc__container__trackDetails {
+    position: relative;
+    top: 7px;
+  }
+  .TrackPage__wrapper .TpTc__container_siderbar {
+    width: 35%;
+  }
+  .TrackPage__wrapper .TpTc__container__main {
+    width: 60%;
+    margin-left: 5%;
+  }
+  .TrackPage__wrapper .video-iframe-container iframe {
+    min-height: 240px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .TrackPage__container .EditTrackCard .EditTrackCard--right {
+    left: 5rem !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .TrackPage__footer--text {
+    font-size: 1.2rem;
+    margin: auto;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  /* For Chrome */
+  .TrackPage__container .radarBlock {
+    /* width: 45% !important; */
+    width: 100% !important;
+  }
+}
+
+@-moz-document url-prefix() {
+  .TrackPage__container .radarBlock {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+  .TrackPage__container .radarBlock {
+    width: 45% !important;
+  }
+}

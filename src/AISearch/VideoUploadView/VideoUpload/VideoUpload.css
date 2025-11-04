@@ -1,0 +1,11 @@
+.SonicModal_dialog.Upload_Progress_dialog
+  .SonicModal_dialog-close.SonicModal_close_icon {
+  display: none;
+}
+
+.report_form_error {
+  color: var(--color-error);
+  padding: 10px 0px 5px;
+  font-size: 14px;
+  margin: 0;
+}

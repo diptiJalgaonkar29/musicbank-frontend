@@ -1,0 +1,30 @@
+.MuiTab-textColorPrimary.Mui-selected {
+  color: var(--color-primary) !important;
+  /* font-weight: bold; */
+}
+
+.TabsContainer {
+  font-family: var(--font-primary-bold);
+  font-size: 15px;
+}
+
+.shareTabs {
+  font-size: 15px !important;
+  font-family: var(--font-primary) !important;
+}
+
+.shareContent {
+  font-family: var(--font-primary) !important;
+}
+
+.MuiTabs-indicator {
+  background-color: var(--color-primary) !important;
+}
+
+.MuiTabs-flexContainer {
+  background-color: transparent !important;
+}
+
+/* .MuiTab-wrapper {
+  color: var(--color-white);
+} */

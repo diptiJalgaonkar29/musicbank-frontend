@@ -1,0 +1,359 @@
+{
+  "app": {
+    "document": {
+      "title": "ADAC Sonic Hub"
+    },
+    "footer": {
+      "main": "All content is registered to Sonic Hub. You have permission to use, combine, change and edit all downloadable content from this platform. For any questions concerning rights management, user profiles and the system itself, please refer to amp sound branding:",
+      "email": "amp.sonic-os@ampcontact.com"
+    },
+    "common": {
+      "loading": "Loading",
+      "loadingWithDashes": "Loading...",
+      "goBack": "Go Back",
+      "notFound": "Not Found"
+    },
+    "noMatch": {
+      "title": "404: Page not Found.",
+      "body": "The page you're looking for can't be found.",
+      "goBack": "Go Back"
+    }
+  },
+  "navbar": {
+    "navItems": {
+      "supersearch": "Keyword",
+      "projects": "Projects",
+      "search": "Sonic Hub Home",
+      "searchMenu": "Search",
+      "browse": "Browse",
+      "SimilaritySearch": "Reference Track",
+      "creationStation": "Creation Station (AI)",
+      "voice": "Voice",
+      "myMusic": "Playlists",
+      "reportEnquiry": "Report / Enquiry",
+      "documents": "Guidelines",
+      "documentsReport": "Support",
+      "logout": "Log Out",
+      "downloadCart": "Download queue",
+      "profile": "Profile",
+      "AISearch": "AI Search",
+      "Predict": "Predict",
+      "Monitor": "Monitor"
+    }
+  },
+  "home": {
+    "page": {
+      "titleMain": " ",
+      "titleSub": "Welcome to Sonic Hub",
+      "titleSubtext": "Welcome to ",
+      "titleSubtextHighlight": "Sonic Hub",
+      "titleSubtextTail": " ",
+      "titleSubtextSmall": " ",
+      "recently": "Recently Added",
+      "gotoSuperSearchFooterStart": "Find even more goodness with ",
+      "gotoSuperSearchFooterHighlight": "Super Search",
+      "gotoSuperSearchFooterEnd": " "
+    },
+    "search": {
+      "browseAll": "Browse All"
+    }
+  },
+  "supersearch": {
+    "page": {
+      "titleMain": " ",
+      "titleSub": "Welcome to Sonic Hub",
+      "titleSubtext": "Welcome to ",
+      "titleSubtextHighlight": "Super Search",
+      "titleSubtextSmall": "Pick a tag or a tag combination to find your tracks",
+      "recently": "Recently Added",
+      "gotoSuperSearchFooterStart": "Go to the ",
+      "gotoSuperSearchFooterHighlight": "Super Search: ",
+      "gotoSuperSearchFooterEnd": "Search by tonality, Genre or Moods"
+    }
+  },
+  "auth": {
+    "login": {
+      "page": {
+        "title": "Welcome to Sonic Hub",
+        "subtitle": " ",
+        "V3title": "Welcome to",
+        "V3subtitle": "Sonic Hub",
+        "subtitleLogin": "Sign in to start your session",
+        "forgotPassword": "Forgot your password?",
+        "forgotPasswordMessage": "Forgot your password?",
+        "forgotPasswordLink": "Click here.",
+        "email": "Your Email",
+        "password": "Your Password",
+        "ssoBtnText": "Login with SSO",
+        "accept": "Login",
+        "invalid credential": "Invalid credentials",
+        "user not found": "This account does not exist, please check your email id or sign up.",
+        "user not activated": "Your account is not yet activated, you will receive an email upon activation of your account. Please contact <a style='color:var(--color-error)' href='mailto:{{adminEmail}}'>{{adminEmail}}</a> in case you did not receive mail within 12 hours.",
+        "blocked user": "Your account has been temporarily blocked. Please contact our support team at <a style='color:var(--color-error)' href='mailto:{{adminEmail}}'>{{adminEmail}}</a> to resolve this issue and regain access to your account",
+        "userDisabledForAllBrands": "Your company has been disabled for all brands. Please contact our support team at <a style='color:var(--color-error)' href='mailto:{{adminEmail}}'>{{adminEmail}}</a> to resolve this issue and regain access to your account",
+        "deleted user": "Your account has been deleted.",
+        "default error": "Something went wrong",
+        "sso user": "Your account is registered with SSO. Please log in using SSO.",
+        "approved user": "Your account is approved, please check your mail to set your password or click on Forget password to set your password."
+      }
+    },
+    "register": {
+      "registerhere": "Please fill this form",
+      "registerSuccess": "Thank you for your registration!",
+      "access": "To request access for Sonic Hub"
+    },
+    "recoverPassword": {
+      "page": {
+        "title": "Enter your email or username",
+        "subtitle": "We'll send you a link to reset your password",
+        "resetPassword": "Reset Password",
+        "email": "Your Email",
+        "error": "Something went wrong",
+        "blocked user": "Your account has been temporarily blocked. Please contact our support team at <a style='color:var(--color-error)' href='mailto:{{adminEmail}}'>{{adminEmail}}</a> to resolve this issue and regain access to your account.",
+        "success": "Please check your email.",
+        "accept": "Reset Password",
+        "user not found": "This account does not exist, please check your email id.",
+        "sso user": "Your account is registered with SSO. Unable to recover password."
+      }
+    },
+    "verifyMFA": {
+      "page": {
+        "qrCodeTitle": "Scan the QR Code",
+        "qrCodeSubtitle": "Use an authenticator app to scan",
+        "OTPTitle": "Verify your sign in",
+        "OTPSubtitle": "Enter your code from the app",
+        "defaultError": "Something went wrong"
+      }
+    },
+    "setPassword": {
+      "page": {
+        "title": "Set Your Password",
+        "subtitle": "To get access to the Sonic Hub",
+        "error": "Something went wrong",
+        "success": "Password updated successfully, redirecting to login page.",
+        "linkExpiredMsg": "Your link has expired, please try the forgot password."
+      }
+    },
+    "acceptanceWindow": {
+      "first": "I have read and accept the",
+      "middle": "Terms of Use",
+      "last": "Terms of Use."
+    },
+    "SSAndCSAccessDenied": {
+      "page": {
+        "message": "Access to Sonic Hub and Creation Station has been denied. Please contact the administrator for assistance."
+      }
+    }
+  },
+  "results": {
+    "page": {
+      "resultsFor": "Results for : ",
+      "noResults": "No results"
+    },
+    "newSearch": {
+      "title": "New Search",
+      "button": "New Search",
+      "decline": "Close"
+    }
+  },
+  "playlist": {
+    "page": {
+      "createNew": "New Playlist",
+      "noPlaylist": "No Playlists yet, add new playlist",
+      "noTracks": "No Tracks Added to the Playlist yet",
+      "notExists": "Playlist doesn't exist."
+    },
+    "create": {
+      "title": "Create New Playlist",
+      "nameInputTitle": "Name*",
+      "nameInputPlaceHolder": "My new Playlist",
+      "descriptionInputTitle": "Description",
+      "descriptionInputPlaceHolder": "Enter a Description for your Playlist",
+      "coverImageInputTitle": "Cover Image",
+      "coverImageInputPlaceHolder": "Select cover image",
+      "accept": "Create",
+      "decline": "Cancel"
+    },
+    "remove": {
+      "title": "Are you sure to delete this Playlist ?",
+      "deleteTrack": "Delete from Playlist",
+      "accept": "Delete",
+      "decline": "Cancel"
+    },
+    "member": {
+      "titleOne": "Member",
+      "titleMore": "Members",
+      "invite": "Invite Member to Playlist",
+      "inviteAccept": "Invite",
+      "updateShareLink": "Update validity",
+      "inviteDecline": "Cancel",
+      "ok": "Ok",
+      "selected": "selected",
+      "more": "Show All",
+      "showAll": "Show All",
+      "noMember": "No Member",
+      "accept": "Remove",
+      "decline": "Close",
+      "memberModalTitle": "Registered Members Overview",
+      "memberModalTitleGuest": "External Members Overview"
+    },
+    "extra": {
+      "deletePlaylist": "Delete Playlist",
+      "sharePlaylist": "Share Playlist - Registered Users",
+      "sharePlaylistExternal": "Share Playlist - External Users",
+      "invalidlink": "Sorry, the link is expired!"
+    },
+    "comment": {
+      "newMessageInputPlaceholder": "Type your Message",
+      "deleteQuestion": "Delete this Comment ?",
+      "deleteAccept": "Delete",
+      "editedMessage": "edited",
+      "editAccept": "Save",
+      "editDecline": "Cancel",
+      "accept": "Comment",
+      "titleOne": "Comment",
+      "titleMore": "Comments"
+    }
+  },
+  "browse": {
+    "page": {
+      "recently": "Recently Added",
+      "popular": "Popular",
+      "curated": "Curated Playlist"
+    }
+  },
+  "profile": {
+    "page": {
+      "profilePageTitle": "Edit profile",
+      "nameLabel": "Name",
+      "emailLabel": "Email Address",
+      "MFAConfigureTitle": "2FA authentication",
+      "MFAConfigureDesc": "Use Authenticator app to get two-factor authentication codes",
+      "changePasswordTitle": "Change password",
+      "currentPasswordLabel": "Current password",
+      "newPasswordLabel": "New password",
+      "confirmPasswordLabel": "Confirm Password"
+    }
+  },
+  "trackDetail": {
+    "page": {
+      "downloadMP3": "Download MP3",
+      "downloadSTEMS": "Download STEMS",
+      "downloadWAV": "Download WAV",
+      "similarTRACKS": "Similar TRACKS",
+      "masterTitle": "MASTER:",
+      "editTitleOne": "EDIT",
+      "editTitleMore": "EDITS",
+      "getWAV": "Get WAV",
+      "getSTEMS": "Get STEMS",
+      "notExists": "Track doesn't exist."
+    },
+    "dowloadWAV": {
+      "title": "Please provide some information",
+      "userInformationTitle": "User Information:*",
+      "advertisingTitle": "Advertising Agency:",
+      "productionTitle": "Production Company:",
+      "topicInputTitle": "Product name/Topic Name:",
+      "topicInputPlaceholder": "Product / Topic",
+      "campainInputTitle": "Campaign Name:",
+      "campainInputPlaceholder": "Campaign",
+      "formatInputTitle": "Type of Content:",
+      "formatInputPlaceholder": "Productfilm / Designfilm / Snippets",
+      "durationsInputTitle": "Durations:",
+      "durationsInputPlaceholder": "2x 60 / 2x 15s",
+      "firstAiringInputTitle": "First Airing:",
+      "firstAiringInputPlaceholder": "DD.MM.YYYY",
+      "advertisingAgencyInputTitle": "Advertising Agency/ Production Company:",
+      "advertisingAgencyInputTitleInputPlaceholder": "Agency Name",
+      "producerNameInputTitle": "Producer Name:",
+      "producerNameInputPlaceholder": "...",
+      "IDNumberInputTitle": "ID Number:",
+      "IDNumberInputPlaceholder": "Competitrack Code / Clock Number",
+      "productionCompanyInputTitle": "Production Company:",
+      "productionCompanyInputPlaceholder": "Company Name",
+      "producerEmailInputTitle": "Contact Email Address:",
+      "producerEmailInputPlaceholder": "Contact Email Address",
+      "countryNameInputTitle": "Select Country:",
+      "countryNameInputPlaceholder": "Country Name",
+      "airingmonthInputTitle": "Airing Month:",
+      "airingmonthInputPlaceholder": "Airing Month (mmyy)",
+      "saveAsDraftCartBtn": "Save to draft",
+      "downloadCartBtn": "Download",
+      "selectMediaTypeInputTitle": "Select the Airing Media:",
+      "traditionalMediaTypeInputTitle": "Traditional:",
+      "digitalMediaTypeInputTitle": "Digital:",
+      "accept": "Download Project",
+      "alertDownloadPopup": "Once you download the project, no further changes can be made, and it will be marked as completed. Are you sure you want to proceed?"
+    }
+  },
+  "project": {
+    "createProject": "Create Project",
+    "selectProject": "Select",
+    "seeMore": "See More Projects"
+  },
+  "AISearch": {
+    "title": "AI Music Search",
+    "subtitle": "Discover the Perfect Track with AI-Powered Search.",
+    "optionSelectionTitle": "Upload a video, share a brief, or select a similar track—our AI instantly matches the perfect music to your project. Simple, fast, and precise.",
+    "GenerateMusicWithVideoTitle": "Recommend Music That Fits Your Video",
+    "GenerateMusicWithVideoSubtitle": "This tool analyses your video’s style and mood, then uses advanced AI to search for custom music that fits seamlessly with the visuals.",
+    "GenerateMusicWithBriefTitle": "Use a brief",
+    "GenerateMusicWithBriefSubtitle": "Share a brief or relevant keywords, and our AI will find the ideal custom track that matches your specific style and mood.",
+    "GenerateSimilaritySearchTitle": "Similarity Search",
+    "GenerateSimilaritySearchSubtitle": "Search for a song you love and we’ll recommend similar tracks that align with its style and mood.",
+    "BackBtn": "Back To Home",
+    "ProcessingText": "AI analysis will take some time to process. You can explore other projects meanwhile.",
+    "BadRequest": "Something went wrong!",
+    "NoDataFound": "No data Found"
+  },
+  "CustomTrackForm": {
+    "title": "Commission a Custom Music Track",
+    "subtitle": "Provide project details so that we can create the perfect branded audio for you",
+    "projectTitle": "Project Title*",
+    "projectTitlePlaceholder": "Give a name to your project",
+    "focusofContentTitle": "What’s the Focus of Your Content?*",
+    "focusofContentPlaceholder": "e.g. Introduction of amp's Sonic Space product along with its core features in an engaging way, with music supporting this goal.",
+    "mediaFormat": "Media Format*",
+    "mediaFormatPlaceholder": "Type a format",
+    "creativeBrieftitle": "Do you have a creative brief?",
+    "audioDeliverablesTitle": "Type of Audio Deliverables*",
+    "audioDeliverablesPlaceholder": "Select from the dropdown",
+    "numberofAudioDeliverablesTitle": "Number of Audio Deliverables*",
+    "numberofAudioDeliverablesPlaceholder": "e.g. 3x GIF / Cinematograph",
+    "deadline": "Deadline*",
+    "deadlinePlaceholder": "Type or set a deadline (DD/MM/YYYY)",
+    "yes": "Yes",
+    "no": "No",
+    "customTrack": "Custom Track",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "creativeBriefing": "Creative Briefing",
+    "musicInspiration": "Music Inspiration",
+    "musicStyle": "Music Style",
+    "visualReferences": "Visual References",
+    "whatsNext": "What’s Next?",
+    "uploadYourBrief": "Upload your brief",
+    "uploadBrief": "Upload Brief",
+    "andor": "- And / Or -",
+    "keywords": "Keywords",
+    "KeywordsPlaceholder": "e.g. A melancholic yet hopeful piano piece with ambient textures, subtle strings, and a soft ticking sound to evoke the passage of time. The composition should feel intimate and cinematic, gradually building in intensity while maintaining a sense of introspection and emotional depth.",
+    "musicInspirationTitle": "Music Inspiration",
+    "musicInspirationSubTitle": "Are there any tracks that inspire this project? Search or paste a link to find the tracks you have in mind.",
+    "referencetrack": "Reference track",
+    "pasteLink": "Paste a Link",
+    "linkPlaceholder": "Paste a link from Youtube, SoundCloud, Vimeo, etc.",
+    "customTrackConfirmationModalTitle": "Once you submit your request, you won’t be able to add any more details or share additional information about this project. Are you sure you want to proceed?",
+    "energyTempo": "Do you have an energy & tempo in mind?",
+    "tonalties": "Which of these tonalities match your campaign?",
+    "genres": "Which of these genres do you feel are appropriate?",
+    "selectfromdropdown": "Select from the dropdown",
+    "visualRefSubTitle": "Do you have a work-in-progress, final version, or any visual references?",
+    "uploadfilesex": " Upload Your Files (jpg, png, mp4)",
+    "uploadfile": "Upload File",
+    "ThankyouTitle": "Thank you for submitting your request!",
+    "whathappensnext": "What happens next?",
+    "thankyouPoint1": "1. Our team will review your request and get back to you in the next days.",
+    "thankyouPoint2": "2. If you need any urgent assistance please contact sonicspace@ampcontact.com.",
+    "downloadBrief": "Download Brief"
+  }
+}

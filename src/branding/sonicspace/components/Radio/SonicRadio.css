@@ -1,0 +1,30 @@
+/* .SonicRadio_container input {
+  accent-color: var(--color-primary);
+  margin-right: 5px;
+  scale: 1.2;
+} */
+
+.SonicRadio_container input[type="radio"] {
+  -webkit-appearance: none;
+  margin-right: 0.5rem;
+  scale: 0.75;
+  accent-color: var(--color-primary);
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: #fff;
+}
+
+.SonicRadio_container input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 80%;
+  margin: 10% auto;
+  border-radius: 50%;
+}
+.SonicRadio_container input[type="radio"]:checked:before {
+  background: var(--color-primary);
+}

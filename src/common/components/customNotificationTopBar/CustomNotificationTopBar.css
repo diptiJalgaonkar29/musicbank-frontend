@@ -1,0 +1,45 @@
+.CustomNotificationTopBar_container {
+  background-color: var(--color-primary);
+  width: 100%;
+  position: sticky;
+  height: fit-content;
+  inset: 0;
+  padding: 0.6rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  z-index: 1000;
+  box-sizing: border-box;
+  color: var(--color-white);
+}
+
+.CustomNotificationTopBar_container a {
+  color: var(--color-white);
+}
+.CustomNotificationTopBar_close_btn {
+  cursor: pointer;
+  background-color: transparent;
+}
+.CustomNotificationTopBar_text {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  text-align: center;
+  flex: 1;
+  margin: 0;
+}
+
+.CustomNotificationTopBar_container
+  .sonic_icon_button.CustomNotificationTopBar_close_btn {
+  padding: 0;
+  width: auto;
+  height: auto;
+  scale: 0.8;
+}
+
+.CustomNotificationTopBar_container
+  .sonic_icon_button.CustomNotificationTopBar_close_btn
+  svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}

@@ -1,0 +1,28 @@
+.TrackLyricsAccordion {
+  width: 100%;
+}
+
+.TrackLyricsAccordion_container {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+
+.TrackLyricsAccordion_title {
+  margin-top: 0.5rem;
+}
+
+.TrackLyricsAccordion_message {
+  font-size: 1.6rem;
+  color: var(--color-white);
+  padding-left: 2rem;
+}
+
+.TrackLyricsAccordion .sonic_icon_button {
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 900px) {
+  .TrackLyricsAccordion_container {
+    width: 100%;
+  }
+}

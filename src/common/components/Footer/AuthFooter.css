@@ -1,0 +1,26 @@
+.authFooter {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  /* padding: 0 2rem;  */
+  padding-top: 1rem;
+  box-sizing: content-box;
+}
+
+.authFooter a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.authFooter p span:hover {
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.authFooter a:hover {
+  cursor: pointer;
+  color: var(--color-primary);
+}

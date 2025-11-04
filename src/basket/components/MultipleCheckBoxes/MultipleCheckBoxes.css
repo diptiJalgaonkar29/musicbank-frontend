@@ -1,0 +1,116 @@
+.checkboxes-container {
+  width: 100%;
+}
+
+.checkboxes-container .mediaTypeList-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 225px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.checkboxes-container .mediaTypeList-list-item {
+  display: inline-block !important;
+  width: auto;
+}
+
+.checkboxes-container .mediaTypeList-list-item:last-child {
+  margin-right: 0px;
+  width: 100%;
+}
+
+.checkboxes-container .left-section {
+  display: flex;
+  align-items: center;
+  height: 22px;
+}
+
+.checkboxes-container .checkbox-label {
+  font-size: 1.6rem;
+  color: var(--color-white);
+  position: relative;
+  top: 15px;
+  cursor: pointer;
+}
+
+.checkboxes-container .mb_input_other {
+  margin: 0rem;
+  margin-top: 5px;
+  font-size: 1.4rem;
+  font-family: var(--font-primary);
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-left: 1.4rem;
+  background: transparent;
+  border-radius: 1px;
+  border: 1px solid var(--color-white);
+  border-radius: 15px;
+  color: var(--color-white);
+  height: 2rem;
+  outline: 0;
+  width: 75%;
+}
+
+.checkboxes-container .checkbox-other-error {
+  color: red;
+  padding: 5px 70px;
+}
+
+/* .checkboxes-container .main {
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.checkboxes-container input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.checkboxes-container .checkMark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: var(--color-white);
+  border-radius: 2px;
+}
+
+.checkboxes-container .main input:checked ~ .checkMark {
+  background-color: var(--color-primary);
+}
+
+.checkboxes-container .checkMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxes-container .main input:checked ~ .checkMark:after {
+  display: block;
+}
+
+.checkboxes-container .main .checkMark:after {
+  left: 5px;
+  bottom: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid var(--color-white);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkboxes-container .others-section .main {
+  padding-left: 25px;
+} */

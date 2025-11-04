@@ -1,0 +1,77 @@
+.search_results_card_container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.search_results_card_img_container,
+.search_results_card_img_container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.search_results_card_img_container img {
+  object-fit: cover !important;
+}
+
+.search_results_card_info_container {
+  width: 255px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  text-align: left !important;
+}
+
+.search_results_card_info_container:hover {
+  color: var(--color-primary);
+}
+
+.search_results_card_info_container .search_results_card_title,
+.search_results_card_info_container .search_results_card_subtitle {
+  white-space: nowrap;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  width: calc(100% - 5px);
+  line-height: 1.6rem;
+}
+
+.search_results_card_info_container .search_results_card_title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.search_results_card_info_container .search_results_card_subtitle {
+  font-size: 1.3rem;
+}
+
+.search_results_card_container .lds-default {
+  margin: -7px 0px 0px -7px;
+  scale: 0.8;
+}
+
+/* ✅ dark overlay */
+.search_results_card_img_container::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(0, 0, 0, 0.45); /* semi-transparent black */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* don’t block clicks */
+  z-index: 1;
+}
+
+/* ✅ show overlay on hover */
+.search_results_card_img_container:hover::after {
+  opacity: 1;
+}
+
+/* ✅ keep play button above overlay */
+.search_results_card_img_container .audioPlayer_container {
+  z-index: 2; /* above overlay */
+}

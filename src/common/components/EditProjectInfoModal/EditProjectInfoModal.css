@@ -1,0 +1,23 @@
+.edit_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  gap: 10px;
+}
+
+.edit_project_btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.edit_wrapper .error {
+  color: var(--color-error);
+  padding: 10px 0px 5px;
+  font-size: 14px;
+  margin: 0;
+}

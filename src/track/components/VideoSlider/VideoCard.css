@@ -1,0 +1,179 @@
+.video-card {
+  color: var(--color-white);
+
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2.5rem 1fr;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  background-color: hsl(180, 3%, 10%);
+}
+
+.video-card--img {
+  max-width: 100%;
+  height: auto;
+  grid-column: 1 / -1;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  transition: 450ms transform;
+}
+
+#video-iframe {
+  max-width: 100%;
+  height: 100%;
+  grid-column: 1 / -1;
+}
+
+.video-iframe-container {
+  position: relative;
+  grid-column: 1 / -1;
+}
+
+.video-card--title {
+  word-wrap: break-word;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: end;
+  z-index: 3;
+  max-width: 55%;
+  font-size: 1.4rem;
+  padding: 1.1rem;
+  text-align: center;
+  transform: translateY(20%);
+  background-color: var(--color-primary);
+}
+
+.video-card--description {
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+  box-sizing: border-box;
+  justify-self: center;
+  align-self: flex-start;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.8rem;
+  text-align: center;
+  height: 100%;
+  width: 50rem;
+  word-wrap: break-word;
+  padding: 1.25rem;
+  overflow-wrap: break-word;
+}
+
+.play-icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon {
+  color: var(--color-white);
+  position: relative;
+  height: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: opacity 100ms ease 350ms;
+  opacity: 0;
+}
+
+.play-icon svg {
+  fill: rgba(255, 255, 255, 1);
+  transform: rotateY(90deg);
+  transition: transform 200ms ease 350ms;
+}
+
+/** Mobile Settings **/
+.video-overlay--mobile .play-icon {
+  opacity: 1;
+}
+.video-card .video-overlay--mobile .play-icon {
+  opacity: 1;
+}
+.video-card .video-overlay--mobile .play-icon {
+  height: 75% !important;
+}
+.video-card .video-overlay--mobile .play-icon svg {
+  transform: rotateY(0deg) !important;
+}
+
+/** Mobile Settings End **/
+
+/** Overlay Animation **/
+
+.video-card:hover .video-overlay .play-icon {
+  opacity: 1;
+}
+
+.video-card:hover .video-overlay .play-icon svg {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.video-card:hover img {
+  transform: scale(1.05);
+}
+
+.video-card:hover .video-overlay:after {
+  transform: translateY(170%);
+}
+
+.video-overlay {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  transition: transform 350ms ease 0s;
+}
+.video-overlay--mobile {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  transition: transform 350ms ease 0s;
+}
+
+.video-overlay:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: -191%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: transform 350ms ease 0s;
+}
+
+.video-overlay:after {
+  transform: translateY(90%);
+}
+
+.video-overlay.play-icon {
+  opacity: 1;
+}
+
+.video-overlay.play-icon svg {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+/** Overlay Animation End **/

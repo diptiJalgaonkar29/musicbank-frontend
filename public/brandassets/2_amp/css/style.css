@@ -1,0 +1,18 @@
+.sonicspace .V3AuthLayout .brand_logo {
+  width: auto !important;
+  height: auto !important;
+  max-height: 100% !important;
+}
+
+.sonicspace .sonicButton.filled svg {
+  filter: invert(1) !important;
+}
+
+.sonicspace .navbar__container img {
+  max-width: 50px !important;
+}
+
+.sonicspace .SonicCheckbox_container:has(input:checked):after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}

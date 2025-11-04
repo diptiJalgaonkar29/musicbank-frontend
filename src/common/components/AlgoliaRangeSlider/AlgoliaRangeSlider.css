@@ -1,0 +1,113 @@
+.custom-spectrum-slider {
+  position: relative;
+  width: fit-content;
+  margin: 0px auto 30px;
+}
+
+.custom-spectrum-slider [class*="-Slider-controls"] {
+  margin-left: 10px;
+  width: 218px !important;
+}
+
+.custom-spectrum-slider [class*="-Slider-track"] {
+  height: 4px;
+  background-color: #dfe2ee;
+  border-radius: 9999px;
+}
+
+/* .custom-spectrum-slider [class*="-Slider-track"]:nth-of-type(2) {
+
+} */
+
+.custom-spectrum-slider [class*="-Slider-handle"] {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 1px;
+}
+
+.custom-spectrum-slider input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+/* Label container above slider */
+.slider-thumb-labels {
+  position: absolute;
+  width: 100%;
+  top: 30px; /* Position below the thumb */
+  pointer-events: none;
+  z-index: 10;
+}
+.slider-thumb-icon {
+  position: absolute;
+  width: 100%;
+  top: 13px; /* Position below the thumb */
+  z-index: 999;
+
+  pointer-events: none;
+}
+.slider-start-icon svg {
+  transform: scaleX(-1);
+}
+
+/* Individual value label */
+.slider-value-label {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--color-white);
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 99;
+}
+
+/* Optional: If you want to use CSS calc positioning instead of JS */
+.slider-label {
+  position: absolute;
+  top: 30px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  background: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.slider-label.start {
+  left: calc((var(--start) - var(--min)) / (var(--max) - var(--min)) * 100%);
+}
+
+.slider-label.end {
+  left: calc((var(--end) - var(--min)) / (var(--max) - var(--min)) * 100%);
+}
+.thumb-wrapper {
+  position: absolute;
+  top: 20px; /* adjust vertically to place icon above thumb */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.slider-thumb-icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+}
+
+.A-RCEa_spectrum-Slider-value {
+  visibility: hidden;
+}
+
+.filtered.custom-spectrum-slider [class*="-Slider-handle"],
+.filtered.custom-spectrum-slider [class*="-Slider-track"]:nth-child(3) {
+  background-color: var(--color-primary);
+}

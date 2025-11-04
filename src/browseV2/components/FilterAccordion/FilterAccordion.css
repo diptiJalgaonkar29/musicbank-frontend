@@ -1,0 +1,22 @@
+.FilterAccordion_item {
+  font-size: 1.6rem;
+  color: var(--color-white);
+  margin: 1.2rem 0rem 1.2rem 4rem;
+  cursor: pointer;
+}
+
+.FilterAccordion_item:hover {
+  color: var(--color-primary);
+}
+
+.FilterAccordion_item:first-child {
+  margin-top: 0.5rem;
+}
+
+.FilterAccordion_active_tag {
+  color: var(--color-primary);
+}
+
+.FilterAccordion_item.tag_genre {
+  text-transform: capitalize;
+}

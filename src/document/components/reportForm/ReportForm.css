@@ -1,0 +1,166 @@
+.DocumentsPage__content form {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.DocumentsPage__content .form-group {
+  margin-bottom: 25px;
+}
+
+.DocumentsPage__content .form-group .report_form_error {
+  color: var(--color-error);
+  padding: 10px 0px 5px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.DocumentsPage__content .form-group label {
+  margin-bottom: 0px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+}
+
+.DocumentsPage__content .form-group input[type="text"],
+.DocumentsPage__content input[type="file"],
+.DocumentsPage__content textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-white);
+  border-radius: 23px;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  margin-top: 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.DocumentsPage__content .form-group textarea {
+  resize: vertical;
+}
+
+.DocumentsPage__content .form-group .formButton {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 10px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 180px;
+  margin-top: 15px;
+  color: var(--color-white);
+  font-size: 16px;
+}
+
+.DocumentsPage__content .groupButton {
+  display: flex;
+  justify-content: center;
+}
+
+.DocumentsPage__content .groupButton .lds-default {
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  scale: 0.8;
+}
+
+.DocumentsPage__content .form-group .logo {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+}
+
+.DocumentsPage__content .reportBugContainer {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-white);
+  padding: 0;
+}
+
+.DocumentsPage__content .reportBugContainer:hover {
+  color: var(--color-primary);
+}
+
+.DocumentsPage__content .bugFile_input_container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-right: 2px;
+}
+
+.DocumentsPage__content .form-group #remove_bug_file {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.DocumentsPage__content .form-group #remove_bug_file svg {
+  stroke: var(--color-white);
+}
+
+.DocumentsPage__content .form-group label[for="file"] {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--color-white);
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+  color: var(--color-white);
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.DocumentsPage__content .form-group input[type="file"] {
+  display: none;
+}
+
+.DocumentsPage__content .feedBack_container {
+  padding: 20px;
+  background-color: var(--color-bg);
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  text-align: center;
+  height: 250px;
+  border: 1px solid var(--color-white);
+  width: 80%;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.DocumentsPage__content .feedBack_container p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.DocumentsPage__content .feedBack_container .back-link {
+  text-decoration: none;
+  border-radius: 40px;
+  height: 52px;
+  border: 1px solid var(--color-white);
+  border-radius: 40px;
+  background: var(--color-bg);
+  margin: 0 auto;
+  color: var(--color-white) !important;
+  padding: 10px 17px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.DocumentsPage__content .form-group .formButton:disabled {
+  background-color: var(--color-gray) !important;
+  cursor: not-allowed !important;
+}

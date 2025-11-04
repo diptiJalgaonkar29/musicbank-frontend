@@ -1,0 +1,281 @@
+.TrackCard__audioMini {
+  color: var(--color-white);
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: solid 1px var(--color-gray);
+  box-sizing: border-box;
+  top: 0px;
+  left: 0px;
+}
+
+#audioplayerMini {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+#TimeLineComponent {
+}
+
+#pButtonMini {
+  /* position: absolute;
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+  border: none;
+  padding: 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; */
+  background-color: transparent;
+  z-index: 2;
+}
+
+#pButtonMini:hover {
+  /* cursor: pointer !important; */
+}
+
+.play {
+  /* background-image: url("../../../static/play.png");
+  -webkit-background-image: url("../../../static/play.png");
+  -ms-background-image: url("../../../static/play.png"); */
+}
+
+.pause {
+  /* background-image: none; */
+  /* background-image: url("../../../static/pause.png");
+    -webkit-background-image: url("../../../static/pause.png");
+    -ms-background-image: url("../../../static/pause.png"); */
+}
+
+#timeline__statusbar {
+  position: absolute;
+  pointer-events: none;
+  width: 0px;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+#playhead {
+  height: 100%;
+  position: relative;
+  z-index: 200;
+  border-left: 3px solid black;
+}
+
+.TrackCard__audio_tctpMini {
+  color: black;
+  background-color: rgb(87, 94, 109, 0.5);
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 1260px;
+  border: 1px solid black;
+}
+
+#audioplayer_tctpMini {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  /*   border-radius: 10px; */
+}
+
+#pButton_tctp {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+  border-right: 1px solid black;
+}
+
+.playButton__container {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#timeline__statusbar_tctp {
+  position: absolute;
+  pointer-events: none;
+  width: 0px;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+#playhead_tctp {
+  width: 18px;
+  height: 100%;
+  position: relative;
+  z-index: 200;
+  border-left: 3px solid black;
+}
+
+.TrackCard__time {
+  position: absolute;
+  pointer-events: none;
+  top: 3.9rem;
+  left: 613px;
+  z-index: 200;
+  font-size: 1.6rem;
+}
+
+.timeline__loadingAnimation {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: loader-animate;
+  animation-timing-function: linear;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background: linear-gradient(
+    to right,
+    left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+}
+
+@keyframes loader-animate {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.playing {
+  position: absolute;
+  top: 30px;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  left: 4px;
+  right: 4px;
+  z-index: 1;
+  /*top: 50%;
+    left: 50%;
+    width: auto;
+     transform: translateX(-50%) translateY(-50%); */
+}
+.playing:after {
+  /*content: "Now Playing.";*/
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+.now.playing .bar {
+  display: inline-block;
+  position: relative;
+  margin-right: 1px;
+  width: 9px;
+  height: 1px;
+  overflow: hidden;
+  /* background: linear-gradient(to bottom, #ff9500, #ff5e3a); */
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: transparent;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.paused.playing .bar {
+  animation-iteration-count: 0;
+  /* background: linear-gradient(to bottom, #ff9500, #ff5e3a); */
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  height: 0px;
+}
+.paused.playing:after {
+  /* content: "Paused (Lame)" */
+}
+.n1 {
+  animation-delay: 0.5s;
+}
+.n2 {
+  animation-delay: 0.2s;
+}
+.n3 {
+  animation-delay: 1.2s;
+}
+.n4 {
+  animation-delay: 0.9s;
+}
+.n5 {
+  animation-delay: 2.3s;
+}
+.n6 {
+  animation-delay: 1.3s;
+}
+.n7 {
+  animation-delay: 3.1s;
+}
+.n8 {
+  animation-delay: 1.9s;
+}
+@keyframes pulse {
+  0% {
+    height: 10px;
+    margin-top: 0;
+  }
+  10% {
+    height: 30px;
+    margin-top: -30px;
+  }
+  50% {
+    height: 10px;
+    margin-top: -10px;
+  }
+  60% {
+    height: 20px;
+    margin-top: -20px;
+  }
+  80% {
+    height: 40px;
+    margin-top: -40px;
+  }
+  100% {
+    height: 1px;
+    margin-top: 0;
+  }
+}

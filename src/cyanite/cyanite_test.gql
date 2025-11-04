@@ -1,0 +1,43 @@
+query SimilaritySearchRouteSimilarTracksResultsQuery(
+    $id: ID!,
+    $first: Int = 10,
+    $searchMode: SimilarTracksSearchMode,
+    $target: SimilarTracksTarget!,
+    $experimentalFilter: experimental_SimilarTracksFilter,
+    $tableViewMode: TrackTableViewMode!,
+    $tableViewVersion: TrackTableViewVersion) {
+         track(id: $id) {
+             __typename
+             ...on Error { message      __typename }
+             ...on Track {
+                  id
+            similarTracks(first: $first  target: $target  searchMode: $searchMode experimental_filter: $experimentalFilter)
+            {
+                __typename 
+                    ...on SimilarTracksConnection {
+                    edges {
+                        node {
+                            id
+                            title
+                            audioUrl
+                            cover {
+                                url
+                                __typename
+                            }
+                            tableView(mode: $tableViewMode, version: $tableViewVersion) { isLatestAnalysisVersion                latestAnalysisVersion                bpm                analysisStatus                timeSignature                dominantKey                instrumentTags                instrumentPresence { label                  type value                  __typename } predominantVoiceGender                voicePresenceProfile                subgenreEdmTags                subgenreEdmMean { label                  type value                  __typename } moodTags                moodMean { label                  type value                  __typename } genreTags                genreMean { label                  type value                  __typename } valenceMean                arousalMean                energyLevel                energyDynamics                emotionalProfile                emotionalDynamics                musicalEraTag                augmentedKeywords { label                  __typename } analysisError                __typename } audioAnalysisV6 { __typename                ...on AudioAnalysisV6Failed { error { message                    __typename } __typename } } __typename
+                        } __typename
+                    } __typename
+                }
+                    ...on SimilarTracksError {
+                    code
+                    message
+                    __typename
+                }
+            } __typename
+        }
+    } me {
+        id
+        shouldHintPremiumKeywords
+        __typename
+    }
+}

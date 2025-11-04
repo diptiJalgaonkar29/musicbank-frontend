@@ -1,0 +1,55 @@
+/* .Track__details__tag__container.TrackCard__item__tags span#tonalityTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-tonality-bg) !important;
+}
+
+.Track__details__tag__container.TrackCard__item__tags span#genreTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-genre-bg) !important;
+}
+
+.Track__details__tag__container.TrackCard__item__tags span#feelingsTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-feelings-bg) !important;
+}
+
+.Track__details__tag__container.TrackCard__item__tags span#impactTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-impact-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#motionTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-motion-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#instrumentTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-instrument-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#tempoTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-tempo-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#keyTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-key-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#tagUsedIn {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-usedIn-bg) !important;
+} */
+
+.Track__details__tag__container.TrackCard__item__tags.taxonomy__tag__container {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* .Track__details__tag__container.TrackCard__item__tags span {
+  border: none !important;
+  background-color: #54565a !important;
+  color: var(--color-white) !important;
+  margin-bottom: 1rem !important;
+  margin-right: 1rem !important;
+  text-transform: capitalize;
+} */

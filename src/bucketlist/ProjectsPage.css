@@ -1,0 +1,12 @@
+.projects_container {
+  overflow-x: hidden;
+  /* height: 82vh; */
+  position: relative;
+  overflow-y: auto;
+  position: relative;
+}
+
+.project_loader {
+  width: 100%;
+  text-align: center;
+}

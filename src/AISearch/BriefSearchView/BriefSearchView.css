@@ -1,0 +1,65 @@
+.BriefSearchView_Container {
+  max-width: 600px;
+  background-color: var(--color-card);
+  padding: 20px;
+  border-radius: 20px;
+}
+.AITrackCreationWithBrief_container .VideoPreview_wrapper {
+  margin: 20px 0 30px;
+}
+.AITrackCreationWithBrief_container .prompt_textarea:disabled {
+  cursor: not-allowed;
+}
+
+.AITrackCreationWithBrief_container .card_icon svg {
+  width: 35px;
+  height: 35px;
+}
+
+.brief_form_divider {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin: 25px 0 20px;
+}
+
+.brief_form_btn_container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.brief_form_btn_container .sonicButton {
+  flex: 1;
+}
+
+.pollingModal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pollingModal-dialog .pollingModal_header {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.pollingModal-dialog .pollingModal_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.BriefSearchView_Container .report_form_error {
+  color: var(--color-error);
+  padding: 10px 0px 5px;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .BriefSearchView_Container {
+    max-width: 400px;
+  }
+}

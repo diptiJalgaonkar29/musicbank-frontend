@@ -1,0 +1,23 @@
+.TrackStyleAccordionDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.TrackStyleAccordionDetails_bpm_key_tags {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.TrackStyleAccordionDetails_bpm_key_tags > div {
+  flex: 1;
+}
+
+.TrackStyleAccordionDetails_left,
+.TrackStyleAccordionDetails_right {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

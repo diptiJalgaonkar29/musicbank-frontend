@@ -1,0 +1,169 @@
+.profile_menu_main_container {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  /* max-width: 1200px; */
+}
+
+.profile_menu_main_container .profile_form_heading {
+  font-size: 4rem;
+  font-family: var(--font-primary);
+  margin: 1rem 0 1rem;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile_menu_main_container .sub_heading_text {
+  font-size: 2.2rem;
+  font-weight: 400;
+  font-family: var(--font-primary);
+  padding-top: 40px;
+}
+
+.profile_menu_main_container .form-group {
+  margin-bottom: 20px;
+}
+.profile_menu_main_container .profile_form_input-fields {
+  width: calc(100% - 66px) !important;
+  padding: 8px;
+  padding-right: 60px;
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 1px solid #6c6c6c;
+  outline: none;
+  border-radius: 0;
+}
+.profile_menu_main_container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.MFA_setup_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #6c6c6c;
+}
+
+.MFA_setup_note {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  margin: 8px 0 18px 0;
+}
+
+/* .profile_menu_main_container input {
+  width: 100% !important;
+  padding: 10px;
+
+  font-family: var(--font-primary);
+} */
+.profile_menu_main_container .set_new_password_group {
+  display: flex;
+  gap: 95px;
+}
+.profile_menu_main_container .confirm_password_input,
+.profile_menu_main_container .set_new_password_field {
+  width: calc(100% - 70px) !important;
+  padding-right: 50px;
+  /* background-color: var(--color-white);
+  color: #858585; */
+  font-family: var(--font-primary) !important;
+}
+
+.profile_menu_main_container .profile_form_error {
+  margin: 8px 0 0;
+  font-size: 1.4rem;
+  color: red;
+  width: 260px;
+}
+
+.profile_menu_main_container .password-field-container {
+  position: relative;
+}
+
+.profile_menu_main_container .password-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.profile_menu_main_container .profile_password_input {
+  width: 260px;
+  position: relative;
+}
+.profile_menu_main_container .set_new_password_group .profile_password_input {
+  width: 260px;
+  position: relative;
+}
+.profile_menu_main_container .profile_password_input .eye_icon,
+.profile_menu_main_container .eye_icon_new_password {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.profile_form_input_container {
+  position: relative;
+}
+
+.profile_menu_main_container .profile_form_action_button.sonicButton {
+  position: absolute;
+  right: 0;
+  color: var(--color-primary);
+  background-color: transparent;
+  width: auto;
+}
+
+.profile_menu_main_container .profile_form_action_button.sonicButton:disabled {
+  color: var(--color-gray);
+}
+
+.profile_menu_main_container .groupButton {
+  padding: 40px 0 20px 0;
+  border-bottom: 1px solid #6c6c6c;
+}
+.profile_menu_main_container .set_password_text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-bottom: 21px;
+  padding: 25px 0 15px 8px;
+}
+.profile_menu_main_container .profile_form_action_button_container {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  cursor: pointer;
+}
+
+.profile_menu_main_container form {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.profile_menu_main_container .profile_form_save_botton {
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.profile_menu_main_container .save_dirty {
+  color: #6c6c6c;
+  cursor: not-allowed;
+  font-size: 1.6rem;
+}
+
+.profile_menu_main_container .profile_password_input .ss_input_container {
+  padding-left: 4px;
+}
+
+@media only screen and (max-width: 900px) {
+  .profile_menu_main_container {
+    width: 80%;
+  }
+  .profile_menu_main_container .set_new_password_group {
+    gap: 20px;
+  }
+}

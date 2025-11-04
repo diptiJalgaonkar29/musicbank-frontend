@@ -1,0 +1,51 @@
+.grouped-multiselect {
+  position: relative;
+  width: 100%;
+}
+
+.grouped-multiselect .dropdown-toggle {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #aaa;
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--color-white);
+  text-align: left;
+}
+
+.grouped-multiselect .dropdown-panel {
+  color: var(--color-white) !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grouped-multiselect .search-input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+
+.grouped-multiselect .group-label {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.grouped-multiselect .checkbox-label {
+  cursor: pointer;
+}
+
+.grouped-multiselect .checkbox-item {
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  direction: row;
+  padding: -13px;
+  gap: 10px;
+  align-items: center;
+}
+.grouped-multiselect .dropdown-group {
+  padding: 0 10px 0 10px;
+}

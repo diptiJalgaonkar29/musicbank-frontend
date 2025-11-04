@@ -1,0 +1,150 @@
+.SmartSpotifyInputBox .smart-input-wrapper {
+  position: relative;
+  padding: 0px 12px 0px 16px;
+  border: 1px solid #444;
+  border-radius: 40px;
+  background-color: var(--color-bg-light, var(--color-primary));
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+  min-height: 54px;
+  align-items: center;
+  display: flex;
+}
+
+.SmartSpotifyInputBox .smart-input-wrapper.drag-active {
+  border-color: #00bfff;
+  background-color: #2b2b2b;
+}
+
+.SmartSpotifyInputBox .smart-input-inner {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.SmartSpotifyInputBox .smart-textarea-contenteditable {
+  min-height: 20px;
+  line-height: 20px;
+  padding: 0;
+  overflow: hidden;
+  resize: none;
+  width: calc(100% - 90px);
+  background: transparent;
+  border: none;
+  color: var(--color-text-dark, #fff);
+  font-size: 14px;
+  outline: none;
+  z-index: 2;
+  position: relative;
+}
+
+.SmartSpotifyInputBox .placeholder-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #777;
+  font-size: 14px;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+  z-index: 1;
+}
+
+.SmartSpotifyInputBox .highlighted-text {
+  color: var(
+    --color-primary,
+    #e67300
+  ); /* fallback if CSS variable is missing */
+  font-weight: bold;
+}
+
+.SmartSpotifyInputBox .file-preview {
+  margin-top: 10px;
+  font-size: 13px;
+  background: #333;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  color: #ddd;
+}
+
+.SmartSpotifyInputBox .right-buttons {
+  /* position: absolute; */
+  top: 3px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.SmartSpotifyInputBox .right-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 4px 6px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.SmartSpotifyInputBox .right-btn:hover {
+  background: #333;
+}
+
+/* Dropdown Styles */
+.SmartSpotifyInputBox .dropdown-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.SmartSpotifyInputBox .autoTable {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f;
+}
+
+.SmartSpotifyInputBox .autoTr {
+  cursor: pointer;
+  padding-left: 10px;
+  border-bottom: 1px solid #444;
+  width: 98%;
+  display: inline-table;
+}
+
+.SmartSpotifyInputBox .autoTr:hover {
+  background-color: #333;
+}
+
+.SmartSpotifyInputBox .sptactive {  
+  background-color: var(--color-bg-light, #444);
+}
+
+.SmartSpotifyInputBox .spotifyTracksList td {
+  padding: 10px;
+  color: var(--color-text-dark, #fff);
+}
+
+.SmartSpotifyInputBox .smart-input-inner input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}

@@ -1,0 +1,62 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "@babel/eslint-parser",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "settings": {
+    "react": { 
+      "version": "^18.3.1"
+    }
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "js": true, 
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    },
+    "babelOptions": {
+       "presets": ["@babel/preset-react"]
+    }, 
+    "ecmaVersion": 2018, 
+    "sourceType": "module", 
+    "requireConfigFile": false
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/prop-types": 0,
+    "react-hooks/exhaustive-deps": "off",
+    "no-extra-boolean-cast": 0,
+    "no-dupe-keys": 0,
+    "no-useless-escape": 0,
+    "react/display-name": "off",
+    "react/jsx-key": "off",
+    "react/jsx-no-target-blank": "off",
+    "no-case-declarations": 0,
+    "no-constant-condition": 0,
+    "no-prototype-builtins": 0,
+    "react/no-unescaped-entities": "off",
+    "no-dupe-else-if": 0,
+    "no-empty": 0,
+    "no-self-assign": 0,
+    "no-redeclare": 0,
+    "no-mixed-spaces-and-tabs": 0,
+    "linebreak-style": 0,
+    "quotes": "off",
+    "jsx-a11y/scope": "off",
+    "react/react-in-jsx-scope": 0,
+    "semi": "off",
+    "template-curly-spacing": "off",
+    "indent": "off",
+    "no-unused-vars": 0,
+    "react/no-unknown-property": "off",
+    "no-unsafe-optional-chaining": "off"
+  }
+}

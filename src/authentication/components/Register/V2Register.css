@@ -1,0 +1,135 @@
+.V3AuthLayout .error {
+  color: red;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.V3AuthLayout #register-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  flex-direction: column !important;
+  width: 80%;
+  /* background-color: blue; */
+  padding: 32px 0px 40px 25px;
+}
+
+/* @media only screen and (max-width: 1150px) {
+  #register-container {
+    padding: 32px 0px 40px 25px;
+  }
+} */
+
+.V3AuthLayout .form-heading {
+  color: var(--color-white);
+  font-size: 4.8rem;
+  margin: 0px 0px 0px;
+}
+
+.V3AuthLayout .form-subHeading {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  margin: 5px 0px 35px;
+}
+
+.V3AuthLayout .form-hint {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  margin: 5px 0px 15px;
+}
+
+.V3AuthLayout .form-message {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 15px 0px;
+  padding: 0;
+}
+
+.V3AuthLayout .container form {
+  z-index: 105;
+  max-width: 45rem;
+  width: 100%;
+}
+
+.V3AuthLayout .container .input {
+  display: flex;
+  flex-direction: column;
+  padding: 9px 0px;
+  font-size: 16px;
+}
+
+.V3AuthLayout .container .input label {
+  margin-bottom: 10px;
+  color: var(--color-white);
+}
+/* .container input[type="text"],
+.container input[type="email"],
+.container input[type="password"] {
+  height: 31px;
+  border-radius: 25px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 16px;
+  background-color: #e8f0fe;
+  border: 2px solid var(--color-primary);
+} */
+
+.V3AuthLayout .container .buttons {
+  text-align: center;
+  /* flex: 1; */
+}
+
+.V3AuthLayout .buttonContainer {
+  margin-bottom: 2.4rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.V3AuthLayout .container .buttons button {
+  min-width: 170px;
+  max-width: 170px;
+  flex: 1;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  border: none;
+  margin: 20px 0;
+  color: rgb(245, 255, 244);
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 40px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.V3AuthLayout #cancelBtn {
+  background-color: var(--color-register-cancel-btn);
+}
+
+.V3AuthLayout #setPasswordSubmit {
+  width: 40%;
+}
+
+.V3AuthLayout #registerBtn {
+  display: none;
+  /* background-color: var(--color-primary); */
+}
+
+@media only screen and (max-width: 1400px) {
+  .V3AuthLayout #register-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .V3AuthLayout .container .buttons button {
+    min-width: 125px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .V3AuthLayout .form-message {
+    margin: -5px 0px 10px;
+  }
+}

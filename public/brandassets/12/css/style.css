@@ -1,0 +1,17 @@
+.cocacola .V3AuthLayout .login_right_img {
+  position: relative;
+  bottom: 75px;
+}
+
+.cocacola .navbar__container img {
+  max-width: 90px !important;
+}
+
+.cocacola .SonicCheckbox_container:has(input:checked):after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}
+
+.cocacola .sonicButton.filled svg {
+  filter: invert(1) !important;
+}

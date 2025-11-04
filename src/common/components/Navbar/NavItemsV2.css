@@ -1,0 +1,54 @@
+.navitems__menu_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 calc(3vw + 7px) 0 0px;
+  height: 80px;
+}
+
+.navitems__menu_left {
+  display: flex;
+  gap: 15px;
+}
+
+.navitems__menu_right {
+  display: flex;
+  gap: 20px;
+}
+
+.navitems__menu_left .navitem:first-child a {
+  padding-left: 5px !important;
+}
+
+/* .navitems__menu_container .navitems__menu_left.navitem.dissable_Link {
+  pointer-events: none;
+  cursor: default;
+} */
+
+#navitems .navitem:last-child .WebNavbar--anchor {
+  padding-right: 0 !important;
+}
+
+
+.sonic-profile-dialog .sonic-profile-wrapper {
+  width: 1200px !important;
+}
+
+.sonic-profile-dialog .MuiPaper-root.MuiDialog-paper {
+  max-width: 1300px !important;
+}
+
+.sonic-profile-dialog .sonic-profile-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1204px) {
+  .sonic-profile-dialog .MuiPaper-root.MuiDialog-paper {
+    max-width: 1000px !important;
+  }
+
+  .sonic-profile-dialog .sonic-profile-wrapper {
+    width: 800px !important;
+  }
+}

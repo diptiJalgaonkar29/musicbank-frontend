@@ -1,0 +1,255 @@
+.SearchPageTS__TrackSection .slick-slider {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 35px;
+}
+
+.SearchPageTS__TrackSection .slick-dots,
+.SearchPageTS__TrackSection .slick-next,
+.SearchPageTS__TrackSection .slick-prev {
+  position: absolute;
+  display: block;
+  padding: 0;
+}
+
+.SearchPageTS__TrackSection .slick-dots li button:before,
+.SearchPageTS__TrackSection .slick-next:before,
+.SearchPageTS__TrackSection .slick-prev:before {
+  font-family: slick;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.SearchPageTS__TrackSection .slick-next,
+.SearchPageTS__TrackSection .slick-prev {
+  font-size: 0;
+  line-height: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: 0;
+  background: 0 0;
+}
+
+.SearchPageTS__TrackSection .slick-next:focus:before,
+.SearchPageTS__TrackSection .slick-next:hover:before,
+.SearchPageTS__TrackSection .slick-prev:focus:before,
+.SearchPageTS__TrackSection .slick-prev:hover:before {
+  opacity: 1;
+}
+
+.SearchPageTS__TrackSection .slick-next.slick-disabled:before,
+.SearchPageTS__TrackSection .slick-prev.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.SearchPageTS__TrackSection .slick-next:before,
+.SearchPageTS__TrackSection .slick-prev:before {
+  font-size: 40px;
+  line-height: 1;
+  opacity: 0.9;
+  color: var(--color-white);
+}
+
+.SearchPageTS__TrackSection .slick-prev {
+  left: -25px;
+}
+
+.SearchPageTS__TrackSection [dir="rtl"] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+
+.SearchPageTS__TrackSection .slick-prev:before {
+  content: "<";
+
+  /* background: url("../../../static/slick-prev-svg.svg") no-repeat !important; */
+
+  /* display: block;
+
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 6px 0 0; */
+}
+
+.SearchPageTS__TrackSection .slick-next:before,
+.SearchPageTS__TrackSection [dir="rtl"] .slick-prev:before {
+  content: ">";
+}
+
+.SearchPageTS__TrackSection .slick-next {
+  right: -25px;
+}
+
+.SearchPageTS__TrackSection [dir="rtl"] .slick-next {
+  right: auto;
+  left: -25px;
+}
+
+.SearchPageTS__TrackSection [dir="rtl"] .slick-next:before {
+  content: "<";
+}
+
+.SearchPageTS__TrackSection .slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.SearchPageTS__TrackSection .slick-dots {
+  bottom: -25px;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.SearchPageTS__TrackSection .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.SearchPageTS__TrackSection .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+}
+
+.SearchPageTS__TrackSection .slick-dots li button:focus,
+.SearchPageTS__TrackSection .slick-dots li button:hover {
+  outline: 0;
+}
+
+.SearchPageTS__TrackSection .slick-dots li button:focus:before,
+.SearchPageTS__TrackSection .slick-dots li button:hover:before {
+  opacity: 1;
+}
+
+.SearchPageTS__TrackSection .slick-dots li button:before {
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "â€¢";
+  text-align: center;
+  opacity: 0.25;
+  color: #000;
+}
+
+.SearchPageTS__TrackSection .slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #000;
+}
+
+.SearchPageTS__TrackSection .slick-list,
+.SearchPageTS__TrackSection .slick-slider,
+.SearchPageTS__TrackSection .slick-track {
+  position: relative;
+  display: block;
+}
+
+.SearchPageTS__TrackSection .slick-loading .slick-slide,
+.SearchPageTS__TrackSection .slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.SearchPageTS__TrackSection .slick-slider {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.SearchPageTS__TrackSection .slick-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.SearchPageTS__TrackSection .slick-list:focus {
+  outline: 0;
+}
+
+.SearchPageTS__TrackSection .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.SearchPageTS__TrackSection .slick-slider .slick-list,
+.SearchPageTS__TrackSection .slick-slider .slick-track {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.SearchPageTS__TrackSection .slick-track:after {
+  clear: both;
+}
+
+.SearchPageTS__TrackSection .slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.SearchPageTS__TrackSection [dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.SearchPageTS__TrackSection .slick-slide img {
+  display: block;
+}
+
+.SearchPageTS__TrackSection .slick-initialized .slick-slide {
+  display: block;
+}
+
+.SearchPageTS__TrackSection .slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.SearchPageTS__TrackSection .slick-arrow {
+  z-index: 200;
+  height: unset !important;
+  width: unset !important;
+  padding: 0 !important;
+  opacity: 0.9;
+  top: 40%;
+  /* padding: 40px; */
+}
+
+.SearchPageTS__TrackSection .slick-arrow.slick-hidden {
+  display: none;
+}

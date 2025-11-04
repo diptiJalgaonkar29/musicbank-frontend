@@ -1,0 +1,116 @@
+.homePageV3_content_right {
+  width: 50%;
+}
+
+.recent-tracksv3 .search_results_card_info_container {
+  padding: 0;
+  width: auto;
+}
+
+.recent-tracksv3 {
+  background-color: var(--color-bg);
+}
+
+.recent-tracksv3 .recent-tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 10px;
+}
+
+/* Card Container */
+.recent-tracksv3 .search_results_card_container {
+  display: flex;
+  align-items: center;
+  /* background: #111; */
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in-out;
+  margin: 10px 0;
+}
+
+.recent-tracksv3 .search_results_card_container:hover {
+  transform: translateY(-2px);
+}
+
+/* Left Image */
+.recent-tracksv3 .search_results_card_img_container {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 10px;
+}
+
+.recent-tracksv3 .track-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Middle Info */
+.recent-tracksv3 .search_results_card_info_container {
+  flex: 1;
+  margin-left: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recent-tracksv3 .search_results_card_title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.recent-tracksv3 .search_results_card_title:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+  /* text-decoration: underline; */
+}
+
+.recent-tracksv3 .tags_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.recent-tracksv3 .track-tag {
+  background: var(--color-card);
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+.recent-tracksv3 .favBtn {
+  margin-bottom: 6px;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+/* Right Icon + Duration */
+.recent-tracksv3 .track_icon_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  min-width: 50px;
+  gap: inherit;
+  margin-right: 15px;
+}
+
+.recent-tracksv3 .favBtn {
+  margin-bottom: 6px;
+}
+
+.recent-tracksv3 .search_results_card_duration {
+  font-size: 14px;
+  font-weight: 500;
+  color: #bbb;
+}

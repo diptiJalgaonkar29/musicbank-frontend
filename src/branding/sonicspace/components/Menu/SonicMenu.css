@@ -1,0 +1,10 @@
+.sonic_menu_container .MuiPaper-root.MuiMenu-paper {
+  background-color: var(--color-card) !important;
+  border-radius: 8px !important;
+  transform: scale(0.9) translateY(10px) translateX(25px) !important;
+}
+
+.sonic_menu_container .MuiList-root.MuiMenu-list {
+  width: 215px !important;
+  max-height: 250px !important;
+}

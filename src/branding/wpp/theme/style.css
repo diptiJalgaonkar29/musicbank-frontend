@@ -1,0 +1,854 @@
+.wpp-typography::part(typography) {
+  color: var(--color-white);
+}
+
+.wpp-typography.brandTitle::part(typography) {
+  color: var(--color-primary);
+}
+
+.wpp-typography.title::part(typography) {
+  color: var(--color-white);
+}
+
+.wpp-typography.subtitle::part(typography) {
+  color: var(--color-white);
+  margin: 0 0 3rem 0;
+}
+
+.wpp-typography.tiplink::part(typography) {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.wpp-pill::part(label) {
+  color: var(--color-white);
+}
+
+.wpp-pill::part(label):hover {
+  color: var(--color-white);
+}
+
+.wpp-pill.tag_amp_allmood_ids::part(pill-wrapper),
+.wpp-pill.tag_amp_mainmood_ids::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-amp_allmood_ids-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_amp_allmood_ids::part(label),
+.wpp-pill.tag_amp_mainmood_ids::part(label) {
+  color: var(--color-bubbletag-amp_mainmood_ids-text);
+}
+
+.wpp-pill.st-tbl-sel-2::part(pill-wrapper) {
+  border-color: transparent;
+}
+
+.wpp-pill.st-tbl-sel-2::part(label) {
+  color: #fff;
+}
+
+.wpp-pill.tag_soniclogo_allmood_ids::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-amp_allmood_ids-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_soniclogo_allmood_ids::part(label),
+.wpp-pill.tag_soniclogo_allmood_ids::part(label) {
+  color: var(--color-bubbletag-amp_mainmood_ids-text);
+}
+
+.wpp-pill.tag_genre::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-genre-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_feelings::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-feelings-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_tonality::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-tonality-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_motion::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-motion-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_impact::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-impact-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_genre::part(label) {
+  color: var(--color-bubbletag-genre-text);
+}
+
+.wpp-pill.tag_tempo::part(pill-wrapper),
+.wpp-pill.tempo::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-tempo-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_tempo::part(label),
+.wpp-pill.tempo::part(label) {
+  color: var(--color-bubbletag-tempo-text);
+}
+
+.wpp-pill.tag_key::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-key-bg);
+  text-transform: lowercase;
+  border-color: transparent;
+}
+
+.wpp-pill.instrument_ids::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-instrument-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.assetTypeId::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-asset_type_ids-bg);
+  border-color: transparent;
+}
+
+.wpp-modal::part(content) {
+  width: fit-content;
+  min-width: 600px;
+}
+
+.wpp-modal::part(body-wrapper) {
+  padding: 0;
+}
+
+.wpp-toggle::part(text) {
+  color: var(--color-white);
+}
+
+.wpp-toggle.checked::part(label)::before {
+  background-color: var(--color-primary);
+}
+
+.wpp-toggle.checked.--color-overtimechart-1::part(label)::before {
+  background-color: var(--color-overtimechart-1);
+}
+.wpp-toggle.checked.--color-overtimechart-2::part(label)::before {
+  background-color: var(--color-overtimechart-2);
+}
+.wpp-toggle.checked.--color-overtimechart-3::part(label)::before {
+  background-color: var(--color-overtimechart-3);
+}
+.wpp-toggle.checked.--color-overtimechart-4::part(label)::before {
+  background-color: var(--color-overtimechart-4);
+}
+.wpp-toggle.checked.--color-overtimechart-5::part(label)::before {
+  background-color: var(--color-overtimechart-5);
+}
+.wpp-toggle.checked.--color-overtimechart-6::part(label)::before {
+  background-color: var(--color-overtimechart-6);
+}
+.wpp-toggle.checked.--color-overtimechart-7::part(label)::before {
+  background-color: var(--color-overtimechart-7);
+}
+.wpp-toggle.checked.--color-overtimechart-8::part(label)::before {
+  background-color: var(--color-overtimechart-8);
+}
+.wpp-toggle.checked.--color-overtimechart-9::part(label)::before {
+  background-color: var(--color-overtimechart-9);
+}
+.wpp-toggle.checked.--color-overtimechart-10::part(label)::before {
+  background-color: var(--color-overtimechart-10);
+}
+.wpp-toggle.checked.--color-overtimechart-11::part(label)::before {
+  background-color: var(--color-overtimechart-11);
+}
+.wpp-toggle.checked.--color-overtimechart-12::part(label)::before {
+  background-color: var(--color-overtimechart-12);
+}
+.wpp-toggle.checked.--color-overtimechart-13::part(label)::before {
+  background-color: var(--color-overtimechart-13);
+}
+.wpp-toggle.checked.--color-overtimechart-14::part(label)::before {
+  background-color: var(--color-overtimechart-14);
+}
+.wpp-toggle.checked.--color-overtimechart-15::part(label)::before {
+  background-color: var(--color-overtimechart-15);
+}
+.wpp-toggle.checked.--color-overtimechart-16::part(label)::before {
+  background-color: var(--color-overtimechart-16);
+}
+.wpp-toggle.checked.--color-overtimechart-17::part(label)::before {
+  background-color: var(--color-overtimechart-17);
+}
+.wpp-toggle.checked.--color-overtimechart-18::part(label)::before {
+  background-color: var(--color-overtimechart-18);
+}
+.wpp-toggle.checked.--color-overtimechart-19::part(label)::before {
+  background-color: var(--color-overtimechart-19);
+}
+.wpp-toggle.checked.--color-overtimechart-20::part(label)::before {
+  background-color: var(--color-overtimechart-20);
+}
+
+.wpp-typography.modal_title::part(typography) {
+  color: var(--color-white);
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.wpp-list-item::part(label),
+.wpp-input::part(input),
+.wpp-single-select::part(placeholder),
+.wpp-autocomplete::part(typography),
+.wpp-datepicker::part(datepicker-input),
+.wpp-textarea-input::part(textarea) {
+  color: var(--color-white);
+}
+
+.wpp-slider {
+  width: 100% !important;
+}
+
+.wpp-action-button::part(button) {
+  height: 28px;
+  border-color: var(--color-secondary);
+}
+
+.wpp-datepicker::part(datepicker-container) {
+  width: 100%;
+}
+
+.wpp-button.s {
+  height: 28px !important;
+  border-color: var(--color-secondary);
+}
+
+.wpp-input.s::part(input) {
+  height: 28px;
+  padding-bottom: 10px;
+}
+
+.wpp-checkbox::part(text) {
+  color: var(--color-white);
+  font-size: 1.6rem;
+}
+
+.wpp-file-upload::part(text-info) {
+  display: none;
+}
+
+.wpp .sonic_datepicker .MuiInputBase-input {
+  padding: 0px 11px !important;
+  border-color: #a2a9b0 !important;
+  height: 40px !important;
+  font-size: 14px !important;
+}
+
+/* NAVBAR */
+
+/* .navitem a:hover,
+.navitem a:active,
+.navitem a.navitem--active,
+.WebNavbar--anchor,
+.reportBugContainer,
+.navbar__container .MuiBadge-badge.MuiBadge-anchorOriginTopRightRectangular {
+  color: #fff !important;
+}
+
+.navitem a:active,
+.navitem a.navitem--active {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 3px !important;
+  text-underline-offset: 5px !important;
+  font-weight: 700 !important;
+}
+
+.navbar__container {
+  background-color: var(--color-primary) !important;
+}
+
+.navbar__container .MuiBadge-badge {
+  background-color: var(--color-white) !important;
+}
+
+.toggleMenuContainer .bar1,
+.toggleMenuContainer .bar2,
+.toggleMenuContainer .bar3 {
+  background-color: #fff !important;
+}
+
+.toggleMenuContainer .navitems__toggleContainer {
+  background-color: var(--color-primary) !important;
+} */
+
+.TrackcardV2 .actionMenuSet {
+  gap: 5px !important;
+  min-width: 200px !important;
+}
+
+.TrackPage__wrapper .trackButtonAction {
+  gap: 0 !important;
+}
+
+/* .super_search_action_chip {
+  background-color: transparent !important;
+} */
+.create_playlist_form {
+  min-width: auto !important;
+}
+
+.report-bug-dialog form {
+  border-radius: 5px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  min-width: auto !important;
+}
+
+.login_form .login_password_input .eye_icon {
+  right: 10px !important;
+  top: 10px !important;
+}
+
+/* .login-ac-container-V3 {
+  margin: -1rem 0 1.5rem 0 !important;
+} */
+
+.report-bug-dialog .feedBack_container {
+  background-color: transparent !important;
+  border: none !important;
+  width: 90% !important;
+}
+
+.CommentSections__newComment--wrapper .submit_chat {
+  position: absolute !important;
+  right: 10px !important;
+}
+
+/* .TrackcardV2 #TimeLineComponentV2 {
+  filter: invert(100%) brightness(100%) contrast(95%) !important;
+  background-color: #fff !important;
+} */
+
+.RecentlyAddedTracksList.recent-tracksv3 #TimeLineComponent {
+  display: none;
+}
+.wpp .playButtonWrapper.playButton__container_tctp {
+  align-items: center;
+  border: none;
+  border-radius: 48px;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 56px;
+}
+/* .PlayListTitleList__Item #TimeLineComponent {
+  filter: contrast(2) invert(1) !important;
+  background-color: #fff !important;
+} */
+
+/* .TrackPage__wrapper .TrackCard__player #TimeLineComponent {
+  filter: invert(100%) brightness(100%) contrast(95%) !important;
+  background-color: #fff !important;
+} */
+
+/* .TrackPage__wrapper .EditTrackCard--audio #TimeLineComponent {
+  background-color: #fff !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(201deg)
+    brightness(179%) contrast(82%) !important;
+} */
+
+/* .TrackPage__wrapper
+  .Cyanite_AudioPlayer
+  #audioplayer_tctp
+  #TimeLineComponent::before {
+  filter: invert(100%) brightness(134%) contrast(96%) !important;
+  background-color: #fff !important;
+} */
+
+/* .musicPlayerContainer .waveImage {
+  filter: invert(100%) brightness(134%) contrast(96%) !important;
+} */
+
+/* .musicPlayerContainer .progressBarNew::-webkit-slider-runnable-track {
+  background-color: #000 !important;
+} */
+
+.musicPlayerContainer .musicControls {
+  gap: 10px !important;
+}
+
+.TrackcardV2 .favBtn {
+  width: auto !important;
+}
+
+.TrackcardV2 .MuiPaper-elevation1 {
+  box-shadow: none !important;
+}
+
+.st-container .st-container-inner table .st-tbl-sel-2 {
+  padding: 0 !important;
+}
+
+.track-slide-show-item-content-playlist .PlayListCoverPicture {
+  background-color: var(--color-lightgray) !important;
+}
+
+/* .PlayListTitleList__Item #TimeLineComponent::before {
+  filter: invert(11%) sepia(0%) saturate(0%) hue-rotate(201deg) brightness(100%)
+    contrast(73%) !important;
+} */
+
+.PlayListTitleList__Item #pButton,
+.TrackcardV2 #pButton,
+.TrackPage__wrapper #pButton,
+.music_container_trim .sonic_icon_button.playPause {
+  scale: 1 !important;
+}
+
+.CommentSection__container
+  .CommentSections__newComment
+  .CommentSections__newComment--wrapper
+  .comment_input {
+  width: 100% !important;
+}
+
+.accordion__item {
+  border-radius: var(--wpp-border-radius-m) !important;
+}
+
+.MuiAccordion-rounded,
+.MuiPickersModal-dialogRoot
+  .MuiDialogActions-root.MuiDialogActions-spacing
+  .MuiButtonBase-root,
+.MemberOverview__ul li,
+#delete-track-menu .MuiPaper-root.MuiMenu-paper,
+.sonic_menu_container .MuiPaper-root.MuiMenu-paper,
+.TrackPage__wrapper .TrackCard__player,
+.TrackPage__container .UsedInOuterContainer,
+.TrackPage__container .masterOuterContainer,
+.used_in_video_container,
+.used_in_video_container .cover_image,
+.used_in_video_container .cover_image_skeleton,
+.PlayListCoverPicture__container,
+.PlayListCoverPicture,
+.MyMusic__SideBar .MyMusicSideBar__Wrapper .MyMusicSideBar__Item h4,
+.MyMusic__container .MuiPaper-root,
+.MyMusic__Wrapper .PlayListTitleList__container,
+.CommentSection__container .CommentSections__messages .Comments__ul li,
+.DocumentsPage__container__v2 .DocumentsPage__Item,
+.combinedUserTextBlock,
+.DocumentsPage__container__v2 .DocumentsPage__card,
+.Load-basket-cover-image-container img,
+.checkboxes-container .mb_input_other,
+.TrackPage__container .TpTc__img--holderSpinner,
+.downloadBasketFormPage .datePicker .MuiInputBase-input,
+.footer-dialog .footer_modal_iframe,
+.musicPlayerContainer .audioPlayer,
+.TrackPage__container .TrackPage__wrapper--edits--content .EditTrackCard,
+.TrackPage__container
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  .EditTrackCard__img,
+.TrackPage__wrapper .TpTc__img--holder img,
+.DocumentsPage__container__v2 .DocumentsPage__card--img,
+.SearchPageTS__SliderSection
+  .SearchPageTS__TrackSection
+  .track-slide-show-item-content
+  span,
+.audioPlayer_loader,
+.custSearchBoxForAll__tblHolder,
+.custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data1,
+.custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data2,
+.custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data3,
+.wpp .sonic_datepicker .MuiInputBase-input {
+  border-radius: var(--wpp-border-radius-m) !important;
+}
+
+.custSearchBoxForAll__tblHolder {
+  width: 326px;
+}
+
+.MemberOverview__ul li {
+  border-radius: var(--wpp-border-radius-m) var(--wpp-border-radius-m) 0px 0px !important;
+}
+
+.validityMeta {
+  border-radius: 0px 0px var(--wpp-border-radius-m) var(--wpp-border-radius-m) !important;
+}
+
+.MemberOverview__li--select.errorColorBackground {
+  border-radius: var(--wpp-border-radius-m) !important;
+}
+
+.MuiPickersModal-dialogRoot
+  .MuiDialogActions-root.MuiDialogActions-spacing
+  .MuiButtonBase-root {
+  color: #fff !important;
+}
+
+.downloadBasketFormPage .datePicker .MuiInputBase-input {
+  height: 38px !important;
+  border-color: #8b919a !important;
+}
+
+.MyMusic__container .MuiPaper-root {
+  box-shadow: none !important;
+}
+
+.PlayListTitleList__wrapper {
+  border-radius: var(--wpp-border-radius-m) !important;
+}
+
+.MyMusic__container .MyMusic__Wrapper #RegisteredPlayListMembers__wrapper {
+  border-radius: var(--wpp-border-radius-m) var(--wpp-border-radius-m) 0px 0px !important;
+}
+
+.MyMusic__container .MyMusic__Wrapper #ExternalPlayListMembers__wrapper {
+  border-radius: 0 0 var(--wpp-border-radius-m) var(--wpp-border-radius-m) !important;
+}
+
+.audioEditorBlock .audioTrimLoading {
+  right: 100px !important;
+  bottom: 15px !important;
+}
+
+.audioEditorBlock .audTrim,
+.audioEditorBlock .audTrimDownload,
+.audioEditorBlock .audTrimApply,
+.audioEditorBlock .audTrimCancel {
+  width: auto !important;
+}
+
+#downloadTrimMsg {
+  line-height: 48px !important;
+}
+
+/* .music_container_trim {
+  margin-top: 52px !important;
+} */
+
+.st-container .st-container-inner .st-btn-library.active,
+.st-container .st-container-inner .st-btn-spotify.active {
+  color: #fff !important;
+}
+
+.st-container .st-container-inner .st-btn-spotify.active svg {
+  fill: #fff !important;
+}
+
+.musicPlayerContainer .volumeSlider {
+  margin-right: 10px !important;
+}
+
+.radarBlock .apexcharts-data-labels text {
+  fill: #fff !important;
+}
+
+.MuiPaper-root.MuiSnackbarContent-root .MuiSnackbarContent-message {
+  color: #fff !important;
+}
+
+.MuiSnackbarContent-action .MuiSvgIcon-root {
+  fill: #fff !important;
+}
+
+.Comment_element--Shadow {
+  color: #fff !important;
+}
+.Comment_Icon {
+  top: -46px !important;
+}
+
+.PlaylistDescription__Name--editIcon {
+  top: 4px !important;
+  position: absolute !important;
+  right: 0px !important;
+  display: none !important;
+}
+
+.PlaylistDescription__Name:hover .PlaylistDescription__Name--editIcon {
+  display: flex !important;
+}
+
+.PlaylistDescription__Description--editIcon {
+  top: -6px !important;
+  position: absolute !important;
+  right: 0px !important;
+  display: none !important;
+}
+
+.PlaylistDescription__Description:hover
+  .PlaylistDescription__Description--editIcon {
+  display: flex !important;
+}
+
+.PlaylistCoverImage--image {
+  position: relative !important;
+}
+
+.PlaylistCoverImage--editIcon {
+  right: 10px !important;
+  position: absolute !important;
+  bottom: 10px !important;
+  display: none !important;
+}
+.PlaylistCoverImage--image:hover .PlaylistCoverImage--editIcon {
+  display: flex !important;
+}
+
+.PlaylistCoverImage--approveNewName .file-upload-wrapper:before {
+  color: #fff !important;
+  border-radius: var(--wpp-border-radius-m) !important;
+  padding: 1px 20px !important;
+  font-size: 1.4rem !important;
+  font-weight: bold !important;
+}
+
+.login-ac-container-V3 label {
+  cursor: default !important;
+}
+
+.audioPlayer_loader .Spinner {
+  filter: invert(1) !important;
+}
+
+#navitems.navitems__menu_right .navitem .WebNavbar--anchor {
+  padding: 2px 5px !important;
+}
+
+.download_cart_count_badge {
+  position: absolute !important;
+  top: -6px !important;
+  right: -3px !important;
+  scale: 0.9 !important;
+  color: #fff !important;
+}
+
+.download_cart_count {
+  color: #fff !important;
+}
+
+.saveToDraftBtn {
+  background-color: transparent !important;
+  color: var(--color-white) !important;
+}
+
+.checkboxes-container .mediaType-list {
+  height: 202px !important;
+}
+
+.TakeToAIMenu_buttonText_container,
+.SimilaritySearchMenu_buttonText_container,
+.AddItemToPlaylistMenuV2_buttonText_container,
+.DownloadWidgetWithCookiesV2Dialog_buttonText_container {
+  padding: 0 20px 0 0 !important;
+}
+
+.DownloadWidgetWithCookiesV2Dialog_buttonText_container {
+  background-color: var(--color-card) !important;
+  color: var(--color-white) !important;
+}
+
+/* .wpp .TrackPageHeader_wave {
+  filter: invert(100%) brightness(100%) contrast(95%) !important;
+  /* background-color: #fff !important; 
+} */
+
+.custSearchBoxForAll .custom-input {
+  width: 100% !important;
+  padding: 0px 0px 0px 12px !important;
+  background-color: var(--color-bg) !important;
+}
+
+.custSearchBoxForAll .custSearch__container .custSearch_closeBtn {
+  right: 39px !important;
+  top: 0px !important;
+}
+
+.custom-input.searchBar-input.wpp-input.s::part(input) {
+  width: 100% !important;
+  padding-right: 85px !important;
+}
+
+.MyMusic__Wrapper .PlayListTitleList__container .custSearchBoxForAll {
+  right: 50px !important;
+  top: -46px !important;
+}
+
+.profile_menu_main_container .profile_form_input-fields {
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+
+.profile_menu_main_container .profile_form_action_button_container {
+  top: 6px !important;
+}
+
+.profile_menu_main_container form .confirm_password_input,
+.profile_menu_main_container .set_new_password_group .set_new_password_field {
+  background-color: transparent !important;
+  color: var(--color-white) !important;
+  width: 100% !important;
+  padding-right: 0 !important;
+}
+
+.profile_menu_main_container .confirm_password_input.wpp-input::part(input),
+.profile_menu_main_container .set_new_password_field.wpp-input::part(input) {
+  width: 100% !important;
+  padding-right: 40px !important;
+}
+
+.profile_menu_main_container .profile_password_input .eye_icon,
+.profile_menu_main_container .eye_icon_new_password {
+  top: 10px !important;
+  right: 10px !important;
+}
+
+.searchResuts__container .searchResults__refinements .MuiAccordionSummary-root {
+  padding: 0px 12px 0px 0px !important;
+}
+
+.wpp .searchResults__custSearch_rp .custSearchBoxForAll {
+  z-index: auto !important;
+}
+
+.wpp .CustomNotificationTopBar_text {
+  color: #fff !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  .TakeToAIMenu_buttonText_container,
+  .SimilaritySearchMenu_buttonText_container,
+  .AddItemToPlaylistMenuV2_buttonText_container,
+  .DownloadWidgetWithCookiesV2Dialog_buttonText_container {
+    gap: 1rem !important;
+    padding: 0 15px 0 0 !important;
+  }
+  .custSearchBoxForAll__tblHolder {
+    width: 270px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .download_cart_count_badge {
+    top: 0px !important;
+    right: -8px !important;
+  }
+}
+.wpp .brand_logo {
+  width: 130px;
+}
+.wpp .navbar__container img {
+  max-width: 80px;
+}
+.wpp .brandLogo_container {
+  background-color: var(--color-lightgray);
+}
+.wpp .selected_btn .content slot {
+  color: var(--color-bg);
+}
+/* Style the internal button only when .selected_btn is on the host */
+/* Default style for ctf_btn (when NOT selected) */
+wpp-button-v3-1-1.ctf_btn::part(button) {
+  background-color: var(--color-bg);
+  color: var(--color-white) !important;
+  border: 1px solid var(--color-white) !important;
+}
+
+/* Style when selected_btn class is present */
+wpp-button-v3-1-1.selected_btn::part(button) {
+  background-color: var(--color-primary) !important;
+  color: var(--color-bg) !important;
+  border: 1px solid var(--color-bg) !important; /* optional, match bg if needed */
+}
+
+.wpp .HomePageV3Header_container .SmartInputBox .smart-input-wrapper,
+.wpp .SmartSpotifyInputBox .smart-input-wrapper,
+.wpp .SmartInputBox .smart-input-wrapper {
+  background-color: var(--color-bg);
+  border-radius: 8px;
+}
+.wpp .SmartInputBox .smart-textarea-contenteditable,
+.wpp .SmartSpotifyInputBox .smart-textarea-contenteditable {
+  color: var(--color-white);
+}
+.wpp .AlgoliaSearchContainer .algolia-chip {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+.wpp .wpp-button::part(button) {
+  color: #fff;
+  width: 100%;
+}
+.wpp .filter-sidebar .checkbox-item {
+  margin-top: 4px;
+}
+.wpp .recent-tracksv3 .track-tag {
+  background: var(--color-primary);
+}
+.wpp .SmartInputBox .right-btn {
+  padding: 8px 6px;
+}
+.wpp .musicPlayerContainer.trackAvailable .audioPlayer wpp-slider-v3-1-1 {
+  --wpp-slider-width: 185px;
+  --slider-clickable-wrapper-height: 50px; /* Example to change height */
+}
+
+.wpp .musicPlayerContainer.trackAvailable .audioPlayer .volumeSlider {
+  width: 220px;
+}
+.wpp .Activeproject_list_item .activeSS_project_view path,
+.wpp .Activeproject_list_item .activeSS_project_view path,
+.wpp .projectIcons .activeSS_project_view path {
+  fill: #003de4 !important;
+  color: #003de4 !important;
+}
+.wpp .filter-panel .filter-close-btn svg {
+  stroke: #000 !important;
+}
+.wpp .filter-panel .filter-toggle-wrapper svg path {
+  fill: #000;
+}
+.wpp .filter-panel .filter-sidebar.open svg path {
+  stroke: #000;
+}
+.wpp .SmartInputBox .smart-input-wrapper,
+.wpp .SmartSpotifyInputBox .smart-input-wrapper {
+  border-radius: 8px;
+}
+
+.wpp .navbar__container .navbar__logo__container {
+  margin-right: 20px;
+}
+
+.wpp-add-plalist .wpp-button::part(button) {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.wpp-add-plalist {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wpp-addToPlaylistDialog .wpp-modal::part(content) {
+  width: fit-content;
+  min-width: 400px;
+}
+.wpp .projectDownloadv1 .edit-button {
+  scale: 1.6 !important;
+}
+.wpp .add-contributors-btn {
+  background-color: transparent;
+}

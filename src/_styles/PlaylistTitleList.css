@@ -1,0 +1,249 @@
+.PlayListTitleList__container {
+  box-sizing: border-box;
+  grid-column: 3 / 4;
+  grid-row: 2 / 9;
+  margin-left: 8rem;
+}
+
+.PlayListTitleList__container .Comment_Icon .sonic_icon_button {
+  background-color: var(--color-white);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 55px; */
+  height: 50px;
+  border-radius: 50%;
+  padding: 5px 18px;
+}
+
+.playlist-action-bar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.playlist-action-bar .searchHeadBtn {
+  width: auto;
+  height: auto;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 28px;
+  border: none;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.PlayListTitleList__Extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.PlayListTitleList__Extra--actions {
+  display: flex;
+  width: auto !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.PlayListTitleList__Extra--actions .MuiSvgIcon-root {
+  font-size: 20px !important;
+}
+
+.PlayListTitleList__Extra--actions .sonic_icon_button[icon="DownArrow"],
+.PlayListTitleList__Extra--actions .sonic_icon_button[icon="UpArrow"] {
+  scale: 0.8 !important;
+}
+
+.PlayListTitleList__Extra--actions .sonic_icon_button {
+  background-color: transparent !important;
+  width: 30px !important;
+  height: 30px !important;
+  padding: 0px 0px !important;
+}
+
+.PlayListTitleList__Item {
+  width: 100%;
+  padding-right: 0px !important;
+  cursor: default;
+}
+
+.PlayListTitleList__Item {
+  width: 100%;
+  padding-right: 0px !important;
+}
+
+.PlayListTitleList__Item:hover .PlayListTitleList__Extra--deletIcon {
+  visibility: visible;
+  opacity: 1;
+}
+
+.PlayListTitleList__Item:hover .PlayListTitleList__Extra--deletIcon:hover {
+  cursor: pointer;
+}
+
+.PlayListTitleList__Extra--deletIcon {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.PlayListTitleList__Extra--expansionIcon {
+  transform: rotate(0deg);
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.PlayListTitleList__Extra--expansionIcon:hover {
+  cursor: pointer;
+}
+
+/* TAG STYING IN MUSIC PLAYER , Copied to Prevent not loading*/
+
+/* .TrackCard__item__tags {
+  display: block !important;
+  width: 100% !important;
+  padding-top: 0.5rem !important;
+
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  align-items: space-around !important;
+  min-width: 100% !important;
+} */
+
+/* .TrackCard__item__tags span {
+  display: inline-block !important;
+  line-height: 1 !important;
+  padding: 0.7rem 1rem !important;
+  cursor: default;
+  border: 1px solid #ccc !important;
+  border-radius: var(--border-radius-sm) !important;
+  margin-bottom: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  font-size: 1.3rem !important;
+} */
+
+/* .Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.tonalityTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-tonality-bg) !important;
+}
+
+.Playlist__track__tag__container.TrackCard__item__tags .sonic_chip.genreTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-genre-bg) !important;
+}
+
+.Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.feelingsTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-feelings-bg) !important;
+}
+
+.Playlist__track__tag__container.TrackCard__item__tags .sonic_chip.impactTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-impact-bg) !important;
+}
+.Playlist__track__tag__container.TrackCard__item__tags .sonic_chip.motionTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-motion-bg) !important;
+}
+.Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.instrumentTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-instrument-bg) !important;
+}
+.Playlist__track__tag__container.TrackCard__item__tags .sonic_chip.tempoTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-tempo-bg) !important;
+}
+.Playlist__track__tag__container.TrackCard__item__tags .sonic_chip.keyTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-key-bg) !important;
+}
+.Playlist__track__tag__container.TrackCard__item__tags .sonic_chip.tagUsedIn {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-usedIn-bg) !important;
+} */
+
+.Playlist__track__tag__container.TrackCard__item__tags .sonic_chip {
+  border-color: transparent;
+}
+
+.Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.tag_amp_allmood_ids {
+  background-color: var(--color-bubbletag-amp_allmood_ids-bg) !important;
+  color: var(--color-bubbletag-amp_mainmood_ids-text) !important;
+}
+
+.Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.tag_soniclogo_allmood_ids {
+  background-color: var(--color-bubbletag-soniclogo_mainmood_ids-bg) !important;
+  color: var(--color-bubbletag-soniclogo_mainmood_ids-text) !important;
+}
+
+.Playlist__track__tag__container.TrackCard__item__tags .sonic_chip.tag_genre {
+  background-color: var(--color-bubbletag-genre-bg) !important;
+  color: var(--color-bubbletag-genre-text) !important;
+}
+
+.Playlist__track__tag__container.TrackCard__item__tags .sonic_chip.tag_key {
+  background-color: var(--color-bubbletag-key-bg) !important;
+  text-transform: lowercase;
+}
+
+.Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.instrument_ids {
+  background-color: var(--color-bubbletag-instrument-bg) !important;
+  color: var(--color-white) !important;
+}
+
+/* PLAYER STYLINGS */
+.PlayListTitleList__Item .TrackCard__audio {
+  border: none;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.PlayListTitleList__Item #audioplayer {
+  height: 5.5rem;
+  justify-content: space-between !important;
+  align-items: center;
+}
+
+.PlayListTitleList__Item #TimeLineComponent {
+  transform: scaleY(0.6);
+}
+
+.PlayListTitleList__Item #pButton {
+  /* height: 3.1rem;
+  width: 3rem;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  border: none; */
+  background-color: transparent;
+  scale: 1.8;
+}
+
+.PlayListTitleList__Item #pButton:hover {
+  /* cursor: pointer; */
+}
+
+.PlayListTitleList__Item .TrackCard__time {
+  position: static;
+}
+
+.PlayListTitleList__container--noTracks {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.PlayListTitleList__container .new_playlist_accordian {
+  display: flex;
+  flex-direction: column;
+}

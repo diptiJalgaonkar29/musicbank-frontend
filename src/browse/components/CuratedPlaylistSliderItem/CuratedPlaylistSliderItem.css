@@ -1,0 +1,142 @@
+.track-slide-show-item-loading-playlist {
+  width: var(--picture-size);
+  height: var(--picture-size);
+  text-align: center;
+}
+.track-slide-show-item-playlist {
+  flex: 1 1 calc(25% - 20px); /* 4 per row (adjust %) */
+  max-width: calc(25% - 20px);
+  min-width: 180px; /* prevent too small */
+  height: 220px; /* reduce height */
+  text-align: center;
+  text-decoration: none;
+  outline: none !important;
+  color: var(--color-white);
+}
+
+.track-slide-show-item-playlist img {
+  width: var(--picture-size);
+  height: var(--picture-size);
+  /* border-radius: 25px; */
+}
+
+.track-slide-show-item-title-playlist {
+  width: var(--picture-size);
+  margin-top: 10px;
+  font-size: 1.8rem;
+}
+
+.track-slide-show-item-fallback-playlist {
+  width: var(--picture-size);
+  height: var(--picture-size);
+  text-align: center;
+}
+
+.track-slide-show-item-content-playlist {
+  position: relative;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100%; */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.track-slide-show-item-content-playlist p {
+  max-width: 19rem;
+}
+/* .track-slide-show-item-content-playlist:hover {
+  filter: grey;
+  -webkit-filter: grayscale(50%);
+} */
+
+/* .track-slide-show-item-content-playlist:after {
+  position: absolute;
+  content: " ";
+  -webkit-filter: invert(100%);
+  background-image: url("../../../static/more.svg");
+  background-size: 100% 85%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1),
+    transform 0.2s cubic-bezier(0, 0, 0.3, 1);
+  transform: rotate(10deg);
+} */
+
+/* .track-slide-show-item-content-playlist:hover:after {
+  opacity: 0.9;
+  transform: rotate(0deg);
+} */
+
+/* .trackslider_image-playlist {
+  height: var(--picture-size);
+  width: var(--picture-size); 
+} */
+
+.track-slide-show-item-content-playlist .PlayListCoverPicture__container {
+  /* height: var(--picture-size);
+  width: var(--picture-size); */
+  width: 180px;
+  height: 180px; /* reduce image height */
+
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.track-slide-show-item-content-playlist .PlayListCoverPicture {
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  border: none;
+}
+
+.track-slide-show-item-content-playlist [class^="PlaylistImage-"] {
+  border-radius: 0px;
+}
+
+img[class^="PlaylistImage-"] {
+  border-radius: 0px;
+  width: 100%;
+  height: auto;
+}
+
+.truncate-overflow {
+  --max-lines: 3;
+  position: relative;
+  max-height: calc(var(--lh) * var(--max-lines));
+  overflow: hidden;
+  padding-right: 1rem; /* space for ellipsis */
+}
+.truncate-overflow::before {
+  position: absolute;
+  content: "...";
+  /* tempting... but shows when lines == content */
+  /* top: calc(var(--lh) * (var(--max-lines) - 1)); */
+
+  /*
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  */
+  bottom: 0;
+  right: 0;
+}
+.truncate-overflow::after {
+  content: "";
+  position: absolute;
+  /*
+  inset-inline-end: 0;
+  */
+  right: 0;
+  /* missing bottom on purpose*/
+  width: 1rem;
+  height: 1rem;
+  background: white;
+}

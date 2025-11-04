@@ -1,0 +1,98 @@
+.HomePageV3Header_container {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  /* margin-bottom: 5rem; */
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  position: relative;
+  top: -26px;
+  margin-bottom: -15px;
+}
+.homePageV3_title {
+  font-size: 4rem;
+  line-height: 4.2rem;
+  margin: 10px 0 5px;
+}
+.homePageV3_title .highlight {
+  color: var(--color-texthighlight, var(--color-primary));
+}
+.homePageV3_subtitle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.HomePageV3Header_right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.HomePageV3Header_link_container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.HomePageV3Header_link_text {
+  color: var(--color-white);
+  font-size: 2.2rem;
+}
+
+.HomePageV3Header_container .SmartInputBox .smart-input-wrapper {
+  position: relative;
+  padding: 0px 4px 0px 15px;
+  border: 1px solid #444;
+  border-radius: 40px;
+  background-color: var(--color-bg-light, #222529);
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+  min-height: 54px;
+  align-items: center;
+  display: flex;
+}
+
+.HomePageV3Header_container .AISearchButtons {
+  display: flex;
+  background-color: var(--color-primary, #222529);
+  padding: 4px;
+  border-radius: 40px;
+  /* gap: 10px; */
+  width: 334px;
+  height: 49px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.HomePageV3Header_container .toggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  height: 41px;
+}
+
+.HomePageV3Header_container .toggleBtn .SimilarityIcon {
+  width: 22px;
+  height: 22px;
+}
+.HomePageV3Header_container .selectedBtn {
+  background-color: white;
+  color: black;
+}

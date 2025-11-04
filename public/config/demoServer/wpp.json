@@ -1,0 +1,112 @@
+{
+  "APP_VERSION": "V 12.0.0",
+  "LOGOUTTIME": "86400",
+
+  "CURATOR_MCODE": "6a45675b-3202-4c29-d7b5c37d1daf",
+  "JOB_STATUS_RETRIVE_INTERVAL": 20000,
+  "BRANDING": "wpp",
+  "IUBENDA_SITE_ID": "",
+  "IUBENDA_COOKIE_POLICY_ID": "",
+  "BRAND_NAME": "WPP",
+  "BRAND_NAME_SECONDARY": "WPP",
+  "BRAND_NAME_TERTIARY": "WPP",
+  "COOKIEPRO": "false",
+  "INTRO_VIDEO_RELATIVE_PATH": "",
+  "API_TTS_PROCESS": "https://voice.logthis.in/api/musicbank/process_TTS",
+  "CS_BASE_URL": "https://demo.wpp.creationstation.sonic-hub.com",
+  "CS_IFRAME_URL": "https://demo.wpp.creationstation.sonic-hub.com/config/demoServer/music-bank-cs.html",
+
+  "APP_SUPPORTED_BROWSER_LIST": ["Chrome", "Firefox"],
+  "INPROCESS_FLAX_CUE_IDS": [],
+  "SHOW_SPLASH_SCREEN": false,
+  "SPLASH_SCREEN_TEXT": "Please note, for the best experience, our tool is optimized for use on Chrome and Firefox browsers. Thank you for choosing Sonic Hub for your needs.",
+  "SUPPORT_FORM_FILE_SIZE": 10,
+  "OVERTIME_GRAPH_MAX_LIMIT": 0.6,
+  "RADAR_CHART_MAIN_MOOD_MAX_LIMIT": 0.5,
+  "RADAR_CHART_SONIC_LOGO_MAX_LIMIT": 100,
+  "WPP_KEYCLOAK_URL": "https://authenticate.os.wpp.com/auth/",
+  "WPP_KEYCLOAK_REALM": "os-prod",
+  "WPP_KEYCLOAK_CLIENTID": "sonichub-prod",
+  "WPP_KEYCLOAK_CLIENTSECRET": "",
+  "WPP_KEYCLOAK_SILENTCHECKSSOFALLBACK": false,
+  "WPP_KEYCLOAK_REDIRECTURI": "https://demo.wpp.sonicspace.sonic-hub.com/#/",
+  "LOGIN_TYPE": [],
+  "SHOW_NOTIFICATION_TOP_BAR": false,
+  "NOTIFICATION_TOP_BAR_TEXT": "",
+  "DOWNLOAD_FORM_META": {
+    "fieldsForm": [
+      {
+        "fieldName": "topic_product_sub_brand_model",
+        "isMandatory": true,
+        "type": "input"
+      },
+      { "fieldName": "campaignName", "isMandatory": true, "type": "input" },
+      { "fieldName": "format", "isMandatory": true, "type": "input" },
+      { "fieldName": "duration", "isMandatory": true, "type": "input" },
+      {
+        "fieldName": "advertising_agency_name",
+        "isMandatory": true,
+        "type": "input"
+      },
+      { "fieldName": "contact_email", "isMandatory": true, "type": "input" },
+      { "fieldName": "media_type", "isMandatory": true, "type": "checkbox" },
+      { "fieldName": "otherMedia-1", "isMandatory": true, "type": "checkbox" },
+      { "fieldName": "otherMedia-2", "isMandatory": true, "type": "checkbox" },
+      { "fieldName": "country", "isMandatory": true, "type": "dropdown" },
+      { "fieldName": "idNumber", "isMandatory": true, "type": "input" },
+      { "fieldName": "airing_month", "isMandatory": true, "type": "date" }
+    ],
+    "dowloadLabel": {
+      "title": "Please provide some information",
+
+      "userInformationTitle": "User Information:*",
+      "advertisingTitle": "Advertising Agency:*",
+      "productionTitle": "Production Company:*",
+
+      "topicInputTitle": "Product name/Topic Name:*",
+      "topicInputPlaceholder": "Product / Topic",
+
+      "campainInputTitle": "Campaign Name:*",
+      "campainInputPlaceholder": "Campaign",
+
+      "formatInputTitle": "Type of Content*:",
+      "formatInputPlaceholder": "Productfilm / Designfilm / Snippets",
+
+      "durationsInputTitle": "Durations:*",
+      "durationsInputPlaceholder": "2x 60 / 2x 15s",
+
+      "firstAiringInputTitle": "First Airing:*",
+      "firstAiringInputPlaceholder": "DD.MM.YYYY",
+
+      "advertisingAgencyInputTitle": "Advertising Agency/ Production Company*:",
+      "advertisingAgencyInputTitleInputPlaceholder": "Agency Name",
+
+      "producerNameInputTitle": "Producer Name:*",
+      "producerNameInputPlaceholder": "...",
+
+      "IDNumberInputTitle": "ID Number*:",
+      "IDNumberInputPlaceholder": "Competitrack Code / Clock Number",
+
+      "productionCompanyInputTitle": "Production Company:*",
+      "productionCompanyInputPlaceholder": "Company Name",
+
+      "producerEmailInputTitle": "Contact Email Address*:",
+      "producerEmailInputPlaceholder": "Contact Email Address",
+
+      "countryNameInputTitle": "Select Country:*",
+      "countryNameInputPlaceholder": "Country Name",
+
+      "airingmonthInputTitle": "Airing Month*:",
+      "airingmonthInputPlaceholder": "Airing Month (mmyy)",
+
+      "saveAsDraftCartBtn": "Save to draft",
+      "downloadCartBtn": "Download",
+
+      "selectMediaTypeInputTitle": "Select the Airing Media*:",
+      "traditionalMediaTypeInputTitle": "Traditional:",
+      "digitalMediaTypeInputTitle": "Digital:",
+
+      "accept": "Download"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "CURATOR_MCODE": "6a45675b-3202-4c29-d7b5c37d1daf",
+  "IUBENDA_SITE_ID": "",
+  "IUBENDA_COOKIE_POLICY_ID": "",
+  "COOKIEPRO": "false",
+
+  "CS_BASE_URL": "https://creationstation.sonic-hub.com",
+  "CS_IFRAME_URL": "https://creationstation.sonic-hub.com/config/stageServer/music-bank-cs.html",
+
+  "INPROCESS_FLAX_CUE_IDS": [],
+  "LOGIN_TYPE": ["Normal"],
+  "DOWNLOAD_FORM_META": {
+    "fieldsForm": [
+      {
+        "fieldName": "topic_product_sub_brand_model",
+        "isMandatory": true,
+        "type": "input"
+      },
+      { "fieldName": "campaignName", "isMandatory": true, "type": "input" },
+      { "fieldName": "format", "isMandatory": true, "type": "input" },
+      { "fieldName": "duration", "isMandatory": true, "type": "input" },
+      {
+        "fieldName": "advertising_agency_name",
+        "isMandatory": true,
+        "type": "input"
+      },
+      { "fieldName": "contact_email", "isMandatory": true, "type": "input" },
+      { "fieldName": "media_type", "isMandatory": true, "type": "checkbox" },
+      { "fieldName": "otherMedia-1", "isMandatory": true, "type": "checkbox" },
+      { "fieldName": "otherMedia-2", "isMandatory": true, "type": "checkbox" },
+      { "fieldName": "country", "isMandatory": true, "type": "dropdown" },
+      { "fieldName": "idNumber", "isMandatory": true, "type": "input" },
+      { "fieldName": "airing_month", "isMandatory": true, "type": "date" }
+    ],
+    "dowloadLabel": {
+      "title": "Please provide some information",
+
+      "userInformationTitle": "User Information:*",
+      "advertisingTitle": "Advertising Agency:*",
+      "productionTitle": "Production Company:*",
+
+      "topicInputTitle": "Product name/Topic Name:*",
+      "topicInputPlaceholder": "Product / Topic",
+
+      "campainInputTitle": "Campaign Name:*",
+      "campainInputPlaceholder": "Campaign",
+
+      "formatInputTitle": "Type of Content*:",
+      "formatInputPlaceholder": "Productfilm / Designfilm / Snippets",
+
+      "durationsInputTitle": "Durations:*",
+      "durationsInputPlaceholder": "2x 60 / 2x 15s",
+
+      "firstAiringInputTitle": "First Airing:*",
+      "firstAiringInputPlaceholder": "DD.MM.YYYY",
+
+      "advertisingAgencyInputTitle": "Advertising Agency/ Production Company*:",
+      "advertisingAgencyInputTitleInputPlaceholder": "Agency Name",
+
+      "producerNameInputTitle": "Producer Name:*",
+      "producerNameInputPlaceholder": "...",
+
+      "IDNumberInputTitle": "ID Number*:",
+      "IDNumberInputPlaceholder": "Competitrack Code / Clock Number",
+
+      "productionCompanyInputTitle": "Production Company:*",
+      "productionCompanyInputPlaceholder": "Company Name",
+
+      "producerEmailInputTitle": "Contact Email Address*:",
+      "producerEmailInputPlaceholder": "Contact Email Address",
+
+      "countryNameInputTitle": "Select Country:*",
+      "countryNameInputPlaceholder": "Country Name",
+
+      "airingmonthInputTitle": "Airing Month*:",
+      "airingmonthInputPlaceholder": "Airing Month (mmyy)",
+
+      "saveAsDraftCartBtn": "Save to draft",
+      "downloadCartBtn": "Download",
+
+      "selectMediaTypeInputTitle": "Select the Airing Media*:",
+      "traditionalMediaTypeInputTitle": "Traditional:",
+      "digitalMediaTypeInputTitle": "Digital:",
+
+      "accept": "Download"
+    }
+  }
+}

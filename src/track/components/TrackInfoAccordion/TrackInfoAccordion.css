@@ -1,0 +1,46 @@
+.TrackInfoAccordion {
+  width: 100%;
+}
+
+.TrackInfoAccordion_registration_Details_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  gap: 4rem;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.TrackInfoAccordion_registration_Details_footer_row {
+  display: flex;
+  /* gap: 3rem; */
+}
+
+.TrackInfoAccordion_registration_Details_footer_row
+  .trackDetailHighlightedTitle {
+  margin-top: 0;
+}
+
+.TrackInfoAccordion_registration_Details_footer_row .trackDetailValue {
+  margin-bottom: 0;
+}
+
+.TrackInfoAccordion_registration_Details_footer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.TrackInfoAccordion_registration_Details_footer_cell {
+  border-left: 1px solid #9e9e9e;
+  padding: 0 25px;
+  text-align: center;
+}
+
+.TrackInfoAccordion_registration_Details_footer_cell:first-child {
+  width: 290px;
+  border-left: none;
+  text-align: left;
+  padding-left: 0;
+}

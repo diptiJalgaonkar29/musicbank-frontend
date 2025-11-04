@@ -1,0 +1,269 @@
+.filter_header {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.rmsc.multi_select_track_type_filter .dropdown-container,
+.rmsc.multi_select_track_type_filter .dropdown-content {
+  background-color: transparent;
+  border: none;
+}
+
+.rmsc.multi_select_track_type_filter .dropdown-container:focus-within {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.rmsc.multi_select_track_type_filter .dropdown-heading {
+  width: 100%;
+  height: 5rem;
+  padding: 10px 16px;
+  gap: 2px;
+  border-radius: 40px;
+  border: 1px solid var(--color-white);
+  font-size: 1.6rem;
+}
+
+.rmsc.multi_select_track_type_filter .dropdown-content .panel-content {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color-white);
+  font-size: 16px;
+  background: var(--color-bg);
+}
+
+.rmsc.multi_select_track_type_filter .search input {
+  border: 1px solid var(--color-white);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  border-radius: 10px;
+  padding: 4px 45px 4px 8px;
+  height: 25px;
+  position: relative;
+}
+
+.rmsc.multi_select_track_type_filter .search input:focus {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+}
+
+.rmsc.multi_select_track_type_filter .search::after {
+  content: "";
+  /* background-image: url(../../../../static/common/search.svg); */
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 6px;
+  top: 1px;
+  scale: 0.8;
+}
+
+.rmsc.multi_select_track_type_filter .search {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.rmsc.multi_select_track_type_filter .search .search-clear-button {
+  right: 35px;
+  scale: 0.9;
+  width: 15px;
+}
+
+.rmsc.multi_select_track_type_filter .select-item {
+  padding: 8px 0;
+}
+
+.rmsc.multi_select_track_type_filter .item-renderer {
+  align-items: center;
+  gap: 5px;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  flex: 1;
+}
+
+.rmsc.multi_select_track_type_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"] {
+  position: relative;
+}
+
+.rmsc.multi_select_track_type_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"]:checked:before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  position: absolute;
+  border: 1px solid var(--color-white);
+}
+
+.rmsc.multi_select_track_type_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"]:checked:after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  width: 7px;
+  height: 3px;
+  background-color: var(--color-bg);
+  position: absolute;
+  top: 5px;
+  left: 3px;
+}
+
+.rmsc.multi_select_track_type_filter.voiceOptions:not(.selectAll)
+  .select-item
+  input[type="checkbox"] {
+  display: none;
+}
+
+.rmsc.multi_select_track_type_filter.voiceOptions:not(.selectAll)
+  .select-item
+  .item-renderer
+  span {
+  padding-left: 4px;
+}
+
+/* .rmsc.multi_select_track_type_filter .select-item.selected .item-renderer span {
+  font-weight: bold;
+} */
+
+.rmsc.multi_select_track_type_filter .select-item:hover,
+.rmsc.multi_select_track_type_filter .select-item.selected {
+  background-color: transparent;
+}
+
+.rmsc.multi_select_track_type_filter .select-item:hover span,
+.rmsc.multi_select_track_type_filter .select-item.selected span {
+  color: var(--color-primary);
+}
+
+.rmsc.multi_select_track_type_filter .clear-selected-button {
+  display: none;
+}
+
+.rmsc.multi_select_track_type_filter .dropdown-search-clear-icon {
+  scale: 1.1;
+}
+
+.rmsc.multi_select_track_type_filter .dropdown-heading-dropdown-arrow {
+  scale: 1.5;
+}
+
+.rmsc.multi_select_track_type_filter svg {
+  color: var(--color-white);
+}
+
+.rmsc.multi_select_track_type_filter .item-renderer input {
+  display: none;
+  position: relative;
+}
+
+.rmsc.multi_select_track_type_filter.selectAll
+  .options
+  > label.select-item:first-child
+  input[type="checkbox"] {
+  display: none;
+}
+
+.rmsc.multi_select_track_type_filter .select-item {
+  display: flex;
+  gap: 8px;
+  /* align-items: center; */
+  padding: 8px 0;
+  position: relative;
+  /* text-transform: capitalize; */
+}
+
+.rmsc.multi_select_track_type_filter .dropdown-heading-value span {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
+/* css for all unchecked checkboxes */
+.rmsc.multi_select_track_type_filter label.select-item::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-bg);
+  border-radius: 2px;
+  border: 1px solid var(--color-white);
+}
+
+/* css for all checked checkboxes */
+.rmsc.multi_select_track_type_filter label.select-item.selected::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-card);
+  border-radius: 2px;
+  border: 1px solid var(--color-primary);
+}
+
+.rmsc.multi_select_track_type_filter label.select-item.selected::after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-white);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* css for "Select All" checked checkbox */
+.rmsc.multi_select_track_type_filter.selectAll
+  .options
+  > label.select-item.selected:first-child::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  border: 1px solid var(--color-primary);
+}
+
+.rmsc.multi_select_track_type_filter.selectAll
+  .options
+  > label.select-item.selected:first-child::after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  width: 14px;
+  height: 3px;
+  background-color: var(--color-bg);
+  border-radius: 4px;
+  position: absolute;
+  top: 16px;
+  left: 3px;
+  border: none;
+  transform: none;
+}
+
+.rmsc.multi_select_track_type_filter
+  .dropdown-heading:has(.clear-selected-button) {
+  border: 1px solid var(--color-primary);
+}
+
+.dropdown-heading:has(.clear-selected-button) .dropdown-heading-value span,
+.dropdown-heading:has(.clear-selected-button) svg {
+  color: var(--color-primary) !important;
+}

@@ -1,0 +1,272 @@
+.trackResultView_container {
+    width: 100%;
+    margin: auto;
+    background-color: var(--color-card);
+    display: flex;
+    gap: 2.5rem;
+    height: calc(100vh - 120px);
+    border-radius: 10px;
+  }
+  
+  .trackresultView_loading_container {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .trackResultView_container .browseV2_sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 1rem;
+    padding-top: 2rem;
+  }
+  
+  .trackResultView_container .browseV2_trackType_filter_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .trackResultView_container .trackType_filter_item {
+    text-transform: capitalize;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0px;
+  }
+  
+  .trackResultView_container .trackType_filter_item_active {
+    background-color: var(--color-white);
+    color: var(--color-bg);
+  }
+  
+  .trackresultView_content_main {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding: 20px;
+  }
+  
+  .trackResultView_container .browseV2_tracklist {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 10px !important;
+  }
+  
+  .trackResultView_container .filteredTags_container {
+    display: flex;
+    gap: 1rem;
+    margin: 1.9rem 0 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .trackResultView_container .tempo_range_slider {
+    margin: -2rem 3rem 2.5rem 4rem;
+    width: 100%;
+  }
+  
+  .trackResultView_container .clear_all_filters_btn {
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  
+  .trackResultView_container .clear_all_filters_btn_chip:hover {
+    background-color: red;
+    border-color: transparent !important;
+    transition: all 200ms;
+  }
+  
+  .trackResultView_container .browseV2_tracklist .MuiAccordionSummary-content {
+    margin: 0 !important;
+  }
+  
+  .trackResultView_container .browseV2_content_header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 201;
+    padding-bottom: 2rem;
+  }
+  
+  .trackResultView_container
+    .browseV2_content_header
+    .browseV2_content_header_count_search {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: space-between;
+    /* background-color: #fff; */
+    padding-top: 1px;
+  }
+  
+  .trackResultView_container .browseV2_header {
+    margin: 0 0 1rem;
+    font-weight: normal;
+  }
+  
+  .trackResultView_container .browseV2_no_data_header {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .trackResultView_container .searchResult_SingleResBlock {
+    display: inline-block;
+    border: 1px solid var(--color-white);
+    padding: 8px;
+    width: 250px;
+    margin: 2rem 0px 1rem 0px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .trackResultView_container
+    .searchResult_SingleResBlock
+    .custSearch_closeBtn
+    .sonic_icon_button {
+    padding: 6px;
+    width: auto;
+    scale: 0.75;
+    position: absolute;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    z-index: 1;
+  }
+  
+  .trackResultView_container .browseV2_track_list {
+    margin-top: -1.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  /* tempo */
+  
+  .trackResultView_container .no_tempo_data {
+    padding: 0px 2rem 0px 70px;
+    margin: 0.4rem 0px;
+    font-size: 1.6rem;
+  }
+  
+  .trackResultView_container .ais-RangeSlider-wrapper {
+    position: relative;
+    background: transparent;
+    /* border-bottom: 1px dotted gray; */
+    box-sizing: border-box;
+    padding: 1.5rem 0.8rem 2rem;
+    /* border: 1px solid var(--color-white); */
+    /* border-radius: 3rem; */
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+  }
+  
+  .trackResultView_container
+    #nested_accordion__body--top:has(.sonic-rangeslider-wrapper-disabled) {
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+  }
+  
+  .trackResultView_container
+    .ais-RangeSlider-wrapper:has(.sonic-rangeslider-wrapper-disabled) {
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+  }
+  
+  .trackResultView_container .ais-RangeSlider-tempo {
+    position: relative;
+    top: 3rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+  
+  .trackResultView_container .ais-RangeSlider-tempo h5:hover {
+    color: var(--color-primary);
+  }
+  
+  .trackResultView_container .ais-RangeSlider-tempoSlowFast {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+  }
+  
+  .trackResultView_container .ais-RangeSlider-tempoRange {
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    gap: 5px;
+    margin-top: 5px !important;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  .trackResultView_container .ais-RangeSlider-tempo .sonic_chip {
+    border: 1px solid var(--color-white) !important;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+  }
+  
+  .trackResultView_container .custom-Input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+    /* border-bottom: 0px dotted gray; */
+    box-sizing: border-box;
+    margin: auto;
+    top: 2.8rem;
+    /* border: 1px solid var(--color-white); */
+    /* border-radius: 1rem; */
+    margin: 20px 0px !important;
+  }
+  
+  .trackResultView_container
+    .ais-RangeSlider-wrapper
+    .custom-inputicon-wrapper
+    .ss_input {
+    padding: 0px 65px 0px 12px;
+  }
+  
+  .trackResultView_container .submitInput {
+    position: absolute !important;
+    right: 0px !important;
+  }
+  
+  .trackResultView_container .rangeSubmitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .trackResultView_container .rangeSubmitBtn .custom-input-icon {
+    margin-bottom: 6px;
+  }
+  
+  .trackResultView_container .TrackcardV2 #TimeLineComponentV2::before {
+    filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg) brightness(20%)
+    contrast(73%);
+  -webkit-filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg)
+    brightness(20%) contrast(73%);
+  -moz-filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg)
+    brightness(20%) contrast(73%);
+  -o-filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg)
+    brightness(20%) contrast(73%);
+  }
+
+  .trackResultView_container .TrackcardV2 #playhead {
+    border-left: none !important;
+  }

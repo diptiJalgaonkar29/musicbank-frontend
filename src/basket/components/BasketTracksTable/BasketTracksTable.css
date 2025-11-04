@@ -1,0 +1,110 @@
+.downloadBasketPage__container table {
+  border-collapse: collapse;
+  font-size: 1.4rem;
+}
+
+.downloadBasketPage__container table tr {
+  border-bottom: 4px solid var(--color-bg) !important;
+}
+
+.downloadBasketPage__container .table-dark.table-bordered {
+  border: 0;
+}
+.downloadBasketPage__container .table-dark {
+  color: var(--color-white);
+  background-color: var(--color-card);
+}
+.downloadBasketPage__container .table-dark th {
+  font-family: var(--font-primary);
+  background-color: var(--color-card);
+}
+.downloadBasketPage__container .table-dark td,
+.downloadBasketPage__container .table-dark th,
+.downloadBasketPage__container .table-dark thead th {
+  border-color: var(--color-card);
+}
+.downloadBasketPage__container .table-bordered thead td,
+.downloadBasketPage__container .table-bordered thead th {
+  border-bottom-width: 2px;
+}
+.downloadBasketPage__container .table-bordered th {
+  border: 1px solid #000000 !important;
+}
+.downloadBasketPage__container .table-bordered td {
+  border-top: 1px solid #2f3033;
+  border-bottom: 1px solid #444445;
+}
+.downloadBasketPage__container .table td,
+.downloadBasketPage__container .table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  /* border-top: 1px solid #dee2e6; */
+  text-align: center;
+  vertical-align: middle;
+}
+.downloadBasketPage__container .table td.spinnerContainer {
+  background-color: var(--color-bg);
+}
+.downloadBasketPage__container .table th:first-child,
+.downloadBasketPage__container .table td:first-child {
+  text-align: left;
+  width: fit-content;
+}
+.downloadBasketPage__container .table-dark td,
+.downloadBasketPage__container .table-dark th,
+.downloadBasketPage__container .table-dark thead th {
+  border-color: #32383e;
+}
+
+.downloadBasketPage__container .autoTr {
+  width: 96%;
+  display: block;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  padding: 5px;
+  border-color: var(--color-gray);
+  cursor: pointer;
+  min-height: 50px;
+  position: relative;
+}
+
+.downloadBasketPage__container .spinnerWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.downloadBasketPage__container .autoTr:hover {
+  background-color: var(--color-gray);
+}
+
+.downloadBasketPage__container .table-dark td {
+  border: 0px;
+}
+
+.downloadBasketPage__container .tableHeader {
+  position: sticky;
+  top: -1px;
+  z-index: 10;
+}
+
+.downloadBasketPage__container .tableHeader th {
+  border: none;
+}
+
+.downloadBasketPage__container .TrackCard__item__title {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-white);
+  text-decoration: none;
+}
+.downloadBasketPage__container .TrackCard__item__title:hover {
+  color: var(--color-primary);
+  cursor: default;
+  text-decoration: underline;
+}

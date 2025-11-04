@@ -1,0 +1,16 @@
+.SonicModal_dialog.document_viewer .MuiPaper-root.MuiDialog-paper {
+  max-width: 1200px !important;
+  width: 80% !important;
+}
+
+.SonicModal_dialog.document_viewer .MuiPaper-root.MuiDialog-paper .docViewer,
+.SonicModal_dialog.document_viewer .MuiPaper-root.MuiDialog-paper .vidplayer,
+.document_viewer_loader {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 125px) !important;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

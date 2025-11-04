@@ -1,0 +1,105 @@
+.video_upload_container {
+  max-width: 600px;
+  background-color: var(--color-card);
+  padding: 20px;
+  border-radius: 20px;
+}
+.video_upload_container_header .video_upload_content {
+  text-align: center;
+  max-width: 675px;
+  /* margin: 0 auto 45px; */
+  margin: 200px auto 45px;
+}
+
+.video_upload_container_header .video_upload_content h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.video_upload_container_header .video_upload_content .subtitle {
+  font-size: 16px;
+  margin: 35px auto 30px;
+  font-weight: 700;
+}
+
+.video_upload_container_header .video_upload_content .option_selection_title {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.UploadViewVideo_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.UploadViewVideo_container .VideoPreview_wrapper {
+  margin-top: 20px;
+}
+
+.UploadViewVideo_container .card_icon svg {
+  width: 35px;
+  height: 35px;
+}
+
+.UploadViewVideo_container .note {
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.UploadViewVideo_container .thumbnail_container {
+  /* height: 295px; */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--color-primary);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.UploadViewVideo_container .thumbnail_container .video_duration {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 30px;
+}
+
+.UploadViewVideo_container .thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.AITrackCreationWithVideo_btn_container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.AITrackCreationWithVideo_btn_container .sonicButton {
+  flex: 1;
+}
+
+.pollingModal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pollingModal-dialog .pollingModal_header {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.pollingModal-dialog .pollingModal_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .video_upload_container {
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,41 @@
+.homePageV3_content {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin: 10px;
+  gap: 20px;
+  margin-top: -30px;
+}
+.HomePageGrids {
+  padding-top: 15px;
+  height: calc(100vh - 250px); /* full viewport height minus padding */
+  overflow-y: auto;
+}
+.homePageV3_content_left {
+  width: 50%;
+  margin-bottom: 50px;
+}
+.homePageV3_content_right {
+  width: 50%;
+  margin-bottom: 50px;
+}
+.homePageV3_content_left .CuratedPlaylistSlideShow_container {
+  padding: 0 0 0 0;
+}
+
+.homePageV3_content_left .CuratedPlaylistSlideShow_container .slider-playlist {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(180px, 1fr)
+  ); /* 👈 responsive columns */
+  gap: 30px; /* space between blocks */
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 350px;
+}
+
+.main_layout_wrapper .main_layout_FooterSection {
+  position: fixed;
+}

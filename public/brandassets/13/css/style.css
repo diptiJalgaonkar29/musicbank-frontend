@@ -1,0 +1,449 @@
+.vodafone .V3AuthLayout .brand_logo {
+  width: 55px !important;
+}
+
+.vodafone .navbar__container img {
+  max-width: 55px !important;
+}
+
+.vodafone .sonicButton.outlined {
+  color: var(--color-white) !important;
+}
+
+.vodafone .V3AuthLayout .sonicButton.outlined {
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+.vodafone .V3AuthLayout_wrapper {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.vodafone .DocumentsPage__cardsItem:hover {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.vodafone .used_in_video_container .cover_image.default_usedin_img {
+  padding: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.vodafone .login-ac-container-V3 label {
+  margin-bottom: 2px !important;
+}
+
+.vodafone .V3_login_container > .MuiPaper-root,
+.vodafone .V3AuthLayout .container form,
+.vodafone .V3AuthLayout_left .MuiPaper-root:first-child {
+  width: 82% !important;
+}
+
+.vodafone .VerificationMFAPage_container {
+  width: 100% !important;
+}
+
+.vodafone .searchResults__results .TrackcardV2 #TimeLineComponentV2,
+.vodafone .AISearch_Content .TrackcardV2 #TimeLineComponentV2,
+.vodafone .TrackPage__wrapper .Cyanite_AudioPlayer #TimeLineComponent,
+.vodafone .musicPlayerContainer .progress_div,
+.vodafone .TrackPageHeader_wave,
+.vodafone .PlayListTitleList__Item #TimeLineComponent,
+.vodafone
+  .TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  #TimeLineComponent {
+  background-color: #000 !important;
+}
+
+.vodafone .searchResults__results .TrackcardV2 #TimeLineComponentV2:before,
+.vodafone .TrackPage__wrapper .Cyanite_AudioPlayer #TimeLineComponent:before,
+.vodafone .TrackPageHeader_wave img,
+.vodafone .TrackcardV2 #TimeLineComponentV2,
+.vodafone .musicPlayerContainer .waveImage {
+  filter: invert(1) contrast(200%) !important;
+}
+
+.vodafone .AISearch_Content .TrackcardV2 #TimeLineComponentV2 {
+  filter: none !important;
+}
+
+.vodafone .PlayListTitleList__Item #TimeLineComponent::before,
+.vodafone
+  .TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  #TimeLineComponent:before,
+.vodafone .AISearch_Content .TrackcardV2 #TimeLineComponentV2:before {
+  filter: brightness(0%) contrast(83%) invert(1) !important;
+}
+
+.vodafone .custSearchBoxForAll .custSearch__container .custSearch_closeBtn,
+.vodafone
+  .custSearchBoxForAll
+  .custSearch__container
+  .searchIconContainer.sonic_icon_button,
+.vodafone .sonic_icon_button[icon="Play"],
+.vodafone .sonic_icon_button[icon="Pause"],
+.vodafone .musicPlayerContainer .sonic_icon_button[icon="Close"],
+.vodafone .TrackDownloadProgress_close_icon svg,
+.vodafone .credits-info svg,
+.vodafone .sonicButton.filled svg,
+.vodafone .trackbutton .credits-info svg,
+.vodafone #project_menu_dropdown svg {
+  filter: invert(1) !important;
+}
+
+.vodafone .SonicRadio_container input[type="radio"] {
+  background-color: #494b4c !important;
+}
+
+.vodafone .credit-request .button-cancel {
+  background-color: var(--color-white) !important;
+  color: var(--color-bg) !important;
+}
+
+.vodafone .sonic_tab_title.MuiTab-textColorInherit.MuiTab-root.Mui-selected,
+.vodafone .download_cart_count,
+.vodafone .sonicButton,
+.vodafone .st-container .st-container-inner .st-btn-library.active,
+.vodafone .st-container .st-container-inner .st-btn-spotify.active,
+.vodafone .sonic-rangeslider-wrapper .slideCtrLbl,
+.vodafone .searchResuts__container .ais-CurrentRefinements-list .sonic_chip,
+.vodafone
+  .TrackcardV2__item__tags
+  .taxonomy__tags_container
+  .sonic_chip.tag_key,
+.vodafone
+  .TrackcardV2__item__tags
+  .taxonomy__tags_container
+  .sonic_chip.instrument_ids,
+.vodafone
+  .Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.tag_key,
+.vodafone
+  .Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.instrument_ids,
+.vodafone .MemberOverview__li--select.errorColorBackground,
+.vodafone .st-container .st-container-inner table .st-tbl-sel-2,
+.vodafone .ais-ClearRefinements-button:hover,
+.vodafone .MuiSnackbarContent-message,
+.vodafone .DownloadWidgetWithCookiesV2Dialog_buttonText {
+  color: #fff !important;
+}
+
+.vodafone .search_results_card_info_container:hover,
+.vodafone .downloadBasketPage__container .TrackCard__item__title:hover,
+.vodafone .used_in_video_container .used_in_title:hover {
+  color: var(--color-primary) !important;
+}
+
+.vodafone .st-container .st-container-inner .st-btn-spotify.active svg,
+.vodafone .Comment_Icon svg {
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+
+.vodafone .sonic_icon_button .MuiSvgIcon-root,
+.vodafone .sonic_icon_button[icon="Done"] svg {
+  fill: #fff !important;
+}
+
+.vodafone .PlayListTitleList__Item .sonic_icon_button .MuiSvgIcon-root {
+  fill: var(--color-white) !important;
+}
+
+.vodafone .PlayListTitleList__wrapper .MuiPaper-root.MuiAccordion-root {
+  border: none !important;
+}
+
+.vodafone .PlayListTitleList__wrapper .MuiPaper-elevation1 {
+  box-shadow: none !important;
+}
+
+.vodafone .sonic_chip svg {
+  stroke: #fff !important;
+}
+
+.vodafone .MemberOverview__ul .MemberOverview__li .recent_link_icon {
+  color: #000 !important;
+}
+
+.vodafone .musicPlayerContainer .progressBarNew::-webkit-slider-runnable-track {
+  background-color: #000 !important;
+}
+
+.vodafone .PlayListTitleList__Item #pButton svg,
+.vodafone
+  .PlaylistCoverImage--image:hover
+  .PlaylistCoverImage--editIcon.sonic_icon_button,
+.vodafone .sonic_icon_button.submit_chat svg,
+.vodafone .closeSnackbarButton {
+  filter: invert(1) !important;
+}
+
+.vodafone .profile_menu_main_container .confirm_password_input,
+.vodafone .profile_menu_main_container .set_new_password_field {
+  background-color: transparent !important;
+  color: var(--color-white) !important;
+}
+
+.vodafone .profile_menu_main_container .profile_form_action_button.sonicButton {
+  color: var(--color-primary) !important;
+}
+
+.vodafone
+  .profile_menu_main_container
+  .profile_form_action_button.sonicButton:disabled {
+  color: var(--color-gray) !important;
+}
+
+.vodafone .boldFamily,
+.vodafone .sonicButton,
+.vodafone .MuiTab-wrapper,
+.vodafone #navitems .navitem .WebNavbar--anchor {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+.vodafone .PlayListTitleList__wrapper .sonic_icon_button[icon="Play"],
+.vodafone .PlayListTitleList__wrapper .sonic_icon_button[icon="Pause"] {
+  filter: invert(0) !important;
+}
+
+.vodafone .Comment_element--extra .sonic_icon_button .MuiSvgIcon-root {
+  fill: #000 !important;
+}
+
+.vodafone .sonicButton:disabled {
+  background-color: #494b4c !important;
+}
+
+.vodafone .CustomNotificationTopBar_text {
+  color: #fff !important;
+}
+
+.vodafone .CustomNotificationTopBar_container {
+  background-color: var(--color-primary) !important;
+}
+
+.vodafone
+  .profile_menu_main_container
+  .profile_form_action_button.sonicButton:disabled {
+  background-color: transparent !important;
+}
+
+.vodafone .V3AuthLayout_wrapper .V3_login_container,
+.vodafone .V3AuthLayout_wrapper .select_company_page,
+.vodafone .sonicButton {
+  color: #fff !important;
+}
+
+.vodafone .sonicButton.outlined {
+  color: var(--color-white) !important;
+}
+
+.vodafone .V3AuthLayout .sonicButton.outlined {
+  color: #fff !important;
+  border: 1px solid #fff;
+}
+
+.vodafone .V3AuthLayout_right {
+  visibility: hidden;
+}
+
+.vodafone .V3AuthLayout .V3LoginTitle,
+.vodafone .CustomNotificationTopBar_text,
+.vodafone .V3AuthLayout .V3LoginSubTitle,
+.vodafone .V3AuthLayout .login-ac-container-V3 .login-ac-p span,
+.vodafone .V3AuthLayout .form-heading,
+.vodafone .V3AuthLayout .form-subHeading,
+.vodafone .V3AuthLayout .ss_input_container .ss_input,
+.vodafone .V3AuthLayout .form-hint,
+.vodafone .V3AuthLayout .authTitle,
+.vodafone .V3AuthLayout .authSubtitle {
+  color: #fff !important;
+}
+
+/* .vodafone
+  .V3AuthLayout
+  .login-ac-container-V3
+  .login-ac-anchor.hover-cursor
+  span {
+  color: var(--color-primary) !important;
+} */
+.vodafone .V3AuthLayout .V3LoginForgotPasswordLink {
+  color: #fff !important;
+}
+
+.vodafone .V3AuthLayout .ss_input_container .ss_input {
+  border: 1px solid #fff !important;
+  background: #fff !important;
+  border: 1px solid #fff !important;
+  color: #000 !important;
+}
+
+.vodafone .V3AuthLayout .ss_select_container [class*="control"] {
+  background: #fff !important;
+  border: 1px solid #fff !important;
+  color: #000 !important;
+}
+
+.vodafone .V3AuthLayout .ss_select_container [class*="singleValue"] {
+  color: #000 !important;
+}
+
+.vodafone .V3AuthFooter {
+  height: auto !important;
+}
+
+.vodafone #authFooter {
+  display: block !important;
+}
+
+.vodafone
+  .TrackPageHeader_container_right
+  .DownloadWidgetWithCookiesV2Dialog_buttonText_container
+  svg
+  path {
+  stroke: #fff !important;
+}
+
+.vodafone .MuiButtonBase-root.MuiButton-root .MuiButton-label {
+  color: #fff !important;
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+.vodafone .Comment_element--extraVisible span,
+.vodafone .PlayListMembers__container--title.showAll {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+.vodafone .Comment_element--Shadow {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.vodafone .bubbleBoxText {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+.vodafone .CommonMessageModal_text {
+  color: var(--color-primary) !important;
+}
+
+.vodafone .V3AuthLayout .login_form_error_msg,
+.vodafone .V3AuthLayout .register_form_error_msg,
+.vodafone .V3AuthLayout .ss_error_msg {
+  font-size: 1.5rem !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: fit-content !important;
+  padding: 5px 14px !important;
+  border-radius: 16px !important;
+}
+
+.vodafone .V3AuthLayout .separator {
+  color: #fff !important;
+}
+
+.vodafone .V3AuthLayout .separator::before,
+.vodafone .V3AuthLayout .separator::after {
+  border-bottom: 1px solid #fff !important;
+}
+
+.vodafone .V3AuthLayout .form-message {
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: fit-content !important;
+  padding: 5px 14px !important;
+  border-radius: 16px !important;
+}
+
+/* .vodafone .sonicButton.filled,
+.vodafone .sonicButton.primaryOutlined.sonicButtonHover,
+.vodafone .sonicButton.primaryOutlined {
+  color: var(--color-bg) !important;
+  background-color: var(--color-primary) !important;
+} */
+
+.vodafone #register_btn {
+  color: var(--color-bg) !important;
+  background-color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary) !important;
+}
+
+.vodafone .SonicCheckbox_container:has(input:checked):after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}
+
+.vodafone .AIMusicGenerator_container .sonic_file_input_container svg path {
+  fill: var(--color-bg) !important;
+}
+
+.vodafone .browseV2_container .submitInput svg path {
+  fill: #fff !important;
+}
+
+.vodafone .TrackPageHeader_img_holder .TrackTypeBadge_icon {
+  width: 60px !important;
+  height: auto !important;
+}
+
+@media only screen and (max-width: 1460px) {
+  .vodafone .SearchPageTS__TitleSection__Custom {
+    flex-direction: column !important;
+    align-items: normal !important;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .vodafone .V3AuthLayout_wrapper {
+    background-position: 15% 50% !important;
+  }
+}
+
+@media (max-width: 1040px) and (min-width: 1000px) {
+  .vodafone .main-title-tsp {
+    line-height: 3rem !important;
+  }
+
+  .vodafone
+    .SearchPageTS__ContentWrapper
+    .SearchPageTS__SearchSection
+    .main-subtitle-subtext {
+    margin-top: 0.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .vodafone .navbar__logo__container {
+    width: 10% !important;
+  }
+
+  .vodafone .V3AuthLayout_wrapper {
+    background-position: 32% 50% !important;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .vodafone
+    .SearchPageTS__ContentWrapper
+    .SearchPageTS__SearchSection
+    .main-title-tsp {
+    line-height: 3rem !important;
+  }
+
+  .vodafone
+    .SearchPageTS__ContentWrapper
+    .SearchPageTS__SearchSection
+    .main-subtitle-subtext {
+    margin-top: 0.5rem !important;
+  }
+}

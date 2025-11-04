@@ -1,0 +1,48 @@
+.SonicAccordion_container {
+  color: var(--color-white);
+}
+
+.SonicAccordion_container .SonicAccordion_title .MuiTouchRipple-root {
+  display: none;
+}
+
+.SonicAccordion_container .SonicAccordion_title .MuiTypography-root {
+  font-size: 1.6rem !important;
+  margin: 5px 0;
+  font-family: var(--font-primary);
+  color: var(--color-white);
+}
+
+.MuiAccordionSummary-content.Mui-expanded {
+  margin: 5px 0;
+}
+
+.SonicAccordion_container .MuiAccordionDetails-root,
+.SonicAccordion_container .SonicAccordion_title,
+.SonicAccordion_container .MuiAccordionSummary-expandIcon {
+  color: var(--color-white) !important;
+}
+.SonicAccordion_container
+  .SonicAccordion_title.MuiAccordionSummary-root.Mui-expanded,
+.SonicAccordion_container .SonicAccordion_title.MuiAccordionSummary-root {
+  height: 5rem;
+  min-height: 5rem;
+}
+.SonicAccordion_container .MuiAccordionSummary-expandIcon {
+  scale: 1.8;
+  background-color: transparent;
+}
+.SonicAccordion_container .MuiPaper-root {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  border-radius: 25px !important;
+}
+
+.SonicAccordion_container .MuiAccordionDetails-root {
+  padding: 0 1rem 0.5rem;
+}
+
+.SonicAccordion_container
+  .MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1 {
+  box-shadow: none !important;
+}

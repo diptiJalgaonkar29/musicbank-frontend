@@ -1,0 +1,167 @@
+.audioPlayerContainer .TrackCard__audio {
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 650px;
+
+  box-sizing: border-box;
+}
+
+.audioPlayerContainer #audioplayer {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.audioPlayerContainer #TimeLineComponent {
+}
+
+.audioPlayerContainer #pButton {
+  /* height: 6rem;
+  width: 6rem;
+  border: none;
+  background-size: 60% 60% !important ;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+  background-color: transparent; */
+}
+
+.audioPlayerContainer #pButton:hover {
+  /* cursor: pointer !important; */
+}
+
+.audioPlayerContainer .play {
+  /* background-image: url("../../../static/play_rounded_svg.svg") !important;
+  -webkit-background-image: url("../../../static/play_rounded_svg.svg") !important;
+  -ms-background-image: url("../../../static/play_rounded_svg.svg") !important; */
+}
+
+.audioPlayerContainer .pause {
+  /* background-image: url("../../../static/pause.png") !important;
+  -webkit-background-image: url("../../../static/pause.png") !important;
+  -ms-background-image: url("../../../static/pause.png") !important; */
+}
+
+.audioPlayerContainer #timeline__statusbar {
+  position: absolute;
+  pointer-events: none;
+  width: 0px;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.audioPlayerContainer #playhead {
+  height: 100%;
+  position: relative;
+  z-index: 200;
+  border-left: 0px solid black !important;
+}
+
+.audioPlayerContainer .TrackCard__audio_tctp {
+  color: black;
+  background-color: rgb(87, 94, 109, 0.5);
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 1260px;
+  border: 1px solid black;
+}
+
+.audioPlayerContainer #audioplayer_tctp {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.audioPlayerContainer #pButton_tctp {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+  border-right: 1px solid black;
+}
+
+.audioPlayerContainer .playButton__container {
+}
+
+.audioPlayerContainer #timeline__statusbar_tctp {
+  position: absolute;
+  pointer-events: none;
+  width: 0px;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.audioPlayerContainer #playhead_tctp {
+  width: 18px;
+  height: 100%;
+  position: relative;
+  z-index: 200;
+  border-left: 3px solid black;
+}
+
+.audioPlayerContainer .TrackCard__time {
+  position: absolute;
+  pointer-events: none;
+  top: 3.9rem;
+  left: 613px;
+  z-index: 200;
+  font-size: 1.6rem;
+}
+
+.audioPlayerContainer .timeline__loadingAnimation {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: loader-animate;
+  animation-timing-function: linear;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background: linear-gradient(
+    to right,
+    left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+}
+
+@keyframes loader-animate {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

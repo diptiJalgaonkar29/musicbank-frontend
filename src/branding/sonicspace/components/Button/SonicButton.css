@@ -1,0 +1,68 @@
+.sonicButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  color: white;
+  font-size: 1.6rem;
+  min-width: 14rem;
+  width: fit-content;
+  padding: 0 2.5rem;
+  height: 4rem;
+  cursor: pointer;
+  font-family: var(--font-primary) !important;
+  text-transform: capitalize;
+}
+
+.sonicButton.outlined {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+}
+
+.sonicButton.primaryOutlined {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.sonicButton.filled {
+  background-color: var(--color-primary);
+  border: 1px solid transparent;
+  color: var(--color-bg);
+}
+
+.sonicButton.filledSecondary {
+  background-color: var(--color-white);
+  border: 1px solid transparent;
+  color: var(--color-bg);
+}
+
+.sonicButton:disabled {
+  background-color: #1f1f1f;
+  color: #797979 !important;
+  cursor: not-allowed;
+  pointer-events: all !important;
+  border: 1px solid transparent;
+  /* color: var(--color-secondary-shade11) !important;
+  border: 1px solid var(--color-secondary-shade11) !important; */
+}
+
+.sonicButton.s {
+  min-width: fit-content;
+  width: fit-content;
+  height: auto;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .customBtn {
+    font-size: 1.4rem;
+    width: 1.4rem;
+    height: 3.5rem;
+  }
+  .sonicButton.s {
+    width: max-content;
+    height: auto;
+  }
+}

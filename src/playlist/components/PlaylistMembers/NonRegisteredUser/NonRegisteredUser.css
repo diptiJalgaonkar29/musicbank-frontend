@@ -1,0 +1,72 @@
+.extInviteBlock {
+  background-color: var(--color-white);
+  padding: 3px;
+  box-shadow: 0 1.5rem 1rem -1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  max-height: 100px;
+  overflow: auto;
+}
+
+.extInviteBlock .input {
+  width: auto;
+  height: 40px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font: inherit;
+  border-radius: 0.2rem;
+  border: 0px solid #d4d5d6;
+  color: #565656;
+  -webkit-appearance: none;
+  font-size: 2rem;
+  display: inline-flex;
+}
+
+.extInviteBlock .input:focus {
+  border-color: cornflowerblue;
+  outline: none;
+}
+
+.extInviteBlock .input.has-error {
+  border-color: #ff0000;
+}
+
+.extInviteBlock .error {
+  margin: 0;
+  font-size: 11px;
+  color: #ff0000;
+}
+
+.extInviteBlock .tag-item {
+  background-color: #d4d5d6;
+  display: inline-block;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  height: 30px;
+  padding: 0 4px 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.3rem 0.3rem 0;
+  color: #565656;
+}
+
+.extInviteBlock .tag-item > .button {
+  background-color: var(--color-white);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listblock {
+  display: none;
+}

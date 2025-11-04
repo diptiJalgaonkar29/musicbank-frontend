@@ -1,0 +1,63 @@
+.VerificationMFAPage_wrapper {
+  width: 70%;
+  padding: 150px 0px 0px 0px;
+  max-width: 500px;
+}
+
+.VerificationMFAPage_container {
+  display: flex !important;
+  align-items: flex-start !important;
+  flex-direction: column !important;
+  width: 100%;
+}
+
+.VerificationMFAPage_qr_code {
+  width: 200px;
+  height: 200px;
+  margin: 10px 0 20px 0;
+}
+
+.VerificationMFAPage_form {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.VerificationMFAPage_code_input {
+  width: 158px;
+}
+
+.VerificationMFAPage_btn_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 10px 0;
+  flex-wrap: wrap;
+}
+
+.VerificationMFAPage_btn_container .sonicButton {
+  width: calc(50% - 0.8rem) !important;
+}
+
+.VerificationMFAPage_btn_container .sonicButton {
+  width: calc(50% - 10px);
+}
+
+.VerificationMFAPage_btn_container .spinnerContainer .lds-default {
+  margin: 0 !important;
+  scale: 0.5 !important;
+  width: 10px !important;
+  height: 10px !important;
+  top: -14px !important;
+  left: -12px !important;
+}
+
+.VerificationMFAPage_error_msg {
+  margin: 8px 0 0;
+  font-size: 1.4rem;
+  color: red;
+}
+
+.MFASetupBtn {
+  /* margin: 10px 0; */
+}

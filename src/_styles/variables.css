@@ -1,0 +1,69 @@
+:root {
+  /* Background Color 
+      */
+  --color-bg: rgb(20, 20, 19);
+
+  --color-navbar: rgb(20, 20, 19);
+  /* Error 
+      */
+  --color-error: #d7373c;
+  --color-success: #f38b00; /* GOLD */
+  --color-green: #628020;
+  /* Canvas 
+      */
+  --color-card-lightest: #f3f0ee;
+  --color-card-lighter: #e8e5e1;
+  --color-card-light: #b1ada6;
+  --color-card: #b1ada6;
+  --color-card: #96918b;
+  --color-card-darker: #444340;
+  --color-card-darkest: #222221;
+
+  /*Main
+      */
+  --color-main: #cf4500; /* Active */
+
+  --color-primary: #f38b00; /* GOLD */
+  --color-secondary: #ffc61e; /* YELLOW */
+  --color-alternative: #628020; /* GREEN */
+
+  --color-white: var(--color-white);
+  --color-black: #141413;
+
+  --color-gray: #323231;
+  --color-lightgray: #fcfbfa;
+
+  /* SPECIFIC */
+  --browse-bg: rgb(20, 20, 19);
+  --trackDetail-bg: rgb(20, 20, 19);
+
+  --font-primary: var(--color-white);
+  --main-font: "MarkForMC-Regular", Helvetica, Arial, sans-serif;
+  --font-url: local("MarkMCRegular"),
+    url("../static/Fonts/MarkForMC-Regular.ttf");
+
+  --border-radius-sm: 5px;
+  --border-radius-ml: 15px;
+  --border-radius-xl: 30px;
+
+  /* SearchInput */
+  --nav-underline: -4px;
+  --navbar-positon: center;
+
+  /* Download Button TpTc */
+
+  --dwnldbtn--radius: 50px;
+
+  /* SearchInput */
+  --searchInput--radius: 100px;
+  --searchInput--color: 243, 139, 0;
+
+  /* MyMusic, SearchResulst*/
+  --sidebar-bg: #141413;
+
+  /*Login Page */
+  --login-bg: rgba(20, 20, 19, 0.8);
+
+  /* Prediction Report */
+  --pr-report-card-bg: #161616;
+}

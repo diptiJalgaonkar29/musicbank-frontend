@@ -1,0 +1,334 @@
+.Project_container_card .project_header {
+  color: var(--color-white);
+  font-size: 1.6rem;
+}
+
+.Project_container_card {
+  max-width: 1200px;
+  /* min-width: 700px; */
+  margin: 0 auto;
+}
+
+.Project_container_card .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  gap: 1rem;
+  margin: 4rem 0rem;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.Project_container_card .card {
+  box-sizing: border-box;
+  background-color: var(--color-card);
+  border-radius: 8px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  min-height: 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid transparent;
+}
+
+.Project_container_card .project_loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.Project_container_card .card-icon {
+  /* width: 24px;
+  height: 24px; */
+  /* margin-bottom: 1rem; */
+  margin: 0;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.Project_container_card .card-title {
+  font-size: 1.4rem;
+  /* margin-bottom: 0.5rem; */
+  margin: 0;
+  color: var(--color-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Project_container_card .card-title.see_more_card {
+  color: var(--color-primary);
+}
+
+.Project_container_card .card:has(.card-title.see_more_card) {
+  display: flex;
+  justify-content: center;
+}
+
+.Project_container_card .card-assets {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  /* margin-bottom: 0.5rem; */
+  margin: 0;
+}
+
+.Project_container_card .card-updated {
+  font-size: 1rem;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.Project_container_card .new-project {
+  border: 2px dashed #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14rem;
+}
+
+.Project_container_card .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.Project_container_card .btn-cancel {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.SonicModal_dialog.select-project-dialog .MuiPaper-root.MuiDialog-paper {
+  width: 700px;
+  max-width: 700px;
+}
+
+.ProjectPage__content form {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.ProjectPage__content .form-group {
+  margin-bottom: 25px;
+}
+
+.ProjectPage__content .form-group .report_form_error {
+  color: var(--color-error);
+  padding: 10px 0px 5px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.ProjectPage__content .form-group label {
+  margin-bottom: 0px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+}
+
+.ProjectPage__content .form-group input[type="text"],
+.ProjectPage__content input[type="file"],
+.ProjectPage__content textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-white);
+  border-radius: 23px;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  margin-top: 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.ProjectPage__content .form-group textarea {
+  resize: vertical;
+}
+
+.ProjectPage__content .form-group .formButton {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 10px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 180px;
+  margin-top: 15px;
+  color: var(--color-white);
+  font-size: 16px;
+}
+
+.ProjectPage__content .groupButton {
+  /* display: flex;
+    justify-content: space-evenly; */
+}
+
+.ProjectPage__content .groupButton .lds-default {
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  scale: 0.8;
+}
+
+.ProjectPage__content .form-group .logo {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+}
+
+.ProjectPage__content .reportBugContainer {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-white);
+  padding: 0;
+}
+
+.ProjectPage__content .reportBugContainer:hover {
+  color: var(--color-primary);
+}
+
+.ProjectPage__content .bugFile_input_container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-right: 2px;
+}
+
+.ProjectPage__content .form-group #remove_bug_file {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.ProjectPage__content .form-group #remove_bug_file svg {
+  stroke: var(--color-white);
+}
+
+.ProjectPage__content .form-group label[for="file"] {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--color-white);
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+  color: var(--color-white);
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.ProjectPage__content .form-group input[type="file"] {
+  display: none;
+}
+
+.ProjectPage__content .feedBack_container {
+  padding: 20px;
+  background-color: var(--color-bg);
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  text-align: center;
+  height: 250px;
+  border: 1px solid var(--color-white);
+  width: 80%;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.ProjectPage__content .feedBack_container p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.ProjectPage__content .feedBack_container .back-link {
+  text-decoration: none;
+  border-radius: 40px;
+  height: 52px;
+  border: 1px solid var(--color-white);
+  border-radius: 40px;
+  background: var(--color-bg);
+  margin: 0 auto;
+  color: var(--color-white) !important;
+  padding: 10px 17px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ProjectPage__content .form-group .formButton:disabled {
+  background-color: var(--color-gray) !important;
+  cursor: not-allowed !important;
+}
+
+.new-project-active {
+  border: 1px solid var(--color-primary) !important;
+}
+
+.ProjectPage__content .date-picker-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ProjectPage__content .react-datepicker__tab-loop .react-datepicker__triangle {
+  display: none !important;
+}
+
+.date-picker-wrapper .react-datepicker {
+  width: 362px;
+  height: 300px;
+  border-radius: 4px;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  padding: 5px;
+}
+
+.date-picker-wrapper.active .react-datepicker-popper {
+  z-index: 9999;
+  line-height: 0;
+  margin-top: -35px;
+  scale: 0.75;
+  top: 345px !important;
+  /* transform: translate(30px, 855px) !important; */
+}
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}
+.date-picker-wrapper.inactive .react-datepicker-popper {
+  z-index: 1;
+  line-height: 0;
+  margin-top: -35px;
+  scale: 0.75;
+  top: 60px !important;
+  /* transform: translate(30px, 335px) !important; */
+}
+
+.ProjectPage__content .groupDate {
+  gap: 10px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 150px;
+  /* justify-content: center; */
+}
+
+.ProjectPage__content .react-select__option input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: white;
+}

@@ -1,0 +1,81 @@
+.MB_Input--counter {
+  font-size: 16px;
+  color: var(--color-primary);
+}
+.MB_TextArea--counter {
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.MB_Input--tag {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.MB_TextArea--tag {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: -30px;
+}
+.MB_TextArea--tag span,
+.MB_Input--tag span {
+  font-size: 1.5rem;
+}
+
+.MB_TextArea {
+  font-size: 1.6rem;
+  font-family: inherit;
+
+  padding-top: 0.5rem;
+
+  background: var(--color-white);
+  border-radius: 1px;
+  border: 1px solid #999;
+  color: #333;
+  padding: 10px 14px;
+  outline: 0;
+  float: left;
+
+  text-transform: none;
+
+  resize: none;
+
+  height: 16.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.MB_TextArea::placeholder {
+  font-size: 1.6rem;
+  font-family: inherit;
+
+  padding-top: 0.00912em;
+  padding-bottom: 0.15788em;
+  color: #999;
+
+  outline: 0;
+}
+
+.InputWithWordCounter__container {
+  height: 7rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.TextAreaWithWordCounter__container {
+  height: 23rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-start;
+}

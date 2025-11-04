@@ -1,0 +1,333 @@
+.downloadBasketFormPage {
+  width: 90%;
+  margin: auto;
+  display: block;
+  max-width: 1400px;
+  /* padding-top: 20px; */
+}
+
+.downloadBasketFormPage .MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  padding: 1rem 3rem !important;
+}
+
+.downloadBasketFormPage .MuiPaper-root {
+  background-color: var(--color-white) !important;
+  max-width: 1920px !important;
+  width: auto !important;
+  border-radius: 4px !important;
+}
+
+.downloadBasketFormPage .MuiPaper-root {
+  background-color: var(--color-white) !important;
+  max-width: 1920px !important;
+  width: auto !important;
+  border-radius: 4px !important;
+}
+
+.downloadBasketFormPage .mb_basketDownload_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.downloadBasketFormPage_Content {
+  margin-top: 0% !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh; */
+}
+
+.downloadBasketFormPage .mb_basketDownload_SubmitDownload_title {
+  padding: 1.2rem 1.2rem 2.5rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.downloadBasketFormPage .mb_basketDownload_h3 {
+  font-size: 2.8rem;
+  font-family: var(--font-primary);
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0em;
+  font-weight: bold;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.downloadBasketFormPage .mb_basketDownload_h4 {
+  font-size: 1.8rem;
+  font-family: var(--font-primary);
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.downloadBasketFormPage .mb_basketDownload_padding {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: var(--color-white);
+  /* padding-left: 5%; */
+}
+
+.downloadBasketFormPage .mb_basketDownload_SubmitDownload_form {
+  margin: 0 auto;
+  width: 100%;
+  height: 94%;
+}
+
+.downloadBasketFormPage .mb_basketDownload_input_container {
+  width: 100%;
+  height: 6.5rem;
+  margin: 0.5rem 0px 5px 0px;
+  box-sizing: border-box;
+}
+
+.downloadBasketFormPage .mb_basketDownload_input {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  /* margin-right: 0.5rem; */
+  font-size: 1.4rem;
+  font-family: var(--font-primary);
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 0.00912em;
+  padding-left: 1.4rem;
+  padding-bottom: 0.15788em;
+  /* background: var(--color-white); */
+  background: #000;
+  border-radius: 25px;
+  /* border: 2px solid var(--color-primary); */
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  height: 3.5rem;
+  outline: 0;
+  float: left;
+  width: 90%;
+  margin-top: 12px;
+}
+
+.mb_basketDownload_input_wrapper {
+  display: flex;
+  /* justify-content: center; */
+  /* position: relative;
+  left: 4px; */
+}
+
+.downloadBasketFormPage .mb_basketDownload_error {
+  color: var(--color-error);
+  padding: 10px 0px 5px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.downloadBasketFormPage
+  .mb_basketDownload_input_container
+  .MuiOutlinedInput-root.Mui-error
+  .MuiOutlinedInput-notchedOutline,
+.downloadBasketFormPage
+  .mb_basketDownload_input_container
+  #country
+  .Mui-focused {
+  border: 1px solid #999;
+}
+
+.downloadBasketFormPage
+  .mb_basketDownload_input_container
+  .MuiFormControl-root.MuiTextField-root {
+  /* width: calc(100% + 17px); */
+  width: 94%;
+  height: 40px;
+}
+
+.downloadBasketFormPage .datePicker .MuiOutlinedInput-root {
+  border-radius: 0px !important;
+  font-size: 13px !important;
+  color: #999 !important;
+}
+
+.downloadBasketFormPage .MuiOutlinedInput-input {
+  padding: 12px 14px;
+  color: var(--color-white);
+}
+
+.downloadBasketFormPage
+  .mb_basketDownload_input_container
+  .MuiFormHelperText-root.Mui-error {
+  color: #f44336;
+  font-size: 14px;
+  margin: 1px 0px;
+}
+
+.downloadBasketFormPage .mb_basketDownload_input_container .MuiIconButton-root {
+  position: relative;
+  left: 15px;
+}
+
+.MuiTypography-root.MuiPickersMonth-root.MuiTypography-subtitle1,
+.MuiPickersYear-root,
+.MuiPickersToolbarText-toolbarBtnSelected.MuiTypography-subtitle1 {
+  font-size: 14px !important;
+  font-family: var(--font-primary);
+}
+
+.MuiPickersToolbarText-toolbarTxt {
+  font-family: var(--font-primary) !important;
+}
+
+.MuiPickersModal-dialogRoot
+  .MuiDialogActions-root.MuiDialogActions-spacing
+  .MuiButtonBase-root {
+  font-size: 14px;
+  text-transform: capitalize;
+  font-family: var(--font-primary) !important;
+  background-color: var(--color-primary) !important;
+  color: var(--color-white);
+  height: 36px;
+  border-radius: 25px;
+}
+
+.MuiPickersYear-root:focus,
+.MuiPickersMonth-root:focus {
+  color: var(--color-white);
+}
+
+.MuiPickersYear-yearSelected,
+.MuiPickersMonth-monthSelected {
+  font-size: 16px;
+  color: var(--color-primary) !important;
+  margin: 0;
+}
+
+.MuiPickersToolbar-toolbar {
+  background-color: var(--color-primary) !important;
+}
+
+.downloadBasketFormPage .mb_basketDownload_input_checkboxes {
+  height: auto !important;
+  margin-bottom: 0;
+}
+
+.downloadBasketFormPage .checkboxes_title {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-white);
+}
+
+.downloadBasketFormPage .basketButtonContainer {
+  margin: 2.5rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  max-width: 100% !important;
+}
+
+.saveToDraftBtn {
+  background-color: var(--color-white);
+  color: #000;
+}
+
+/* .downloadBasketBtn a {
+  background-color: var(--color-primary) !important;
+} */
+
+.downloadBasketBtn.downloadBtnDisable {
+  background-color: var(--color-gray) !important;
+  cursor: not-allowed !important;
+}
+
+.downloadBasketBtn.downloadBtnActive {
+  background-color: var(--color-primary) !important;
+}
+
+.mb_basketDownload_btn_wrapper {
+  width: 90%;
+  margin: 0 auto !important;
+}
+
+/* .basket_download_form_container {
+  border: 1px solid var(--color-white);
+  border-radius: 25px;
+  padding: 2% 5% 2% 7%;
+  margin-bottom: 25px;
+} */
+
+/* .downloadBasketFormPage__navbar .navbar__container {
+  max-width: 100%;
+  width: 100vw;
+} */
+
+.downloadBasketFormPage__navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.downloadBasketFormbtnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.downloadBasketFormPage .searchResuts__footer {
+  position: initial;
+}
+
+.downloadBasketFormPage .searchResuts__footer--text {
+  background-color: var(--color-bg);
+  margin: auto;
+  max-width: 100vw;
+  width: 88vw !important;
+  display: block;
+  bottom: 0px;
+  position: absolute;
+  padding-bottom: 9px;
+  padding-left: 6px;
+  color: var(--color-footer);
+}
+
+.downloadBasketFormPage .searchResuts__footer--text a {
+  color: var(--color-footer);
+}
+
+.downloadBasketFormPage .downloadBasket_Empty {
+  font-size: 2.2rem;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.downloadBasketFormPage .downloadBasketSpinner {
+  text-align: center;
+  width: 500px;
+  margin: 60px auto;
+}
+
+.downloadBasketFormPage .downloadProgressNoteTitle {
+  font-weight: bold;
+  margin: 25px auto 0px;
+}
+
+.downloadBasketFormPage .downloadProgressNote,
+.downloadBasketFormPage .downloadProgressNoteTitle {
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 950px) {
+  .downloadBasketFormPage,
+  .downloadBasketFormPage .mb_basketDownload_SubmitDownload_form {
+    width: 100%;
+  }
+}

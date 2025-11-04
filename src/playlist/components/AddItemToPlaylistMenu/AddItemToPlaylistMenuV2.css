@@ -1,0 +1,34 @@
+.AddItemToPlaylistMenuV2_buttonText_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  height: 50px;
+  background-color: var(--color-card);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.AddItemToPlaylistMenuV2_buttonText {
+  font-size: 1.6rem;
+  padding: 10px 10px 10px 25px;
+}
+
+.AddItemToPlaylistMenuV2_buttonText_container .sonic_icon_button {
+  background-color: transparent;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .AddItemToPlaylistMenuV2_buttonText_container {
+    height: 40px;
+    gap: 0rem;
+  }
+
+  .AddItemToPlaylistMenuV2_buttonText {
+    padding: 10px 0px 10px 15px;
+  }
+  .AddItemToPlaylistMenuV2_buttonText_container .sonic_icon_button {
+    padding: 5px 15px;
+  }
+}

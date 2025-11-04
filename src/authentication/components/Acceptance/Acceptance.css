@@ -1,0 +1,86 @@
+.login-ac-container {
+  border: 0;
+  margin: 2rem 0 -0.5rem 0;
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  min-width: 0;
+  flex-direction: column;
+  vertical-align: top;
+  width: 100%;
+  text-align: start;
+}
+
+.login-ac-hr {
+  border: 0;
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.login-ac-input {
+  margin-right: 0.5em;
+  height: 1.4rem;
+  margin-top: 0;
+  vertical-align: middle;
+}
+
+.login-ac-anchor {
+  /* color: var(--color-primary); */
+  font-size: 1.4rem;
+}
+
+.login-ac-anchor-pp {
+  color: var(--color-primary);
+}
+
+.login-ac-pp {
+  font-size: 1.2rem;
+}
+
+.login-ac-p {
+  vertical-align: middle;
+  font-size: 1.4rem;
+  display: inline-block;
+}
+
+.hover-cursor:hover {
+  cursor: pointer;
+}
+
+.goForward-Section {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.goForward-Section svg {
+  font-size: 1.6rem !important;
+  margin-left: 1rem;
+}
+
+.goForward {
+  color: var(--color-primary);
+}
+
+.goForward-Section:hover {
+  cursor: pointer;
+}
+
+.goForward-Section:hover .goForward {
+  text-decoration: underline;
+}
+
+.goForward-Section:hover svg {
+  animation-iteration-count: 1;
+  animation: goForwardArrowAnimation 0.25s forwards ease-in-out;
+}
+
+@keyframes goForwardArrowAnimation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(+30%);
+  }
+}

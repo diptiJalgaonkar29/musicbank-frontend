@@ -1,0 +1,18 @@
+.filter_by_tags_list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 2px;
+}
+
+.filter_by_tags_list li {
+  list-style: none;
+  padding: 2px 4px;
+  line-height: 1.6rem;
+}
+
+.filter_by_tags_list li a {
+  text-decoration: none;
+  color: var(--color-white);
+}

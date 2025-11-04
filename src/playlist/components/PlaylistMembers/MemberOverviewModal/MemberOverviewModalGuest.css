@@ -1,0 +1,27 @@
+.validityMeta {
+  background-color: #f1f1f1;
+  color: rgba(0, 0, 0, 0.87);
+  height: auto;
+  margin: -5px 5px 5px 5px;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.MemberOverview__ul .MemberOverview__li .recent_link_icon {
+  color: #000000de !important;
+  cursor: pointer;
+  background-color: transparent;
+  /* position: absolute;
+  top: 2px;
+  right: 50px; */
+  padding: 0;
+  margin: 0;
+  width: auto;
+  font-size: 14px;
+  line-height: 14px;
+}
+.MemberOverview__ul .MemberOverview__li .recent_link_icon:hover {
+  color: var(--color-primary) !important;
+}

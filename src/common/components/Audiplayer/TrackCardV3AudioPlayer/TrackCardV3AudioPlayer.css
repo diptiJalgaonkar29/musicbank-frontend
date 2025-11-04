@@ -1,0 +1,77 @@
+.enabled_footer_music_player#TimeLineComponentV2 {
+    pointer-events: none !important;
+}
+
+.TrackcardV3 #TrackcardV3__playhead {
+    height: 100%;
+    position: relative;
+    z-index: 200;
+    border-left: 0px solid black !important;
+}
+
+.TrackcardV3 .TrackcardV3__timeline__loadingAnimation {
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-name: loader-animate;
+    animation-timing-function: linear;
+    background: -webkit-linear-gradient(left,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0) 100%,
+            rgba(255, 255, 255, 0.2) 100%);
+    background: -o-linear-gradient(left,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0) 100%,
+            rgba(255, 255, 255, 0.2) 100%);
+    background: linear-gradient(to right,
+            left,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0) 100%,
+            rgba(255, 255, 255, 0.2) 100%);
+}
+
+.audioSpinnerContainer .lds-default {
+    margin: 0 !important;
+    scale: 0.8 !important;
+    top: -6px !important;
+    left: -6px !important;
+    align-items: center;
+    width: 56px;
+    height: 46px;
+}
+
+@keyframes loader-animate {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .TrackcardV3 #TimeLineComponentV2 {
+        width: 200px !important;
+    }
+}
+
+@media only screen and (max-width: 1111px) {
+    .TrackcardV3 #TimeLineComponentV2 {
+        width: 100px !important;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .TrackcardV3 #TimeLineComponentV2 {
+        display: none;
+    }
+}

@@ -1,0 +1,75 @@
+{
+  "CURATOR_MCODE": "6a45675b-3202-4c29-d7b5c37d1daf",
+  "IUBENDA_SITE_ID": 1586846,
+  "IUBENDA_COOKIE_POLICY_ID": 71135063,
+  "COOKIEPRO": "false",
+  "GOOGLE_ANALYTICS_ID": "UA-50237976-4",
+
+  "CS_BASE_URL": "https://mastercard.creationstation.sonic-hub.com",
+  "CS_IFRAME_URL": "https://mastercard.creationstation.sonic-hub.com/config/liveServer/music-bank-cs.html",
+
+  "INPROCESS_FLAX_CUE_IDS": [],
+  "LOGIN_TYPE": ["SSO"],
+  "DOWNLOAD_FORM_META": {
+    "fieldsForm": [
+      { "fieldName": "campaignName", "isMandatory": true, "type": "input" },
+      { "fieldName": "country", "isMandatory": true, "type": "dropdown" },
+      { "fieldName": "media_type", "isMandatory": false, "type": "checkbox" },
+      { "fieldName": "otherMedia-1", "isMandatory": false, "type": "checkbox" },
+      { "fieldName": "otherMedia-2", "isMandatory": false, "type": "checkbox" },
+      { "fieldName": "airing_month", "isMandatory": false, "type": "date" }
+    ],
+    "dowloadLabel": {
+      "title": "Please provide some information",
+
+      "userInformationTitle": "User Information:*",
+      "advertisingTitle": "Advertising Agency:*",
+      "productionTitle": "Production Company:*",
+
+      "topicInputTitle": "Product name/Topic Name:*",
+      "topicInputPlaceholder": "Product / Topic",
+
+      "campainInputTitle": "Campaign Name:*",
+      "campainInputPlaceholder": "Campaign",
+
+      "formatInputTitle": "Type of Content*:",
+      "formatInputPlaceholder": "Productfilm / Designfilm / Snippets",
+
+      "durationsInputTitle": "Durations:*",
+      "durationsInputPlaceholder": "2x 60 / 2x 15s",
+
+      "firstAiringInputTitle": "First Airing:*",
+      "firstAiringInputPlaceholder": "DD.MM.YYYY",
+
+      "advertisingAgencyInputTitle": "Advertising Agency/ Production Company*:",
+      "advertisingAgencyInputTitleInputPlaceholder": "Agency Name",
+
+      "producerNameInputTitle": "Producer Name:*",
+      "producerNameInputPlaceholder": "...",
+
+      "IDNumberInputTitle": "ID Number*:",
+      "IDNumberInputPlaceholder": "Competitrack Code / Clock Number",
+
+      "productionCompanyInputTitle": "Production Company:*",
+      "productionCompanyInputPlaceholder": "Company Name",
+
+      "producerEmailInputTitle": "Contact Email Address*:",
+      "producerEmailInputPlaceholder": "Contact Email Address",
+
+      "countryNameInputTitle": "Select Country:*",
+      "countryNameInputPlaceholder": "Country Name",
+
+      "airingmonthInputTitle": "Airing Month*:",
+      "airingmonthInputPlaceholder": "Airing Month (mmyy)",
+
+      "saveAsDraftCartBtn": "Save to draft",
+      "downloadCartBtn": "Download",
+
+      "selectMediaTypeInputTitle": "Select the Airing Media*:",
+      "traditionalMediaTypeInputTitle": "Traditional:",
+      "digitalMediaTypeInputTitle": "Digital:",
+
+      "accept": "Download"
+    }
+  }
+}

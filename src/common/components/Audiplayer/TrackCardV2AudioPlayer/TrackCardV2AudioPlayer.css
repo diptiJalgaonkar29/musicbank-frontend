@@ -1,0 +1,118 @@
+.TrackcardV2 #pButton {
+  /* height: 4rem;
+  width: 4rem;
+  border: none;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+  background-color: transparent;
+  margin: 0 !important;
+  padding: 0 !important; */
+}
+
+.TrackcardV2 #pButton:hover {
+  /* cursor: pointer !important; */
+}
+
+.TrackcardV2 .play {
+  /* background-image: url("../../../../static/bordered-play.svg") !important;
+  -webkit-background-image: url("../../../../static/bordered-play.svg") !important;
+  -ms-background-image: url("../../../../static/bordered-play.svg") !important; */
+}
+
+.TrackcardV2 .pause {
+  /* background-image: url("../../../../static/bordered-pause.svg") !important;
+  -webkit-background-image: url("../../../../static/bordered-pause.svg") !important;
+  -ms-background-image: url("../../../../static/bordered-pause.svg") !important; */
+}
+
+.enabled_footer_music_player#TimeLineComponentV2 {
+  pointer-events: none !important;
+}
+
+.TrackcardV2 #TrackcardV2__playhead {
+  height: 100%;
+  position: relative;
+  z-index: 200;
+  border-left: 0px solid black !important;
+}
+
+/* .searchResults__results .TrackcardV2 #TimeLineComponentV2:before {
+  background-color: #d9d9d9 !important;
+  filter: none !important;
+} */
+
+.TrackcardV2 .TrackcardV2__timeline__loadingAnimation {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: loader-animate;
+  animation-timing-function: linear;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background: linear-gradient(
+    to right,
+    left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+}
+
+.audioSpinnerContainer .lds-default {
+  margin: 0 !important;
+  scale: 0.8 !important;
+  top: -6px !important;
+  left: -6px !important;
+  align-items: center;
+  width: 56px;
+  height: 46px;
+}
+
+@keyframes loader-animate {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .TrackcardV2 #TimeLineComponentV2 {
+    width: 200px !important;
+  }
+}
+
+@media only screen and (max-width: 1111px) {
+  .TrackcardV2 #TimeLineComponentV2 {
+    width: 100px !important;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .TrackcardV2 #TimeLineComponentV2 {
+    display: none;
+  }
+}

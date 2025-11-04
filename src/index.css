@@ -1,0 +1,164 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+#legalnformation {
+  color: black;
+  font-size: 1.8rem;
+  z-index: 99999999;
+  position: absolute;
+  bottom: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+  -webkit-text-size-adjust: 100%;
+  /* will ensure that the text doesn't get size adjusted automatically by the browser. */
+  scrollbar-width: thin;
+  background: var(--color-bg);
+}
+
+textarea,
+a,
+input {
+  font-family: var(--main-font) !important;
+}
+
+.activeColor {
+  color: var(--color-primary) !important;
+}
+
+.activeColorHover:hover {
+  color: var(--color-primary) !important;
+}
+
+.activeColorSecondary {
+  color: var(--color-secondary) !important;
+}
+
+.errorColor {
+  color: var(--color-error) !important;
+}
+
+.errorColorBackground {
+  background-color: var(--color-error) !important;
+  width: fit-content;
+  align-self: flex-end;
+}
+
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: var(--color-bg);
+  /* border: 1px solid var(--color-white) !important; */
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 18px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+  border-radius: 18px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #D9D9D9;
+}
+
+#Login__Container {
+  background-color: var(--login-background-color);
+}
+
+/* addition by Trupti - Wtis */
+.disabledColor {
+  color: var(--color-gray) !important;
+}
+
+.SearchPageTS__navigation {
+  position: sticky;
+  top: 0;
+  z-index: 1111;
+  background-color: var(--color-bg);
+}
+
+.V3_login_container .MuiFormControl-marginNormal {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.MuiDialog-root {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  z-index: 1300 !important;
+}
+
+.MuiSnackbar-root {
+  z-index: 1301 !important;
+}
+
+.MuiMenuItem-root {
+  font-family: var(--font-primary) !important;
+}
+
+.MuiAutocomplete-popper {
+  z-index: 111111111111 !important;
+}
+
+.MuiSnackbarContent-message {
+  color: var(--color-white) !important;
+}
+
+.MuiSvgIcon-root {
+  font-size: 22px !important;
+}
+
+.browseV2_sidebar .MuiSvgIcon-root {
+  font-size: 35px !important;
+}
+
+.MuiAutocomplete-paper {
+  background-color: var(--color-bg) !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--color-white) !important;
+  color: var(--color-white) !important;
+  margin: 0 !important;
+}
+
+.MuiInput-underline:after,
+.MuiInput-underline:before {
+  border-bottom: none !important;
+}
+
+textarea,
+input {
+  caret-color: var(--color-white);
+}
+
+.highlight_text {
+  color: var(--color-primary);
+}
+
+body>iframe[style*="z-index: 2147483647"] {
+  display: none;
+}

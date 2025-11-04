@@ -1,0 +1,32 @@
+.sonicspace .V3AuthLayout .brand_logo {
+  width: auto !important;
+  height: auto !important;
+  max-height: 100% !important;
+}
+
+.sonicspace.amp .navbar__container img {
+  max-width: 50px !important;
+}
+
+.sonicspace.amp .sonic_icon_button .MuiSvgIcon-root,
+.sonicspace.amp .MuiSnackbarContent-root .MuiSvgIcon-root {
+  color: #000 !important;
+}
+
+.sonicspace.amp .Comment_Icon svg {
+  stroke: #000 !important;
+  fill: #000 !important;
+}
+
+.sonicspace.amp .SonicCheckbox_container:has(input:checked):after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}
+
+.sonicspace.amp .sonic-rangeslider-wrapper .slideCtrLbl {
+  color: #000 !important;
+}
+
+.sonicspace.amp .browseV2_container .submitInput svg path {
+  fill: #000 !important;
+}

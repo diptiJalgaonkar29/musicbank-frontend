@@ -1,0 +1,264 @@
+.AISearchWorkSpace_container {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  /* padding: 30px 10px; */
+}
+
+.AISearchWorkSpace_container .content {
+  display: flex;
+  gap: 20px;
+}
+
+.AISearchWorkSpace_container .card-icon svg path {
+  fill: var(--color-white);
+}
+
+.AISearchWorkSpace_container .loader_container {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: var(--color-card); */
+}
+
+.AISearchWorkSpace_container .loader_container .loader_container_text {
+  height: auto;
+  width: 400px;
+  background-color: var(--color-card);
+  padding: 25px 20px 10px;
+  border-radius: 20px;
+}
+
+.AISearchWorkSpace_container .AISearch_Content {
+  width: 100%;
+}
+
+.AISearchWorkSpace_container .Intro-text {
+  text-align: center;
+  max-width: 675px;
+  padding: 0 20px;
+  /* margin: calc(50vh - 150px) auto 45px; */
+  margin: 250px auto 45px;
+}
+
+.AISearchWorkSpace_container .Intro-text h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.AISearchWorkSpace_container .Intro-text .subtitle {
+  font-size: 16px;
+  margin: 35px auto 30px;
+  font-weight: 700;
+}
+
+.AISearchWorkSpace_container .Intro-text .option_selection_title {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.AISearchWorkSpace_container .mainSide_bar {
+  /* height: 85vh; */
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.AISearchWorkSpace_container .AISearchWorkSpace_backBtn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.AISearchWorkSpace_container .AISearchWorkSpace_backBtn span {
+  font-weight: 400;
+  /* line-height: 18.75px; */
+  font-size: 16px;
+}
+
+.AISearchWorkSpace_container .cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex: 1;
+}
+
+.AISearchWorkSpace_container .card-layout-content .thumbnail_container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  /* border: 1px solid var(--color-primary); */
+  /* padding: 10px; */
+  /* margin-bottom: 20px; */
+}
+.AISearchWorkSpace_container
+  .card-layout-content
+  .thumbnail_container
+  .thumbnail_container_loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AISearchWorkSpace_container .card-layout-content .brief-textarea {
+  width: 100%;
+  min-height: 120px;
+  background-color: var(--color-card);
+  border: none;
+  border-radius: 8px;
+  padding: 5px;
+  color: var(--color-white);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  resize: none;
+  border: 1px solid var(--color-white);
+}
+
+.AISearchWorkSpace_container .bottomBar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* .AISearchWorkSpace_container .bottomBar p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-white);
+  margin: 0;
+} */
+
+.AISearchWorkSpace_container .cmn_label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 1%;
+  text-align: center;
+  margin-top: 130px;
+}
+.AISearchWorkSpace_container .commision_button,
+.AISearchWorkSpace_container .sonicButton.filled.commision_button {
+  /* width: 418px; */
+  width: 100%;
+  height: 45px;
+  gap: 10px;
+  border-radius: 43px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--color-white) !important;
+  color: var(--color-bg) !important;
+}
+
+.AISearchWorkSpace_container .card {
+  background-color: var(--color-card);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.AISearchWorkSpace_container .card.not-active {
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 20px;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.AISearchWorkSpace_container .card#video {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.AISearchWorkSpace_container .card:hover {
+  border: 1px solid var(--color-primary);
+}
+
+.AISearchWorkSpace_container .card-icon {
+  margin-bottom: 10px;
+}
+
+.AISearchWorkSpace_container .card-icon svg {
+  width: 35px;
+  height: 35px;
+}
+
+.AISearchWorkSpace_container .card.not-active .card-icon {
+  margin-bottom: 0;
+}
+
+.AISearchWorkSpace_container .card.not-active .card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.AISearchWorkSpace_container .card h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.AISearchWorkSpace_container .card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.AISearchWorkSpace_container .card.card.not-active p {
+  display: none;
+}
+
+.AISearchWorkSpace_container .back-link {
+  display: inline-flex;
+  align-items: center;
+  color: #9e9e9e;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.AISearchWorkSpace_container .back-link svg {
+  height: 16px;
+  width: 16px;
+  fill: #9e9e9e;
+}
+
+.AISearchWorkSpace_container .cards-grid .video_upload_button {
+  width: 100%;
+  height: 40px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .AISearchWorkSpace_container .cards-grid {
+    width: 250px;
+  }
+
+  .AISearchWorkSpace_container .mainSide_bar {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .AISearchWorkSpace_container .AISearch_Content {
+    flex: 1.5;
+  }
+}

@@ -1,0 +1,126 @@
+.customTrackForm {
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.customTrackForm .custom_track_form_title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.customTrackForm .custom_track_form_subTitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #9e9e9e;
+}
+
+.customTrackForm .creative_brief_row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.customTrackForm .creative_brief_btn_container {
+  margin-left: 13px;
+  display: flex;
+  gap: 10px;
+}
+
+.customTrackForm .custom_track_form_section {
+  display: flex;
+  justify-content: space-between;
+  gap: 91px;
+  flex-wrap: wrap;
+  margin-left: 170px;
+  margin-right: 170px;
+}
+
+.customTrackForm .custom_track_form {
+  flex: 1;
+  min-width: 300px;
+  /* ensures form doesn't shrink too much */
+}
+
+.customTrackForm .btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* space between buttons */
+  margin-top: 211px;
+  /* space above buttons */
+  margin-bottom: 50px;
+}
+
+.customTrackForm .sonicButton.filled.cnl_btn {
+  width: 230px;
+  height: 46px;
+  gap: 10px;
+  border-radius: 43px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--color-white) !important;
+  color: var(--color-bg) !important;
+}
+
+.customTrackForm .sonicButton.filled.ctk_btn {
+  width: 230px;
+  height: 46px;
+  gap: 10px;
+  border-radius: 43px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.customTrackForm .sonicButton.outlined.selected_btn.m {
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.customTrackForm .custom-datepicker {
+  height: 45px;
+  border-radius: 25px;
+  border: 1px solid var(--color-white);
+  padding: 0px 20px;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: var(--color-white) !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.customTrackForm .report_form_error {
+  color: var(--color-error);
+  padding: 10px 0px 5px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.customTrackForm .ctk_btn.active-btn {
+  background-color: var(--color-primary) !important;
+  color: var(--color-bg) !important;
+}
+
+.customTrackForm .react-datepicker-wrapper {
+  width: 100% !important;
+}

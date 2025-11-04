@@ -1,0 +1,12 @@
+.addtoQueue_btn {
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.addtoQueue_btn svg {
+  font-size: 2.2rem;
+}

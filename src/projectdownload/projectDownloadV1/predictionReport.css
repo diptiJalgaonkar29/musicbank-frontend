@@ -1,0 +1,119 @@
+.prediction-section {
+    width: 98%;
+}
+
+.predictionReport_Headers {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-direction: row;
+    font-size: 1.8rem;
+    align-items: normal;
+    justify-content: space-between;
+}
+
+.predictionReport-item {
+    display: flex;    
+    height: 70px;
+    flex-direction: row;
+    font-size: 1.4rem;
+    align-items: normal;
+    justify-content: space-evenly;
+    border: 1px solid var(--pr-report-card-border);
+    border-radius: 4px;
+    text-align: center;
+    background-color: var(--pr-report-card-bg);
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.predictionReport-item:hover:has(:not(:hover)){
+    background-color: #4a4a4a;
+}
+
+.predictionReport-item div {
+    max-width: 250px;
+    margin: auto 0;
+    text-align: left;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    text-wrap: wrap;
+    word-wrap: anywhere;
+    text-align: center;
+}
+
+.predictionReport-item .reportName {
+    width: 20%;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.predictionReport-item .sonicProfile {
+    width: 15%;
+}
+
+.predictionReport-item .assetCount {
+    width: 10%;
+}
+
+.predictionReport-item .assetName {
+    width: 20%;
+    height: 40px;
+    line-height: 12px;
+    cursor: pointer;
+}
+
+.predictionReport-item .assetName>.innerBlock {
+    width: 100%;
+    color: #000;
+    border-radius: 37px;
+    text-align: center;
+    line-height: 12px;
+    cursor: pointer;
+    max-width: 170px;
+}
+
+.predictionReport-item .createdDate {
+    width: 10%;
+}
+
+.predictionReport-item .createdBy {
+    width: 10%;
+}
+
+.predictionReport-item .reportStatus {
+    width: 10%;
+  background-color: #222529;
+  text-align: center;
+  border-radius: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+}
+
+.predict-headerLbl {
+    margin: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 1.5rem;
+    max-width: 250px;
+    border: solid 1px;
+}
+
+.predictReportSorter {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.splash_screen {
+  text-align: center;
+}
+
+.splash_screen_text {
+  font-size: 16px !important;
+  color: var(--color-white);
+  width: 100%;
+  text-align: center;
+  margin: 25px 0px 35px 0px;
+}

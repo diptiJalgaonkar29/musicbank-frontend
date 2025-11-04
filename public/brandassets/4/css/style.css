@@ -1,0 +1,12 @@
+.mercedes .navbar__container img {
+  max-width: 90px !important;
+}
+
+.mercedes .SonicCheckbox_container:has(input:checked):after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}
+
+.mercedes .sonicButton.filled svg {
+  filter: invert(1) !important;
+}

@@ -1,0 +1,428 @@
+.musicInspiration-container {
+  width: 100%;
+  color: var(--color-white);
+  height: 575px;
+}
+
+.musicInspiration-container .musicInspiration-header {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--color-white);
+}
+
+.musicInspiration-container .musicInspiration-subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-white);
+  margin-top: 14px;
+}
+
+.musicInspiration-container .reference-track {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.musicInspiration-container .st-filter-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.musicInspiration-container .st-filter-lp {
+  display: flex;
+  height: 42px;
+  gap: 15px;
+}
+
+.musicInspiration-container .st-filter-para {
+  color: var(--color-white);
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.musicInspiration-container .st-filter-lp-inner {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-white);
+  border-radius: 50px;
+  overflow: hidden;
+  background: none;
+}
+
+.musicInspiration-container .st-filter-btn {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  background: none;
+  border: none;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.musicInspiration-container .st-filter-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.musicInspiration-container .st-filter-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--color-white);
+}
+
+.musicInspiration-container .st-filter-cp {
+  flex-grow: 1;
+}
+
+.musicInspiration-container .search-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.musicInspiration-container .search-input-wrapper input {
+  width: 100%;
+  background: none;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  padding: 1rem 2rem 1rem 4rem;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.musicInspiration-container .st-input-search {
+  color: var(--color-white);
+  width: 100%;
+  background: none;
+  padding: 0px;
+  height: 24px;
+  border: 1px solid var(--color-white);
+  padding-left: 0;
+  outline: 0px;
+  margin-left: 0px;
+  font-size: 14px;
+}
+
+.musicInspiration-container .search-input-wrapper input::placeholder {
+  color: var(--color-white);
+  opacity: 0.7;
+}
+
+.musicInspiration-container .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  fill: var(--color-white);
+}
+
+.musicInspiration-container .st-filter-rp-inner {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.musicInspiration-container .st-similar-autosearch table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--color-white);
+  border-color: var(--color-white);
+  border: 1px;
+}
+
+.musicInspiration-container .librarySearchIcon,
+.musicInspiration-container .spotifySearchIcon {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  width: 20px;
+}
+
+.musicInspiration-container .st-filter-rp-inner .st-input-search {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 10px 7px 50px !important;
+  height: 42px;
+  border: 1px solid var(--color-white);
+  outline: 0px;
+  border-radius: 40px;
+}
+
+.musicInspiration-container .st-btn-spotify svg path {
+  fill: var(--color-white);
+}
+
+.musicInspiration-container .st-filter-link {
+  color: var(--color-white);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.musicInspiration-container .link-area {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  height: 42px;
+  width: 100%;
+}
+
+.musicInspiration-container .link-area .ss_link_input_container {
+  height: 42px;
+  width: 100%;
+  margin-left: 35px;
+}
+
+.musicInspiration-container .ss_link_input_wrapper {
+  height: 42px;
+}
+
+.musicInspiration-container .link-search-btn {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: none;
+  width: 116px;
+  height: 31px;
+  margin-right: 10px;
+  border-radius: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.musicInspiration-container .link-search-name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  text-align: center;
+  margin: 0;
+}
+
+.musicInspiration-container .musicInspiration-result {
+  margin-top: 28px;
+}
+
+.musicInspiration-container .SonicCheckbox_container {
+  margin-right: 60px;
+}
+
+.musicInspiration-container .PlayListTitleList__Item__Left {
+  margin-right: 25px;
+}
+
+.musicInspiration-container .autoTable.spotifyTracksList {
+  z-index: 1;
+}
+
+.musicInspiration-container .st-similar-autosearch .autoTable {
+  padding: 10px;
+  position: absolute;
+  background-color: var(--color-card);
+  margin: 5px 0 0px 0;
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.musicInspiration-container .st-similar-autosearch .autoTr {
+  width: 655px;
+  display: block;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  padding: 5px;
+  border-color: var(--color-gray);
+  cursor: pointer;
+  min-height: 50px;
+  position: relative;
+}
+
+.musicInspiration-container
+  .st-similar-autosearch
+  .autoTr
+  .search_results_card_info_container:hover {
+  color: var(--color-primary);
+}
+
+.musicInspiration-container
+  .st-similar-autosearch
+  .search_results_card_info_container {
+  width: 400px;
+}
+
+.musicInspiration-container
+  .st-similar-autosearch
+  .search_results_card_info_container
+  .search_results_card_title {
+  font-size: 1.7rem;
+  font-weight: normal !important;
+}
+
+.musicInspiration-container
+  .st-similar-autosearch
+  .search_results_card_info_container
+  .search_results_card_subtitle {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1350px) {
+  .musicInspiration-container
+    .st-similar-autosearch
+    .search_results_card_info_container {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .musicInspiration-container
+    .st-similar-autosearch
+    .search_results_card_info_container {
+    width: 200px;
+  }
+}
+
+.musicInspiration-container .circular-reveal::after {
+  height: 85px;
+  width: 80px;
+}
+/* Container hover triggers styles */
+.musicInspiration-container .ss_link_input_wrapper:hover {
+  border: 1px solid var(--color-primary);
+}
+
+/* Change SVG fill on container hover */
+.musicInspiration-container .ss_link_input_wrapper:hover .link-input-icon path {
+  fill: var(--color-primary);
+}
+
+.musicInspiration-container .link-input-icon path {
+  fill: var(--color-white);
+}
+.musicInspiration-list {
+  max-height: 340px;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-top: 20px;
+}
+/* Ensure this wraps play button, waveform & time in a row */
+.musicInspiration-list .track-card {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #54565a;
+}
+
+.musicInspiration-list .track-checkbox {
+  margin-right: 12px;
+}
+
+.musicInspiration-list .PlayListTitleList__Item__Left {
+  padding: 10px;
+}
+
+.musicInspiration-list .track-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+.musicInspiration-list .sonic_icon_button {
+  width: 75px;
+  background-color: var(--color-bg);
+  margin-left: 35px;
+}
+.musicInspiration-list .track-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 100;
+  height: 19;
+  left: 95.44px;
+}
+.musicInspiration-list .TrackcardV2 {
+  border-bottom: 0px;
+}
+.musicInspiration-list .TrackcardV2__cover__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  padding: 10px;
+}
+.musicInspiration-list .TrackcardV2__title__container {
+  min-height: 30px;
+}
+.musicInspiration-list .TrackcardV2_lower_block {
+  width: 708px;
+}
+.musicInspiration-container .link-search-btn:hover {
+  background-color: var(
+    --color-primary
+  ); /* replace with actual variable or hex */
+}
+.musicInspiration-list .track-card__loader {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100px; /* Match your track card height */
+  width: 100%; /* Take full width of card */
+}
+
+.musicInspiration-list #playhead {
+  border-left: 0px !important;
+}
+.musicInspiration-container .report_form_error {
+  color: var(--color-error);
+  padding: 10px 0px 5px;
+  font-size: 14px;
+  margin: 0;
+  margin-top: -10px;
+  margin-left: 129px;
+}
+.musicInspiration-container .audioPlayer_container #TimeLineComponent {
+  display: none;
+}
+.musicInspiration-container .TrackCard__audio_tctp {
+  color: black;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 600px;
+  border: 1px solid black;
+}
+.musicInspiration-container .tctp__time {
+  color: var(--color-white);
+  font-size: 16px;
+  position: relative;
+  left: 50px;
+  top: 0px;
+}
+.musicInspiration-container .TrackcardV2__item__title:hover {
+  color: inherit !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
+.musicInspiration-container .TrackcardV2__main {
+  gap: 0px;
+}
+.musicInspiration-container .TrackcardV2__info {
+  gap: 0px;
+  margin: 0px;
+}

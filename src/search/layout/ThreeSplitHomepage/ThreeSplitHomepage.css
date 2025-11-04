@@ -1,0 +1,177 @@
+/* Layout */
+
+.SearchPageTS__container {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.SearchPageTS__navigation {
+  height: 10.8rem;
+  box-sizing: border-box;
+}
+
+.SearchPageTS__ContentWrapper {
+  max-width: 100vw;
+  width: 100vw;
+  min-height: calc(100% - 10.8rem);
+  display: grid;
+  box-sizing: border-box;
+  grid-template-rows: 30vh minmax(35vh, min-content) 1fr;
+  grid-template-columns:
+    [full-start] minmax(10rem, 1fr) [center-start] repeat(
+      9,
+      [col-start] minmax(5rem, 1fr) [col-end]
+    )
+    [center-end] minmax(10rem, 1fr) [full-end];
+}
+
+.SearchPageTS__TitleSection {
+  grid-row: 1 / 2;
+  grid-column: center-start / center-end;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: "SearchInputSection SearchInputSection LogoSection LogoSection" "SearchInputSection SearchInputSection LogoSection LogoSection" "SearchInputSection SearchInputSection LogoSection LogoSection" "SearchInputSection SearchInputSection LogoSection LogoSection";
+  padding-bottom: 1rem;
+}
+
+/* CONTENT */
+
+.browse-seperator {
+  background-image: -webkit-linear-gradient(
+    left,
+    var(--color-alternative),
+    var(--color-green),
+    var(--color-alternative)
+  );
+  height: 1px !important;
+  border: none;
+  outline: none;
+  position: relative;
+  grid-row: 2 / 3;
+}
+
+.SearchPageTS__SearchSection {
+  grid-area: SearchInputSection;
+  color: var(--color-white);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 10rem;
+  padding-bottom: 6rem;
+}
+
+.SearchPageTS__LogoSection {
+  grid-area: LogoSection;
+  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-right: 10rem;
+}
+
+.SearchPageTS__SliderSection {
+  grid-row: 2 / 3;
+  min-width: 65rem;
+  grid-column: center-start / center-end;
+  position: relative;
+  box-sizing: border-box;
+
+  --picture-size: 25rem;
+}
+
+.extended {
+  margin-top: 45rem;
+}
+
+.SearchPageTS__SliderSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 2px;
+  background: -webkit-linear-gradient(
+    left,
+    var(--color-secondary),
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+
+.SearchPageTS__TrackSection {
+  color: var(--color-white);
+  min-width: 65rem;
+  grid-row: 2 / 4;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.SearchPageTS__FooterSection {
+  height: 100%;
+  box-sizing: border-box;
+  grid-column: full-start / full-end;
+  grid-row: 3 / 4;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.9rem;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1600px) {
+  .SearchPageTS__ContentWrapper {
+    grid-template-rows: 35vh max-content 1fr !important;
+  }
+  .SearchPageTS__LogoSection {
+    margin-right: 5rem !important;
+  }
+  .SearchPageTS__SearchSection {
+    padding-left: 5rem !important;
+  }
+  .SearchPageTS__SliderSection {
+    --picture-size: 19rem;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .SearchPageTS__TitleSection {
+    grid-column: full-start / full-end !important;
+  }
+  .SearchPageTS__SliderSection {
+    grid-column: full-start / full-end !important;
+    margin-left: 5rem !important;
+    margin-right: 5rem !important;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .SearchPageTS__LogoSection {
+    margin-right: 0rem !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .SearchPageTS__TitleSection {
+    grid-template-areas: "LogoSection LogoSection LogoSection LogoSection" "LogoSection LogoSection LogoSection LogoSection" "SearchInputSection SearchInputSection SearchInputSection SearchInputSection" "SearchInputSection SearchInputSection SearchInputSection SearchInputSection" !important;
+    display: block;
+  }
+  .SearchPageTS__ContentWrapper {
+    /* grid-template-rows: 50vh 1fr !important; */
+    grid-template-rows: 30vh 1fr !important;
+  }
+  .SearchPageTS__SearchSection {
+    padding: unset !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .SearchPageTS__SliderSection {
+    grid-column: full-start / full-end !important;
+    /*         margin: unset !important; */
+  }
+}

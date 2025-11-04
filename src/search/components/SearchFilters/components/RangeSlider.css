@@ -1,0 +1,283 @@
+/* 
+
+.rheostat-handle:before,
+.rheostat-handle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #dadfe8;
+}
+
+.rheostat-horizontal {
+  height: 24px;
+}
+
+.rheostat-horizontal .rheostat-background {
+  height: 15px;
+  top: 0px;
+  width: 100%;
+}
+
+.rheostat-horizontal .rheostat-progress {
+  height: 13px;
+  top: 2px;
+}
+
+.rheostat-horizontal .rheostat-handle {
+  margin-left: -12px;
+  top: -5px;
+}
+
+.rheostat-horizontal .rheostat-handle:before,
+.rheostat-horizontal .rheostat-handle:after {
+  top: 7px;
+  height: 10px;
+  width: 1px;
+}
+
+.rheostat-horizontal .rheostat-handle:before {
+  left: 10px;
+}
+
+.rheostat-horizontal .rheostat-handle:after {
+  left: 13px;
+} */
+
+/* 
+
+.ais-RangeSlider--marker {
+  display: none;
+}
+
+.ais-RangeSlider--body {
+  padding: 0 11px 0 16px;
+}
+
+
+
+.ais-RangeSlider--tooltip {
+  background: transparent;
+}
+
+ */
+
+.rheostat {
+  overflow: visible;
+}
+
+.rheostat-background {
+  background-color: #fcfcfc;
+  border: 1px solid #d8d8d8;
+  position: relative;
+}
+
+.rheostat-progress {
+  background-color: #abc4e8;
+  position: absolute;
+}
+.rheostat-handle {
+  position: relative;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-white);
+  border: 1px solid #333;
+  border-radius: 50%;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.ais-RangeSlider .rheostat-background {
+  height: 3px;
+  top: 2px;
+  width: 100%;
+  /*background-color: #5f83cc;*/
+  background-color: var(--color-primary);
+  border: none;
+}
+.ais-RangeSlider .rheostat-handle {
+  width: 19px;
+  height: 19px;
+  border: solid 2px #5468ff;
+  top: -6px;
+  margin-left: -10px;
+  border-radius: 50%;
+}
+
+.ais-RangeSlider-wrapper {
+  position: relative;
+  background: transparent;
+  border-bottom: 1px dotted gray;
+  box-sizing: border-box;
+  padding: 1.8rem 1.8rem;
+}
+
+.ais-RangeSlider {
+  margin: 50px 20px 20px 20px;
+}
+
+.ais-RangeSlider .rheostat-horizontal .rheostat-handle {
+  top: -6px;
+}
+
+.ais-RangeSlider .rheostat-progress {
+  height: 5px;
+  top: 1px;
+  /*background: #5468ff;*/
+  background: var(--color-primary);
+}
+
+.ais-RangeSlider-numbers {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  font-size: 1.7rem;
+  color: var(--color-white);
+  margin: auto;
+}
+
+.rangeTitle {
+  font-size: 1.6rem;
+  margin: 0px;
+  padding-bottom: 15px;
+}
+
+.slideCtrLbl {
+  opacity: 1;
+  position: absolute;
+  left: -8px;
+  height: 30px;
+  width: 36px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--color-primary) !important;
+  color: var(--color-white);
+  font-weight: 500;
+  top: -45px;
+  transform: translateX(-1px);
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+.ais-RangeSlider .rheostat-handle {
+  /*border: solid 2px #274684;*/
+  border: solid 2px var(--color-primary);
+}
+.ais-RangeSlider .rheostat-progress {
+  /*background: #274684;*/
+  background: var(--color-primary);
+}
+
+/* .slideCtrLbl::before {
+    opacity: 1;
+    content: attr(data-content);
+    display: block;
+    position: absolute;
+    top: -40px;
+    right: -23px;
+    width: 40px;
+    padding: 3px;
+    text-align: center;
+    color: var(--color-white);
+    background: #274684;
+    border-radius: 20px;
+  }  */
+.slideCtrLbl::after {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  /*border-top: 8px solid #274684;*/
+  border-top: 8px solid var(--color-primary);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.slideCtrLbl:hover::after {
+  opacity: 1;
+}
+
+/* /////////// For input box //////////// */
+.custom-Input-wrapper {
+  position: relative;
+  background: transparent;
+  border-bottom: 0px dotted gray;
+  box-sizing: border-box;
+  /* padding: 1.8rem 1.8rem; */
+  padding-top: 15px;
+  display: table;
+  margin: auto;
+}
+
+.custom-inputicon-wrapper {
+  border: solid 1px var(--color-white);
+  position: relative;
+  display: flex;
+  width: auto;
+  float: left;
+  padding: 0px 5px;
+  background-color: #000;
+}
+
+.custom-input-icon {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--color-white);
+  transform: scale(1);
+  margin: auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.custom-textInput {
+  height: 20px;
+  font-size: 1.6rem;
+  width: 70px;
+  display: block;
+  background-color: #000;
+  border: none;
+  color: var(--color-white);
+  margin: auto;
+  padding: 3px;
+  box-shadow: none;
+}
+
+.custom-textInput:focus,
+.custom-textInput:active,
+.submitInput:focus,
+.submitInput:active {
+  outline: none;
+}
+
+.submitInput {
+  background-color: var(--color-primary);
+  box-shadow: inset 0 0 0 2px var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 5rem;
+  border-radius: var(--border-radius-sm);
+  margin-left: 1rem;
+}
+/* /////////// For input box //////////// */

@@ -1,0 +1,101 @@
+.st-container {
+  width: 100%;
+  margin: auto;
+  color: var(--color-white);
+}
+
+.st-container__custSearch {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding-bottom: 15px;
+}
+.st-container__custSearch .st-container__custSearch_lp {
+  flex: 4;
+}
+
+.st-container__custSearch .st-container__custSearch_rp {
+  flex: 6;
+}
+
+.st-input-search {
+  color: var(--color-white);
+  width: 100%;
+  background: none;
+  padding: 0px;
+  height: 24px;
+  border: 0px solid var(--color-white);
+  padding-left: 0;
+  outline: 0px;
+  margin-left: 0px;
+  font-size: 14px;
+}
+.TrackPage__wrapper .spotifySearchIcon,
+.TrackPage__wrapper .librarySearchIcon {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  width: 16px;
+}
+.st-input-search::placeholder {
+  color: var(--color-white);
+  opacity: 1;
+}
+
+.st-input-search:-ms-input-placeholder {
+  color: ffffff;
+}
+
+.st-input-search::-ms-input-placeholder {
+  color: ffffff;
+}
+
+.st-similar-autosearch table {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.st-similar-autosearch .table-dark.table-bordered {
+  border: 0;
+}
+.st-similar-autosearch .table-dark {
+  color: var(--color-white);
+  background-color: var(--color-card);
+}
+.st-similar-autosearch .table-dark th {
+  font-family: var(--font-primary);
+  background-color: #2c2f37;
+}
+.st-similar-autosearch .table-dark td,
+.st-similar-autosearch .table-dark th,
+.st-similar-autosearch .table-dark thead th {
+  border-color: #32383e;
+}
+.st-similar-autosearch .table-bordered thead td,
+.st-similar-autosearch .table-bordered thead th {
+  border-bottom-width: 2px;
+}
+.st-similar-autosearch .table-bordered th {
+  border: 1px solid #000000 !important;
+}
+.st-similar-autosearch .table-bordered td {
+  border-top: 1px solid #2f3033;
+  border-bottom: 1px solid #444445;
+}
+.st-similar-autosearch .table td,
+.st-similar-autosearch .table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+  vertical-align: middle;
+}
+.st-similar-autosearch .table th:first-child,
+.st-similar-autosearch .table td:first-child {
+  text-align: left;
+  width: 200px;
+}
+.st-similar-autosearch .table-dark td,
+.st-similar-autosearch .table-dark th,
+.st-similar-autosearch .table-dark thead th {
+  border-color: #32383e;
+}

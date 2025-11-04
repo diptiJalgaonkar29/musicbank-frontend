@@ -1,0 +1,436 @@
+/* .shell .V3AuthLayout .brand_logo {
+  width: 80px !important;
+} */
+
+.shell .navbar__container img {
+  max-width: 45px !important;
+}
+
+.shell .navbar__logo__container {
+  gap: 20px !important;
+  width: 260px !important;
+  justify-content: flex-start !important;
+  padding-left: 15px !important;
+}
+
+/* .shell .V3AuthLayout .shapes_img {
+  visibility: hidden !important;
+} */
+
+.shell .DocumentsPage__cardsItem:hover {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.shell .activeNavlink,
+.shell .MuiSlider-valueLabel *,
+.shell .sonicButton,
+.shell .navitem:hover,
+.shell
+  .SearchPageTS__ContentWrapper
+  .SearchPageTS__SearchSection
+  .main-subtitle-Highlight {
+  color: var(--color-white) !important;
+}
+
+.shell .navitem {
+  border-radius: 5px;
+}
+
+.shell .navitem:hover {
+  background-color: #4a4a4a1a !important;
+}
+
+.shell a.navitem--active::before,
+.shell .WebNavbar--anchor.activeNavlink::before {
+  content: "";
+  width: 100% !important;
+  height: 4px !important;
+  background-color: var(--color-primary) !important;
+  position: absolute !important;
+  bottom: -17px !important;
+  left: 0 !important;
+}
+
+.shell .navitems__menu_right .WebNavbar--anchor.activeNavlink::before {
+  bottom: -12px !important;
+}
+
+.shell .WebNavbar--anchor.activeNavlink .sonic_icon_button[icon="Help"] svg,
+.shell .WebNavbar--anchor.activeNavlink .sonic_icon_button[icon="Profile"] svg {
+  stroke: var(--color-white) !important;
+}
+
+.shell .navitems__menu_container {
+  height: 75px !important;
+}
+
+.shell .navitem a:hover,
+.shell .navitem a:active,
+.shell #navitems .navitem .WebNavbar--anchor:hover,
+.shell #navitems .navitem .WebNavbar--anchor.activeNavlink,
+.shell .navitem a.navitem--active {
+  color: var(--color-white) !important;
+}
+
+.shell #navitems .navitem:last-child .WebNavbar--anchor {
+  padding-right: 10px !important;
+}
+
+.shell .navbar__container {
+  height: 75px !important;
+  border-bottom: 1px solid var(--color-gray-2) !important;
+}
+
+.shell .navitems__customHolder {
+  flex: 1 !important;
+}
+
+.shell .CustomNotificationTopBar_text {
+  color: var(--color-white) !important;
+}
+
+.shell .used_in_video_container .cover_image.default_usedin_img {
+  padding: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.shell .searchResults__results .TrackcardV2 #TimeLineComponentV2,
+.shell .TrackPage__wrapper .Cyanite_AudioPlayer #TimeLineComponent,
+.shell .musicPlayerContainer .progress_div,
+.shell .TrackPageHeader_wave,
+.shell .PlayListTitleList__Item #TimeLineComponent,
+.shell
+  .TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  #TimeLineComponent {
+  background-color: #000 !important;
+}
+
+.shell .searchResults__results .TrackcardV2 #TimeLineComponentV2:before,
+.shell .TrackPage__wrapper .Cyanite_AudioPlayer #TimeLineComponent:before,
+.shell .TrackPageHeader_wave img,
+.shell .musicPlayerContainer .waveImage {
+  filter: invert(1) contrast(200%) !important;
+}
+
+.shell .PlayListTitleList__Item #TimeLineComponent::before,
+.shell
+  .TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  #TimeLineComponent:before {
+  filter: brightness(0%) contrast(92%) invert(1) !important;
+}
+
+.shell .custSearchBoxForAll .custSearch__container .custSearch_closeBtn,
+.shell .sonic_icon_button.CustomNotificationTopBar_close_btn,
+.shell
+  .custSearchBoxForAll
+  .custSearch__container
+  .searchIconContainer.sonic_icon_button,
+.shell .sonic_icon_button[icon="Play"],
+.shell .sonic_icon_button[icon="Pause"],
+.shell .musicPlayerContainer .sonic_icon_button[icon="Close"],
+.shell .custSearchResultDialog .closeIconContainer svg,
+.shell .TrackDownloadProgress_close_icon svg {
+  filter: contrast(0%) brightness(60%) !important;
+}
+
+.shell .sonic_tab_title.MuiTab-textColorInherit.MuiTab-root.Mui-selected,
+.shell .download_cart_count,
+.shell .sonicButton,
+.shell .st-container .st-container-inner .st-btn-library.active,
+.shell .st-container .st-container-inner .st-btn-spotify.active,
+.shell .sonic-rangeslider-wrapper .slideCtrLbl,
+.shell .searchResuts__container .ais-CurrentRefinements-list .sonic_chip,
+.shell .TrackcardV2__item__tags .taxonomy__tags_container .sonic_chip.tag_key,
+.shell
+  .TrackcardV2__item__tags
+  .taxonomy__tags_container
+  .sonic_chip.instrument_ids,
+.shell
+  .Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.tag_key,
+.shell
+  .Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.instrument_ids,
+.shell .MemberOverview__li--select.errorColorBackground,
+.shell .st-container .st-container-inner table .st-tbl-sel-2,
+.shell .ais-ClearRefinements-button:hover,
+.shell .MuiSnackbarContent-message,
+.shell .DownloadWidgetWithCookiesV2Dialog_buttonText {
+  color: var(--color-white) !important;
+}
+
+.shell .search_results_card_info_container:hover,
+.shell .downloadBasketPage__container .TrackCard__item__title:hover,
+.shell .used_in_video_container .used_in_title:hover {
+  color: var(--color-primary) !important;
+}
+
+.shell .st-container .st-container-inner .st-btn-spotify.active svg,
+.shell .Comment_Icon svg,
+.shell .projectName_container svg {
+  fill: var(--color-white) !important;
+  stroke: var(--color-white) !important;
+}
+
+.shell .sonic_icon_button .MuiSvgIcon-root,
+.shell .sonic_icon_button[icon="Done"] svg {
+  fill: var(--color-white) !important;
+}
+
+.shell .PlayListTitleList__Item .sonic_icon_button .MuiSvgIcon-root {
+  fill: var(--color-white) !important;
+}
+
+.shell .PlayListTitleList__wrapper .MuiPaper-root.MuiAccordion-root {
+  border: none !important;
+}
+
+.shell .PlayListTitleList__wrapper .MuiPaper-elevation1 {
+  box-shadow: none !important;
+}
+
+.shell .sonic_chip svg {
+  stroke: #fff !important;
+}
+
+.shell .MemberOverview__ul .MemberOverview__li .recent_link_icon {
+  color: #000 !important;
+}
+
+.shell .musicPlayerContainer .progressBarNew::-webkit-slider-runnable-track {
+  background-color: #000 !important;
+}
+
+.shell .PlayListTitleList__Item #pButton svg,
+.shell
+  .PlaylistCoverImage--image:hover
+  .PlaylistCoverImage--editIcon.sonic_icon_button,
+.shell .sonic_icon_button.submit_chat svg,
+.shell .closeSnackbarButton {
+  filter: contrast(0%) brightness(60%) !important;
+}
+
+.shell .profile_menu_main_container .confirm_password_input,
+.shell .profile_menu_main_container .set_new_password_field,
+.shell .profile_menu_main_container .confirm_password_input,
+.shell .profile_menu_main_container .set_new_password_field {
+  background-color: var(--color-gray-2) !important;
+  color: var(--color-white) !important;
+}
+
+.shell .BackButton_container svg {
+  fill: var(--color-white) !important;
+}
+
+.shell .profile_menu_main_container .profile_form_action_button.sonicButton {
+  background-color: var(--color-primary) !important;
+}
+
+.shell
+  .profile_menu_main_container
+  .profile_form_action_button.sonicButton:disabled,
+.shell .sonicButton:disabled {
+  color: var(--color-gray-7) !important;
+  background-color: var(--color-primary-shade1) !important;
+}
+
+.shell .SonicRadio_container input[type="radio"] {
+  /* background-color: var(--color-gray-2) !important; */
+  background-color: var(--color-bg) !important;
+  border: 1px solid var(--color-white) !important;
+}
+
+.shell .SonicRadio_container input[type="radio"]:before {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+.shell .boldFamily,
+/* .shell .V3AuthLayout .V3LoginTitle, */
+.shell .MuiTab-wrapper {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+.shell #navitems .navitem .WebNavbar--anchor {
+  padding: 10px !important;
+}
+
+.shell .PlayListTitleList__wrapper .sonic_icon_button[icon="Play"],
+.shell .PlayListTitleList__wrapper .sonic_icon_button[icon="Pause"] {
+  filter: invert(0) !important;
+}
+
+.shell .Comment_element--extra .sonic_icon_button .MuiSvgIcon-root {
+  fill: var(--color-white) !important;
+}
+
+.shell .sonicButton {
+  color: var(--color-white) !important;
+}
+
+.shell .saveToDraftBtn {
+  background-color: var(--color-primary) !important;
+}
+
+.shell
+  .profile_menu_main_container
+  .profile_form_action_button.sonicButton:disabled {
+  background-color: transparent !important;
+}
+
+/* .shell .V3AuthLayout .login_form_btn_container #register_btn {
+  background-color: var(--color-white) !important;
+  color: #fff !important;
+} */
+
+/* .shell .login-ac-anchor {
+  color: var(--color-white) !important;
+} */
+
+.shell .shape_circle {
+  background-color: var(--color-secondary) !important;
+}
+
+.shell .highlight_text,
+/* .shell .V3AuthLayout .form-message.highlight_text, */
+.shell .highlight_text a {
+  color: var(--color-white) !important;
+}
+
+.shell .profile_menu_main_container .profile_form_input-fields {
+  border-radius: 100px !important;
+  padding: 8px 20px !important;
+  width: calc(100% - 42px) !important;
+}
+
+.shell .profile_menu_main_container .profile_form_action_button_container {
+  right: 15px !important;
+  top: 15px !important;
+}
+
+.shell
+  .TrackPageHeader_container_right
+  .DownloadWidgetWithCookiesV2Dialog_buttonText_container
+  svg
+  path {
+  stroke: var(--color-white) !important;
+}
+
+.shell .MuiButtonBase-root.MuiButton-root .MuiButton-label {
+  color: #fff !important;
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+/* .shell .st-container .st-container-inner .st-filter-rp-inner .st-input-search {
+  padding: 7px 15px 7px 15px !important;
+} */
+
+.shell .Comment_element--extraVisible span,
+.shell .PlayListMembers__container--title.showAll {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+.shell .Comment_element--Shadow {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.shell .bubbleBoxText {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+.shell .CommonMessageModal_text {
+  color: var(--color-primary) !important;
+}
+
+/* .shell .V3AuthLayout_wrapper .login_right_img_logo_container {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-color: transparent !important;
+} */
+
+.shell .V3AuthLayout_wrapper .login_right_img {
+  display: none !important;
+}
+
+.shell .login_form {
+  position: relative !important;
+}
+
+.shell .login_form {
+  position: relative !important;
+}
+
+/* .shell .V3AuthLayout .V3LoginTitle {
+  font-size: 4.8rem !important;
+  font-weight: 600 !important;
+} */
+
+.shell .eye_icon svg {
+  fill: var(--color-white) !important;
+}
+
+.shell .filter_by_tags_list_db .filtered_tag span:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.shell .credits-info svg {
+  filter: invert(1) !important;
+}
+
+.shell .credit-request .button-cancel {
+  background-color: var(--color-white) !important;
+  color: var(--color-bg) !important;
+}
+
+.shell .DocumentsPage__container__v2 .DocumentsPage__Item:has(.activeColor) {
+  background-color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+.shell .DocumentsPage__container__v2 .DocumentsPage__Item .activeColor,
+.shell .footer_link:hover {
+  color: var(--color-white) !important;
+}
+/* .shell .sonicButton.primaryOutlined,
+.shell .sonicButton.primaryOutlined.sonicButtonHover {
+  color: var(--color-bg) !important;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+} */
+
+.shell #register_btn {
+  color: var(--color-bg) !important;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+
+.shell .musicInspiration-container .ss_link_input_wrapper {
+  border: 1px solid var(--color-gray-2) !important;
+  background-color: var(--color-gray-2) !important;
+}
+.shell .musicInspiration-container .ss_input,
+.shell .ss_textarea {
+  border: 1px solid var(--color-gray-2) !important;
+  background-color: var(--color-gray-2) !important;
+  height: 42px;
+}
+
+.shell .customTrackForm .custom-datepicker {
+  border: 1px solid var(--color-gray-2) !important;
+  background-color: var(--color-gray-2) !important;
+}

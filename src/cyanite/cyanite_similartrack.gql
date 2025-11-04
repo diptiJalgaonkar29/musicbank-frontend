@@ -1,0 +1,74 @@
+//working query - combined similar tracks result with audioAnalysisV6
+Request variables
+{
+  "trackId": "1g81E6YHw7oJ7nBEERUvau"
+}
+
+Request Headers
+{
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiSW50ZWdyYXRpb25BY2Nlc3NUb2tlbiIsInZlcnNpb24iOiIxLjAiLCJpbnRlZ3JhdGlvbklkIjoxMTAsInVzZXJJZCI6MjkzOSwiYWNjZXNzVG9rZW5TZWNyZXQiOiJjZDQyOWI3NDk2MTk2NDU3ZWQ4MmExMGIxNGRmMmQ3MmY2NzU5MDQ2Mjg0NTAwMmEyOTY4Zjk4NGUyOWVhZTFlIiwiaWF0IjoxNjE2NTA3MzA1fQ.5nlFKQS-_pmBHnyESMTwEZPyg9JK4uuJB-XiR3UNEmc"
+}
+
+
+
+query SimilarTracksQuery($trackId: ID!) {
+  spotifyTrack(id: $trackId) {    
+    __typename
+    ... on Error {
+      message
+    }
+    ... on Track {
+      id      
+      similarTracks(target: {spotify: {}}) {
+        __typename
+        ... on SimilarTracksError {
+          code
+          message
+        }        
+        ... on SimilarTracksConnection {   
+          pageInfo{hasNextPage}          
+          
+          edges {
+            cursor            
+            node {
+              __typename              
+              id              
+              audioAnalysisV6 {
+                
+                __typename
+                ... on AudioAnalysisV6Finished {
+                  result {
+                    
+                    mood {
+                      aggressive
+                      calm
+                      chilled
+                      dark
+                      energetic
+                      epic
+                      happy
+                      romantic
+                      sad
+                      scary
+                      sexy
+                      ethereal
+                      uplifting
+                    }
+                    moodTags
+                    moodMaxTimes {
+                      mood
+                      start
+                      end
+                    }
+                  }
+                }
+              }
+              __typename
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}

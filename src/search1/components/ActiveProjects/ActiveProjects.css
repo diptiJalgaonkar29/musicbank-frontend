@@ -1,0 +1,13 @@
+.Activeprojects_container {
+  overflow-x: hidden;
+  /* height: 82vh; */
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  position: relative;
+}
+
+.project_loader {
+  width: 100%;
+  text-align: center;
+}

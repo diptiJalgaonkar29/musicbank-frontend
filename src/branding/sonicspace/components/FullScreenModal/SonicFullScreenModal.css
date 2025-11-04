@@ -1,0 +1,41 @@
+.SonicFSModal_dialog {
+  background-color: rgba(74, 74, 74, 0.3);
+  z-index: 1300 !important;
+  color: var(--color-white);
+  padding: 30px;
+}
+
+.SonicFSModal_close_icon {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  font-size: 14px;
+  color: var(--color-white);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.SonicFSModal_close_icon svg {
+  stroke: var(--color-white);
+}
+
+.SonicFSModal_dialog .MuiPaper-root.MuiDialog-paper {
+  background-color: var(--color-bg) !important;
+  border-radius: 10px;
+  width: 100%;
+  height: 95%;
+  min-width: 500px;
+
+}
+
+.SonicFSModal_dialog .SonicFSModal_title {
+  font-size: 2rem !important;
+  color: var(--color-white);
+  width: 100%;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}

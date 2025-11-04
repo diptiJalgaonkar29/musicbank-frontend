@@ -1,0 +1,233 @@
+.Layout-container {
+  display: flex;
+  color: var(--color-white);
+  height: 74vh;
+  overflow-y: auto;
+}
+
+.Layout-container .sidebar {
+  min-width: 290px;
+  height: 625px;
+  gap: 45px;
+  margin-left: 56px;
+}
+
+.Layout-container .step-row {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.Layout-container .step-icon {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: 1.5px solid #c4c4c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.Layout-container .step-icon.active {
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+}
+
+.Layout-container .step-icon.done {
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.Layout-container .step-icon.done .checkmark {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Layout-container .inner-circle {
+  width: 11px;
+  height: 11px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 4.9px;
+  left: 5px;
+}
+
+.Layout-container .step-label {
+  margin-left: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: var(--color-bg);
+}
+
+.Layout-container .inactive-label {
+  color: var(--color-white);
+}
+
+.Layout-container .active-label {
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+.Layout-container .step-line {
+  position: absolute;
+  height: 39px;
+  width: 1px;
+  background-color: var(--color-white);
+  left: 11px;
+  top: 24px;
+}
+
+.Layout-container .content-area {
+  width: 995px;
+  height: 352px;
+  gap: 20px;
+  border-radius: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  width: calc(100% - 416px);
+}
+
+.Layout-container .disabled-step {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.Layout-container .disabled-label {
+  color: #c4c4c4;
+  cursor: not-allowed;
+}
+
+.Layout-container .btn_container {
+  display: flex;
+  justify-content: flex-end;
+  /* Align to right */
+  align-items: center;
+  gap: 8px;
+  /* Space between buttons */
+  padding-right: 40px;
+  /* Optional: add right padding for spacing from edge */
+  width: 100%;
+  /* Full width of container */
+  box-sizing: border-box;
+  /* Ensure padding doesn't cause overflow */
+}
+
+.Layout-container .sonicButton.filled.bck_btn {
+  width: 230px;
+  height: 46px;
+  gap: 10px;
+  border-radius: 43px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--color-white) !important;
+  color: var(--color-bg) !important;
+}
+
+.Layout-container .sonicButton.filled.nxt_btn {
+  width: 230px;
+  height: 46px;
+  gap: 10px;
+  border-radius: 43px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  /* background-color: var(--color-primary) !important;
+  color:var(--color-bg) !important ; */
+}
+
+.Layout-container .confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(98, 98, 98, 0.6);
+  /* semi-transparent #626262 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.Layout-container .confirmation-modal {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  width: 568px;
+  height: 150px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* allow top + bottom spacing */
+  align-items: center;
+  padding: 20px;
+  /* add some padding around content */
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.Layout-container .modal-buttons {
+  margin-top: auto;
+  /* push this block to the bottom */
+  width: 100%;
+  /* span full width of modal */
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.Layout-container .cancel-btn,
+.submit-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Layout-container .submit-btn {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.Layout-container .sonicButton.filled.cancel-btn {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-bg) !important;
+}
+
+/* .Layout-container .step-row {
+  cursor: pointer;
+} */
+
+.Layout-container .disabled-step {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,26 @@
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  #DropDownContainer {
+    max-height: 35rem !important;
+    height: 35rem !important;
+  }
+  .searchResults__results {
+    grid-template-rows: minmax(10rem, auto) calc(85vh - 10.8rem);
+  }
+  .searchResults__results--header::before {
+    display: none;
+  }
+  #DropDownNewSearchElement {
+    max-height: 29rem;
+    height: 29rem;
+  }
+}
+@media screen and (-webkit-max-device-pixel-ratio: 1.5) {
+  #DropDownContainer {
+    max-height: 48rem;
+    height: 48rem;
+  }
+  #DropDownNewSearchElement {
+    max-height: 39rem;
+    height: 39rem;
+  }
+}

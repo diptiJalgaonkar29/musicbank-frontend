@@ -1,0 +1,29 @@
+.Load-basket-cover-image-container {
+  height: 55px;
+  width: 55px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Load-basket-cover-image-container img {
+  width: 50px !important;
+  height: 50px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative !important;
+  left: 8px !important;
+}
+
+.Load-basket-cover-image-container .Load-basket-cover-image-loader {
+  width: 45px !important;
+  height: 45px !important;
+  position: absolute;
+  top: -5px;
+  left: -10px;
+}
+
+.Load-basket-cover-image-container .lds-default {
+  margin: 4px 0px 0px 2px !important;
+  scale: 0.8 !important;
+}

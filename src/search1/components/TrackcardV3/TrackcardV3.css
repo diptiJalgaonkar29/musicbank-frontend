@@ -1,0 +1,446 @@
+.TrackcardV3 {
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background-color: transparent;
+  color: var(--color-white);
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.356); */
+  box-shadow: none;
+  width: 100%;
+}
+
+.TrackcardV3 .MuiPaper-root.MuiAccordion-root {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  width: 100% !important;
+}
+
+.TrackcardV3 .MuiAccordionSummary-root {
+  padding: 0 !important;
+}
+
+.TrackcardV3 #pButton {
+  background-color: transparent;
+  padding: 0;
+  /* width: 5.6rem; */
+}
+
+.TrackcardV3 #pButton svg {
+  width: 4.2rem;
+}
+
+.TrackcardV3 .TrackcardV3__main {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.TrackcardV3 .TrackcardV3__Left {
+  width: 100px;
+}
+.TrackcardV3 .TrackcardV3__main .TrackcardV3__cover .lds-default {
+  left: -12px;
+  top: -12px;
+}
+.TrackcardV3 .circular-reveal,
+.TrackcardV3 .circular-reveal img {
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: cover;
+}
+
+.TrackcardV3 .favBtn {
+  position: relative;
+  fill: var(--color-white);
+  cursor: pointer;
+  font-size: 2.2rem;
+  width: 2.2rem;
+  padding: 0;
+  background-color: transparent;
+}
+
+.TrackcardV3 .favBtn svg {
+  fill: var(--color-white);
+}
+.TrackcardV3 .TrackcardV3__cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 80px;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.TrackcardV3__title__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  min-height: 35px;
+}
+
+.TrackcardV3 .activeColor {
+  color: var(--color-primary) !important;
+  font-size: 1.4rem !important;
+}
+
+.TrackcardV3 .inactiveColor {
+  font-size: 1.4rem !important;
+  color: var(--color-white) !important;
+}
+
+.TrackcardV3 .TrackcardV3__duration__icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.TrackcardV3__item__title {
+  margin: 0rem !important;
+  font-size: 1.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-white);
+  font-weight: normal;
+  flex: 1;
+  width: 0px;
+  align-self: flex-start;
+}
+
+.TrackcardV3_lower_block {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 20px;
+  /* justify-content: space-between; */
+}
+
+.TrackcardV3__player .TrackCard__audio .TrackCard__time {
+  display: none;
+}
+.TrackcardV3 .audioPlayer_container.TrackCard__audio_tctp {
+  display: flex;
+  align-items: center;
+  width: auto;
+  border: none;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background-color: transparent;
+  color: transparent;
+}
+
+.TrackcardV3 #audioplayer_tctp .lds-default {
+  position: absolute;
+  left: -22px;
+  top: -24px;
+}
+.TrackcardV3 #audioplayer_tctp .tctp__time {
+  display: none;
+}
+
+/* Hide play button by default */
+.TrackcardV3 .playButton__container_tctp {
+  position: relative;
+  display: inline-block;
+}
+
+.TrackcardV3 .playButton__container_tctp #pButton {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.TrackcardV3 .playButton__container_tctp:hover #pButton {
+  opacity: 1;
+}
+
+.TrackcardV3 .playButton__container_tctp.is-playing #pButton {
+  opacity: 1 !important;
+}
+
+.TrackcardV3 .audioPlayer_container #TimeLineComponent {
+  display: none;
+}
+
+.TrackcardV3__duration {
+  font-size: 1.6rem;
+  color: var(--color-white);
+  width: 50%;
+  min-width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TrackcardV3__tags__expandIcon {
+  width: 20px;
+  transform: rotate(0deg);
+  color: var(--color-white);
+  transition: all 0.3s;
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.TrackcardV3 .TrackcardV3__download_menu:disabled {
+  opacity: 0.5 !important;
+}
+
+.TrackcardV3 .downloadImgContainer {
+  width: 20px !important;
+}
+
+.TrackcardV3__tags__expandIcon.expanded {
+  transform: rotate(180deg);
+}
+
+.TrackcardV3 .TrackcardV3__item__tags__expansion__panel {
+  width: calc(100% + 36px);
+  background: var(--color-bg-light, var(--color-card));
+  margin-left: -40px;
+}
+
+.TrackcardV3__item__tags {
+  padding: 1rem 1rem 1rem 0rem !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.TrackcardV3__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+  margin: 1rem 0rem 1rem 0.5rem;
+}
+
+.TrackcardV3 .MuiAccordionDetails-root {
+  padding: 0 0 0 0px !important;
+  width: calc(100% - 0px);
+}
+
+.TrackcardV3__item__tags_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px; /* Add gap between items */
+}
+
+.TrackcardV3__item__tags--divider h4 {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+/* .TrackcardV3__item__tags span {
+  display: inline-block !important;
+  line-height: 1 !important;
+  padding: 0.7rem 1rem !important;
+  cursor: default;
+  border: 1px solid #ccc !important;
+  border-radius: 18px !important;
+  margin-bottom: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  font-size: 1.3rem !important;
+} */
+
+.TrackcardV3__item__tags .taxonomy__tags_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.TrackcardV3__item__tags .taxonomy__tags_container .sonic_chip {
+  text-transform: capitalize;
+  color: var(--color-white) !important;
+  border: none !important;
+}
+
+.TrackcardV3__item__tags
+  .taxonomy__tags_container
+  .sonic_chip.tag_amp_allmood_ids {
+  background-color: var(--color-bubbletag-amp_allmood_ids-bg) !important;
+  color: var(--color-bubbletag-amp_mainmood_ids-text) !important;
+}
+
+.TrackcardV3__item__tags
+  .taxonomy__tags_container
+  .sonic_chip.tag_soniclogo_allmood_ids {
+  background-color: var(--color-bubbletag-amp_allmood_ids-bg) !important;
+  color: var(--color-bubbletag-amp_mainmood_ids-text) !important;
+}
+
+.TrackcardV3__item__tags .taxonomy__tags_container .sonic_chip.tag_genre {
+  background-color: var(--color-bubbletag-genre-bg) !important;
+  color: var(--color-bubbletag-genre-text) !important;
+}
+
+.TrackcardV3__item__tags .taxonomy__tags_container .sonic_chip.tag_tempo {
+  background-color: var(--color-bubbletag-tempo-bg) !important;
+  color: var(--color-bubbletag-tempo-text) !important;
+}
+
+.TrackcardV3__item__tags .taxonomy__tags_container .sonic_chip.tag_key {
+  background-color: var(--color-bubbletag-key-bg) !important;
+  text-transform: lowercase;
+}
+
+.TrackcardV3__item__tags .taxonomy__tags_container .sonic_chip.instrument_ids {
+  background-color: var(--color-bubbletag-instrument-bg) !important;
+}
+
+.TrackcardV3__toggleTagsBtn {
+  background-color: var(--color-TrackcardV3-showall);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+}
+
+.TrackcardV3 .queueIcon {
+  color: var(--color-white) !important;
+}
+
+.TrackcardV3 .cs_edit_btn {
+  padding: 4px 12px !important;
+  cursor: pointer;
+  border: 1px solid var(--color-primary) !important;
+  color: var(--color-primary);
+  border-radius: 18px !important;
+  background-color: transparent;
+  width: auto;
+  font-size: 1.4rem !important;
+  /* width: 105px; */
+}
+
+.TrackcardV3 .TrackcardV3__actionBtns .sonic_icon_button {
+  background-color: transparent !important;
+  width: 30px !important;
+  padding: 0 !important;
+}
+
+.TrackcardV3 .actionMenuSet {
+  margin-left: auto; /* pushes it to far right inside flex */
+  gap: 15px;
+  /* margin: 0 !important;
+  padding: 0 !important; */
+  min-width: 190px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.TrackcardV3 .PlayListTitleList__Extra--actions {
+  position: relative !important;
+  top: 1px !important;
+  width: 25px;
+  cursor: pointer !important;
+}
+
+.TrackcardV3 .PlayListTitleList__Extra--actions svg {
+  width: 25px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* .TrackcardV3 .circular-reveal,
+  .TrackcardV3 .circular-reveal img,
+  .TrackcardV3__cover {
+    width: 100px !important;
+    height: 100px !important;
+  } */
+  /* .TrackcardV3 .actionMenuSet {
+    gap: 5px;
+    min-width: 160px;
+  }
+  .TrackcardV3 .TrackcardV3__info,
+  .TrackcardV3_lower_block {
+    gap: 5px;
+  }
+  .TrackcardV3 .lds-default {
+    margin: 10px;
+  } */
+}
+.TrackcardV3__item__tags--divider {
+  display: flex;
+}
+.TrackcardV3__item__tags .trackFilterLabel {
+  /* height: 24px; */
+  opacity: 1;
+  border-radius: 40px;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  color: var(--color-texthighlight, var(--color-primary));
+  font-size: 1.6rem;
+}
+.TrackcardV3__item__tags .trackFilterOption {
+  /* height: 24px; */
+  opacity: 1;
+  border-radius: 40px;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  color: var(--color-white);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.TrackcardV3__item__tags .verticalDevider {
+  width: 1px;
+  height: 2rem;
+  background-color: #fff;
+  display: inline-block;
+  margin: 0px 2px -4px 2px;
+}
+.MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters {
+  cursor: default !important;
+}
+.TrackcardV3__tagGroup {
+  margin: 2px 0px 2px 0px;
+}
+.TrackcardV3__item__tags_container .sonic_chip.tag_amp_allmood_ids {
+  border-radius: 10px;
+  background-color: var(--color-card) !important;
+  min-width: 50px !important;
+}
+.TrackcardV3__item__title mark {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.TrackcardV3__item__title span:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+  /* text-decoration: underline; */
+}
+
+.trackcard_play_pause_icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  /* scale: 1.2; */
+}
+
+.TrackcardV3__main .circular-reveal::after {
+  display: none;
+}

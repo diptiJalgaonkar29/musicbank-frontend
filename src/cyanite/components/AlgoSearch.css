@@ -1,0 +1,8 @@
+.ss_library_input {
+  border: 1px solid var(--color-white);
+  border-radius: 4x;
+  background-color: transparent;
+  color: var(--color-white);
+  font-size: 16px;
+  height: 40px;
+}

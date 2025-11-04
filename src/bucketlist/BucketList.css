@@ -1,0 +1,140 @@
+.project-list-container {
+  max-width: 1512px;
+  margin: 0 auto;
+}
+
+.project-list header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-list h1 {
+  font-size: 4rem;
+  width: 27.2rem;
+  height: 5rem;
+  margin: 0;
+}
+
+.project-list .project-list-left-section {
+  width: 332px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-list .credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  width: 15rem;
+  height: 4.5rem;
+  border: 0.1rem solid var(--color-white);
+  border-radius: 3rem;
+  /* line-height: 1rem; */
+  gap: 1rem;
+}
+
+.project-list .new-project {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  /* padding: 10px 20px; */
+  font-size: 1.4rem;
+  line-height: 16px;
+  border-radius: 3rem;
+  cursor: pointer;
+  width: 152px;
+  height: 45px;
+}
+
+.project-list .search-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.project-list .search-input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  background-color: var(--color-bg);
+  border: 0.1rem solid var(--color-white);
+  /* color: var(--color-white); */
+  border-radius: 3.3rem;
+  font-size: 1.4rem;
+}
+
+.project-list .search-input::placeholder {
+  color: var(--color-white);
+}
+
+.project-list .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 45%;
+  transform: translateY(-50%);
+  color: var(--color-white);
+}
+
+.project-list .dropdown {
+  margin-bottom: 20px;
+}
+
+.project-list .dropdown select {
+  background-color: #000;
+  color: #666;
+  border: none;
+  padding: 5px;
+}
+
+.project-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-list th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.project-list th {
+  color: #666;
+  font-weight: normal;
+}
+
+.project-list .project-name {
+  display: flex;
+  align-items: center;
+}
+
+.project-list .folder-icon {
+  margin-right: 10px;
+}
+
+.project-list .delete-icon {
+  color: #666;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* .project-list .ProjectDropDown {
+    position: absolute;
+    top: 0;
+} */
+
+#ProjectDropDown {
+  position: absolute;
+  top: 145px;
+}
+
+.project-dropdown-list .MuiButtonBase-root .MuiList-root {
+  background-color: #333;
+}

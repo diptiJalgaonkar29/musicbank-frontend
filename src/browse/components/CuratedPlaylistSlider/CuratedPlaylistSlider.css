@@ -1,0 +1,244 @@
+.CuratedPlaylistSlideShow_container .slick-slider {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+.CuratedPlaylistSlideShow_container .slick-dots,
+.CuratedPlaylistSlideShow_container .slick-next,
+.CuratedPlaylistSlideShow_container .slick-prev {
+  position: absolute;
+  display: block;
+  padding: 0;
+}
+
+.CuratedPlaylistSlideShow_container .slick-dots li button:before,
+.CuratedPlaylistSlideShow_container .slick-next:before,
+.CuratedPlaylistSlideShow_container .slick-prev:before {
+  font-family: slick;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.CuratedPlaylistSlideShow_container .slick-next,
+.CuratedPlaylistSlideShow_container .slick-prev {
+  font-size: 0;
+  line-height: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: 0;
+  background: 0 0;
+}
+
+.CuratedPlaylistSlideShow_container .slick-next:focus:before,
+.CuratedPlaylistSlideShow_container .slick-next:hover:before,
+.CuratedPlaylistSlideShow_container .slick-prev:focus:before,
+.CuratedPlaylistSlideShow_container .slick-prev:hover:before {
+  opacity: 1;
+}
+
+.CuratedPlaylistSlideShow_container .slick-next.slick-disabled:before,
+.CuratedPlaylistSlideShow_container .slick-prev.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.CuratedPlaylistSlideShow_container .slick-next:before,
+.CuratedPlaylistSlideShow_container .slick-prev:before {
+  font-size: 40px;
+  line-height: 1;
+  opacity: 0.9;
+  color: var(--color-white);
+}
+
+.CuratedPlaylistSlideShow_container .slick-prev {
+  left: -25px;
+}
+
+.CuratedPlaylistSlideShow_container [dir="rtl"] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+
+.CuratedPlaylistSlideShow_container .slick-prev:before {
+  content: "<";
+}
+
+.CuratedPlaylistSlideShow_container .slick-next:before,
+.CuratedPlaylistSlideShow_container [dir="rtl"] .slick-prev:before {
+  content: ">";
+}
+
+.CuratedPlaylistSlideShow_container .slick-next {
+  right: -25px;
+}
+
+.CuratedPlaylistSlideShow_container [dir="rtl"] .slick-next {
+  right: auto;
+  left: -25px;
+}
+
+.CuratedPlaylistSlideShow_container [dir="rtl"] .slick-next:before {
+  content: "<";
+}
+
+.CuratedPlaylistSlideShow_container .slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.CuratedPlaylistSlideShow_container .slick-dots {
+  bottom: -25px;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.CuratedPlaylistSlideShow_container .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.CuratedPlaylistSlideShow_container .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+}
+
+.CuratedPlaylistSlideShow_container .slick-dots li button:focus,
+.CuratedPlaylistSlideShow_container .slick-dots li button:hover {
+  outline: 0;
+}
+
+.CuratedPlaylistSlideShow_container .slick-dots li button:focus:before,
+.CuratedPlaylistSlideShow_container .slick-dots li button:hover:before {
+  opacity: 1;
+}
+
+.CuratedPlaylistSlideShow_container .slick-dots li button:before {
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "â€¢";
+  text-align: center;
+  opacity: 0.25;
+  color: #000;
+}
+
+.CuratedPlaylistSlideShow_container .slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #000;
+}
+
+.CuratedPlaylistSlideShow_container .slick-list,
+.CuratedPlaylistSlideShow_container .slick-slider,
+.CuratedPlaylistSlideShow_container .slick-track {
+  position: relative;
+  display: block;
+}
+
+.CuratedPlaylistSlideShow_container .slick-loading .slick-slide,
+.CuratedPlaylistSlideShow_container .slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.CuratedPlaylistSlideShow_container .slick-slider {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.CuratedPlaylistSlideShow_container .slick-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.CuratedPlaylistSlideShow_container .slick-list:focus {
+  outline: 0;
+}
+
+.CuratedPlaylistSlideShow_container .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.CuratedPlaylistSlideShow_container .slick-slider .slick-list,
+.CuratedPlaylistSlideShow_container .slick-slider .slick-track {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.CuratedPlaylistSlideShow_container .slick-track:after {
+  clear: both;
+}
+
+.CuratedPlaylistSlideShow_container .slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.CuratedPlaylistSlideShow_container [dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.CuratedPlaylistSlideShow_container .slick-slide img {
+  display: block;
+}
+
+.CuratedPlaylistSlideShow_container .slick-initialized .slick-slide {
+  display: block;
+}
+
+.CuratedPlaylistSlideShow_container .slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.CuratedPlaylistSlideShow_container .slick-arrow {
+  z-index: 200;
+  height: unset !important;
+  width: unset !important;
+  padding: 0 !important;
+  opacity: 0.9;
+  top: 40%;
+}
+
+.CuratedPlaylistSlideShow_container .slick-arrow.slick-hidden {
+  display: none;
+}

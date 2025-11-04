@@ -1,0 +1,25 @@
+.TrackTypeBadge_containerV2 {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 7px 0px 7px 7px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+/* .TrackTypeBadge_container#TrackType-4,
+.TrackTypeBadge_container#TrackType-5 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+} */
+
+.TrackTypeBadge_icon {
+  width: 24px;
+  height: 24px;
+}

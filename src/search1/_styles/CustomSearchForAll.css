@@ -1,0 +1,432 @@
+.custSearchBoxForAll {
+  position: relative;
+  z-index: 999;
+  /* width: 462px !important; */
+  max-width: 350px;
+  float: right;
+}
+.custSearchBoxForAll__tblHolder {
+  position: absolute;
+  z-index: 2;
+  right: 0px;
+  top: 36px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-white);
+  padding: 5px;
+  width: 338px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.custSearchBoxForAll__tblHolder .custSearchBoxForAll__dataHolder {
+  max-height: 360px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0;
+}
+
+.custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data1,
+.custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data2,
+.custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data3 {
+  padding: 8px;
+  background-color: var(--color-card);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  width: calc(100% - 16px);
+}
+
+.custSearchBoxForAll__tblHolder
+  .custSearchBoxForAll__dataHolder
+  .custSearchBoxForAll__data1
+  .search_results_card_img_container
+  img {
+  background-color: var(--color-card);
+}
+
+.custSearchBoxForAll .custSearch__container {
+  height: 28px;
+  color: var(--color-white);
+  font-size: 14px;
+}
+.custSearchBoxForAll .custSearch__container .searchIcon {
+  margin: -1px -2px 0px 0px;
+  height: 18px;
+  width: 56px;
+  cursor: pointer;
+  transition: all 0.15s ease-in 0s;
+  stroke: var(--color-white);
+}
+
+.custSearchBoxForAll .custSearch__container .searchIconContainer {
+  /* margin: -1px -2px 0px 0px;
+  height: 30px;
+  width: 56px;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right; */
+  position: absolute;
+  background-color: transparent;
+  right: 0px;
+  /* pointer-events: none; */
+  /* top: 12px;
+  pointer-events: none; */
+}
+
+.custSearchBoxForAll
+  .custSearch__container
+  .searchIconContainer.sonic_icon_button {
+  fill: none;
+  stroke: none;
+  width: 45px;
+  cursor: default;
+  padding: 5px 13px;
+}
+
+.custSearchBoxForAll .custSearch__container img.searchIcon:hover {
+  opacity: 0.8;
+}
+
+.custSearchBoxForAll .closeIconContainer {
+  position: absolute;
+  background-color: var(--color-bg);
+  right: 0px;
+  top: 0px;
+  display: none;
+}
+.custSearchBoxForAll .custom-input {
+  width: calc(100% - 32px);
+  padding: 0px 60px 0px 12px;
+  background-color: var(--color-bg) !important;
+}
+.custSearchBoxForAll .custSearch__dropdownHolder {
+  display: none;
+  position: absolute;
+  right: 0px;
+  width: 100%;
+}
+.custSearchBoxForAll .custSearch__container .custSearch_closeBtn {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+}
+
+.custSearchBoxForAll
+  .custSearch__container
+  .custSearch_closeBtn
+  .sonic_icon_button {
+  background: transparent;
+  padding: 10px;
+  width: auto;
+  scale: 0.6;
+}
+
+.custSearchBoxForAll .custSearch__container .custSearchShowMoreResults {
+  border: 0px;
+  outline: 0px;
+  background: none;
+  color: var(--color-white) !important;
+  font-size: 1.2rem;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: right;
+  width: 100%;
+}
+.custSearchBoxForAll.expand {
+  width: 100%;
+}
+.custSearchBoxForAll.expand .custSearch__container {
+  /* background-color: var(--color-bg);
+  border: 1px solid var(--color-white); */
+}
+.custSearchBoxForAll.expand .custSearch__container img.searchIcon {
+  margin: -1px -2px 0px 0px;
+  height: 18px;
+}
+.custSearchBoxForAll.expand .custSearch__dropdownHolder {
+  display: block;
+}
+
+.custSearchBoxForAll.expand
+  .custSearch__dropdownHolder
+  .form-group
+  .ss_input_container {
+  width: calc(100% - 42px) !important;
+}
+.custSearchBoxForAll.expand .custSearch__dropdownHolder .form-group {
+  display: flex;
+  align-items: center;
+}
+
+.custSearchResultDialogBg {
+  position: fixed;
+  top: 0px !important;
+  padding-top: 90px !important;
+  left: 0px;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg);
+  /* opacity: 0; */
+  /* display: none; */
+}
+
+.toggleDialog {
+  opacity: 1;
+}
+
+.custSearchResultDialog {
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.custSearchResultDialogHeading__Holder {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: center;
+  text-align: left;
+}
+.custSearchResultDialog .closeIconContainer {
+  flex: 1 1;
+  align-items: flex-end;
+  flex-direction: column;
+  display: flex;
+}
+.custSearchResultDialogHeading {
+  display: inline-block;
+  font-size: 28px !important;
+  font-weight: normal;
+  margin: 1.5rem 0 1.5rem;
+  /* margin-bottom: 15px !important;
+  margin-top: 0px;
+  margin-right: 20px; */
+}
+/* Toggle Switch */
+.custSearchResultDialogToggle__Holder {
+  display: inline-block;
+}
+.custSearchResultDialogToggle__Holder .switch {
+  position: relative;
+  top: -6px;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  line-height: normal;
+  font-size: x-small;
+}
+.custSearchResultDialogToggle__Holder .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.custSearchResultDialogToggle__Holder .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: none;
+  border: 1px solid var(--color-white);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.custSearchResultDialogToggle__Holder .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 30px;
+  left: -1px;
+  bottom: -1px;
+  background-color: var(--color-primary);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.custSearchResultDialogToggle__Holder input:checked + .slider {
+  background: none;
+}
+.custSearchResultDialogToggle__Holder input:focus + .slider {
+  box-shadow: 0 0 1px var(--color-primary);
+}
+.custSearchResultDialogToggle__Holder input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+/* Rounded sliders */
+.custSearchResultDialogToggle__Holder .slider.round {
+  border-radius: 10px;
+}
+.custSearchResultDialogToggle__Holder .slider.round:before {
+  border-radius: 10px;
+}
+/* End Toggle Switch */
+.custSearchToggleBy__SongArtist {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--color-white);
+  margin: 10px;
+  line-height: normal;
+}
+
+.custSearchResultLibraryTracksOuterContainer,
+.custSearchResultSpotifyTracksOuterContainer {
+  border: 1px solid var(--color-white);
+  border-radius: 15px;
+  overflow: auto;
+  height: calc(100vh - 200px);
+  position: relative;
+  z-index: 1;
+}
+
+.custSearchResultTracksInnerContainer {
+  height: calc(100vh - 225px);
+  margin: 10px 15px 0px 0px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.custSearchResultTracksInnerContainer .search_results_card_info_container {
+  width: 100%;
+}
+
+.custSearchResultDialog
+  .custSearchResultTracksInnerContainer
+  .search_results_card_info_container {
+  width: 500px;
+}
+
+.autoTable {
+  width: 100%;
+}
+
+#autoTable {
+  width: 100%;
+  padding: 0px 10px 0px 10px;
+  border-spacing: 10px;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+#autoTable .autoTr {
+  background-color: var(--color-card);
+  border-radius: 10px !important;
+  position: relative;
+  width: 100% !important;
+  display: flex !important;
+  cursor: pointer !important;
+}
+
+#autoTable .autoTr .st-tbl-logo-holder img {
+  width: 50px !important;
+  height: 50px !important;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin-right: 0px;
+}
+.custSearchBoxForAll__Tracks {
+  padding: 10px;
+  background-color: var(--color-card);
+  margin-bottom: 5px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  width: 98%;
+}
+.custSearchBoxForAll__Tracks .st-tbl-logo-holder {
+  width: 65px;
+  height: 50px;
+  text-align: left;
+}
+.custSearchBoxForAll__Tracks .autoTr .searchRowImgLoader {
+  width: 50px !important;
+  height: 50px !important;
+  position: absolute;
+  bottom: 85px;
+  left: -5px;
+}
+
+.custSearchBoxForAll__Tracks .autoTr .searchRowImgLoader .lds-default {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#autoTable .autoTr .trackTitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  width: 100%;
+}
+
+#autoTable .autoTr .trackArtist {
+  font-size: 1.5rem;
+  font-weight: normal;
+  display: flex;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.custSearchBoxForAll__data2 .autoTable .autoTr {
+  display: flex;
+}
+
+.custSearchBoxForAll__data2 .autoTable .autoTr .searchRowImgLoader {
+  width: 45px !important;
+  height: 45px !important;
+  position: absolute;
+  top: -12px;
+  left: -13px;
+}
+
+.custSearchBoxForAll__data2
+  .autoTable
+  .autoTr
+  .searchRowImgLoader
+  .lds-default {
+  width: 50px !important;
+  height: 50px !important;
+  padding: 0;
+  margin: 0;
+}
+
+.custSearchBoxForAll__data2 .autoTable .autoTr .st-tbl-logo-holder {
+  position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+  .custSearchBoxForAll {
+    max-width: 300px;
+  }
+  .custSearchBoxForAll__tblHolder {
+    width: 288px;
+  }
+  .custSearchBoxForAll .search_results_card_info_container {
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .custSearchResultDialogHeading {
+    font-size: 22px !important;
+  }
+}

@@ -1,0 +1,803 @@
+.AlgoliaSearchContainer .AlgoliaSearchResults {
+  height: 510px;
+  overflow-y: auto;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  padding-left: 0;
+}
+
+.AlgoliaSearchContainer .track-card {
+  margin: 0;
+  padding: 0 12px;
+  /* border: 1px solid #ccc; */
+  border-radius: 0px;
+  /* background-color: #4d4949; */
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid #54565a;
+}
+
+.AlgoliaSearchContainer .track-card .MuiAccordionSummary-content {
+  margin: 0;
+}
+
+.AlgoliaSearchContainer .AlgoliaSearchContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.AlgoliaSearchContainer .SearchBelow {
+  display: flex;
+  width: calc(100% + 3%);
+  margin-top: 16px;
+  margin-left: -3%;
+  height: calc(100vh - 220px);
+  min-height: 300px;
+}
+
+/* Sidebar */
+.AlgoliaSearchContainer .filter-panel {
+  width: 88px;
+  transition: width 0.3s ease;
+  background: var(--color-card);
+  padding: 0px;
+  overflow: hidden;
+  border-right: 1px solid var(--color-card);
+  border-top-right-radius: 30px;
+  position: relative;
+  height: 70vh; /* full height viewport */
+  display: flex;
+  flex-direction: column; /* stack content + bottomBar */
+  overflow: hidden;
+}
+
+.AlgoliaSearchContainer .filter-panel.open {
+  width: 300px;
+  border-top-right-radius: 60px;
+}
+
+.AlgoliaSearchContainer .filter-panel.open .accordion-body {
+  background-color: var(--color-bg);
+  padding: 1rem 0;
+}
+
+.AlgoliaSearchContainer .filter-toggle-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.AlgoliaSearchContainer .filter-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--color-white);
+}
+
+.AlgoliaSearchContainer .filter-close-btn {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-white);
+  padding: 8px;
+  z-index: 9;
+}
+
+.AlgoliaSearchContainer .filter-content {
+  color: var(--color-white);
+  font-size: 14px;
+  padding-top: 15px; /* To avoid overlap with close button */
+  overflow-y: auto;
+  height: calc(73vh - 20px);
+}
+
+/* Main Search Result Area */
+.AlgoliaSearchContainer .search-panel {
+  flex: 1;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.AlgoliaSearchContainer .search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #9e9e9e;
+  /* min-height: 35px; */
+}
+
+.AlgoliaSearchContainer .searchBtnLeft {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  min-height: 35px;
+}
+
+.AlgoliaSearchContainer .searchBtnRht {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-right: 20px; /* Optional safety to force right alignment */
+}
+
+.AlgoliaSearchContainer .searchHeadBtn {
+  width: auto;
+  height: auto;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 28px;
+  border: none;
+  opacity: 1;
+  cursor: pointer;
+}
+.AlgoliaSearchContainer .searchSpanBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+}
+.AlgoliaSearchContainer .requestTrackWrapper {
+  position: relative;
+}
+.AlgoliaSearchContainer .genreWrapper {
+  position: relative;
+}
+.AlgoliaSearchContainer .library-select {
+  position: absolute;
+  top: 33px; /* appears just below the 49px button */
+  right: 0;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  width: 235px;
+}
+.AlgoliaSearchContainer .library-item {
+  display: flex;
+  flex-direction: row;
+  /* height: 42px; */
+  opacity: 1;
+  gap: 10px;
+  border-radius: 20px;
+  padding-left: 10px;
+  margin: 10px;
+}
+.AlgoliaSearchContainer .library-label {
+  margin: 0.2rem 0rem;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.AlgoliaSearchContainer .genre-select {
+  position: absolute;
+  top: 33px; /* appears just below the 49px button */
+  right: 0;
+  background-color: var(--color-card);
+  border-radius: 12px;
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  width: 168px;
+}
+.AlgoliaSearchContainer .genre-item {
+  display: flex;
+  flex-direction: row;
+  height: 42px;
+  opacity: 1;
+  gap: 10px;
+  border-radius: 20px;
+  margin-left: 16px;
+}
+.AlgoliaSearchContainer .genre-label {
+  margin: 0.2rem 0rem;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.AlgoliaSearchContainer .appliedFilters {
+  height: 35px;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 10px;
+}
+.AlgoliaSearchContainer .ClearFilterBtn {
+  cursor: pointer;
+  gap: 10px;
+}
+
+.AlgoliaSearchContainer .algolia-chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.AlgoliaSearchContainer .algolia-chip {
+  background-color: var(--color-bg-dark, #222529);
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.AlgoliaSearchContainer .chip-close {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.AlgoliaSearchContainer .filter-chips-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.AlgoliaSearchContainer .ClearFilterBtn {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.AlgoliaSearchContainer
+  .genreWrapper
+  .rmsc.multi_select_music_library_filter
+  label.select-item::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  /* background-color: var(--color-bg); */
+  border-radius: 2px;
+  border: 1px solid var(--color-white);
+  display: none;
+}
+.AlgoliaSearchContainer
+  .genreWrapper
+  .rmsc.multi_select_music_library_filter
+  label.select-item.selected::after {
+  content: "";
+  font-weight: 900;
+  display: none;
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.AlgoliaSearchContainer .rmsc .dropdown-content {
+  z-index: 2;
+}
+.AlgoliaSearchContainer
+  .genreWrapper
+  .rmsc.multi_select_music_library_filter
+  .dropdown-content
+  .panel-content {
+  width: 168px;
+  padding: 10px;
+  border-radius: 20px;
+  /* border: 1px solid var(--color-white); */
+  font-size: 16px;
+  background: var(--color-card);
+  margin-left: 20px;
+}
+.AlgoliaSearchContainer .autoTable.spotifyTracksList {
+  z-index: 1;
+}
+.AlgoliaSearchContainer .custom-input.form-control.st-input-search {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 10px 7px 50px !important;
+  height: 42px;
+  border: 1px solid var(--color-white);
+  outline: 0px;
+  border-radius: 40px;
+}
+
+.AlgoliaSearchContainer .st-similar-autosearch .autoTable {
+  padding: 10px;
+  position: absolute;
+  background-color: var(--color-card);
+  margin: 5px 0 0px 0;
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.AlgoliaSearchContainer .st-similar-autosearch .autoTr {
+  width: 655px;
+  display: block;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  padding: 5px;
+  border-color: var(--color-gray);
+  cursor: pointer;
+  min-height: 50px;
+  position: relative;
+}
+
+.AlgoliaSearchContainer
+  .st-similar-autosearch
+  .autoTr
+  .search_results_card_info_container:hover {
+  color: var(--color-primary);
+}
+
+.AlgoliaSearchContainer
+  .st-similar-autosearch
+  .search_results_card_info_container {
+  width: 400px;
+}
+
+.AlgoliaSearchContainer
+  .st-similar-autosearch
+  .search_results_card_info_container
+  .search_results_card_title {
+  font-size: 1.7rem;
+  font-weight: normal !important;
+}
+
+.AlgoliaSearchContainer
+  .st-similar-autosearch
+  .search_results_card_info_container
+  .search_results_card_subtitle {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1350px) {
+  .AlgoliaSearchContainer
+    .st-similar-autosearch
+    .search_results_card_info_container {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .AlgoliaSearchContainer
+    .st-similar-autosearch
+    .search_results_card_info_container {
+    width: 200px;
+  }
+}
+.rmsc.multi_select_music_library_filter .dropdown-container,
+.rmsc.multi_select_music_library_filter .dropdown-content {
+  background-color: transparent;
+  border: none;
+}
+
+.rmsc.multi_select_music_library_filter .dropdown-container:focus-within {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.rmsc.multi_select_music_library_filter .dropdown-heading {
+  width: 100%;
+  height: auto;
+  padding: 0px 16px;
+  gap: 2px;
+  border-radius: 40px;
+  /* border: 1px solid var(--color-white); */
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.rmsc.multi_select_music_library_filter .dropdown-content .panel-content {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  /* border: 1px solid var(--color-white); */
+  font-size: 16px;
+  background: var(--color-card);
+}
+
+.rmsc.multi_select_music_library_filter .search input {
+  border: 1px solid var(--color-white);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  border-radius: 10px;
+  padding: 4px 45px 4px 8px;
+  height: 25px;
+  position: relative;
+}
+
+.rmsc.multi_select_music_library_filter .search input:focus {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+}
+
+.rmsc.multi_select_music_library_filter .search::after {
+  content: "";
+  /* background-image: url(../../../../static/common/search.svg); */
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 6px;
+  top: 1px;
+  scale: 0.8;
+}
+
+.rmsc.multi_select_music_library_filter .search {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.rmsc.multi_select_music_library_filter .search .search-clear-button {
+  right: 35px;
+  scale: 0.9;
+  width: 15px;
+}
+
+.rmsc.multi_select_music_library_filter .select-item {
+  padding: 8px 0;
+}
+
+.rmsc.multi_select_music_library_filter .item-renderer {
+  align-items: center;
+  gap: 5px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  flex: 1;
+}
+
+.rmsc.multi_select_music_library_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"] {
+  position: relative;
+}
+
+.rmsc.multi_select_music_library_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"]:checked:before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  position: absolute;
+  border: 1px solid var(--color-white);
+}
+
+.rmsc.multi_select_music_library_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"]:checked:after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  width: 7px;
+  height: 3px;
+  background-color: var(--color-bg);
+  position: absolute;
+  top: 5px;
+  left: 3px;
+}
+
+.rmsc.multi_select_music_library_filter.voiceOptions:not(.selectAll)
+  .select-item
+  input[type="checkbox"] {
+  display: none;
+}
+
+.rmsc.multi_select_music_library_filter.voiceOptions:not(.selectAll)
+  .select-item
+  .item-renderer
+  span {
+  padding-left: 4px;
+}
+
+/* .rmsc.multi_select_music_library_filter .select-item.selected .item-renderer span {
+  font-weight: bold;
+} */
+
+.rmsc.multi_select_music_library_filter .select-item:hover,
+.rmsc.multi_select_music_library_filter .select-item.selected {
+  background-color: transparent;
+}
+
+.rmsc.multi_select_music_library_filter .select-item:hover span,
+.rmsc.multi_select_music_library_filter .select-item.selected span {
+  color: var(--color-primary);
+}
+
+.rmsc.multi_select_music_library_filter .clear-selected-button {
+  display: none;
+}
+
+.rmsc.multi_select_music_library_filter .dropdown-search-clear-icon {
+  scale: 1.1;
+}
+
+.rmsc.multi_select_music_library_filter svg {
+  color: var(--color-white);
+}
+
+.rmsc.multi_select_music_library_filter .item-renderer input {
+  display: none;
+  position: relative;
+}
+
+.rmsc.multi_select_music_library_filter.selectAll
+  .options
+  > label.select-item:first-child
+  input[type="checkbox"] {
+  display: none;
+}
+
+.rmsc.multi_select_music_library_filter .select-item {
+  display: flex;
+  gap: 8px;
+  /* align-items: center; */
+  padding: 8px 0;
+  position: relative;
+  /* text-transform: capitalize; */
+}
+
+.rmsc.multi_select_music_library_filter .dropdown-heading-value span {
+  color: var(--color-white);
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.rmsc.multi_select_music_library_filter .dropdown-heading-value span {
+  color: var(--color-white);
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+/* css for all unchecked checkboxes */
+.rmsc.multi_select_music_library_filter label.select-item::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  /* background-color: var(--color-bg); */
+  border-radius: 2px;
+  border: 1px solid var(--color-white);
+}
+
+/* css for all checked checkboxes */
+.rmsc.multi_select_music_library_filter label.select-item.selected::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-card);
+  border-radius: 2px;
+  border: 1px solid var(--color-primary);
+}
+
+.rmsc.multi_select_music_library_filter label.select-item.selected::after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-white);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* css for "Select All" checked checkbox */
+.rmsc.multi_select_music_library_filter.selectAll
+  .options
+  > label.select-item.selected:first-child::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  border: 1px solid var(--color-primary);
+}
+
+.rmsc.multi_select_music_library_filter.selectAll
+  .options
+  > label.select-item.selected:first-child::after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  width: 14px;
+  height: 3px;
+  background-color: var(--color-bg);
+  border-radius: 4px;
+  position: absolute;
+  top: 16px;
+  left: 3px;
+  border: none;
+  transform: none;
+}
+.rmsc.multi_select_music_library_filter
+  .dropdown-heading:has(.clear-selected-button)
+  span,
+.rmsc.multi_select_music_library_filter
+  .dropdown-heading:has(.clear-selected-button)
+  .dropdown-heading-dropdown-arrow {
+  color: var(--color-primary);
+}
+
+.SearchSuggestionsDropdown {
+  position: absolute;
+  background: var(--color-bg-light, var(--color-card));
+  z-index: 999;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 1.6rem;
+  width: 100%;
+  color: var(--color-text-dark, var(--color-white));
+
+}
+
+.SearchSuggestionsDropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.SearchSuggestionsDropdown li {
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.SearchSuggestionsDropdown li:hover {
+  background-color: #bebebe;
+}
+
+.AlgoliaSearchContainer .spotifyTrackDetails table {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.AlgoliaSearchContainer .spotifyTrackDetails .table-dark.table-bordered {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.AlgoliaSearchContainer .spotifyTrackDetails .table-dark {
+  color: var(--color-white);
+  background-color: var(--color-card);
+}
+.AlgoliaSearchContainer .spotifyTrackDetails .table-dark th {
+  font-family: var(--font-primary);
+  background-color: var(--color-card);
+}
+
+.AlgoliaSearchContainer .spotifyTrackDetails .table td,
+.AlgoliaSearchContainer .spotifyTrackDetails .table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  /* border-top: 1px solid #dee2e6; */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.AlgoliaSearchContainer .spotifyTrackDetails .table th {
+  padding-top: 10px;
+}
+
+.AlgoliaSearchContainer .spotifyTrackDetails .table th:first-child {
+  text-align: left;
+}
+/* .AlgoliaSearchContainer .spotifyTrackDetails .table th:first-child, */
+.AlgoliaSearchContainer .spotifyTrackDetails .table td:first-child {
+  text-align: left;
+  width: 200px;
+}
+
+.AlgoliaSearchContainer .spotifyTrackDetails .table th:first-child,
+.AlgoliaSearchContainer .spotifyTrackDetails .table td:first-child {
+  padding-left: 15px;
+}
+
+.AlgoliaSearchContainer .circular-reveal__content {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.AlgoliaSearchContainer .circular-reveal__content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3d3d3db2; /* overlay color */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* keep buttons clickable */
+}
+
+/* ✅ Trigger overlay when either image OR play button is hovered */
+.AlgoliaSearchContainer
+  .TrackcardV3__cover:hover
+  .circular-reveal__content::after {
+  opacity: 1;
+}
+.AlgoliaSearchContainer .TrackCard__audioMini {
+  position: relative;
+}
+/* .AlgoliaSearchContainer .st_ad_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+} */
+.AlgoliaSearchContainer table .st-tbl-logo-holder,
+.AlgoliaSearchContainer table .st-tbl-logo-holder .st-tbl-logo {
+  aspect-ratio: 1 / 1;
+  display: inline-block;
+  height: auto;
+  min-height: 50px;
+  object-fit: cover;
+  width: 50px;
+}
+.AlgoliaSearchContainer table .st-tbl-logo-text-holder {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.AlgoliaSearchContainer .TrackCard__audioMini {
+  border: 1px solid var(--color-gray);
+  box-sizing: border-box;
+  color: var(--color-white);
+  display: block;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
+}

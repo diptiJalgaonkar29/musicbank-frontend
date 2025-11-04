@@ -1,0 +1,138 @@
+.SonicLogoAssetAnalysisAccordion .MuiAccordionDetails-root {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.SonicLogoAssetAnalysisAccordion .table-container {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #97979799;
+}
+
+.SonicLogoAssetAnalysisAccordion .data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.SonicLogoAssetAnalysisAccordion .table-header {
+  color: #ffffff;
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #97979799;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+  border-right: 1px solid #97979799;
+}
+
+.SonicLogoAssetAnalysisAccordion .table-header:last-child {
+  border-right: none;
+}
+
+.SonicLogoAssetAnalysisAccordion .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.SonicLogoAssetAnalysisAccordion .text-left .header-content {
+  justify-content: flex-start;
+}
+
+.SonicLogoAssetAnalysisAccordion .text-center .header-content {
+  justify-content: center;
+}
+
+.SonicLogoAssetAnalysisAccordion .sort-arrows {
+  display: flex;
+  gap: 0px;
+  margin-left: 8px;
+}
+
+.SonicLogoAssetAnalysisAccordion .arrow {
+  font-size: 1.7rem;
+  color: #666666;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+
+.SonicLogoAssetAnalysisAccordion .arrow.active {
+  color: #ffffff;
+}
+
+.SonicLogoAssetAnalysisAccordion .arrow-up {
+  margin-bottom: 1px;
+}
+
+.SonicLogoAssetAnalysisAccordion .table-row {
+  border-bottom: 1px solid #97979799;
+  transition: background-color 0.2s ease;
+}
+
+.SonicLogoAssetAnalysisAccordion .table-row:last-child {
+  border-bottom: none;
+}
+
+.SonicLogoAssetAnalysisAccordion .table-cell {
+  padding: 16px 20px;
+  color: #ffffff;
+  font-size: 14px;
+  vertical-align: middle;
+  border-right: 1px solid #97979799;
+}
+
+.SonicLogoAssetAnalysisAccordion .table-cell:last-child {
+  border-right: none;
+}
+
+.SonicLogoAssetAnalysisAccordion .text-left {
+  text-align: left;
+}
+
+.SonicLogoAssetAnalysisAccordion .text-center {
+  text-align: center;
+}
+
+.SonicLogoAssetAnalysisAccordion .asset-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.SonicLogoAssetAnalysisAccordion .asset-name {
+  font-weight: 500;
+}
+
+.SonicLogoAssetAnalysisAccordion .badge {
+  background-color: #ea8a82;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.SonicLogoAssetAnalysisAccordion .arrow_container {
+  cursor: pointer;
+  display: flex;
+}
+
+.SonicLogoAssetAnalysisAccordion .arrow_container svg {
+  width: 16px;
+  height: 16px;
+}
+
+.SonicLogoAssetAnalysisAccordion .arrow_container .activeSort {
+  fill: var(--color-white);
+}
+.SonicLogoAssetAnalysisAccordion .arrow_container .disableSort {
+  fill: #757575;
+}

@@ -1,0 +1,155 @@
+/* addition by Trupti-Wits for color codes */
+
+#nested_accordion__body--top {
+  padding: 0 !important;
+}
+#nested_accordion__body--top:hover {
+  border: 0px !important;
+}
+#nested_accordion {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+}
+#nested_accordion__title {
+  background-color: transparent;
+  border: 0 !important;
+  padding: 0rem 2rem 0rem 2rem !important;
+}
+#nested_accordion__title:empty {
+  display: none;
+}
+
+#nested_accordion__title--text {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin: 0;
+}
+#nested_accordion__title--text h3 {
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  margin: 0rem;
+  position: relative;
+  top: -0.5rem;
+  font-weight: normal;
+}
+
+#nested_accordion__title--text h3:hover {
+  color: var(--color-primary);
+}
+
+#accordion__arrow__nested {
+  position: relative !important;
+  top: 0px !important;
+}
+
+.nested_accordion__body--ul {
+  list-style: none;
+  width: 100%;
+  margin: 0px 0 10px 0;
+  padding: 0 0 4px 0;
+}
+
+.accordion__body__nested--li {
+  padding: 0rem 2rem 0rem 70px;
+  color: var(--color-white);
+  margin: 0;
+  border-left: 0px solid #39535d;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion__body__nested--li_active {
+  padding: 0rem 2rem 0rem 70px;
+  cursor: pointer;
+  /* border-left: 0.8rem solid var(--color-primary); */
+  color: var(--color-primary);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion__body__nested--li:hover {
+  padding: 0rem 2rem 0rem 70px;
+  color: var(--color-primary);
+}
+
+.accordion__body__nested--li p {
+  font-size: 1.6rem;
+  margin: 0.4rem 0rem;
+  /* text-transform: capitalize; */
+}
+
+.accordion_sidebar.Key .accordion__body__nested--li p {
+  text-transform: lowercase !important;
+}
+
+.accordion__body__nested--li:hover #accordion__body__nested--icon {
+  display: none;
+  opacity: 1 !important;
+  font-size: 2.4rem;
+}
+
+#accordion__body__nested--icon_active {
+  display: none;
+  opacity: 1 !important;
+  color: var(--color-error) !important;
+  font-size: 2.4rem;
+}
+
+.accordion__body__nested--maintext {
+  font-size: 1.6rem;
+  color: var(--color-white);
+  text-transform: capitalize;
+}
+
+.accordion_sidebar.Key .accordion__body__nested--maintext {
+  text-transform: lowercase;
+}
+
+.accordion__body__nested--li_active .accordion__body__nested--maintext {
+  color: var(--color-primary);
+}
+
+.accordion__body__nested--subtext {
+  color: var(--color-white);
+
+  font-size: 1.2rem;
+}
+
+#accordion__body__nested--icon {
+  display: block !important;
+  opacity: 0;
+  font-size: 2.4rem;
+}
+
+/* Main Icons */
+
+.mainIcon__container {
+  justify-self: flex-end;
+  align-self: center;
+}
+
+#mainIcon__add {
+  font-size: 2.4rem;
+}
+#mainIcon__add:hover {
+  color: var(--color-primary);
+}
+
+#mainIcon__remove {
+  color: var(--color-error);
+  font-size: 2.4rem;
+}
+
+#mainIcon__remove:hover {
+  color: var(--color-primary);
+}

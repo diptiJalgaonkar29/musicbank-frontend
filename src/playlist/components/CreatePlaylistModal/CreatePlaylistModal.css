@@ -1,0 +1,74 @@
+.create_playlist_form {
+  min-width: 650px;
+}
+
+.cover-image-file-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .cover-image-file-input-container label {
+  font-size: 1.5rem;
+} */
+
+.cover-image-file-input-container .file-upload-wrapper {
+  position: relative;
+  width: 100%;
+  height: 35px;
+}
+.cover-image-file-input-container .file-upload-wrapper:after {
+  content: attr(data-text);
+  font-size: 16px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background: var(--color-white);
+  padding: 0px 50px 0px 15px;
+  display: block;
+  width: calc(100% - 105px);
+  pointer-events: none;
+  z-index: 20;
+  height: 35px;
+  line-height: 35px;
+  color: #999;
+  border-radius: 20px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cover-image-file-input-container .file-upload-wrapper:before {
+  content: "Upload";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 35px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  z-index: 25;
+  font-size: 16px;
+  line-height: 35px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  pointer-events: none;
+  border-radius: 20px;
+}
+.cover-image-file-input-container .file-upload-wrapper:hover:before {
+  background-color: var(--color-primary);
+}
+.cover-image-file-input-container .file-upload-wrapper input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}

@@ -1,0 +1,131 @@
+.page_header {
+  display: flex;
+  align-items: baseline;
+  align-items: center;
+}
+
+.page_search_bar {
+  height: 140px;
+  display: flex;
+  align-items: center;
+}
+
+.archive_note {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: var(--color-white);
+  height: 64px;
+}
+
+.archive_note span {
+  color: var(--color-primary);
+}
+
+/* #project_menu_dropdown .MuiMenu-paper {
+  font-size: 16px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+} */
+
+#project_menu_dropdown .MuiMenu-paper .MuiMenuItem-root {
+  /* font-size: 16px !important; */
+  /* color: var(--color-white); */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#project_menu_dropdown .MuiMenu-paper .MuiDivider-root {
+  width: 90% !important;
+  margin: 0 auto;
+}
+
+#project_menu_dropdown .MuiMenu-paper .MuiMenuItem-root:not(:last-child) {
+  border-bottom: 1px solid #4d4d4d;
+}
+
+#project_menu_dropdown .MuiPaper-root {
+  margin-left: 265px;
+  margin-top: 10px;
+}
+
+#project_menu_dropdown.sonic_menu_container .MuiList-root.MuiMenu-list {
+  padding: 10px 15px;
+}
+
+.page_header .page_header_viewType_Add {
+  display: flex;
+  margin-left: auto;
+  gap: 15px;
+  align-items: center;
+}
+
+.page_header_viewType_Add .page_header_add {
+  border: none;
+  border-radius: 0px;
+}
+
+.page_header_viewType_Add div {
+  cursor: pointer;
+}
+
+.page_header_viewType_Add .active_project_view {
+  fill: var(--color-icon-active);
+  color: var(--color-icon-active);
+}
+
+.page_header_viewType_Add .inactive_project_view {
+  fill: var(--color-icon-inactive);
+  color: var(--color-icon-inactive);
+}
+
+.page_header_viewType_Add p {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-light, var(--color-bg));
+}
+
+.project_menu_item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.page_header .page_header_option {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--color-white);
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.page_header .page_header_option svg {
+  stroke: var(--color-white);
+  width: 24px;
+  height: 48px;
+}
+
+.page_header .predict_header_wrapper {
+  width: 80%;
+}
+
+.page_header .predict_header_wrapper h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.page_header .predict_header_wrapper p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+}

@@ -1,0 +1,4 @@
+.V3AuthLayout_left_content:has(.select_company_page) {
+  max-width: 600px;
+  width: 100%;
+}

@@ -1,0 +1,7 @@
+.LoginPage_CompanyLogo {
+    display: block;
+}
+
+.LoginPage_CompanyLogo img {
+    max-height: 10rem;   
+}

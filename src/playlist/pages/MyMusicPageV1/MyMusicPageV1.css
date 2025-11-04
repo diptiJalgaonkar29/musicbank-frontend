@@ -1,0 +1,217 @@
+.PlaylistPageContainer .no-playlist-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  font-size: 18px;
+  color: var(--color-white);
+}
+
+.PlaylistPageContainer .playlistV1_wrapper {
+  padding-top: 10px;
+  height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+
+.PlaylistPageContainer .playlist-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.playlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.playlist-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.playlist-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 20px;
+  /* height: 65vh;
+    overflow-y: auto; */
+}
+
+.playlist-card img {
+  width: 90px !important;
+}
+
+.playlist-card .PlayListCoverPicture {
+  width: 180px !important;
+  height: 180px !important;
+}
+
+.PlaylistPageContainer .playlist-header p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--color-bg);
+}
+
+.PlaylistPageContainer .playlist-card {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.playlist-card .track-slide-show-item-playlist {
+  text-align: center;
+  text-decoration: none !important;
+  outline: none !important;
+  color: var(--color-white);
+}
+
+.playlist-card .track-slide-show-item-playlist img {
+  width: var(--picture-size);
+  height: var(--picture-size);
+  /* border-radius: 25px; */
+}
+
+.playlist-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+  line-height: 1.3;
+  width: 300px;
+  text-align: center;
+}
+
+.track-count {
+  font-size: 12px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .playlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+}
+
+.track-slide-show-item-loading-playlist {
+  width: var(--picture-size);
+  height: var(--picture-size);
+  text-align: center;
+}
+
+.track-slide-show-item-playlist {
+  text-align: center;
+  text-decoration: none !important;
+  outline: none !important;
+  color: var(--color-white);
+}
+
+.track-slide-show-item-playlist img {
+  width: var(--picture-size);
+  height: var(--picture-size);
+  /* border-radius: 25px; */
+}
+
+.track-slide-show-item-title-playlist {
+  width: var(--picture-size);
+  margin-top: 10px;
+  font-size: 1.8rem;
+}
+
+.track-slide-show-item-fallback-playlist {
+  width: var(--picture-size);
+  height: var(--picture-size);
+  text-align: center;
+}
+
+.track-slide-show-item-content-playlistV1 {
+  position: relative;
+  font-size: 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-slide-show-item-content-playlistV1 p {
+  max-width: 19rem;
+}
+
+.track-slide-show-item-content-playlistV1 .PlayListCoverPicture__container {
+  height: var(--picture-size);
+  width: var(--picture-size);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.track-slide-show-item-content-playlistV1 .PlayListCoverPicture {
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  border: none;
+}
+
+.PlaylistPageContainer .playlist-count {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.PlaylistPageContainer .more_playlist_icon {
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  right: 20%;
+}
+
+.track-slide-show-item-content-playlistV1 [class^="PlaylistImage-"] {
+  border-radius: 0px;
+}
+
+#playlist_menu_dropdown .MuiButtonBase-root {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.PlaylistPageContainer .track-slide-show-item-title-playListData {
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+img[class^="PlaylistImage-"] {
+  border-radius: 0px;
+  width: 100%;
+  height: auto;
+}

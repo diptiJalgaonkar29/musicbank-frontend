@@ -1,0 +1,123 @@
+#nested_accordion__body--top {
+  padding: 0 !important;
+}
+#nested_accordion__body--top:hover {
+  border: 0px !important;
+}
+#nested_accordion {
+  width: 100%;
+  padding: 0;
+}
+#nested_accordion__title {
+  background-color: var(--color-primary);
+  border: 0 !important;
+  padding: 0.4rem 2rem 0.4rem 1rem !important;
+}
+#nested_accordion__title:empty {
+  display: none;
+}
+
+#nested_accordion__title--text {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+#nested_accordion__title--text h3 {
+  padding-left: 1rem;
+  font-size: 1.9rem;
+}
+
+.accordion__arrow {
+  top: 0 !important;
+}
+
+#accordion__arrow__nested {
+  position: relative !important;
+}
+
+.nested_accordion__body--ul {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion__body__nested--li {
+  padding: 0.5rem 2rem;
+  border-left: 0px solid #39535d;
+  transition: all 0.2s;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion__body__nested--li_active {
+  padding: 0.5rem 2rem;
+  border-left: 0.8rem solid var(--color-primary);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion__body__nested--li:hover {
+  padding: 0.5rem 2rem;
+
+  border-left: 0.8rem solid var(--color-secondary);
+}
+
+.accordion__body__nested--li:hover #accordion__body__nested--icon {
+  display: block !important;
+  opacity: 1 !important;
+  font-size: 2.4rem;
+}
+
+#accordion__body__nested--icon_active {
+  display: block !important;
+  opacity: 1 !important;
+  color: var(--color-error) !important;
+  font-size: 2.4rem;
+}
+
+.accordion__body__nested--maintext {
+  font-size: 1.6rem;
+}
+
+.accordion__body__nested--subtext {
+  color: var(--color-white) !important;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+
+#accordion__body__nested--icon {
+  display: none !important;
+  opacity: 0;
+  font-size: 2.4rem;
+}
+
+/* Main Icons */
+
+.mainIcon__container {
+  justify-self: flex-end;
+  align-self: center;
+}
+
+#mainIcon__add {
+  font-size: 2.4rem;
+}
+#mainIcon__add:hover {
+  color: var(--color-primary);
+}
+
+#mainIcon__remove {
+  color: var(--color-error);
+  font-size: 2.4rem;
+}
+
+#mainIcon__remove:hover {
+  color: var(--color-primary);
+}

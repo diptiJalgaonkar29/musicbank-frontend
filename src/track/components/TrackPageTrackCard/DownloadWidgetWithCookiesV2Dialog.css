@@ -1,0 +1,146 @@
+.download-option-dialog .MuiPaper-root.MuiDialog-paper {
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.download-option-dialog .download-option-dialog-title {
+  font-size: 18px !important;
+  color: var(--color-white);
+  max-width: 600px !important;
+  max-width: 400px !important;
+  width: 100%;
+  text-align: center;
+  margin: 30px 0px 0px 0px;
+}
+
+.download-option-dialog .download-option-dialog-subtitle {
+  font-size: 14px !important;
+  color: var(--color-white);
+  padding: 0px 20px;
+  margin: 10px 20px 30px 20px;
+}
+
+.download-option-dialog .left-section {
+  display: flex;
+  align-items: center;
+  height: 22px;
+}
+
+.download-option-dialog .others-section .main {
+  padding-left: 25px;
+}
+
+.download-option-dialog ul {
+  list-style: none;
+  position: relative;
+  /* padding-left: 110px; */
+  /* padding: 0; */
+  text-align: left;
+}
+
+.download-option-dialog .mediaType-list-item {
+  padding: 5px 0 5px 0px;
+  list-style: none;
+}
+
+.download-option-dialog .download_dialog_image_options .circular-reveal::after {
+  display: none;
+}
+
+.download-option-dialog .btnContainer {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  margin: 35px 6px 15px 6px;
+}
+
+.download-option-dialog .download_dialog_image_options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 0 20px;
+}
+
+.download-option-dialog .download_dialog_image_options .track_img {
+  position: relative;
+}
+
+.download-option-dialog.SonicModal_dialog .MuiPaper-root.MuiDialog-paper {
+  min-width: fit-content;
+}
+
+.download-option-predict-dialog .Btn_wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.downloadImgContainer {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: grid;
+  place-items: center;
+  width: 25px !important;
+  height: 25px !important;
+  padding: 0;
+  cursor: pointer;
+}
+
+.downloadImgContainer svg {
+  font-size: 15px;
+  margin: 0 !important;
+  padding: 0 !important;
+  stroke: var(--color-white);
+  width: 20px;
+}
+
+.DownloadWidgetWithCookiesV2Dialog_buttonText_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  height: 50px;
+  background-color: var(--color-card);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.DownloadWidgetWithCookiesV2Dialog_buttonText {
+  font-size: 1.6rem;
+  padding: 10px 10px 10px 25px;
+}
+
+.DownloadWidgetWithCookiesV2Dialog_buttonText_container .sonic_icon_button {
+  background-color: transparent;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .DownloadWidgetWithCookiesV2Dialog_buttonText_container {
+    height: 40px;
+    gap: 0rem;
+  }
+
+  .DownloadWidgetWithCookiesV2Dialog_buttonText {
+    padding: 10px 0px 10px 15px;
+  }
+
+  .DownloadWidgetWithCookiesV2Dialog_buttonText_container .sonic_icon_button {
+    padding: 5px 15px;
+  }
+}
+.dwnld_Preview_btn .lds-default {
+  margin: 0 !important;
+  scale: 0.7 !important;
+  height: 40px !important;
+  top: -8px;
+}
+.sonic_menu_item .lds-default {
+  margin: -14px 0px 0px 65px;
+  scale: 0.7 !important;
+  height: 35px !important;
+}

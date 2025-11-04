@@ -1,0 +1,252 @@
+.google .navbar__container img {
+  max-width: 55px !important;
+}
+
+.google .CustomNotificationTopBar_text {
+  color: #fff !important;
+}
+
+.google .used_in_video_container .cover_image.default_usedin_img {
+  padding: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.google .sonicButton.outlined {
+  color: var(--color-white) !important;
+}
+
+.google .searchResults__results .TrackcardV2 #TimeLineComponentV2,
+.google .TrackPage__wrapper .Cyanite_AudioPlayer #TimeLineComponent,
+.google .musicPlayerContainer .progress_div,
+.google .TrackPageHeader_wave,
+.PlayListTitleList__Item #TimeLineComponent,
+.google
+  .TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  #TimeLineComponent {
+  background-color: #000 !important;
+}
+
+.google .searchResults__results .TrackcardV2 #TimeLineComponentV2:before,
+.google .TrackPage__wrapper .Cyanite_AudioPlayer #TimeLineComponent:before,
+.google .TrackPageHeader_wave img,
+.TrackcardV2 #TimeLineComponentV2,
+.google .musicPlayerContainer .waveImage {
+  filter: invert(1) contrast(200%) !important;
+}
+
+.google .PlayListTitleList__Item #TimeLineComponent::before,
+.google
+  .TrackPage__container
+  .TrackPage__wrapper
+  .TrackPage__wrapper--edits--content
+  .EditTrackCard
+  #TimeLineComponent:before {
+  filter: brightness(0%) contrast(83%) invert(1) !important;
+}
+
+.google .custSearchBoxForAll .custSearch__container .custSearch_closeBtn,
+.google
+  .custSearchBoxForAll
+  .custSearch__container
+  .searchIconContainer.sonic_icon_button,
+.google .sonic_icon_button[icon="Play"],
+.google .sonic_icon_button[icon="Pause"],
+.google .musicPlayerContainer .sonic_icon_button[icon="Close"],
+.TrackDownloadProgress_close_icon svg,
+.google .sonicButton.filled svg,
+.google .trackbutton .credits-info svg,
+.google #project_menu_dropdown svg {
+  filter: invert(1) !important;
+}
+
+.google .sonic_tab_title.MuiTab-textColorInherit.MuiTab-root.Mui-selected,
+.google .download_cart_count,
+.google .st-container .st-container-inner .st-btn-library.active,
+.google .st-container .st-container-inner .st-btn-spotify.active,
+.google .sonic-rangeslider-wrapper .slideCtrLbl,
+.google .searchResuts__container .ais-CurrentRefinements-list .sonic_chip,
+.google .TrackcardV2__item__tags .taxonomy__tags_container .sonic_chip.tag_key,
+.google
+  .TrackcardV2__item__tags
+  .taxonomy__tags_container
+  .sonic_chip.instrument_ids,
+.google
+  .Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.tag_key,
+.google
+  .Playlist__track__tag__container.TrackCard__item__tags
+  .sonic_chip.instrument_ids,
+.google .MemberOverview__li--select.errorColorBackground,
+.google .st-container .st-container-inner table .st-tbl-sel-2,
+.google .ais-ClearRefinements-button:hover,
+.google .MuiSnackbarContent-message,
+.google .DownloadWidgetWithCookiesV2Dialog_buttonText {
+  color: #fff !important;
+}
+
+.google .sonicButton.outlined {
+  color: var(--color-white) !important;
+}
+
+.google .search_results_card_info_container:hover,
+.google .downloadBasketPage__container .TrackCard__item__title:hover,
+.google .used_in_video_container .used_in_title:hover {
+  color: var(--color-primary) !important;
+}
+
+.google .st-container .st-container-inner .st-btn-spotify.active svg,
+.google .Comment_Icon svg {
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+
+.google .sonic_icon_button .MuiSvgIcon-root,
+.google .sonic_icon_button[icon="Done"] svg {
+  fill: #fff !important;
+}
+
+.google .PlayListTitleList__Item .sonic_icon_button .MuiSvgIcon-root {
+  fill: var(--color-white) !important;
+}
+
+.google .PlayListTitleList__wrapper .MuiPaper-root.MuiAccordion-root {
+  border: none !important;
+}
+
+.google .PlayListTitleList__wrapper .MuiPaper-elevation1 {
+  box-shadow: none !important;
+}
+
+.google .sonic_chip svg {
+  stroke: #fff !important;
+}
+
+.google .MemberOverview__ul .MemberOverview__li .recent_link_icon {
+  color: #000 !important;
+}
+
+.google .musicPlayerContainer .progressBarNew::-webkit-slider-runnable-track {
+  background-color: #000 !important;
+}
+
+.google .PlayListTitleList__Item #pButton svg,
+.google
+  .PlaylistCoverImage--image:hover
+  .PlaylistCoverImage--editIcon.sonic_icon_button,
+.google .sonic_icon_button.submit_chat svg,
+.google .closeSnackbarButton {
+  filter: invert(1) !important;
+}
+
+.google .profile_menu_main_container .confirm_password_input,
+.google .profile_menu_main_container .set_new_password_field {
+  background-color: transparent !important;
+  color: var(--color-white) !important;
+}
+
+.google .profile_menu_main_container .profile_form_action_button.sonicButton {
+  color: var(--color-primary) !important;
+}
+
+.google
+  .profile_menu_main_container
+  .profile_form_action_button.sonicButton:disabled {
+  color: var(--color-gray) !important;
+}
+
+.google .boldFamily,
+.google .sonicButton,
+.google .MuiTab-wrapper,
+.google #navitems .navitem .WebNavbar--anchor {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+.google .PlayListTitleList__wrapper .sonic_icon_button[icon="Play"],
+.google .PlayListTitleList__wrapper .sonic_icon_button[icon="Pause"] {
+  filter: invert(0) !important;
+}
+
+.google .Comment_element--extra .sonic_icon_button .MuiSvgIcon-root {
+  fill: #000 !important;
+}
+
+.google .sonicButton:disabled {
+  background-color: #494b4c !important;
+}
+
+.google
+  .profile_menu_main_container
+  .profile_form_action_button.sonicButton:disabled {
+  background-color: transparent !important;
+}
+
+.google .SonicRadio_container input[type="radio"] {
+  background-color: var(--color-gray) !important;
+}
+
+.google
+  .TrackPageHeader_container_right
+  .DownloadWidgetWithCookiesV2Dialog_buttonText_container
+  svg
+  path {
+  stroke: #fff !important;
+}
+
+.google .MuiButtonBase-root.MuiButton-root .MuiButton-label {
+  color: #fff !important;
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+/* .google .st-container .st-container-inner .st-filter-rp-inner .st-input-search {
+  padding: 7px 15px 7px 15px !important;
+} */
+
+.google .Comment_element--extraVisible span,
+.google .PlayListMembers__container--title.showAll {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+.google .Comment_element--Shadow {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.google .bubbleBoxText {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+.google .CommonMessageModal_text {
+  color: var(--color-primary) !important;
+}
+
+.google .DocumentsPage__cardsItem:hover {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+/* .google .sonicButton.filled,
+.google .sonicButton.primaryOutlined.sonicButtonHover,
+.google .sonicButton.primaryOutlined {
+  color: var(--color-bg) !important;
+  background-color: var(--color-primary) !important;
+} */
+
+.google .SonicCheckbox_container:has(input:checked):after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}
+
+@media only screen and (max-width: 950px) {
+  .google .navbar__logo__container {
+    width: 10% !important;
+  }
+  .google .V3AuthLayout_wrapper {
+    background-position: 32% 50% !important;
+  }
+}

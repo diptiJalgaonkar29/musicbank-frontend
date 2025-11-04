@@ -1,0 +1,85 @@
+{
+  "CURATOR_MCODE": "6a45675b-3202-4c29-d7b5c37d1daf",
+  "IUBENDA_SITE_ID": "",
+  "IUBENDA_COOKIE_POLICY_ID": "",
+  "COOKIEPRO": "false",
+
+  "CS_BASE_URL": "https://vodafone.creationstation.sonic-hub.com",
+  "CS_IFRAME_URL": "https://vodafone.creationstation.sonic-hub.com/config/liveServer/music-bank-cs.html",
+
+  "INPROCESS_FLAX_CUE_IDS": [
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-5940c183-9926-4a63-81c5-6bf7f5fa20bc",
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-0fcb0f98-7d44-4a02-979e-8c545fdbc625",
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-31f842f4-4a85-405b-a30f-1de9fa860c1f",
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-bdf9ec63-f2f8-47c6-90fd-1b563a94c4f2",
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-a4894557-d00b-4f06-b134-d63e15fef29d",
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-7cd9a2c2-a0b9-4f75-847d-13cb59a7a5d8",
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-2419cac4-5dfb-438d-9fbe-5c8cc4198dc2",
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-da5788ed-93d8-41d6-8f63-2a40e1e1eb33",
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-8aaf4ed4-1604-41d9-bd30-72d3398fa750",
+    "Jq8NI1hlGmNPWFYODB2zEiVIOWF3-85ecfeb5-e913-4ec7-bfe1-eff6243c8334"
+  ],
+  "LOGIN_TYPE": ["SSO", "Normal", "MFA"],
+  "DOWNLOAD_FORM_META": {
+    "fieldsForm": [
+      { "fieldName": "campaignName", "isMandatory": true, "type": "input" },
+      { "fieldName": "country", "isMandatory": true, "type": "dropdown" },
+      { "fieldName": "media_type", "isMandatory": false, "type": "checkbox" },
+      { "fieldName": "otherMedia-1", "isMandatory": false, "type": "checkbox" },
+      { "fieldName": "otherMedia-2", "isMandatory": false, "type": "checkbox" },
+      { "fieldName": "airing_month", "isMandatory": false, "type": "date" }
+    ],
+    "dowloadLabel": {
+      "title": "Please provide some information",
+
+      "userInformationTitle": "User Information:*",
+      "advertisingTitle": "Advertising Agency:*",
+      "productionTitle": "Production Company:*",
+
+      "topicInputTitle": "Product name/Topic Name:*",
+      "topicInputPlaceholder": "Product / Topic",
+
+      "campainInputTitle": "Campaign Name:*",
+      "campainInputPlaceholder": "Campaign",
+
+      "formatInputTitle": "Type of Content*:",
+      "formatInputPlaceholder": "Productfilm / Designfilm / Snippets",
+
+      "durationsInputTitle": "Durations:*",
+      "durationsInputPlaceholder": "2x 60 / 2x 15s",
+
+      "firstAiringInputTitle": "First Airing:*",
+      "firstAiringInputPlaceholder": "DD.MM.YYYY",
+
+      "advertisingAgencyInputTitle": "Advertising Agency/ Production Company*:",
+      "advertisingAgencyInputTitleInputPlaceholder": "Agency Name",
+
+      "producerNameInputTitle": "Producer Name:*",
+      "producerNameInputPlaceholder": "...",
+
+      "IDNumberInputTitle": "ID Number*:",
+      "IDNumberInputPlaceholder": "Competitrack Code / Clock Number",
+
+      "productionCompanyInputTitle": "Production Company:*",
+      "productionCompanyInputPlaceholder": "Company Name",
+
+      "producerEmailInputTitle": "Contact Email Address*:",
+      "producerEmailInputPlaceholder": "Contact Email Address",
+
+      "countryNameInputTitle": "Select Country:*",
+      "countryNameInputPlaceholder": "Country Name",
+
+      "airingmonthInputTitle": "Airing Month*:",
+      "airingmonthInputPlaceholder": "Airing Month (mmyy)",
+
+      "saveAsDraftCartBtn": "Save to draft",
+      "downloadCartBtn": "Download",
+
+      "selectMediaTypeInputTitle": "Select the Airing Media*:",
+      "traditionalMediaTypeInputTitle": "Traditional:",
+      "digitalMediaTypeInputTitle": "Digital:",
+
+      "accept": "Download"
+    }
+  }
+}

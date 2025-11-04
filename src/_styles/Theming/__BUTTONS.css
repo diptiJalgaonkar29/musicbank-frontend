@@ -1,0 +1,9 @@
+.button-primary {
+  background-color: var(--color-primary);
+
+  transition: all ease-in-out 330ms;
+}
+
+.button-primary:hover {
+  background: var(--color-secondary);
+}

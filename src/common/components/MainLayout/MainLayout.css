@@ -1,0 +1,47 @@
+.main_layout_wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main_layout_wrapper .main_layout_container {
+  width: 94%;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.main_layout_wrapper .main_layout_navigation {
+  height: 10.8rem;
+  box-sizing: border-box;
+}
+
+.main_layout_wrapper .main_layout_content {
+  height: 100%;
+}
+
+.main_layout_wrapper .main_layout_content.show_footer.show_disclaimer_text {
+  min-height: calc(100vh - 10.8rem - 7.5rem);
+}
+
+.main_layout_wrapper .main_layout_content.show_footer.hide_disclaimer_text {
+  min-height: calc(100vh - 10.8rem - 5rem);
+}
+
+.main_layout_wrapper .main_layout_content.hide_footer {
+  min-height: calc(100vh - 10.8rem);
+  height: 100%;
+}
+
+.main_layout_wrapper .main_layout_FooterSection {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: var(--color-bg);
+  z-index: 1;
+  left: 0;
+}
+
+/* @media screen and (max-width: 1000px) {
+  .main_layout_wrapper .main_layout_navigation {
+    height: 13.5rem;
+  }
+} */

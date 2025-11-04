@@ -1,0 +1,101 @@
+.MoodChartTaxonomyV2_content {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+
+.radar_chart_tags_container {
+  display: flex;
+  width: 100%;
+  gap: 5rem;
+  justify-content: center;
+}
+
+.radar_chart_container {
+  /* flex: 1; */
+}
+.genre_tags_container {
+  flex: 1;
+}
+.mood_tags_container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.radar_chart_container .radarChartV2 {
+  max-width: 400px;
+}
+
+.trackDetails_V3 .moodProfileBlock .sonic_icon_button {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+.MoodChartTaxonomyV2_title {
+  color: var(--color-primary);
+  font-size: 2rem;
+  /* text-align: center; */
+}
+
+.MoodChartTaxonomyV2_genre_tags_list,
+.MoodChartTaxonomyV2_mood_tags_list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.MoodChartTaxonomyV2_genre_tags_list {
+  flex-direction: column;
+}
+
+.MoodChartTaxonomyV2_mood_tags_list {
+  width: 28rem;
+}
+
+.MoodChartTaxonomyV2_genre_tags_list .sonic_chip .sonic_chip_label {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
+  width: 10rem;
+  text-transform: capitalize;
+}
+
+.MoodChartTaxonomyV2_mood_tags_list .sonic_chip .sonic_chip_label {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
+  width: 10rem;
+  text-transform: capitalize;
+}
+
+.overtime_graph_container {
+  margin-top: 5rem;
+}
+
+.overtime_graph_container .MoodChartTaxonomyV2_title {
+  text-align: left;
+}
+
+/* @media only screen and (max-width: 1400px) {
+  .radar_chart_container {
+    flex: 2;
+  }
+  .genre_tags_container {
+    flex: 1;
+  }
+  .mood_tags_container {
+    flex: 1;
+  }
+} */
+
+@media only screen and (max-width: 1000px) {
+  .MoodChartTaxonomyV2_content {
+    width: 100%;
+  }
+}

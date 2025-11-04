@@ -1,0 +1,166 @@
+/* .Track__details__tag__container.TrackCard__item__tags span#tonalityTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-tonality-bg) !important;
+}
+
+.Track__details__tag__container.TrackCard__item__tags span#genreTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-genre-bg) !important;
+}
+
+.Track__details__tag__container.TrackCard__item__tags span#feelingsTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-feelings-bg) !important;
+}
+
+.Track__details__tag__container.TrackCard__item__tags span#impactTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-impact-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#motionTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-motion-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#instrumentTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-instrument-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#tempoTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-tempo-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#keyTags {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-key-bg) !important;
+}
+.Track__details__tag__container.TrackCard__item__tags span#tagUsedIn {
+  border: 1px solid #ccc !important;
+  background-color: var(--color-bubbletag-usedIn-bg) !important;
+} */
+
+.Track__details__tag__container.TrackCard__item__tags.taxonomy__tag__container {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* .Track__details__tag__container.TrackCard__item__tags span {
+  border: none !important;
+  background-color: #54565a !important;
+  color: var(--color-white) !important;
+  margin-bottom: 1rem !important;
+  margin-right: 1rem !important;
+  text-transform: capitalize;
+} */
+
+.trackDetails_V3 {
+  margin: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .TrackPageHeader_container_right
+  .TrackPage__wrapper--edits {
+  height: 350px;
+  overflow: hidden auto;
+  padding: 5px 20px 5px 5px !important;
+}
+
+.trackDetails_V3 .cyaniteGraphs .legendContainer {
+  padding-bottom: 50px;
+}
+
+.trackDetails_V3 .MuiCollapse-hidden .MuiCollapse-wrapper {
+  display: none;
+}
+.TrackPage__wrapper
+  .trackDetails_V3
+  .moodProfileBlock
+  .MuiAccordionSummary-root {
+  /* width: auto !important; */
+}
+
+.TrackPage__container
+  .TrackPage__wrapper
+  .trackDetails_V3
+  .MuiAccordionSummary-root {
+  padding: 0 !important;
+}
+
+.trackDetails_V3 .moodProfileBlock {
+  margin-bottom: 0;
+}
+
+.TrackPageTrackCardV3 .TrackPageHeader_img_holder > img {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.TrackPageTrackCardV3 .trackDetailSectionTitle {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--color-white);
+}
+
+.TrackPageTrackCardV3 .trackDetailHighlightedTitle {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  width: max-content;
+}
+
+.TrackPageTrackCardV3 .trackDetailValue {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-top: 5px;
+  color: var(--color-white);
+}
+
+.TrackPageTrackCardV3 .tag_chip_container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.TrackPageTrackCardV3 .tag_chip {
+  display: inline-block;
+  background-color: var(--color-card);
+  color: var(--color-text-light, var(--color-white));
+  width: 100%;
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  max-width: 12rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.TrackPageTrackCardV3 [class*="MuiAccordionSummary"] .sonic_icon_button {
+  background-color: transparent;
+  width: 20px;
+  height: 30px;
+  border-radius: 48px;
+  padding: 0px 0px;
+}
+
+.TrackPageTrackCardV3 .MuiAccordionDetails-root {
+  padding: 10px 40px 30px !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .TrackPageTrackCardV3 .MuiAccordionDetails-root {
+    padding: 10px 25px 20px !important;
+  }
+}
+.TrackPageTrackCardV3 .cyaniteGraphs.cyaniteGraphsV2 .waveImage {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+}

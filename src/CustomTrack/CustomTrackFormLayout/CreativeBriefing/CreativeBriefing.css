@@ -1,0 +1,71 @@
+.CreativeBrief-container {
+  width: 85%;
+  color: var(--color-white);
+  height: 570px;
+}
+
+.CreativeBrief-container .CreativeBrief-header {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--color-white);
+}
+
+.CreativeBrief-container .SonicInputLabel {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.CreativeBrief-container
+  .sonic_file_input_container
+  label[for="sonic_file_input"] {
+  background-color: var(--color-white);
+  color: var(--color-card);
+}
+
+.CreativeBrief-container label[for="sonic_file_input"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--color-white);
+  border-radius: 30px;
+  cursor: pointer;
+  width: 955px;
+  color: var(--color-white);
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+.CreativeBrief-container .report_form_error {
+  color: var(--color-error);
+  padding: 10px 0px 5px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.CreativeBrief-container #remove_sonic_file {
+  display: none;
+}
+
+/* Generic class you can apply to any container or element */
+/* .CreativeBrief-container .cursor-blocked {
+  cursor: not-allowed !important;
+  opacity: 0.6; 
+} */
+
+/* Specific styling for native <input type="file"> when disabled or readonly */
+/* Apply red "not-allowed" cursor to the label that acts as the visible file input trigger */
+/* .CreativeBrief-container
+  .sonic_file_input_container
+  label[for="sonic_file_input"]:has(+ input:disabled),
+.CreativeBrief-container
+  .sonic_file_input_container
+  label[for="sonic_file_input"]:has(+ input[readonly]) {
+  cursor: not-allowed !important;
+  opacity: 0.6;
+} */

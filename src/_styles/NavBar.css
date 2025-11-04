@@ -1,0 +1,315 @@
+.navbar__container {
+  position: relative;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  gap: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--color-bg);
+  width: 100%;
+  height: 80px !important;
+  z-index: 1;
+}
+
+.nav_logo_text {
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 25px;
+}
+
+#navitems {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  display: block;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: var(--navbar-positon);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.navitem {
+  white-space: nowrap;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+}
+
+.navbar__container .MuiBadge-badge {
+  background-color: var(--color-primary);
+}
+
+.navitem a {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+}
+
+.navitem a:hover,
+.navitem a:active,
+.navitem a.navitem--active {
+  color: var(--color-primary);
+}
+
+.navitem a:hover .MuiBadge-badge,
+.navitem a:active .MuiBadge-badge,
+.navitem a.navitem--active .MuiBadge-badge {
+  color: var(--color-white);
+}
+
+.navbar__logo--star {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  display: table-cell;
+  width: 64px;
+  height: 64px;
+  padding-right: 64px;
+}
+
+.navbar__logo--claim {
+  vertical-align: bottom;
+  padding-bottom: 4px;
+  display: table-cell;
+  width: 100%;
+  height: auto;
+  padding-right: 80px;
+}
+
+.navbar__logo__link {
+  text-decoration: none;
+  display: table-row;
+}
+
+.navbar__logo__link:hover {
+  cursor: pointer;
+}
+
+#navbar__logo__container {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  min-width: 290px;
+  overflow: hidden;
+  display: table;
+}
+
+/* Icon 3 */
+#nav-icon3 {
+  width: 35px;
+  height: 20px;
+  min-width: 35px;
+  min-height: 20px;
+  position: relative;
+  display: none;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: var(--color-white);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+  top: 9px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 18px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 9px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+/* Icon 3  END*/
+
+.openNavbar {
+  visibility: visible;
+  opacity: 100;
+}
+/* Custom Code */
+.searchResuts__navbar__grid {
+  background-color: #000;
+}
+.MobileNavbar--anchor {
+  padding: 0.75rem 1.5rem;
+  height: 80%;
+}
+
+.navbar__container img {
+  max-width: 50px;
+  width: 85%;
+  padding: 0;
+}
+.navbar__logo__container {
+  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 7vw !important;
+}
+.navitems__customHolder {
+  width: 100%;
+  float: left;
+  padding: 0px;
+  display: block;
+}
+.navitems__customHolder #navitems {
+  padding: 0px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.navitems__customHolder #navitems #nav_supersearch .navitem a,
+.navitems__customHolder #navitems #nav_browse .navitem a {
+  margin: 0px;
+}
+#navitems .navitem {
+  display: inline-block;
+}
+
+#navitems .navitem .WebNavbar--anchor {
+  display: inline-block !important;
+  padding: 2px 15px;
+  cursor: pointer;
+}
+
+#navitems.navitems__menu_right .navitem .WebNavbar--anchor {
+  width: 28px;
+  height: 28px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+#navitems.navitems__menu_right .navitem .WebNavbar--anchor {
+  padding: 0px;
+}
+
+#navitems .navitem .WebNavbar--anchor:hover,
+#navitems .navitem .WebNavbar--anchor.activeNavlink {
+  color: var(--color-primary);
+}
+#navitems > div {
+  display: inline-block;
+}
+
+/* End Custom Code */
+@media only screen and (max-width: 1100px) {
+  #navitems .navitem .WebNavbar--anchor {
+    padding: 10px 10px;
+    /* line-height: 50px; */
+  }
+  .navbar__container {
+    height: 82px;
+  }
+}
+@media (max-width: 1024px) {
+  .navitem {
+    margin: 10px 4px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #navitems .navitem .WebNavbar--anchor {
+    padding: 10px 7px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .searchResuts__navbar__grid {
+    padding-bottom: 5px;
+  }
+  #navitems {
+    float: none !important;
+    margin-right: 0px;
+    margin-left: 32px;
+  }
+  .navbar__container {
+    display: block;
+  }
+  .navbar__logo__container {
+    padding-left: 10px;
+  }
+  .navitems__customHolder {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+  .navitem .WebNavbar--anchor {
+    padding: 0px 7px !important;
+    line-height: 30px !important;
+  }
+  .toggleMenuContainer .navitems__toggleContainer {
+    display: flex !important;
+    align-items: center !important;
+  }
+  .navbar__container {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    z-index: 1111 !important;
+  }
+}

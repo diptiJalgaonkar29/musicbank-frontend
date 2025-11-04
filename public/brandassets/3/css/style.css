@@ -1,0 +1,32 @@
+.navbar__container img {
+  max-width: 90px !important;
+}
+
+.mastercard .V3AuthLayout .brand_logo {
+  height: 110px !important;
+}
+
+.searchResults__results--refinements .ais-CurrentRefinements-delete {
+  font-size: 10px !important;
+}
+
+.CommentSection__container
+  .CommentSections__newComment
+  .CommentSections__newComment--wrapper
+  button {
+  right: 19px !important;
+}
+
+.mastercard .sonicButton.filled {
+  color: var(--color-white) !important;
+}
+
+.mastercard .sonicButton:disabled {
+  background-color: #1f1f1f;
+  color: #797979 !important;
+}
+
+.mastercard .SonicCheckbox_container:has(input:checked):after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}

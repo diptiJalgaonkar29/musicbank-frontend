@@ -1,0 +1,28 @@
+.TrackDownloadProgress_container {
+  background-color: var(--color-card);
+  border-radius: 1rem;
+  position: absolute;
+  top: 65px;
+  right: 7%;
+  z-index: 1111;
+}
+
+.TrackDownloadProgress_note {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  margin: 0;
+  padding: 0.2rem 1.5rem;
+}
+
+.TrackDownloadProgress_close_icon svg {
+  width: 1.2rem;
+  width: 1.2rem;
+}
+.TrackDownloadProgress_close_icon {
+  background-color: transparent !important;
+  width: auto !important;
+  padding: 0.5rem 0 0.5rem 0.5rem !important;
+}

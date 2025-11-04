@@ -1,0 +1,165 @@
+@media screen and (max-width: 2150px) {
+  .CommentSection__container {
+    margin-left: 5px;
+    grid-template-rows: 4rem repeat(6, 1fr);
+    width: 45rem;
+  }
+  .PlayListTitleList__container {
+    margin-left: 2rem;
+  }
+  .PlaylistDescription__Wrapper {
+    /* width: 30rem; */
+  }
+  .PlaylistDescription__Name {
+    font-size: 2.6rem;
+  }
+  .PlayListMembers__wrapper {
+    width: 32rem;
+  }
+  .PlayListCoverPicture {
+    width: 32rem;
+    height: 32rem;
+  }
+
+  #RegisteredPlayListMembers__wrapper {
+    padding-top: 25px;
+    /* margin: 0px 35px !important; */
+  }
+  #ExternalPlayListMembers__wrapper {
+    /* margin: 0px 35px !important; */
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .CommentSection__container {
+    height: 100%;
+    overflow: hidden;
+  }
+  .PlayListCoverPicture {
+    width: 25rem;
+    height: 25rem;
+  }
+  .PlayListCoverPicture__Loading {
+    width: 25rem;
+    height: 25rem;
+  }
+  .PlaylistDescription__Wrapper {
+    /* width: 30rem; */
+  }
+  .PlaylistDescription__Description--info {
+    padding: 1px;
+  }
+  .PlayListMembers__wrapper {
+    box-shadow: none;
+  }
+  .PlayListTitleList__Item .TrackCard__audio {
+    margin-top: 0px;
+  }
+  .PlayListTitleList__Extra {
+    margin-top: 0px;
+  }
+  #Open_Comment_Section {
+    top: 10rem;
+  }
+  .CommentSections__newComment--wrapper {
+    padding: 2rem;
+  }
+  .PlayListMembers__heading {
+    font-size: 2rem;
+  }
+  .PlayListTitleList__Item #TimeLineComponent {
+    width: 100% !important;
+    transform: none !important;
+  }
+  #RegisteredPlayListMembers__wrapper {
+    padding-top: 25px;
+    /* margin: 0px 45px !important; */
+  }
+  #ExternalPlayListMembers__wrapper {
+    /* margin: 0px 45px !important; */
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .MyMusic__Wrapper {
+    grid-template-columns:
+      [full-start-content] minmax(7rem, 1.33fr) [center-start-content] minmax(
+        39rem,
+        2.33333fr
+      )
+      minmax(82rem, 1.66666fr) minmax(43rem, auto) [center-end-content] minmax(
+        0,
+        8rem
+      )
+      [full-end-content];
+  }
+
+  #RegisteredPlayListMembers__wrapper {
+    padding-top: 25px;
+    /* margin: 0px 45px !important; */
+  }
+  #ExternalPlayListMembers__wrapper {
+    /* margin: 0px 45px !important; */
+  }
+  .PlaylistDescription__Wrapper {
+    /* width: 22rem; */
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .MyMusic__Wrapper {
+    grid-template-columns:
+      [full-start-content] minmax(7rem, 1.33fr) [center-start-content] minmax(
+        37rem,
+        2.33333fr
+      )
+      minmax(71rem, 1.66666fr) minmax(43rem, auto) [center-end-content] minmax(
+        0,
+        8rem
+      )
+      [full-end-content];
+  }
+  .PlaylistDescription__Wrapper {
+    /* width: 22rem; */
+  }
+
+  #RegisteredPlayListMembers__wrapper {
+    padding-top: 25px;
+    /* margin: 0px 45px !important; */
+  }
+  #ExternalPlayListMembers__wrapper {
+    /* margin: 0px 45px !important; */
+  }
+}
+
+@media screen and (max-width: 1165px) {
+  .MyMusic__Wrapper {
+    grid-template-columns:
+      [full-start-content] minmax(7rem, 1.33fr) [center-start-content] minmax(
+        30rem,
+        2.33333fr
+      )
+      minmax(61rem, 1.66666fr) minmax(43rem, auto) [center-end-content] minmax(
+        0,
+        8rem
+      )
+      [full-end-content];
+  }
+
+  #RegisteredPlayListMembers__wrapper {
+    padding-top: 25px;
+    /* margin: 0px 20px !important; */
+  }
+  #ExternalPlayListMembers__wrapper {
+    /* margin: 0px 20px !important; */
+  }
+  .PlaylistDescription__Wrapper {
+    /* width: 23rem; */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .PlaylistDescription__Wrapper {
+    /* width: 30rem; */
+  }
+}

@@ -1,0 +1,148 @@
+.login-ac-container-V3 {
+  border: 0;
+  margin: 2rem 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* display: inline-block;
+  padding: 0;
+  position: relative;
+  min-width: 0;
+  flex-direction: column;
+  vertical-align: top;
+  width: 100%;
+  text-align: start; */
+}
+
+.login-ac-container-V3 label {
+  cursor: pointer;
+  display: flex !important;
+  /* display: inline-block; */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-ac-container-V3 input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-clip: content-box;
+  /* border: 2px solid var(--color-primary); */
+  border-radius: 50%;
+  background-color: #e7e6e7;
+  cursor: pointer;
+}
+
+.login-ac-container-V3 input[type="checkbox"]:checked {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-white);
+}
+
+.login-ac-container-V3 input[type="checkbox"]:focus {
+  outline: none !important;
+}
+
+.login-ac-container-V3 .login-ac-hr {
+  border: 0;
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.login-ac-container-V3 .login-ac-input {
+  margin-right: 0.5em;
+  height: 1.4rem;
+  margin-top: 0;
+  vertical-align: middle;
+}
+
+.login-ac-container-V3 .login-ac-anchor {
+  /* color: var(--color-primary); */
+  font-size: 1.6rem;
+}
+
+.login-ac-container-V3 .login-ac-anchor-pp {
+  color: var(--color-primary);
+}
+
+.login-ac-container-V3 .login-ac-pp {
+  font-size: 1.2rem;
+}
+
+.login-ac-container-V3 .login-ac-p {
+  vertical-align: middle;
+  font-size: 1.6rem;
+  display: inline-block;
+  margin: 0px;
+}
+
+.login-ac-container-V3 .hover-cursor:hover {
+  cursor: pointer;
+}
+
+.login-ac-container-V3 .goForward-Section {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.login-ac-container-V3 .goForward-Section svg {
+  font-size: 1.6rem !important;
+  margin-left: 1rem;
+}
+
+.login-ac-container-V3 .goForward {
+  color: var(--color-primary);
+}
+
+.login-ac-container-V3 .goForward-Section:hover {
+  cursor: pointer;
+}
+
+.login-ac-container-V3 .goForward-Section:hover .goForward {
+  text-decoration: underline;
+}
+
+.login-ac-container-V3 .goForward-Section:hover svg {
+  animation-iteration-count: 1;
+  animation: goForwardArrowAnimation 0.25s forwards ease-in-out;
+}
+
+.data_policy_dialog_btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 0;
+}
+
+@keyframes goForwardArrowAnimation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(+30%);
+  }
+}
+
+.terms_of_use_modal_iframe {
+  width: 100%;
+  height: calc(70vh - 140px) !important;
+  border-radius: 10px;
+  border: 1px solid var(--color-white);
+  display: block !important;
+}
+
+.data-policy-dialog .MuiPaper-root.MuiDialog-paper {
+  background-color: var(--color-bg) !important;
+  width: 75% !important;
+  border-radius: 10px;
+  padding: 25px 50px;
+}
+
+.data-policy-dialog .MuiDialog-paperWidthSm {
+  max-width: 1000px !important;
+}

@@ -1,0 +1,119 @@
+.toggleMenuContainer .toggleMeunBtn {
+  display: inline-block !important;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 1011;
+}
+
+.toggleMenuContainer .bar1,
+.toggleMenuContainer .bar2,
+.toggleMenuContainer .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--color-primary);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.toggleMenuContainer .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.toggleMenuContainer .change .bar2 {
+  opacity: 0;
+}
+
+.toggleMenuContainer .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.toggleMenuContainer .navitems__menu_container {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.toggleMenuContainer .navitems__toggleContainer {
+  background-color: var(--color-bg);
+  width: 34vw;
+  /* change height over here */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -35vw;
+  z-index: 1010;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border: 1px solid var(--color-white);
+  border-right: none;
+  transition: all 0.5s;
+}
+
+.toggleMenuContainer #navitems {
+  position: relative !important;
+  height: fit-content !important;
+}
+.toggleMenuContainer #navitems.navitems__menu_left {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  margin-left: 0 !important;
+  padding: 0;
+  gap: 10px;
+}
+
+.toggleMenuContainer #navitems.navitems__menu_right {
+  margin-left: 0 !important;
+  padding: 0;
+  gap: 10px;
+  align-items: center;
+}
+
+.toggleMenuContainer .navitems__menu li {
+  padding-left: 8vw;
+}
+
+.toggleMenuContainer .navitem,
+.toggleMenuContainer .navitem div,
+.toggleMenuContainer .navitem a {
+  padding: 5px 0px;
+  margin: 5px 0px;
+  line-height: 0;
+  display: block !important;
+  height: auto !important;
+  text-align: center;
+  width: 100%;
+}
+.toggleMenuContainer #nav_supersearch,
+.toggleMenuContainer #nav_browse {
+  width: 100%;
+}
+
+.toggleMenuContainer {
+  display: none;
+}
+
+.navitems__customHolder {
+  display: block;
+}
+
+@media only screen and (max-width: 950px) {
+  .toggleMenuContainer {
+    display: block;
+  }
+  .navitems__customHolder {
+    display: none;
+  }
+  .navitems__menu_right .download_cart_count_badge {
+    top: 5px;
+    right: 0px;
+  }
+}

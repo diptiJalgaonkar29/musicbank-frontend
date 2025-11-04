@@ -1,0 +1,53 @@
+.downloading_pdf_container {
+  text-align: center;
+  margin: -25px auto 30px;
+}
+
+.statistics_main h3 {
+  text-align: center;
+  margin: 10px;
+  /* margin-top: 15px; */
+}
+
+.dates_selection_container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0px;
+  position: relative;
+}
+
+.dates_selection_container .label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.statistics_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statistics_header .download_icon_container {
+  background-color: var(--color-primary);
+  padding: 10px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.statistics_header .download_icon {
+  padding: 10px;
+}
+.chart_layout_container canvas {
+  height: 300px;
+  width: 300px;
+  background-color: #222529;
+  border-radius: 20px;
+}

@@ -1,0 +1,21 @@
+.editor_Container .ss_select_container {
+  width: 91%;
+}
+.editor_Container .SonicInputLabel {
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--color-primary);
+}
+
+.editor_Container .css-1xliaae-control{
+  border-radius: 10px !important;
+}
+
+.editor_form_container {
+  margin-top: 15px;
+  padding: 0 2px;
+  width: calc(100vw - 300px);
+  height: calc(100vh - 220px);
+  overflow: auto;
+  box-sizing: border-box;
+}

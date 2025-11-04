@@ -1,0 +1,524 @@
+/* NAVBAR */
+
+.adac .navbar__container {
+  gap: 1rem !important;
+}
+.adac .navbar__logo__container {
+  min-width: 100px !important;
+}
+
+.adac .navbar__container img {
+  max-width: 90px !important;
+}
+
+.adac .navitem a:hover,
+.adac .navitem a:active,
+.adac .navitem a.navitem--active {
+  color: #000 !important;
+}
+
+.adac .navitem a:active,
+.adac .navitem a.navitem--active {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 3px !important;
+  text-underline-offset: 5px !important;
+  font-weight: 700 !important;
+}
+
+.adac .navbar__container {
+  background-color: var(--color-primary) !important;
+}
+
+.adac .WebNavbar--anchor,
+.adac .ai-search-container .ai-search-container-inner .st-btn-library.active,
+.adac .ai-search-container .ai-search-container-inner .st-btn-spotify.active {
+  color: #000 !important;
+}
+.adac
+  .ai-search-container
+  .ai-search-container-inner
+  .st-btn-spotify.active
+  svg
+  path {
+  fill: #000 !important;
+}
+
+.adac .navbar__container .MuiBadge-badge {
+  background-color: var(--color-white) !important;
+}
+
+.adac
+  .navbar__container
+  .MuiBadge-badge.MuiBadge-anchorOriginTopRightRectangular {
+  color: #000 !important;
+}
+
+.adac .CustomNotificationTopBar_container {
+  background-color: var(--color-card) !important;
+}
+
+.adac:has(.V3AuthLayout) .CustomNotificationTopBar_container {
+  background-color: var(--color-primary) !important;
+}
+
+.adac:has(.V3AuthLayout) .CustomNotificationTopBar_text {
+  color: #000 !important;
+}
+
+.adac:has(.V3AuthLayout) .CustomNotificationTopBar_close_btn {
+  filter: invert(1) !important;
+}
+
+.adac .V3AuthLayout .brand_logo {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.adac .toggleMenuContainer .bar1,
+.adac .toggleMenuContainer .bar2,
+.adac .toggleMenuContainer .bar3 {
+  background-color: #000 !important;
+}
+
+.adac .toggleMenuContainer .navitems__toggleContainer {
+  background-color: var(--color-primary) !important;
+}
+
+/* HOME */
+.adac .gotoSuperSearchBtn {
+  fill: #000 !important;
+}
+
+/* SEARCH GLOBAL */
+
+.adac .custSearchBoxForAll .custSearch__container .searchIcon {
+  stroke: #000 !important;
+}
+
+.adac .custSearchBoxForAll .imgClose {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+
+/* button {
+  color: var(--color-primary) !important;
+} */
+
+/* BROWSE */
+.adac .cs_edit_btn {
+  background-color: var(--color-primary) !important;
+  color: #000 !important;
+}
+.adac .addtoQueue_btn svg {
+  fill: var(--color-white) !important;
+}
+.adac .sonic-rangeslider-wrapper .slideCtrLbl {
+  color: #000 !important;
+}
+
+.adac .sonic_chip.tag_tempo,
+.adac .sonic_chip.tempo {
+  border: 1px solid var(--color-bubbletag-tempo-text) !important;
+}
+
+.adac .custom-input-icon {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+.adac .searchResuts__container .TrackCard__item__tags span {
+  background-color: #54565a !important;
+  color: var(--color-white) !important;
+}
+
+.adac
+  .searchResuts__container
+  .TrackCard__item__tags
+  .taxonomy__tags_container
+  span.tempo_tags {
+  border: 1px solid var(--color-bubbletag-tempo-text) !important;
+  padding: 0.6rem 0.9rem !important;
+}
+
+.adac .ais-CurrentRefinements-category.tag_tempo,
+.adac .searchResuts__container .ais-CurrentRefinements-category.tempo {
+  border: 1px solid var(--color-bubbletag-tempo-text) !important;
+  padding: 0.6rem 1.1rem !important;
+}
+
+.adac .ais-CurrentRefinements-category.tag_tempo .ais-CurrentRefinements-delete,
+.adac
+  .searchResuts__container
+  .ais-CurrentRefinements-category.tempo
+  .ais-CurrentRefinements-delete {
+  color: var(--color-primary) !important ;
+}
+
+.adac
+  .searchResults__results
+  .searchResults__results--header
+  .searchResults__results--refinements
+  .ais-CurrentRefinements-category.tempo
+  .ais-CurrentRefinements-categoryLabel {
+  color: var(--color-primary) !important ;
+}
+
+.adac .TrackcardV2__item__tags .taxonomy__tags_container span.tempo_tags {
+  border: 1px solid var(--color-bubbletag-tempo-text) !important;
+  padding: 0.6rem 0.9rem !important;
+}
+
+/* SIMILARITY SEARCH */
+.adac .st-container .st-container-inner table .st-tbl-sel-1,
+.adac .st-container .st-container-inner table .st-tbl-sel-2,
+.adac .st-container .st-container-inner table .st-tbl-sel-3 {
+  color: #000 !important;
+}
+
+.adac .st-container .st-container-inner .st-btn-spotify svg {
+  fill: var(--color-white) !important;
+  stroke: var(--color-white) !important;
+}
+
+.adac .st-container .st-container-inner .st-btn-spotify.active svg {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+
+.adac .st-container .st-container-inner .st-btn-spotify,
+.adac .st-container .st-container-inner .st-btn-library {
+  color: var(--color-white) !important;
+}
+
+.adac .st-container .st-container-inner .st-btn-spotify.active,
+.adac .st-container .st-container-inner .st-btn-library.active {
+  color: #000 !important;
+}
+
+/* SUPER SEARCH */
+.adac .ss-activeTab-tag_tonality span,
+.adac .ss-activeTab-tag_genre span,
+.adac .ss-activeTab-tag_feelings span {
+  background-color: var(--color-primary) !important;
+  color: #000 !important;
+}
+
+.adac #ssBubbleHolder_tag_tempo .bubbleBox {
+  stroke: var(--color-primary) !important;
+}
+
+.adac #ssBubbleHolder_tag_tempo .bubbleBox[fill="var(--color-gray)"] {
+  stroke: transparent !important;
+}
+
+.adac .SSToggle_container .checkbox:checked + .knobs span,
+.adac .SSToggle_container .knobs:after {
+  color: #000 !important;
+}
+
+.adac .SSToggle_container .checkbox:checked + .knobs:after {
+  color: var(--color-white) !important;
+}
+
+.adac .gsearch-tabrow .gsearch-tabcol .gsearch-tabbtn {
+  border: 1px solid var(--color-white) !important;
+}
+
+.adac .gsearch-tabrow .gsearch-tabcol.divSelect span {
+  border: 1px solid transparent !important;
+}
+
+.adac .gsearch-tabrow .gsearch-tabcol.divSelect span:hover {
+  background-color: var(--color-primary) !important;
+  color: #000 !important;
+}
+
+.adac .gsTagList .gsTagApply {
+  color: #000 !important;
+}
+
+.adac .gsTagList .ssResultsNextArrow {
+  stroke: #000 !important;
+}
+
+.adac .gsTagList .gsTagContainer .gsTagText {
+  color: #000 !important;
+}
+
+.adac .gsTagList .gsTagContainer .gsTagRemoveImg {
+  stroke: #000 !important;
+  fill: #000 !important;
+}
+
+.adac .gsTagList .gsTagContainer.refine-tag_tempo-bgColor .gsTagRemoveImg {
+  stroke: var(--color-primary) !important;
+  fill: var(--color-primary) !important;
+}
+
+.adac .gsearch-tabrow .gsearch-tabcol .gsearch-tabbtn:hover {
+  background-color: transparent !important;
+}
+
+.adac .ss-active-index-1 .bubbleBox {
+  stroke-width: 0 !important;
+}
+
+.adac .gsTagList .gsTagClearAll {
+  color: var(--color-primary) !important;
+}
+
+.adac .refine-tag_tempo-bgColor {
+  background-color: var(--color-bubbletag-tempo-bg) !important;
+  border: 1px solid var(--color-bubbletag-tempo-text) !important;
+}
+
+.adac .gsTagContainer.refine-tag_tempo-bgColor .gsTagText {
+  color: var(--color-bubbletag-tempo-text) !important;
+}
+
+/* PLAYLIST */
+
+.adac
+  .MyMusic__Wrapper
+  .PlaylistDescription__container
+  .PlaylistDescription__Wrapper
+  .PlaylistDescription__Extra
+  .PlaylistDescription__Extra--delete
+  .PlaylistDescription__tabMenuSet {
+  color: #000 !important;
+}
+
+.adac .MyMusic__SideBar .AddPlaylist {
+  color: #000 !important;
+}
+
+.adac
+  .PlaylistDescription__Name:hover
+  .PlaylistDescription__Name--editIcon.sonic_icon_button,
+.adac
+  .PlaylistCoverImage--image:hover
+  .PlaylistCoverImage--editIcon.sonic_icon_button,
+.adac
+  .PlaylistDescription__Description:hover
+  .PlaylistDescription__Description--editIcon.sonic_icon_button {
+  filter: invert(1);
+}
+
+.adac .MyMusic__Wrapper .taxonomy__tags_container span.genre_tags {
+  border: none !important;
+}
+
+.adac .Comment_Icon .closeBtnsize,
+.adac .Comment_Icon .chatIcon {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+
+.adac .MuiDialog-container .MuiDialog-paperWidthSm .MuiButton-text span {
+  color: #000 !important;
+}
+
+.adac .PlaylistCoverImage--approveNewName .file-upload-wrapper:before,
+.adac .cover-image-file-input-container .file-upload-wrapper:before {
+  color: #000 !important;
+}
+
+.adac
+  .CommentSection__container
+  .CommentSections__newComment
+  .CommentSections__newComment--wrapper
+  button
+  svg {
+  fill: #000 !important;
+}
+
+.adac .PlaylistDescription__Name--approveNewName .sonic_icon_button svg,
+.adac .PlaylistCoverImage--approveNewName .sonic_icon_button svg,
+.adac .PlaylistDescription__Description--approveNewName .sonic_icon_button svg {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+
+/* CART */
+.adac .downloadBasketPage__container .removeBasketTrack .MuiSvgIcon-root {
+  color: #000 !important;
+}
+
+.adac .MuiPickersToolbarText-toolbarBtnSelected,
+.adac .MuiPickersToolbarText-toolbarTxt {
+  color: #000 !important;
+}
+
+/* TRACK DETAILS */
+.adac .TrackPage__wrapper .downloadButton svg {
+  stroke: #000 !important;
+}
+.adac .TrackPage__wrapper .addToPlaylistButton svg {
+  fill: #000 !important;
+}
+
+.adac .TrackPage__wrapper .similarTracksButton svg {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+
+.adac .download-option-dialog #checkoutBtn {
+  color: #000 !important;
+}
+
+.adac .music_container_trim .playPause svg {
+  color: #000 !important;
+}
+
+.adac .radarBlock .apexcharts-data-labels text {
+  fill: #000 !important;
+}
+
+/* COMMOM */
+
+.adac .Comment_Icon .sonic_icon_button,
+.adac .custSearchResultDialog .sonic_icon_button.closeIcon svg {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+
+.adac .ais-RangeSlider-wrapper .sonic_icon_button.submitInput svg {
+  filter: invert(1);
+}
+
+.adac .MuiPaper-root.MuiSnackbarContent-root .MuiSnackbarContent-message {
+  color: #000 !important;
+}
+
+/* MUSIC FOOTER PLAYER */
+.adac #audioPlayer .actionMenuIcons .MuiSvgIcon-root {
+  font-size: 40px !important;
+}
+
+.adac #audioPlayer .closeIcon svg,
+.adac #audioPlayer .volume svg,
+.adac #audioPlayer .forwardBackward svg,
+.adac #audioPlayer .playlistIcon svg {
+  fill: var(--color-white) !important;
+}
+
+.adac .sonic_chip svg {
+  stroke: #000 !important;
+}
+
+.adac .TrackcardV2__item__tags .taxonomy__tags_container .sonic_chip.tag_tempo,
+.adac .TrackcardV2__item__tags .taxonomy__tags_container .sonic_chip.tempo,
+.adac .searchResuts__container .sonic_chip.tempo,
+.adac .searchResuts__container .sonic_chip.tag_tempo,
+.adac .gsearch-container .sonic_chip.tempo,
+.adac .gsearch-container .sonic_chip.tag_tempo {
+  border: 1px solid var(--color-bubbletag-tempo-text) !important;
+}
+
+.adac .sonic_chip.tempo svg,
+.adac .sonic_chip.tag_tempo svg {
+  stroke: var(--color-bubbletag-tempo-text) !important;
+}
+
+/* .sonic_icon_button svg {
+  stroke: #000 !important;
+  fill: #000 !important; 
+} */
+
+.adac
+  .SearchPageTS__TrackSection
+  .slick-slider
+  .sonic_icon_button[icon="RightArrow"]
+  svg {
+  stroke: var(--color-white) !important;
+  fill: var(--color-white) !important;
+}
+
+.adac .sonic_tab_title.MuiTab-textColorInherit.MuiTab-root.Mui-selected {
+  color: #000 !important;
+}
+
+.adac .sonic_icon_button[icon="DownloadCart"] svg,
+.adac .sonic_icon_button[icon="Help"] svg,
+.adac .sonic_icon_button[icon="Profile"] svg {
+  stroke: #000 !important;
+}
+
+.adac .sonic_icon_button[icon="DownloadCart"] svg {
+  fill: #000 !important;
+}
+
+.adac .navbar__container .WebNavbar--anchor.activeNavlink {
+  border-bottom: 3px solid #000 !important;
+}
+
+.adac .download_cart_count {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.adac .Comment_Icon svg {
+  stroke: #000 !important;
+}
+
+.adac .PlayListTitleList__Extra--actions button.sonic_icon_button {
+  color: var(--color-white) !important;
+}
+
+/* .adac .sonicButton {
+  color: var(--color-bg) !important;
+} */
+
+.adac .sonicButton.outlined {
+  color: var(--color-white) !important;
+}
+
+.adac
+  .profile_menu_main_container
+  button.profile_form_action_button.sonicButton {
+  color: var(--color-primary) !important;
+}
+
+.adac
+  .profile_menu_main_container
+  button.profile_form_action_button.sonicButton:disabled {
+  color: var(--color-gray) !important;
+}
+
+.adac .Comment_element--Icon svg {
+  color: #fff !important;
+}
+
+.adac .DocumentsPage__container__v2 .DocumentsPage__card--img {
+  object-fit: contain !important;
+}
+
+/* .adac .sonicButton.filled,
+.adac .sonicButton.primaryOutlined,
+.adac .sonicButton.primaryOutlined.sonicButtonHover {
+  color: var(--color-bg) !important;
+}
+
+ */
+
+.adac .login-ac-container-V3 .login-ac-anchor,
+.adac .V3LoginForgotPasswordLink {
+  color: var(--color-primary) !important;
+}
+
+.adac .SonicCheckbox_container:has(input:checked):after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}
+
+.adac .sonicButton.filled svg {
+  filter: invert(1) !important;
+}
+
+.adac .TrackTypeBadge_container .TrackTypeBadge_icon {
+  object-fit: contain !important;
+}
+
+.adac .sonic_icon_button .MuiSvgIcon-root,
+.adac .MuiSnackbarContent-root .MuiSvgIcon-root {
+  color: #000 !important;
+}
