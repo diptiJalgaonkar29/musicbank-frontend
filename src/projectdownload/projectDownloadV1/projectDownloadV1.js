@@ -559,6 +559,7 @@ function ProjectDownloadV1() {
           bpm: AlgoliaResponseData?.bpm,
           tag_key: AlgoliaResponseData?.tag_key,
           instrument_vocal_data: AlgoliaResponseData?.instrument_vocal_data,
+          waveImage: AlgoliaResponseData?.wave_form_js,
         };
       });
 
@@ -652,12 +653,12 @@ function ProjectDownloadV1() {
       `${getUserId()}-${getSuperBrandId()}-downloadtracks-${new Date()?.toJSON()}`;
 
     // Generate PDF and add it to the ZIP
-    try {
-      const pdfBlob = await generatePdfFromResponse(zipFilename);
-      zip.file(`${zipFilename}.pdf`, pdfBlob);
-    } catch (error) {
-      console.error("Error adding PDF to ZIP:", error);
-    }
+    // try {
+    //   const pdfBlob = await generatePdfFromResponse(zipFilename);
+    //   zip.file(`${zipFilename}.pdf`, pdfBlob);
+    // } catch (error) {
+    //   console.error("Error adding PDF to ZIP:", error);
+    // }
 
     for (const trackobj of _tObject || []) {
       let fileName = "";
@@ -901,21 +902,24 @@ function ProjectDownloadV1() {
   };
 
   const handleCallPrdictAPi = (Ids, Index) => {
-    const getDataByIds = Index?.filter((t) => Ids?.includes(t.trackId)) // exclude API IDs
-      ?.map((e) => ({
-        projectId: projectIdSplitter,
-        assetType: e?.asset_type_id,
-        assetName: (e?.preview_track_url || "")?.split("/")[1],
-        assetSourceId: e?.strotswar_track_id,
-        d_link: getMediaBucketPath(
-          e?.preview_track_url,
-          e?.strotswar_track_id,
-          "download"
-        ),
-        algoliaTrackId: e?.objectId,
-        sonicTrackId: e?.trackId,
-        source: 1,
-      }));
+    const getDataByIds = Index?.filter((t) =>
+      //Ids?.includes(t.trackId)) // exclude API IDs
+      //?.map((e) => ({
+      Ids?.some((id) => id.trackId === t.facetTrackId)
+    )?.map((e) => ({
+      projectId: projectIdSplitter,
+      assetType: e?.asset_type_id,
+      assetName: (e?.preview_track_url || "")?.split("/")[1],
+      assetSourceId: e?.strotswar_track_id,
+      d_link: getMediaBucketPath(
+        e?.preview_track_url,
+        e?.strotswar_track_id,
+        "download"
+      ),
+      algoliaTrackId: e?.objectId,
+      sonicTrackId: e?.trackId,
+      source: 1,
+    }));
 
     if (token?.length > 4) {
       // If token already exists
@@ -1113,10 +1117,11 @@ function ProjectDownloadV1() {
                                 enableReinitialize
                               >
                                 {({ values, setFieldValue }) => {
+                                  console.log("values", values);
                                   const apiTrackIds =
                                     retriveDataFromTokenByAPi?.flatMap((item) =>
-                                      Array.isArray(item.trackIds)
-                                        ? item.trackIds
+                                      Array.isArray(item.tracks)
+                                        ? item.tracks
                                         : []
                                     ) || [];
                                   const apiAssetTypes =
@@ -1145,16 +1150,20 @@ function ProjectDownloadV1() {
                                     track?.trackInfo || []
                                   )
                                     .filter((t) => {
-                                      const notInApi =
-                                        !uniqApiTrackIds.includes(
-                                          t.facetTrackId
-                                        );
+                                      const notInApi = !uniqApiTrackIds.some(
+                                        (id) => id.trackId === t.facetTrackId
+                                      ); // exclude API IDs
+
                                       const assetOk = allowedAssetType
                                         ? t.asset_type_id === allowedAssetType
                                         : true;
+
                                       return notInApi && assetOk;
                                     })
-                                    .map((t) => t.facetTrackId);
+                                    .map((t) => ({
+                                      trackId: t.facetTrackId,
+                                      algoliaId: t.objectID, // or t.objectId — depends on your data key
+                                    }));
 
                                   // ---- handleSelectAll: select only selectableIdsAll, or clear
                                   const handleSelectAll = (e) => {
@@ -1189,22 +1198,43 @@ function ProjectDownloadV1() {
                                     }
 
                                     // optional: compute sendToPredictFlag (your existing asset-type check)
-                                    const selectedAssetTypes = (
-                                      track?.trackInfo || []
-                                    )
-                                      .filter((t) =>
-                                        values.selectedTracks.includes(
-                                          t.trackId
+
+                                    console.log(
+                                      "selectedTracks",
+                                      values.selectedTracks
+                                    );
+                                    const selectedAssetTypes =
+                                      (track?.trackInfo || [])
+                                        ?.filter((t) =>
+                                          values.selectedTracks.some(
+                                            (item) =>
+                                              item.trackId === t.facetTrackId
+                                          )
                                         )
-                                      )
-                                      .map((t) => t.asset_type_id);
+                                        ?.map((t) => t.asset_type_id) || [];
+                                    console.log(
+                                      "selectedAssetTypes",
+                                      selectedAssetTypes
+                                    );
+                                    // const selectedAssetTypes = (
+                                    //   track?.trackInfo || []
+                                    // )
+                                    //   .filter((t) =>
+                                    //     values.selectedTracks.includes(
+                                    //       t.trackId
+                                    //     )
+                                    //   )
+                                    //   .map((t) => t.asset_type_id);
 
                                     const allSelectedSameType =
                                       selectedAssetTypes.length > 0 &&
                                       selectedAssetTypes.every(
                                         (id) => id === selectedAssetTypes[0]
                                       );
-
+                                    console.log(
+                                      "allSelectedSameType",
+                                      allSelectedSameType
+                                    );
                                     setFieldValue(
                                       "sendToPredictFlag",
                                       allSelectedSameType
@@ -1220,11 +1250,11 @@ function ProjectDownloadV1() {
                                   const maxSelectable = 10;
                                   const apiTrackIdsSel =
                                     retriveDataFromTokenByAPi?.flatMap((item) =>
-                                      Array.isArray(item.trackIds)
-                                        ? item.trackIds
+                                      Array.isArray(item.tracks)
+                                        ? item.tracks
                                         : []
                                     ) || [];
-
+                                  console.log("apiTrackIdsSel", apiTrackIdsSel);
                                   const remainingSelectable =
                                     maxSelectable - apiTrackIdsSel.length || 0;
 
@@ -1234,7 +1264,14 @@ function ProjectDownloadV1() {
                                       remainingSelectable &&
                                     values?.sendToPredictFlag &&
                                     creditRequest > 0;
-
+                                  console.log(
+                                    "values?.selectedTracks",
+                                    values?.selectedTracks
+                                  );
+                                  console.log(
+                                    "values?.sendToPredictFlag",
+                                    values?.sendToPredictFlag
+                                  );
                                   return (
                                     <>
                                       <div className="tracks-controls">
@@ -1267,9 +1304,10 @@ function ProjectDownloadV1() {
                                           const AssetType =
                                             tracksInfo?.asset_type_id;
                                           const isChecked =
-                                            values.selectedTracks.includes(
-                                              trackId
+                                            values.selectedTracks.some(
+                                              (item) => item.trackId === trackId
                                             );
+
                                           let tooltipMsg = "";
 
                                           const isMatch = Boolean(
@@ -1365,26 +1403,65 @@ function ProjectDownloadV1() {
                                                       checked={isChecked}
                                                       disabled={isMatch}
                                                       onChange={(e) => {
-                                                        const checked =
+                                                        const isChecked =
                                                           e.target.checked;
-                                                        if (checked) {
-                                                          setFieldValue(
-                                                            "selectedTracks",
-                                                            [
-                                                              ...values.selectedTracks,
-                                                              trackId,
-                                                            ]
-                                                          );
+
+                                                        let updatedTracks = [
+                                                          ...values.selectedTracks,
+                                                        ];
+
+                                                        if (isChecked) {
+                                                          const exists =
+                                                            updatedTracks.some(
+                                                              (item) =>
+                                                                item.trackId ===
+                                                                trackId
+                                                            );
+
+                                                          if (!exists) {
+                                                            updatedTracks.push({
+                                                              trackId: trackId,
+                                                              algoliaId:
+                                                                tracksInfo?.objectId ??
+                                                                "",
+                                                            });
+                                                          }
                                                         } else {
-                                                          setFieldValue(
-                                                            "selectedTracks",
-                                                            values.selectedTracks.filter(
-                                                              (id) =>
-                                                                id !== trackId
-                                                            )
-                                                          );
+                                                          updatedTracks =
+                                                            updatedTracks.filter(
+                                                              (item) =>
+                                                                item.trackId !==
+                                                                trackId
+                                                            );
                                                         }
+
+                                                        setFieldValue(
+                                                          "selectedTracks",
+                                                          updatedTracks
+                                                        );
                                                       }}
+
+                                                      // onChange={(e) => {
+                                                      //   const checked =
+                                                      //     e.target.checked;
+                                                      //   if (checked) {
+                                                      //     setFieldValue(
+                                                      //       "selectedTracks",
+                                                      //       [
+                                                      //         ...values.selectedTracks,
+                                                      //         trackId,
+                                                      //       ]
+                                                      //     );
+                                                      //   } else {
+                                                      //     setFieldValue(
+                                                      //       "selectedTracks",
+                                                      //       values.selectedTracks.filter(
+                                                      //         (id) =>
+                                                      //           id !== trackId
+                                                      //       )
+                                                      //     );
+                                                      //   }
+                                                      // }}
                                                     />
                                                   </label>
                                                 </Tooltip>

@@ -10,7 +10,8 @@ import ToolTipWrapper from "../../branding/componentWrapper/ToolTipWrapper";
 import { ReactComponent as Flim } from "../../projectcommon/blackIcon/movietickets.svg";
 import { ReactComponent as Music } from "../../projectcommon/blackIcon/Frame10500.svg";
 import { ReactComponent as AI } from "../../projectcommon/blackIcon/VoiceAssistance.svg";
-import { ReactComponent as MusicBar } from "../../projectcommon/blackIcon/Music.svg";
+// import { ReactComponent as MusicBar } from "../../projectcommon/blackIcon/Music.svg";
+import { ReactComponent as MusicBar } from "../../projectcommon/blackIcon/MusicBar.svg";
 
 function formatProjectDate(timestamp) {
   if (timestamp !== null) {

@@ -139,18 +139,6 @@ export function CustomInfiniteHits({
         <>
           <CreatePlaylistModal openProp={createNewPlaylistDialog} />
           {orderedHits.map((hit, index) => {
-            console.log(
-              "Rendering",
-              hit?.facet_cs_flex_id
-                ?.find(
-                  (id) =>
-                    typeof id === "string" &&
-                    id.startsWith(
-                      serverName + "-" + superBrandId + "_" + brandId + ":"
-                    )
-                )
-                ?.split(":")[1] || null
-            );
             // Initialize tag arrays and preview image
             let ampMainMoodTags = [];
             let ampMoodTags = [];

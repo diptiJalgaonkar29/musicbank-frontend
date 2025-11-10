@@ -199,8 +199,16 @@ class KeycloakV3LoginV3 extends Component {
                   res,
                   res?.response?.user_register_status
                 );
-
-                if (res?.response?.user_register_status) {
+                if (res && res?.response && res?.response?.status) {
+                  navigate("/requestforLogin", {
+                    state: {
+                      status: res?.data?.status,
+                      email: res?.data?.email,
+                      fullName: res?.response?.userName,
+                      contactEmail: res?.response?.contactEmail,
+                    },
+                  });
+                } else if (res?.response?.user_register_status) {
                   console.log(
                     "user_register_status:true called",
                     res?.response?.user_register_status

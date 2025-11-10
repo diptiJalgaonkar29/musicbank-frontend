@@ -56,10 +56,12 @@
   min-height: 54px;
   align-items: center;
   display: flex;
+  max-width: 100%;
 }
 
 .HomePageV3Header_container .AISearchButtons {
   display: flex;
+  flex: 1 1;
   background-color: var(--color-primary, #222529);
   padding: 4px;
   border-radius: 40px;
@@ -70,6 +72,10 @@
   align-items: center;
   box-sizing: border-box;
   white-space: nowrap;
+}
+
+.HomePageV3Header_container .HomePageV3Header_top {
+  display: flex;
 }
 
 .HomePageV3Header_container .toggleBtn {
@@ -86,6 +92,7 @@
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
   height: 41px;
+  flex: 1 1;
 }
 
 .HomePageV3Header_container .toggleBtn .SimilarityIcon {
@@ -95,4 +102,54 @@
 .HomePageV3Header_container .selectedBtn {
   background-color: white;
   color: black;
+  flex: 1 1;
+}
+
+.HomePageV3Header_top .linkIconbtn {
+  background-color: #1f1f1f;
+  border-radius: 40px;
+  width: 49px;
+  height: 49px;
+  border: none;
+  cursor: pointer;
+}
+.linkWrapper {
+  position: relative;
+}
+
+.HomePage-Button-Link-Container {
+  display: flex;
+  gap: 10px;
+}
+
+.HomePageV3Header_top .LinkModal {
+  position: absolute;
+  top: 54px; /* appears just below the 49px button */
+  left: 0;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  width: 157px;
+}
+
+.HomePageV3Header_top .LinkModal .modalIconbtn {
+  background: none;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease-in-out;
+}
+
+.HomePageV3Header_top .LinkModal .linkIconbtn:hover {
+  background-color: #2c2c2c;
 }

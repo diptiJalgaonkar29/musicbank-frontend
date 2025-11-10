@@ -46,10 +46,37 @@ const Editor = () => {
   const [formKey, setFormKey] = useState(`${defaultEditor}-form`);
   const [templateLoaded, setTemplateLoaded] = useState(false);
   const [selectedTemplateType, setSelectedTemplateType] = useState("");
-
+  const [pathAttributes, setPathAttributes] = useState(null);
   useEffect(() => {
     setTemplateJsonText(JSON.stringify(initialTemplate, null, 2));
   }, [initialTemplate]);
+
+  const getSuperBrandAssets = async () => {
+    try {
+      const response = await axios.get(
+        `/api/metaData/getBrandAssetsByBrandID?metadata=config&type=ss`,
+        {
+          headers: {
+            BrandId: 'SUPERBRAND',
+            BrandName: 1,
+          },
+        }
+      );
+      if (!response?.data) {
+        console.error("No brand asset data received");
+        return;
+      }
+      // console.log("Super Brand Assets Response:", response.data);
+      //Save PATH_ATTRIBUTES
+      setPathAttributes(response.data.brandData.PATH_ATTRIBUTES || '');
+    } catch (error) {
+      console.error("Error while fetching super brand assets:", error);
+    }
+  };
+
+  useEffect(() => {
+    getSuperBrandAssets();
+  }, []);
 
   useEffect(() => {
     const fetchBrandOptions = async () => {
@@ -261,6 +288,7 @@ const Editor = () => {
                     brandId={brandId}
                     activeEditor={activeEditor}
                     type={type}
+                    pathAttr={pathAttributes}
                   />
                 )}
 

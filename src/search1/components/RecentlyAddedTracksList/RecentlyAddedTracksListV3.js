@@ -15,7 +15,7 @@ import { useDispatch } from "react-redux";
 import getSuperBrandName from "../../../common/utils/getSuperBrandName";
 import { brandConstants } from "../../../common/utils/brandConstants";
 import getSuperBrandId from "../../../common/utils/getSuperBrandId";
-
+import getSortedLabelledTagsArray from '../../../common/utils/getSortedLabelledTagsArray';
 const RecentlyAddedTracksListV3 = () => {
   const [tracks, setTracks] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -97,6 +97,13 @@ const RecentlyAddedTracksListV3 = () => {
   const hideMoodTags = (window.globalConfig?.HIDE_MOOD_TAGS || []).map((t) =>
     t.toLowerCase()
   );
+
+  const getTopMoodTags = (tags = [], hideMoodTags = [], limit = 3) => {
+     const sortedArray= getSortedLabelledTagsArray(tags,"AMP_MOOD_TAGS");
+    return (sortedArray || [])
+      .filter(sortedArray => !hideMoodTags.includes(sortedArray.toLowerCase()))
+      .slice(0, limit);
+  };
   return (
     <>
       {loading ? (
@@ -148,12 +155,8 @@ const RecentlyAddedTracksListV3 = () => {
                       )}
                       duration={track?.duration_in_sec}
                       tags={
-                        //track?.amp_all_mood_tags?.tag_names.slice(0, 3)
-                        (track?.amp_all_mood_tags?.tag_names || [])
-                          .filter(
-                            (tag) => !hideMoodTags.includes(tag.toLowerCase())
-                          )
-                          .slice(0, 3)
+                        getTopMoodTags(track?.amp_all_mood_tags?.tag_names,hideMoodTags,3)
+                       
                       }
                       icon_url={track?.icon_url}
                       defaultImg="/assets/default-track.png"

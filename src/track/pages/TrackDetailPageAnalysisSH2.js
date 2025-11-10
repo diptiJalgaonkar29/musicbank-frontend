@@ -17,6 +17,10 @@ import MoodChartTaxonomyV2 from "../../cyanite/MoodChartTaxonomyV2";
 import { withRouterCompat } from "../../common/utils/withRouterCompat";
 import algoliasearch from "algoliasearch";
 import getMediaBucketPath from "../../common/utils/getMediaBucketPath";
+import getSuperBrandName from "../../common/utils/getSuperBrandName";
+import { brandConstants } from "../../common/utils/brandConstants";
+import { BrandingContext } from "../../branding/provider/BrandingContext";
+import getSuperBrandId from "../../common/utils/getSuperBrandId";
 
 const InitState = {
   queryID: "",
@@ -94,7 +98,18 @@ const settingsToReceive = [
 
 const returnModifiedDataFromMount = (data, styleData) => {
   console.log("returnModifiedDataFromMount", data);
-
+  const superBrandId = getSuperBrandId();
+  const brandId =
+    BrandingContext._currentValue?.config?.brandId ||
+    localStorage.getItem("brandId");
+  let serverName = "";
+  //console.log("Using Algolia index:", indexName, brandId);
+  if (getSuperBrandName() === brandConstants.WPP) {
+    const { config } = React.useContext(BrandingContext);
+    serverName = config.modules.ServerName;
+  } else {
+    serverName = window.globalConfig?.SERVER_NAME;
+  }
   // console.log("data****", data);
   // let tagGenre = data?.tag_genre || [];
   let tagUsedIn = data?.tag_used_in || [];
@@ -110,25 +125,36 @@ const returnModifiedDataFromMount = (data, styleData) => {
   );
 
   // Slice the genreTags to get only the first 10 visible tags
-  const topGenreTags = (styleData.amp_genre_tags.tag_names || [])
-    .filter((tag) => !hideGenreTags.includes(tag.toLowerCase()))
+  const topGenreTags = (styleData?.amp_genre_tags?.tag_names || [])
+    .filter((tag) => !hideGenreTags?.includes(tag.toLowerCase()))
     .slice(0, 10);
 
   // Slice the ampMoodTags to get only the first 10 visible tags
-  const topEmotionTags = (styleData.amp_all_mood_tags.tag_names || [])
-    .filter((tag) => !hideMoodTags.includes(tag.toLowerCase()))
+  const topEmotionTags = (styleData?.amp_all_mood_tags?.tag_names || [])
+    .filter((tag) => !hideMoodTags?.includes(tag.toLowerCase()))
     .slice(0, 10);
 
-  const topEventTags = (styleData.event_tags.tag_names || []).slice(0, 3);
-  const topMovementTags = (styleData.moment_tags.tag_names || []).slice(0, 3);
+  const topEventTags = (styleData?.event_tags?.tag_names || []).slice(0, 3);
+  const topMovementTags = (styleData?.moment_tags?.tag_names || []).slice(0, 3);
 
   // Combine event & movement tags and take 3 random ones
 
   const topInstrumentsTags = (
-    styleData.amp_instrument_tags.tag_names || []
+    styleData?.amp_instrument_tags?.tag_names || []
   ).slice(0, 10);
   console.log("returnModifiedDataFromMount--image_path", data);
-
+  const getSonicTrackId = (hit, serverName) => {
+    if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+      if (Array.isArray(hit?.facet_sonic_track_id)) {
+        const match = hit?.facet_sonic_track_id.find((id) =>
+          id.startsWith(serverName + ":")
+        );
+        return match ? match.split(":")[1] : "";
+      }
+      return "";
+    }
+    return hit?.sonichub_track_id;
+  };
   let updatedData = {
     descriptionTag,
     descriptionTag2,
@@ -167,9 +193,9 @@ const returnModifiedDataFromMount = (data, styleData) => {
     cyanite_id: data?.cyanite_id || "",
     cyanite_status: data?.cyanite_status || "",
     track_lyrics: data?.trackLyrics || "",
-    trackCSStatus: data?.trackCSStatus || "",
+    //trackCSStatus: data?.trackCSStatus || "",
     csToSsStatus: data?.csToSsStatus || "",
-    csFlaxTrackId: data?.csFlaxTrackId || "",
+    //csFlaxTrackId: data?.csFlaxTrackId || "",
     feelingsTags: data?.tag_feelings || [],
     impactTags: data?.tag_impact || [],
     motionTags: data?.tag_motion || [],
@@ -208,13 +234,29 @@ const returnModifiedDataFromMount = (data, styleData) => {
     keyTag: styleData?.tag_key || "",
     bpm: data?.bpm || null,
     strotswar_track_id: styleData?.strotswar_track_id || null,
-    sonichub_track_id: styleData?.sonichub_track_id || null,
+    sonichub_track_id: getSonicTrackId(styleData, serverName) || null,
     instrument_vocal_data: styleData?.instrument_vocal_data || null,
     wav_track: styleData?.wav_track || null,
     mp3_track: styleData?.mp3_track || null,
     stems_zip: styleData?.stems_zip || null,
     track_mediatypes: styleData?.track_mediatypes || null,
     trackdetails_objectID: styleData?.objectID || null,
+    csFlaxTrackId:
+      styleData?.facet_cs_flex_id
+        ?.find(
+          (id) =>
+            typeof id === "string" &&
+            id.startsWith(serverName + "-" + superBrandId + "_" + brandId + ":")
+        )
+        ?.split(":")[1] || null,
+    csFlaxTrackId:
+      styleData?.facet_cs_flex_id
+        ?.find(
+          (id) =>
+            typeof id === "string" &&
+            id.startsWith(serverName + "-" + superBrandId + "_" + brandId + ":")
+        )
+        ?.split(":")[1] || null,
   };
 
   console.log("returnModifiedDataFromMount--updatedData", updatedData);

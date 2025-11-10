@@ -7,6 +7,14 @@
   background-color: var(--color-primary);
 }
 
+.WPPButton-theme .wpp-button::part(button),
+.WPPButton-Normal .wpp-button::part(button) {
+  background-color: var(--color-primary);
+}
+
+.WPPButton-Normal .wpp-button::part(button):hover {
+  background-color: #0765f4;
+}
 .wpp-icon::part(icon) {
   color: var(--color-primary);
 }

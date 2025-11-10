@@ -1,0 +1,61 @@
+.budgetandTimeline-container .budgetandTimeline-legalService {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* .budgetandTimeline-container .budgetandTimeline_date{
+    border: 1px solid white;
+} */
+
+.budgetandTimeline-container .budgetandTimeline_Bothdate {
+  display: flex;
+  gap: 40px;
+}
+.budgetandTimeline-container .region-dropdown {
+  width: 513px;
+}
+.budgetandTimeline-container .budgetandTimeline_musicOption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.budgetandTimeline-container
+  .budgetandTimeline_musicOption
+  input[type="radio"] {
+  background-color: black;
+  border: 1px solid white;
+}
+
+.budgetandTimeline-container .leagat-Service-filled {
+  display: flex;
+}
+
+.budgetandTimeline-container .budgetandTimeline-Datestart {
+  display: flex;
+  gap: 60px;
+}
+
+.budgetandTimeline-container .custom-datepicker {
+  height: 45px;
+  border-radius: 25px;
+  border: 1px solid var(--color-white);
+  padding-left: 100px;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: var(--color-white) !important;
+  width: 503px;
+  box-sizing: border-box;
+}
+.budgetandTimeline-container .budgetandTimeline_startHead{
+    position: absolute;
+    top: 34%;
+    left: 5%;
+    font-size: 14px;
+    font-weight: 400;
+}
+.budgetandTimeline-container .budgetandTimeline_startbox{
+    position: relative;
+}

@@ -32,7 +32,7 @@ import { BrandingContext } from "../../../branding/provider/BrandingContext";
 import { setPredict } from "../../../redux/actions/PredictAction/predictAction";
 import ButtonWrapper from "../../../branding/componentWrapper/ButtonWrapper";
 import getMediaBucketPath from "../../../common/utils/getMediaBucketPath";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import AudioPlayerMini from "../../../common/components/AudiplayerMini/AudioPlayerMini";
 import { setIsPlayingIndex } from "../../../redux/actions/playerActions/playerActions";
 import { SET_SIMIL_QUERY } from "../../../redux/constants/actionTypes";
@@ -196,6 +196,7 @@ const AlgoliaSearchBoxInner = ({
   const [createPredictProject, setCreatePredictProject] = useState(false);
   const [creditRequest, setCreditRequest] = useState(null);
   const [brandType, setBrandType] = useState(null);
+  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const token = searchParams.get("token");
   const superBrandId = getSuperBrandId();
@@ -445,6 +446,16 @@ const AlgoliaSearchBoxInner = ({
         </td>
         <td>
           {track?.spotifyTrack?.audioAnalysisV6?.result?.moodTags?.join(", ")}
+        </td>
+        <td>
+          <div
+            className="request-license-button"
+            onClick={() => {
+              navigate("/MusicLincensingReq");
+            }}
+          >
+            Request License
+          </div>
         </td>
       </tr>
     ) : (
@@ -808,34 +819,26 @@ const AlgoliaSearchBoxInner = ({
 
       <div className="SearchBelow">
         <div className={`filter-panel ${isFilterOpen ? "open" : ""}`}>
-          {!isFilterOpen ? (
-            <div className="filter-toggle-wrapper">
-              <button
-                className="filter-toggle-btn"
-                onClick={() => setIsFilterOpen(true)}
-                title="Open Filters"
-              >
-                <FilterIcon />
-              </button>
-            </div>
-          ) : (
-            <>
-              <button
-                className="filter-close-btn"
-                onClick={() => setIsFilterOpen(false)}
-                title="Close Filters"
-              >
-                <CloseIcon />
-              </button>
-              <div className="filter-content">
-                <FilterSidebar
-                  open={isFilterOpen}
-                  onClose={() => setIsFilterOpen(false)}
-                  //setSidebarFilters={setSidebarFilters}
-                />
-              </div>
-            </>
-          )}
+          <div className="filter-toggle-wrapper">
+            <button
+              className="filter-toggle-btn"
+              onClick={() => {
+                console.log("toggle clicked", isFilterOpen);
+                setIsFilterOpen(!isFilterOpen);
+              }}
+              title={isFilterOpen ? "Close Filters" : "Open Filters"}
+            >
+              {isFilterOpen ? <CloseIcon /> : <FilterIcon />}
+            </button>
+          </div>
+
+          <div className={`filter-content ${isFilterOpen ? "show" : "hide"}`}>
+            <FilterSidebar
+              open={isFilterOpen}
+              onClose={() => setIsFilterOpen(false)}
+              //setSidebarFilters={setSidebarFilters}
+            />
+          </div>
         </div>
 
         <div className="search-panel">
@@ -1072,28 +1075,32 @@ const AlgoliaSearchBoxInner = ({
                             const match = hit.facet_sonic_track_id.find((id) =>
                               id.startsWith(serverName + ":")
                             );
-                            return match ? match.split(":")[1] : "";
+                            return match
+                              ? Number(match.split(":")[1]) || null
+                              : null;
                           }
-                          return "";
+                          return null;
                         }
-                        return hit?.sonichub_track_id;
+                        return Number(hit?.sonichub_track_id) || null;
                       };
 
                       if (isChecked) {
                         const selectableTracks = allHits
                           .filter((hit) => {
                             const sonicTrackId = getSonicTrackId(hit);
+                            const numericApiTrackIds = apiTrackIds.map(Number); // ✅ normalize types
+
                             return (
                               (apiAssetTypes.length === 0 ||
                                 apiAssetTypes.includes(hit.asset_type_id)) &&
-                              !apiTrackIds.includes(sonicTrackId)
+                              !numericApiTrackIds.includes(sonicTrackId)
                             );
                           })
                           .map((hit) => ({
-                            trackId: getSonicTrackId(hit),
+                            trackId: String(getSonicTrackId(hit)),
                             algoliaId: hit.objectID,
                           }));
-
+                        console.log("selectableTracks", selectableTracks);
                         setSelectedTrackIds(selectableTracks);
                       } else {
                         setSelectedTrackIds([]);

@@ -21,7 +21,7 @@ import { Link, useNavigate } from "react-router-dom";
 import getConfigJson from "../../../common/utils/getConfigJson";
 import getEnabledAmpMainMoodTagsByTrackId from "../../../cyanite/services/getEnabledAmpMainMoodTagsByTrackId";
 import getEnabledSonicLogoMainMoodTagsByTrackId from "../../../cyanite/services/getEnabledSonicLogoMainMoodTagsByTrackId";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import AsyncService from "../../../networking/services/AsyncService";
 import getSortedLabelledTagsArray from "../../../common/utils/getSortedLabelledTagsArray";
 import SimilaritySearchMenu from "../../../playlist/components/SimilaritySearchMenu/SimilaritySearchMenu";
@@ -284,10 +284,23 @@ function TrackPageTrackCardV3(props) {
           buttonText="Take to AI"
         /> */}
         {/* )} */}
-        {(props.track_cs_status &&
+        {/* {(props.track_cs_status &&
           props.track_flaxid &&
           props?.userMeta?.isCSUser) ||
-        isCsTrackForStability ? (
+        isCsTrackForStability ? ( */}
+        {(() => {
+          const { track_lengthProp, track_cs_status, track_flaxid } = props;
+          const { aimusicprovider, isCSUser } =
+            useSelector((s) => s.userMeta) || {};
+          return (
+            isCSUser &&
+            window.globalConfig?.SHOW_TAKETOAI &&
+            track_lengthProp >= 6 &&
+            track_lengthProp <= 185 &&
+            (aimusicprovider === "stability" ||
+              (track_cs_status && track_flaxid))
+          );
+        })() && (
           <div
             className="SimilaritySearchMenu_buttonText_container boldFamily"
             onClick={takeToAI}
@@ -299,7 +312,8 @@ function TrackPageTrackCardV3(props) {
               onClick={takeToAI}
             />
           </div>
-        ) : null}
+          // ) : null}
+        )}
         <div
           className="SimilaritySearchMenu_buttonText_container boldFamily"
           onClick={() =>

@@ -70,6 +70,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 2000;
 }
 
 .AlgoliaSearchContainer .filter-toggle-btn {
@@ -677,7 +678,6 @@
   font-size: 1.6rem;
   width: 100%;
   color: var(--color-text-dark, var(--color-white));
-
 }
 
 .SearchSuggestionsDropdown ul {
@@ -800,4 +800,25 @@
   position: absolute;
   top: 0;
   width: 50px;
+}
+
+.AlgoliaSearchContainer .request-license-button {
+  border: 1px solid var(--color-white);
+  padding: 7px;
+  border-radius: 20px;
+}
+
+.AlgoliaSearchContainer .request-license-button:hover {
+  cursor: pointer;
+  border: none;
+  color: var(--color-bg);
+  background-color: var(--color-primary);
+}
+
+.AlgoliaSearchContainer .SearchBelow .filter-content.hide {
+  display: none !important;
+}
+
+.AlgoliaSearchContainer .SearchBelow .filter-content.show {
+  display: block;
 }

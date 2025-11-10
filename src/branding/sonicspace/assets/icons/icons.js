@@ -3,6 +3,8 @@ import { ReactComponent as SonicChatIcon } from "../../../../static/chat.svg";
 import { ReactComponent as SonicSearchIcon } from "../../../../static/search.svg";
 import { ReactComponent as SonicRightArrow } from "../../../../static/rightArrow.svg";
 import { ReactComponent as SonicAddToPlaylistIcon } from "../../../../static/add-to-playlist.svg";
+import { ReactComponent as SonicDownArrow } from "../../../../static/DownArrowUp.svg";
+import { ReactComponent as SonicDownloadIcon } from "../../../../static/DownloadUp.svg";
 // import { ReactComponent as SonicSimilaritySearchIcon } from "../../../../static/similarity-search.svg";
 import { ReactComponent as SonicSimilaritySearchIcon } from "../../../../static/SonicSimilaritySearchIconnew.svg";
 import { ReactComponent as SimilaritySearch } from "../../../../static/SimilaritySearch.svg";
@@ -11,7 +13,7 @@ import { ReactComponent as SonicPlayIcon } from "../../../../static/bordered-pla
 // import { ReactComponent as addToPlaylistIcon } from "../../../../static/arrow.svg";
 // import { ReactComponent as addToPlaylistIcon } from "../../../../static/checkmark.svg";
 import { ReactComponent as SonicCloseIcon } from "../../../../static/closeIcon.svg";
-import { ReactComponent as SonicDownloadIcon } from "../../../../static/download.svg";
+//import { ReactComponent as SonicDownloadIcon } from "../../../../static/download.svg";
 import { ReactComponent as SonicDownload2Icon } from "../../../../static/download2.svg";
 // import { ReactComponent as addToPlaylistIcon } from "../../../../static/downloadicon.svg";
 import { ReactComponent as SonicEyeIcon } from "../../../../static/eye.svg";
@@ -67,20 +69,23 @@ import {
   MdCheck,
 } from "react-icons/md";
 
-const SonicUpArrowIcon = () => {
-  return <SonicRightArrow style={{ transform: "rotate(270deg)" }} />;
-};
+// const SonicUpArrowIcon = () => {
+//   return <SonicRightArrow style={{ transform: "rotate(270deg)" }} />;
+// };
 
+const SonicUpArrowIcon = () => {
+  return <SonicDownArrow style={{ transform: "rotate(180deg)" }} />;
+};
 const SonicDownArrowIcon = () => {
-  return <SonicRightArrow style={{ transform: "rotate(90deg)" }} />;
+  return <SonicDownArrow />;
 };
 
 const SonicRightArrowIcon = () => {
-  return <SonicRightArrow />;
+  return <SonicDownArrow style={{ transform: "rotate(270deg)" }} />;
 };
 
 const SonicLeftArrowIcon = () => {
-  return <SonicRightArrow style={{ transform: "rotate(180deg)" }} />;
+  return <SonicDownArrow style={{ transform: "rotate(90deg)" }} />;
 };
 
 export default {

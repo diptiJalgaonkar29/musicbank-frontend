@@ -1,0 +1,65 @@
+.requestforAccess-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-top: 10%;
+}
+.requestforAccess-section .requestforAccess-form{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.requestforAccess-section .form-heading-pending{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    gap: 20px;
+    width: 150%;
+}
+
+
+.requestforAccess-section .pending-heading{
+    font-size: 22px;
+    font-weight: 600;
+}
+.requestforAccess-section .pending-info{
+    font-size: 18px;
+}
+
+.requestforAccess-section .admin-email{
+    color: var(--wpp-primary-color-400);
+    
+}
+.requestforAccess-section .non-access-heading{
+    /* font-size: 20px; */
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    gap: 20px;
+    width: 150%;
+
+}
+
+.requestforAccess-section .non-access-info{
+    font-size: 18px;
+    width: 120%;
+    margin-top: 5px;
+}
+
+.requestforAccess-section .non-access-subheading{
+    font-size: 22px;
+    font-weight: 600;
+}
+.requestforAccess-section .rejected-heading{
+    font-size: 20px;
+}
+
+.requestforAccess-section .disable-heading{
+    font-size: 20px;
+}

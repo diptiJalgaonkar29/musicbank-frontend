@@ -212,6 +212,7 @@ const SearchResultsCardV3 = ({
           wave_form_js={wave_form_js}
           track_mediatypes={track_mediatypes}
           track_type_id={track_type_id}
+          source_id={source_id}
         />
       </div>
 

@@ -819,7 +819,10 @@ wpp-button-v3-1-1.selected_btn::part(button) {
 .wpp .filter-panel .filter-toggle-wrapper svg path {
   fill: #000;
 }
-.wpp .filter-panel .filter-sidebar.open svg path {
+/* .wpp .filter-panel .filter-sidebar.open svg path {
+  stroke: #000;
+} */
+.wpp .filter-panel .filter-sidebar.open .filters svg path {
   stroke: #000;
 }
 .wpp .SmartInputBox .smart-input-wrapper,
@@ -851,4 +854,18 @@ wpp-button-v3-1-1.selected_btn::part(button) {
 }
 .wpp .add-contributors-btn {
   background-color: transparent;
+}
+.wpp .react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: var(--color-primary);
+  color: var(--wpp-grey-color-100);
+}
+
+.wpp .react-datepicker__day:hover {
+  background-color: var(--color-primary);
+  color: var(--wpp-grey-color-100);
+  cursor: pointer;
+}
+.wpp #project_menu_dropdown .sonic_menu_item svg path {
+  fill: var(--wpp-brand-color);
 }

@@ -98,7 +98,7 @@ const getSuperBrandName = () => {
     superBrandName = SONIC_SPACE;
   }
   if (process.env.NODE_ENV === "development") {
-    superBrandName = AMP;
+    superBrandName = WPP;
   }
   localStorage.setItem("superBrandName", superBrandName);
   return superBrandName;

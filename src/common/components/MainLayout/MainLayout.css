@@ -1,8 +1,12 @@
-.main_layout_wrapper {
+/* .main_layout_wrapper {
   width: 100%;
   margin: 0 auto;
+} */
+main_layout_wrapper {
+  width: 100%;
+  margin: 0 auto;
+  overflow-y: hidden;
 }
-
 .main_layout_wrapper .main_layout_container {
   width: 94%;
   margin: 0 auto;

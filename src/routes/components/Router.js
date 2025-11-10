@@ -101,7 +101,9 @@ const SearchResultsPage1 = lazy(() =>
   import("../../search1/pages/searchResult/SearchResultsPage")
 );
 const MyMusicPage = lazy(() => import("../../playlist/pages/MyMusicPage"));
-const Playlist = lazy(() => import("../../playlist/pages/MyMusicPageV1/MyMusicPageV1"));
+const Playlist = lazy(() =>
+  import("../../playlist/pages/MyMusicPageV1/MyMusicPageV1")
+);
 const MyMusicPageGuest = lazy(() =>
   import("../../playlist/pages/MyMusicPageGuest")
 );
@@ -140,11 +142,23 @@ const AIMusicSearchPage = lazy(() =>
 const CustomTrackFormPage = lazy(() =>
   import("../../CustomTrack/CustomTrackForm/CustomTrackForm")
 );
+const WPPComponents = lazy(() => import("../../WPPComponents/WPPComponents"));
 const CustomTrackFormLayout = lazy(() =>
-  import("../../CustomTrack/CustomTrackFormLayout/CustomTrackFormLayout")
+  import("../../WPPComponents/WPPComponents")
 );
 const AISearchScreen = lazy(() =>
   import("../../AISearchScreen/AISearchScreen")
+);
+const MusicLincensingReq = lazy(() =>
+  import(
+    "../../AISearchScreen/Components/MusicLincensingReq/MusicLincensingReq"
+  )
+);
+const RequestLogin = lazy(() =>
+  import("../../authentication/components/Login/RequestLogin/RequestLogin")
+);
+const WppLoginTest = lazy(() =>
+  import("../../authentication/components/Login/RequestLogin/WppLoginTest")
 );
 const Editor = lazy(() => import("../../JsonEditor/Editor"));
 class Router extends Component {
@@ -194,6 +208,8 @@ class Router extends Component {
               )
             }
           />
+          <Route path="/requestforLogin" exact element={<RequestLogin />} />
+          <Route path="/wpplogintest" exact element={<WppLoginTest />} />
           <Route
             path="/register/"
             exact
@@ -275,9 +291,7 @@ class Router extends Component {
           />
           <Route
             path="/playlist/"
-            element={
-              <ProtectedRoute config={config} element={<Playlist />} />
-            }
+            element={<ProtectedRoute config={config} element={<Playlist />} />}
           />
 
           <Route
@@ -303,6 +317,21 @@ class Router extends Component {
               />
             }
           />
+          <Route
+            path="/WPPComponents"
+            element={
+              <ProtectedRoute config={config} element={<WPPComponents />} />
+            }
+          />
+          <Route
+            path="/MusicLincensingReq"
+            element={
+              <ProtectedRoute
+                config={config}
+                element={<MusicLincensingReq />}
+              />
+            }
+          />
 
           <Route
             path="/editor/:type"
@@ -324,6 +353,7 @@ class Router extends Component {
               <ProtectedRoute config={config} element={<AISearchScreen />} />
             }
           />
+
           <Route
             path="/search_results/:spotifyId?"
             element={
@@ -354,14 +384,14 @@ class Router extends Component {
                 config={config}
                 element={
                   config.modules.PROJECT_VERSION === "SH2" ? (
-                    <TrackDetailPageAnalysisSH2 configModules={config.modules} />
-                  ) : (
-                     config.modules.CyaniteProfile ? (
+                    <TrackDetailPageAnalysisSH2
+                      configModules={config.modules}
+                    />
+                  ) : config.modules.CyaniteProfile ? (
                     <TrackDetailPageAnalysis configModules={config.modules} />
                   ) : (
                     <TrackDetailPage configModules={config.modules} />
-                  )                    
-                  )                 
+                  )
                 }
               />
             }

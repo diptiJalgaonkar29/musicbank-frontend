@@ -24,9 +24,10 @@ import { useNavigate } from "react-router-dom";
 import { FooterMusicPlayerContext } from "../hooks/FooterMusicPlayerContext";
 import { SpinnerDefault } from "../common/components/Spinner/Spinner";
 import { MultiSelect } from "react-multi-select-component";
-import TrackTypeBadge from "../search1/components/TrackTypeBadge/TrackTypeBadge";
+//import TrackTypeBadge from "../search1/components/TrackTypeBadge/TrackTypeBadge";
 import { de } from "date-fns/locale";
 import { showError, showSuccess } from "../redux/actions/notificationActions";
+import TrackTypeBadge from "../AISearchScreen/Components/TrackTypeBadge/TrackTypeBadge";
 
 export function SimpleDialog(props) {
   const {
@@ -378,9 +379,10 @@ export default function TrackList({
       playPause({
         mp3: playerMeta?.mp3Blob,
         title: details?.title,
-        waveImage: playerMeta?.waveBlob || "",
+        waveImage: playerMeta?.waveImage || "",
         trackImage: playerMeta?.imageBlob,
         id: +details?.trackId,
+        source_id: details?.source_id,
       });
       return;
     }
@@ -391,7 +393,8 @@ export default function TrackList({
     let trackmp3Blobstrotswar = await MediaService.getMp3FromStroswar(
       details?.strotswar_track_id,
       details.track_mediatypes,
-      details.track_type_id
+      details.track_type_id,
+      details?.source_id
     );
     // const [trackImageBlob, trackWaveImageBlob, trackmp3Blob] =
     //   await Promise.all([
@@ -425,6 +428,7 @@ export default function TrackList({
       waveImage: details?.wave_form_js || "",
       trackImage: details?.preview_image_url,
       id: +details?.trackId,
+      source_id: details?.source_id,
     });
   };
   //const redirect = (id) => {
@@ -530,6 +534,9 @@ export default function TrackList({
       </div>
       <div className="track-info">
         <div className="track-title">
+          <div className="track-title-icon">
+            <TrackTypeBadge trackType={Number(details?.track_type_id) || ""} />
+          </div>
           <ToolTipWrapper title={`${details?.title} (${details?.type})`}>
             <p
               onClick={() => navigate(`/track_page/${details?.objectId}`)}

@@ -1,0 +1,48 @@
+name: Deploy Sonic-Hub on Dev-Server by Selection
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        required: true
+        default: "SH2-SS_frontend-Dev-deploy"
+
+      environment:
+        description: "NPM build script to run (e.g., build:staging_MusicBank_Taxonomy)"
+        required: true
+        default: "build:staging_MusicBank_Taxonomy"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: 📦 Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Build project with increased memory
+        run: |
+          export NODE_OPTIONS=--max_old_space_size=4096 
+          npm run ${{ github.event.inputs.environment }}
+
+      - name: 🔐Install sshpass and rsync
+        run: sudo apt-get update && sudo apt-get install -y sshpass rsync
+
+      - name: 🚀Deploy via custom shell script
+        env:
+          DEPLOY_SSH_USER: ${{ secrets.DEPLOY_SSH_USER }}
+          DEPLOY_SSH_PASS: ${{ secrets.DEPLOY_SSH_PASS }}
+          DEPLOY_SSH_HOST: ${{ secrets.DEPLOY_SSH_HOST }}
+          DEPLOY_WORKING_DIR: ${{ secrets.DEPLOY_WORKING_DIR }}
+        run: bash ./deploy.sh "${{ github.actor }}"

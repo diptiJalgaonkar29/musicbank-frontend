@@ -19,6 +19,8 @@ import getMediaBucketPath from "../../../common/utils/getMediaBucketPath";
 import getSuperBrandName from "../../../common/utils/getSuperBrandName";
 import { brandConstants } from "../../../common/utils/brandConstants";
 import { BrandingContext } from "../../../branding/provider/BrandingContext";
+import getTrackDetailsByAlgoliaId from "../../../common/utils/getTrackDetailsByAlgoliaId";
+import tracksInDownloadBasket from "../../../redux/reducers/tracksDownload";
 
 function SimpleDialog({
   open,
@@ -57,7 +59,7 @@ function SimpleDialog({
   ];
 
   const isAllMediaTypeAvailable = (mtypeKey) =>
-    selectedTracks.every(
+    selectedTracks?.every(
       (track) =>
         track[mtypeKey] && track[mtypeKey] !== "-" && track[mtypeKey] !== ""
     );
@@ -259,7 +261,7 @@ export default function DownloadWidgetWithCookiesV3Dialog({
   console.log("createPredictProject ", createPredictProject);
   const [open, setOpen] = useState(false);
   const [projectModal, setProjectModal] = useState(false);
-
+  const [selectedTracks, setSelectedTracks] = useState([]);
   const isControlledExternally = typeof externalOpen !== "undefined";
   const isOpen = isControlledExternally ? externalOpen : open;
 
@@ -280,9 +282,27 @@ export default function DownloadWidgetWithCookiesV3Dialog({
     serverName = window.globalConfig?.SERVER_NAME;
   }
 
-  const selectedTracks = allHits.filter((t) =>
-    selectedTrackIds.some((item) => item.algoliaId === t.objectID)
-  );
+  // const selectedTracks = allHits.filter((t) =>
+  //   selectedTrackIds.some((item) => item.algoliaId === t.objectID)
+  // );
+
+  useEffect(() => {
+    const fetchSelectedTracks = async () => {
+      try {
+        const algoliaIds = selectedTrackIds.map((t) => t.algoliaId);
+        const data = await getTrackDetailsByAlgoliaId(algoliaIds);
+        setSelectedTracks(data || []); // ✅ update state instead of local var
+        console.log("Fetched tracks:", data);
+      } catch (error) {
+        console.error("Error fetching tracks:", error);
+      }
+    };
+
+    // ✅ Call async function
+    if (selectedTrackIds?.length) {
+      fetchSelectedTracks();
+    }
+  }, [selectedTrackIds]);
 
   return (
     <>

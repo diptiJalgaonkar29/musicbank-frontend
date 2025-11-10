@@ -1,0 +1,53 @@
+.contextandUse-container .contextandUse-form{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.contextandUse-container .contextandUse_title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contextandUse-container .licenseTypeOptions ,.contextMusicOption{
+    display: flex;
+    gap: 48px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contextandUse-container .contextMusicOption div,.licenseTypeOptions div{
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contextandUse-container .licenseTypeOptions input[type="radio"]{
+    background-color: black;
+    border: 1px solid white;
+}
+
+.contextandUse-container .contextMusicOption input[type="radio"]{
+    background-color: black;
+    border: 1px solid white;
+}
+.contextandUse-container .regionandMeadia-Section{
+    /* border: 1px solid wheat; */
+    display: flex;
+    gap: 62px;
+}
+.contextandUse-container .region-dropdown{
+ width: 503px;
+ 
+}
+.contextandUse-container .usage-duration-Section-dropdown{
+    display: flex;
+    gap: 62px;
+}
+.contextandUse-container .media-Plan-Section{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}

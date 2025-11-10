@@ -1,0 +1,18 @@
+.contactInfoForm-container{
+    /* border:1px solid wheat; */
+    /* height: 300vh; */
+}
+.contactInfoForm-container .contact-filleds{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactInfoForm-container .email-filled,.number-filled{
+    width: 490px;
+}
+
+.contactInfoForm-container .contactInfo-title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}

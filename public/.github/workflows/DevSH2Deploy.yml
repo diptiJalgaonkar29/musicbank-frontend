@@ -1,0 +1,54 @@
+name: Deploy Sonic-Hub on Dev-Server (Key Auth)
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        required: true
+        default: "SH2-SS_frontend-dev-deploy"
+
+      environment:
+        description: "NPM build script to run (e.g., build:sonichub2Dev)"
+        required: true
+        default: "build:sonichub2Dev"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: 📦 Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: 🏗️ Build project with increased memory
+        run: |
+          export NODE_OPTIONS=--max_old_space_size=4096
+          unset CI
+          npm run ${{ github.event.inputs.environment }}
+
+      - name: 🔑 Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEV_DEPLOY_SSH_PPK }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_rsa
+          echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
+      - name: 🚀 Deploy via custom shell script
+        env:
+          DEPLOY_SSH_USER: ${{ secrets.DEV_DEPLOY_SSH_USER }}
+          DEPLOY_SSH_HOST: ${{ secrets.DEV_DEPLOY_SSH_HOST }}
+          DEPLOY_WORKING_DIR: ${{ secrets.DEVSH2_DEPLOY_WORKING_DIR }}
+        run: bash ./SH2DevDeploy.sh "${{ github.actor }}"

@@ -45,7 +45,9 @@ const AISearchScreen = (sepectedSearch) => {
   const [selected, setSelected] = useState(
     type === "similarity" ? "similarity" : "ai"
   );
-  const [showLinkModal, setShowLinkModal] = useState(false);
+  const [showLinkModal, setShowLinkModal] = useState(
+    type === "showLinkModal" ? true : false
+  );
   const [selectedFiles, setSelectedFiles] = useState([]);
   const linkWrapperRef = useRef(null);
   const fileInputRef = useRef(null);

@@ -1,0 +1,42 @@
+.budget-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.budget-label {
+  font-weight: 500;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
+.budget-input-field {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 220px; /* adjust as needed */
+  background: #fff;
+}
+
+.currency-symbol {
+  font-size: 1rem;
+  color: #333;
+  margin-right: 6px;
+}
+
+.budget-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #111;
+  background: transparent;
+}

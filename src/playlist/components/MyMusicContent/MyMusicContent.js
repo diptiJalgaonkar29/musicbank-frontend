@@ -34,6 +34,8 @@ import { SwipeableDrawer } from "@mui/material";
 import getMediaBucketPath from "../../../common/utils/getMediaBucketPath";
 import IconWrapper from "../../../branding/componentWrapper/IconWrapper";
 import { useNavigate } from "react-router-dom";
+import getSuperBrandName from "../../../common/utils/getSuperBrandName";
+import { brandConstants } from "../../../common/utils/brandConstants";
 
 //addition by Trupti-Wits
 
@@ -249,8 +251,28 @@ const MyMusicContent = (props) => {
         .splice(0, 4);
       TracksArray = dataProp.tracks?.map((item) => item.preview_track_url);
       TracksToAddInBasket = dataProp.tracks?.map((item) => {
+        const getSonicTrackId = (hit) => {
+          let serverName = "";
+          //console.log("Using Algolia index:", indexName, brandId);
+          if (getSuperBrandName() === brandConstants.WPP) {
+            const { config } = React.useContext(BrandingContext);
+            serverName = config.modules.ServerName;
+          } else {
+            serverName = window.globalConfig?.SERVER_NAME;
+          }
+          if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+            if (Array.isArray(hit?.facet_sonic_track_id)) {
+              const match = hit.facet_sonic_track_id.find((id) =>
+                id.startsWith(serverName + ":")
+              );
+              return match ? Number(match.split(":")[1]) || null : null;
+            }
+            return null;
+          }
+          return Number(hit?.sonichub_track_id) || null;
+        };
         return {
-          id: item?.sonichub_track_id?.toString(),
+          id: getSonicTrackId(item).toString(),
           audio_type: "MP3",
           checked: 0,
           algoliaId: item?.objectID || "",

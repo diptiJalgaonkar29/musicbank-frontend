@@ -144,3 +144,6 @@
   scale: 0.7 !important;
   height: 35px !important;
 }
+.track-info .track-title-icon {
+  position: relative;
+}

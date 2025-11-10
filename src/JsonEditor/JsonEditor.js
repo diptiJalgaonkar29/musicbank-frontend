@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Formik, Form } from "formik";
 import RecursiveField from "./RecursiveField";
 import ButtonWrapper from "../branding/componentWrapper/ButtonWrapper";
@@ -12,7 +12,10 @@ const JsonEditor = ({
   values,
   brandId,
   activeEditor,
+  pathAttr,
 }) => {
+
+
   // 🧼 Clean recursively and remove empty values
   const clean = (obj) =>
     obj && typeof obj === "object"
@@ -108,6 +111,8 @@ const JsonEditor = ({
     }
   };
 
+  
+
   return (
     <Formik
       key={brandId}
@@ -122,6 +127,7 @@ const JsonEditor = ({
             data={template}
             placeholders={data}
             depth={0}
+            pathAttr={pathAttr}
           />
         </div>
         <br />

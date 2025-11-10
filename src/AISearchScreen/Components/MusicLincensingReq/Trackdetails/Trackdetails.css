@@ -1,0 +1,48 @@
+.trackdetails-container{
+  /* display: flex; */
+}
+
+.trackdetails-container .ProjectInfo_title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.trackdetails-container .openToAlter{
+    /* border: 1px solid wheat; */
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.trackdetails-container .openToAlter-option{
+    /* border: 1px solid wheat; */
+    display:flex;
+    gap: 15px;
+}
+
+.trackdetails-container .openToAlter-option-A ,.openToAlter-option-B{
+    display: flex;
+    /* gap: 8px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.trackdetails-container .sonic_file_input_container {
+    margin: 25px 0px;
+     
+}
+
+.trackdetails-container .openToAlter-option-A input[type="radio"] , .openToAlter-option-B input[type="radio"]{
+    background-color: black;
+    border: 1px solid white;
+}
+
+.trackdetails-container .project-label {
+  font-size: 14px;
+  /* border: 1px solid white; */
+  color: white;
+}

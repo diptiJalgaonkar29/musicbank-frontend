@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./CustomDatePicker.css";
 import { Autocomplete } from "downshift";
+import { ReactComponent as CalendarIcon } from "../../../static/Calendar.svg";
 import { useIntl } from "react-intl";
 
 const DatePickerField = ({ name, ...props }) => {
@@ -12,6 +13,7 @@ const DatePickerField = ({ name, ...props }) => {
   const intl = useIntl();
   return (
     <>
+    <div className='datePicker'>
       <DatePicker
         id={name}
         portalId="root"
@@ -29,6 +31,9 @@ const DatePickerField = ({ name, ...props }) => {
         autoComplete="off"
         {...props} // ✅ Spread any additional props like minDate
       />
+      <CalendarIcon className='calender-icon'/>
+    </div>
+      
       {errors[name] && touched[name] && (
         <p className="report_form_error">{errors[name]}</p>
       )}

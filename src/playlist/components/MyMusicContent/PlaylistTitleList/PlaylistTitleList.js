@@ -2,41 +2,43 @@ import { Accordion } from "@mui/material";
 import { AccordionDetails } from "@mui/material";
 import { AccordionSummary } from "@mui/material";
 import { withStyles } from "@mui/styles";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+//import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React, { Component, useContext } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import AudioPlayer from "../../../../common/components/Audiplayer/AudioPlayer.js";
+//import { Link } from "react-router-dom";
+//import AudioPlayer from "../../../../common/components/Audiplayer/AudioPlayer.js";
 import { getPlaylistById } from "../../../../redux/actions/playListActions/index";
 import "../../../../_styles/PlaylistTitleList.css";
-import DeleteTrackFromPlaylistMenu from "../../DeleteTrackFromPlaylistMenu/DeleteTrackFromPlaylistMenu";
+//import DeleteTrackFromPlaylistMenu from "../../DeleteTrackFromPlaylistMenu/DeleteTrackFromPlaylistMenu";
 import PlaylistService from "../../../services/PlaylistService";
-import MediaService from "../../../../common/services/MediaService";
+//import MediaService from "../../../../common/services/MediaService";
 import { BrandingContext } from "../../../../branding/provider/BrandingContext";
-import Picture from "../../../../search1/components/AnimatedPicture/AnimatedPicture.js";
+//import Picture from "../../../../search1/components/AnimatedPicture/AnimatedPicture.js";
 
-import SpotifySearch3 from "../../../../cyanite/components/SpotifySearch3";
+//import SpotifySearch3 from "../../../../cyanite/components/SpotifySearch3";
 import IconButtonWrapper from "../../../../branding/componentWrapper/IconButtonWrapper.js";
-import ChipWrapper from "../../../../branding/componentWrapper/ChipWrapper.js";
+//import ChipWrapper from "../../../../branding/componentWrapper/ChipWrapper.js";
 import { FooterMusicPlayerContext } from "../../../../hooks/FooterMusicPlayerContext.js";
-import getSortedLabelledTagsArray from "../../../../common/utils/getSortedLabelledTagsArray.js";
-import AudioPlayerSH2 from "../../../../common/components/Audiplayer/AudioPlayerSH2.js";
+//import getSortedLabelledTagsArray from "../../../../common/utils/getSortedLabelledTagsArray.js";
+//import AudioPlayerSH2 from "../../../../common/components/Audiplayer/AudioPlayerSH2.js";
 import { withRouterCompat } from "../../../../common/utils/withRouterCompat.js";
-import { generateWaveformImage } from "../../../../common/utils/genrateImageFromJsFile.js";
-import SimilaritySearchMenu from "../../SimilaritySearchMenu/SimilaritySearchMenu.js";
-import TrackTypeBadge from "../../../../search1/components/TrackTypeBadge/TrackTypeBadge.js";
-import { formatDuration } from "../../../../common/utils/formatDuration.js";
-import TrackCardV3AudioPlayer from "../../../../common/components/Audiplayer/TrackCardV3AudioPlayer/TrackCardV3AudioPlayer.js";
-import IconWrapper from "../../../../branding/componentWrapper/IconWrapper.js";
+//import { generateWaveformImage } from "../../../../common/utils/genrateImageFromJsFile.js";
+//import SimilaritySearchMenu from "../../SimilaritySearchMenu/SimilaritySearchMenu.js";
+//import TrackTypeBadge from "../../../../search1/components/TrackTypeBadge/TrackTypeBadge.js";
+//import { formatDuration } from "../../../../common/utils/formatDuration.js";
+//import TrackCardV3AudioPlayer from "../../../../common/components/Audiplayer/TrackCardV3AudioPlayer/TrackCardV3AudioPlayer.js";
+//import IconWrapper from "../../../../branding/componentWrapper/IconWrapper.js";
 import ButtonWrapper from "../../../../branding/componentWrapper/ButtonWrapper.js";
 import PlayListAccordion from "./PlayListAccordion.js";
 import CheckboxWrapper from "../../../../branding/componentWrapper/CheckboxWrapper.js";
-import AddToBucket from "../../../../addtobucket/AddToProject.js";
+//import AddToBucket from "../../../../addtobucket/AddToProject.js";
 import getMediaBucketPath from "../../../../common/utils/getMediaBucketPath.js";
 import AsyncService from "../../../../networking/services/AsyncService.js";
-import { showError } from "../../../../redux/actions/notificationActions/notificationActions.js";
+//import { showError } from "../../../../redux/actions/notificationActions/notificationActions.js";
 import { setPredict } from "../../../../redux/actions/PredictAction/predictAction.js";
+import getSuperBrandName from "../../../../common/utils/getSuperBrandName.js";
+import { brandConstants } from "../../../../common/utils/brandConstants.js";
 
 //addition by Trupti-Wits
 
@@ -97,12 +99,6 @@ class PlaylistTitleList extends Component {
       brandType: null,
     };
   }
-  // state = {
-  //   expanded: null,
-  //   waveformData: null,
-  //   preview_image_data: null,
-  //   preview_track_data: null,
-  // };
 
   handleChange = (panel) => () => {
     this.setState({
@@ -133,6 +129,26 @@ class PlaylistTitleList extends Component {
     return result ? result.url : null;
   }
 
+  getSonicTrackId = (hit) => {
+    let serverName = "";
+    //console.log("Using Algolia index:", indexName, brandId);
+    if (getSuperBrandName() === brandConstants.WPP) {
+      const { config } = React.useContext(BrandingContext);
+      serverName = config.modules.ServerName;
+    } else {
+      serverName = window.globalConfig?.SERVER_NAME;
+    }
+    if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+      if (Array.isArray(hit?.facet_sonic_track_id)) {
+        const match = hit.facet_sonic_track_id.find((id) =>
+          id.startsWith(serverName + ":")
+        );
+        return match ? Number(match.split(":")[1]) || null : null;
+      }
+      return null;
+    }
+    return Number(hit?.sonichub_track_id) || null;
+  };
   redirect = (id) => {
     this.item?.navigate(`/track_page/${id}`);
   };
@@ -147,7 +163,7 @@ class PlaylistTitleList extends Component {
       // });
       this.setState({
         selectedTrackIds: trackList.map((track) => ({
-          trackId: track.sonichub_track_id,
+          trackId: this.getSonicTrackId(track),
           algoliaId: track.objectID,
         })),
       });
@@ -241,7 +257,7 @@ class PlaylistTitleList extends Component {
       });
     }
 
-    //trackList.sort((a, b) => 0.5 - Math.random());
+    console.log("selectedTrackIds", selectedTrackIds);
 
     let tagTrackListArr = trackList?.map((data) => {
       return data?.tags?.reduce((group, tag) => {
@@ -260,7 +276,7 @@ class PlaylistTitleList extends Component {
         ?.filter((t) =>
           // this.state.selectedTrackIds.includes(t.sonichub_track_id)
           this.state.selectedTrackIds.some(
-            (item) => item.trackId === t.sonichub_track_id
+            (item) => item.trackId === this.getSonicTrackId(t)
           )
         )
         ?.map((t) => t.asset_type_id) || [];
@@ -283,7 +299,7 @@ class PlaylistTitleList extends Component {
           //?.filter((track) => this.state.selectedTrackIds.includes(track.sonichub_track_id))
           ?.filter((track) =>
             this.state.selectedTrackIds.some(
-              (item) => item.trackId === track.sonichub_track_id
+              (item) => item.trackId === this.getSonicTrackId(track)
             )
           )
 
@@ -297,6 +313,8 @@ class PlaylistTitleList extends Component {
               "download"
             ),
             source: 1,
+            algoliaTrackId: track?.objectID,
+            sonicTrackId: this.getSonicTrackId(track),
           }));
 
         if (dataArr?.length) {
@@ -427,7 +445,7 @@ class PlaylistTitleList extends Component {
                       {trackList?.length > 0 ? (
                         trackList?.map((item, index) => (
                           <div
-                            key={item.sonichub_track_id}
+                            key={this.getSonicTrackId(item)}
                             style={{
                               display: "flex",
                               alignItems: "center",
@@ -439,16 +457,17 @@ class PlaylistTitleList extends Component {
                             {!mCode && (
                               <CheckboxWrapper
                                 name="selectedTracks"
-                                value={item.sonichub_track_id}
+                                value={this.getSonicTrackId(item)}
                                 checked={this.state.selectedTrackIds.some(
-                                  (t) => t.trackId === item.sonichub_track_id
+                                  (t) =>
+                                    t.trackId === this.getSonicTrackId(item)
                                 )}
                                 // checked={selectedTrackIds.includes(
                                 //   item.sonichub_track_id
                                 // )}
                                 onChange={(e) =>
                                   this.handleSelectTrack(
-                                    item.sonichub_track_id,
+                                    this.getSonicTrackId(item),
                                     item.objectID,
                                     e.target.checked
                                   )

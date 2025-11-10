@@ -143,6 +143,7 @@
     "build:sonichub2Demo": "env-cmd -e settings,domainsSettings,sonichub2DemoServerSetting,taxonomyAlgoliaSettings,stageServerSetting, react-scripts build",
     "build:sonichub2Dev": "env-cmd -e settings,domainsSettings,sh2DevServerSetting,taxonomyAlgoliaSettings, react-scripts build",
     "build:sonichub2Wpp": "env-cmd -e settings,domainsSettings,sonichub2WppServerSetting,taxonomyAlgoliaSettings,stageServerSetting, react-scripts build",
+    "build:sonichub2Live": "env-cmd -e settings,domainsSettings,sonichub2LiveServerSetting,taxonomyAlgoliaSettings,stageServerSetting, react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prebuild": "npm run generate-build-meta",
@@ -154,7 +155,7 @@
     "extends": "react-app"
   },
   "proxy00": "http://localhost:3002/",
-  "proxy": "https://demo.sonic-hub.com/",
+  "proxy": "https://dev.sonic-hub.com/",
   "browserslist": [
     "last 3 version",
     ">0.2%",

@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 10px;
   /* margin-top: 10px; */
+  width: 100%;
 }
 
 .ss_textarea_label {
@@ -20,7 +21,7 @@
   border-radius: 10px;
   border: 1px solid var(--color-white);
   padding: 10px 20px;
-  font-size: 1.6rem;
+  font-size: clamp(12px, 0.8vw, 18px);
   background-color: transparent;
   color: var(--color-white);
 }
@@ -35,4 +36,54 @@
   margin: 8px 0;
   font-size: 1.4rem;
   color: red;
+}
+
+.ss_textarea_container.ss_theme_editor_textarea {
+  width: 80%;
+}
+.ss_textarea_container.other_textarea textarea {
+  width: 70%;
+}
+
+/* new css */
+
+.ss_theme_editor_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 16px;
+}
+
+.ss_editor_row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  justify-content: left;
+}
+
+.ss_config_file_box {
+  border: 1px solid var(--color-white);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.ss_file_choose_btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  background: var(--color-primary);
+  white-space: nowrap;
+}
+
+.ss_file_name_display {
+  font-size: 13px;
+  color: var(--color-white);
+}
+.ss_file_name_display_input {
+  font-size: 13px;
+  color: var(--color-white);
+  background: transparent;
+  border: none;
+  outline: none;
 }

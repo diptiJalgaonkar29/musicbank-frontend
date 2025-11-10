@@ -29,6 +29,7 @@ import DeleteTrackFromPlaylistMenu from "../../DeleteTrackFromPlaylistMenu/Delet
 import ToolTipWrapper from "../../../../branding/componentWrapper/ToolTipWrapper";
 import getSuperBrandName from "../../../../common/utils/getSuperBrandName";
 import { brandConstants } from "../../../../common/utils/brandConstants";
+import getSuperBrandId from "../../../../common/utils/getSuperBrandId";
 
 export default function PlayListAccordion(props) {
   // console.log("PlayListAccordion props", props);
@@ -40,15 +41,18 @@ export default function PlayListAccordion(props) {
   const { jsonConfig: CONFIG } = useContext(BrandingContext);
   const favTracksIds = useSelector((state) => state.favTracksIds);
   const { onRefine = () => {} } = props;
-  const isCsTrackForStability = window.globalConfig?.SHOW_TAKETOAI;
+  //const isCsTrackForStability = window.globalConfig?.SHOW_TAKETOAI;
   let navigate = useNavigate();
   let dispatch = useDispatch();
 
   const handleChange = (panel) => () => {
     setExpanded((prev) => (prev === panel ? false : panel));
   };
+
+  const { aimusicprovider, isCSUser } = useSelector((s) => s.userMeta) || {};
+
   const takeToAI = () => {
-    if (isCsTrackForStability) {
+    if (aimusicprovider === "stability") {
       let getFilePath = getMediaBucketPath(
         props?.mp3_track,
         props?.source_id,
@@ -66,7 +70,7 @@ export default function PlayListAccordion(props) {
           }/work-space/project-settings/${encodeURIComponent(
             response?.data?.[0]
           )}?${appendCSUrlParams()}&is-stability-track=${
-            !!isCsTrackForStability ? "1" : "0"
+            !!aimusicprovider === "stability" ? "1" : "0"
           }`;
           try {
             localStorage.setItem("CSLoggingOut", "false");
@@ -124,7 +128,7 @@ export default function PlayListAccordion(props) {
   };
 
   const renderTaxonomyTags = (type) => {
-    console.log("renderTaxonomyTags", props);
+    //console.log("renderTaxonomyTags", props);
 
     const hideMoodTags = (window.globalConfig?.HIDE_MOOD_TAGS || []).map((t) =>
       t.toLowerCase()
@@ -186,7 +190,7 @@ export default function PlayListAccordion(props) {
       },
       {
         label: "Instruments",
-        items: props.instrumentTags || [],
+        items: props.amp_instrument_tags.tag_names || [],
         className: "amp_instrument_tags.tag_names",
         refine: (val) => onRefine("instrument_ids", val),
       },
@@ -198,19 +202,19 @@ export default function PlayListAccordion(props) {
       },
       {
         label: "Key",
-        items: props.keyTags || [],
+        items: props.tag_key || [],
         className: "tag_key",
         refine: (val) => onRefine("tag_key", val),
       },
       {
         label: "Instrumental/Vocal",
-        items: props.instrument_vocal,
+        items: props.instrument_vocal_data,
         className: "instrument_vocal",
         refine: (val) => onRefine("instrument_vocal", val),
       },
       {
         label: "Stems",
-        items: props.stems_zipYesNo,
+        items: props.stems_zip != "" ? "Yes" : "No",
         className: "stems_zip",
         refine: (val) => onRefine("stems_zip", val),
       },
@@ -451,6 +455,7 @@ export default function PlayListAccordion(props) {
                         track_type_id={props.track_type_id}
                         isUnRegistered={props.isUnRegistered}
                         trackdetails_objectID={props.objectID}
+                        source_id={props?.source_id}
                       />
                     </div>
                   </div>
@@ -635,12 +640,55 @@ export default function PlayListAccordion(props) {
                           {/* {(props.track_cs_status &&
                             props.track_flaxid &&
                             props?.userMeta?.isCSUser &&  */}
-                          {props.duration_in_sec >= 6 &&
+                          {/* {props.duration_in_sec >= 6 &&
                           props.duration_in_sec <= 185 &&
                           ((props.track_cs_status &&
                             props.track_flaxid &&
                             props?.userMeta?.isCSUser) ||
-                            isCsTrackForStability) ? (
+                            isCsTrackForStability) ? ( */}
+                          {(() => {
+                            const superBrandId = getSuperBrandId();
+                            const brandId =
+                              BrandingContext._currentValue?.config?.brandId ||
+                              localStorage.getItem("brandId");
+                            const {
+                              duration_in_sec,
+                              facet_cs_flex_id,
+                              facet_enableTrackForCS,
+                            } = props;
+                            const track_cs_status =
+                              facet_enableTrackForCS
+                                ?.find(
+                                  (id) =>
+                                    typeof id === "string" &&
+                                    id.startsWith(serverName + ":")
+                                )
+                                ?.split(":")[1] || null;
+                            const track_flaxid =
+                              facet_cs_flex_id
+                                ?.find(
+                                  (id) =>
+                                    typeof id === "string" &&
+                                    id.startsWith(
+                                      serverName +
+                                        "-" +
+                                        superBrandId +
+                                        "_" +
+                                        brandId +
+                                        ":"
+                                    )
+                                )
+                                ?.split(":")[1] || null;
+
+                            return (
+                              isCSUser &&
+                              window.globalConfig?.SHOW_TAKETOAI &&
+                              duration_in_sec >= 6 &&
+                              duration_in_sec <= 185 &&
+                              (aimusicprovider === "stability" ||
+                                (track_cs_status && track_flaxid))
+                            );
+                          })() && (
                             <ToolTipWrapper title="Take to AI">
                               <IconButtonWrapper
                                 icon="AITrackIconSH2"
@@ -648,7 +696,8 @@ export default function PlayListAccordion(props) {
                                 onClick={takeToAI}
                               />
                             </ToolTipWrapper>
-                          ) : null}
+                          )}
+                          {/* ) : null} */}
                           {props?.config?.modules.showBasketDownload && (
                             <DownloadWidgetWithCookiesV2Dialog
                               className="PlayListAccordion__download_menu"
