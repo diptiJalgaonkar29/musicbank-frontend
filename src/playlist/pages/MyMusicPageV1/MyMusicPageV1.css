@@ -1,3 +1,6 @@
+.PlaylistPageContainer {
+  margin-top: -20px;
+}
 .PlaylistPageContainer .no-playlist-message {
   display: flex;
   justify-content: center;
@@ -58,6 +61,7 @@
   justify-content: center;
   gap: 10px;
   color: var(--color-bg);
+  margin: 0;
 }
 
 .PlaylistPageContainer .playlist-card {

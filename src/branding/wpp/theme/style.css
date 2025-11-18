@@ -748,9 +748,9 @@
 .wpp .brand_logo {
   width: 130px;
 }
-.wpp .navbar__container img {
+/* .wpp .navbar__container img {
   max-width: 80px;
-}
+} */
 .wpp .brandLogo_container {
   background-color: var(--color-lightgray);
 }
@@ -868,4 +868,10 @@ wpp-button-v3-1-1.selected_btn::part(button) {
 }
 .wpp #project_menu_dropdown .sonic_menu_item svg path {
   fill: var(--wpp-brand-color);
+}
+.filter-panel.open .filter-toggle-wrapper .filter-toggle-btn svg {
+  stroke: black;
+}
+.wpp .predictReadyText {
+  color: #fff;
 }

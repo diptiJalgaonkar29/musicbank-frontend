@@ -7,7 +7,7 @@ import getSuperBrandId from "../../common/utils/getSuperBrandId";
 import React from "react";
 import { brandConstants } from "../../common/utils/brandConstants";
 import getSuperBrandName from "../../common/utils/getSuperBrandName";
-
+import { useContext } from "react";
 const searchClient = algoliasearch(
   "UGELINWMHK",
   "ca0ae95e4a09ce03c09546001ac1a6d3"
@@ -20,11 +20,11 @@ const brandId =
 //const serverName = process.env.REACT_APP_SERVER_NAME;
 
 const AlgoliaWrapperV2 = ({ children }) => {
+  const { config } = useContext(BrandingContext);
   const { indexName } = useAlgoliaIndex(); // dynamic from context
   let serverName = "";
   //console.log("Using Algolia index:", indexName, brandId);
   if (getSuperBrandName() === brandConstants.WPP) {
-    const { config } = React.useContext(BrandingContext);
     serverName = config?.modules?.ServerName;
   } else {
     serverName = window.globalConfig?.SERVER_NAME;

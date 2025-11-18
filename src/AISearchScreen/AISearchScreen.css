@@ -67,7 +67,7 @@
   flex: 1 1;
 }
 .AISearchScreenContainer .linkIconbtn {
-  background-color: #1f1f1f;
+  background-color: var(--color-primary);
   border-radius: 40px;
   width: 49px;
   height: 49px;
@@ -83,7 +83,7 @@
   position: absolute;
   top: 54px; /* appears just below the 49px button */
   left: 0;
-  background-color: #1f1f1f;
+  background-color: var(--color-bg);
   border-radius: 12px;
   padding: 0.75rem 0;
   display: flex;
@@ -96,7 +96,7 @@
 .AISearchScreenContainer .LinkModal .modalIconbtn {
   background: none;
   border: none;
-  color: white;
+  color: var(--color-white);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -154,4 +154,8 @@
   height: 16px;
   flex-shrink: 0;
   stroke: var(--color-primary);
+}
+.linkWrapper .LinkModal .modalIconbtn svg path,
+.linkWrapper .LinkModal .modalIconbtn svg path {
+  fill: var(--color-white);
 }

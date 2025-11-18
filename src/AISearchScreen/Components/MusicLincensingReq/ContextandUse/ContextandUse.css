@@ -1,53 +1,258 @@
-.contextandUse-container .contextandUse-form{
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+.contextandUse-container .contextandUse-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
-.contextandUse-container .contextandUse_title{
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.contextandUse-container .licenseTypeOptions ,.contextMusicOption{
-    display: flex;
-    gap: 48px;
-    font-size: 14px;
-    font-weight: 400;
+.contextandUse-container .contextandUse_title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
-.contextandUse-container .contextMusicOption div,.licenseTypeOptions div{
+.contextandUse-container .licenseTypeOptions,
+.contextMusicOption {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.contextandUse-container .contextMusicOption div,
+.licenseTypeOptions div {
   display: flex;
   gap: 4px;
   justify-content: center;
   align-items: center;
 }
 
-.contextandUse-container .licenseTypeOptions input[type="radio"]{
-    background-color: black;
-    border: 1px solid white;
+.contextandUse-container .licenseTypeOptions input[type="radio"] {
+  background-color: black;
+  border: 1px solid white;
 }
 
-.contextandUse-container .contextMusicOption input[type="radio"]{
-    background-color: black;
-    border: 1px solid white;
+.contextandUse-container .contextMusicOption input[type="radio"] {
+  background-color: black;
+  border: 1px solid white;
 }
-.contextandUse-container .regionandMeadia-Section{
-    /* border: 1px solid wheat; */
-    display: flex;
-    gap: 62px;
+/* .contextandUse-container .rmsc .dropdown-container{
+background-color: rgb(0, 0, 0);
+border-radius: 40px;
+height: 50px;
+padding-top: 5px;
+} */
+.contextandUse-container .usage-duration-select {
+  text-align: center;
 }
-.contextandUse-container .region-dropdown{
- width: 503px;
- 
+.contextandUse-container .regionandMeadia-Section {
+  /* border: 1px solid wheat; */
+  display: flex;
+  gap: 62px;
 }
-.contextandUse-container .usage-duration-Section-dropdown{
-    display: flex;
-    gap: 62px;
+.contextandUse-container .region-dropdown {
+  width: 503px;
+  position: relative;
 }
-.contextandUse-container .media-Plan-Section{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 20px;
+.contextandUse-container .date-range-dropdown {
+  border-radius: 30px;
 }
+
+.contextandUse-container .date-range-heading {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 35%;
+  left: 6%;
+  font-size: 14px;
+}
+.contextandUse-container .usage-duration-Section-dropdown {
+  display: flex;
+  gap: 62px;
+}
+.contextandUse-container .media-Plan-Section {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+  /* align-items: center; */
+  gap: 10px;
+}
+
+.contextandUse-container .date-range-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 40px;
+  font-size: 14px;
+}
+
+.contextandUse-container .date-range-dropdown2 {
+  border: 1px solid white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  /* border-radius: 6px;
+    padding: 10px; */
+}
+
+.contextandUse-container .date-input-block2 {
+  width: 100%;
+}
+
+.contextandUse-container .date-input2 {
+  width: 100%;
+  /* height: 38px; */
+  background-color: var(--color-black);
+  padding: 6px 10px;
+  /* border: 1px solid #d9d9d9; */
+  border-radius: 6px;
+}
+
+.contextandUse-container .date-input {
+  background-color: var(--color-black);
+  color: var(--color-white); /* optional if text invisible */
+  border: 1px solid var(--color-black);
+  border-radius: 6px;
+  box-shadow: none !important;
+  outline: none !important;
+  width: 100px;
+}
+
+/* Remove focus shadow */
+.contextandUse-container .date-input:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Remove hover border change */
+.contextandUse-container .date-input:hover {
+  border-color: #555 !important;
+}
+
+
+
+/* ---------- MultiSelect Styling ---------- */
+
+
+.contextandUse-container .rmsc.multi_select_genres_filter .dropdown-container,
+.contextandUse-container .rmsc.multi_select_genres_filter .dropdown-content {
+  background-color: transparent;
+  border: none;
+}
+
+.contextandUse-container .rmsc.multi_select_genres_filter .dropdown-heading {
+  width: 100%;
+  height: 5rem;
+  padding: 10px 16px;
+  border-radius: 40px;
+  border: 1px solid var(--color-white);
+  font-size: 1.6rem;
+}
+
+.contextandUse-container .rmsc.multi_select_genres_filter .dropdown-content .panel-content {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color-white);
+  background: var(--color-bg);
+}
+
+.contextandUse-container .rmsc.multi_select_genres_filter .search input {
+  border: 1px solid var(--color-white);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  border-radius: 10px;
+  padding: 4px 45px 4px 8px;
+  height: 25px;
+}
+
+.contextandUse-container .rmsc.multi_select_genres_filter .select-item {
+  padding: 8px 0;
+  display: flex;
+  gap: 8px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.contextandUse-container .rmsc.multi_select_genres_filter label.select-item::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-bg);
+  border-radius: 2px;
+  border: 1px solid var(--color-white);
+}
+
+.contextandUse-container .rmsc.multi_select_genres_filter label.select-item.selected::before {
+  background-color: var(--color-card);
+  border-color: var(--color-primary);
+}
+
+.contextandUse-container .rmsc.multi_select_genres_filter label.select-item.selected::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-black);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+
+}
+
+.contextandUse-container .rmsc.multi_select_genres_filter .dropdown-container:focus-within {
+  /* border: 1px solid var(--color-white) !important; */
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.contextandUse-container .rmsc .select-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.contextandUse-container .rmsc .select-item:hover span {
+  color: var(--color-primary);
+}
+
+/* Hover effect on checkbox */
+.contextandUse-container .rmsc .select-item:hover::before {
+  border-color: var(--color-primary);
+}
+
+/* ---------- Force selected option to BLACK (cover every selector variant) ---------- */
+
+/* most common selectors used by react-multi-select-component */
+.contextandUse-container .rmsc .item.selected,
+.contextandUse-container .rmsc .item.selected .item-renderer,
+.contextandUse-container .rmsc .options .item.selected,
+.contextandUse-container .rmsc .select-item.selected,
+.contextandUse-container .rmsc .select-item.selected .item-renderer,
+.contextandUse-container .rmsc.multi_select_genres_filter .select-item.selected,
+.contextandUse-container .rmsc.multi_select_genres_filter .item.selected {
+  background-color: var(--color-black) !important;
+  color: var(--color-white) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* also ensure the checkbox pseudo-elements don't show white */
+.contextandUse-container .rmsc .select-item.selected::before,
+.contextandUse-container .rmsc .item.selected::before,
+.contextandUse-container .rmsc .select-item.selected::after,
+.contextandUse-container .rmsc .item.selected::after {
+  background-color: var(--color-black) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+/* keep hover consistent for selected items */
+.contextandUse-container .rmsc .item.selected:hover,
+.contextandUse-container .rmsc .select-item.selected:hover {
+  background-color: var(--color-black) !important;
+  color: var(--color-primary) !important; /* or white if you prefer */
+}
+
+
+

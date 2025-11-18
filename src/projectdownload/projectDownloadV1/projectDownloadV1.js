@@ -4,6 +4,7 @@ import React, {
   useMemo,
   useRef,
   useState,
+  useContext,
 } from "react";
 import ModalWrapper from "../../branding/componentWrapper/ModalWrapper";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -244,10 +245,10 @@ function ProjectDownloadV1() {
   const projectIdSplitter = (projectId || "")?.split("&")[0];
   const [retriveDataFromTokenByAPi, setRetriveDataFromTokenApi] = useState([]);
   let serverName = "";
+  const { config } = useContext(BrandingContext);
   //console.log("Using Algolia index:", indexName, brandId);
   if (getSuperBrandName() === brandConstants.WPP) {
-    const { config } = React.useContext(BrandingContext);
-    serverName = config.modules.ServerName;
+    serverName = config?.modules?.ServerName;
   } else {
     serverName = window.globalConfig?.SERVER_NAME;
   }

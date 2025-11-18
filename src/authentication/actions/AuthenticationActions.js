@@ -122,7 +122,10 @@ export const SSOloginWithKeycloak = (osToken) => {
     });
     return AuthenticationService.SSOKeycloakLogin(osToken)
       .then((result) => {
-        // console.log("dispatch - login success", result);
+        console.log("result response", result);
+        if (result.response && result?.response?.status) {
+          return result;
+        }
         storeUserDataInRedux(result?.response, dispatch);
         dispatch({
           type: LOGIN_SUCCESS,

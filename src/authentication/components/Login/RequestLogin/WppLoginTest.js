@@ -31,7 +31,10 @@ const WppLoginTest = () => {
     )
       .then((res) => {
         console.log("requestforLoginkeycloak", res);
-
+        localStorage.setItem("WPPstatus", res?.data?.status);
+        localStorage.setItem("WPPemail", res?.data?.email);
+        localStorage.setItem("WPPfullName", res?.data?.userName);
+        localStorage.setItem("WPPcontactEmail", res?.data?.contactEmail);
         // if (res?.data?.status) {
         if (res && res.data && res.data.status) {
           navigate("/requestforLogin", {

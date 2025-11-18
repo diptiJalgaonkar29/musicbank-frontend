@@ -6,24 +6,39 @@ import { Field, Formik } from "formik";
 import * as Yup from "yup";
 import SonicInputLabel from "../../../../branding/sonicspace/components/InputLabel/SonicInputLabel";
 import InputWrapper from "../../../../branding/componentWrapper/InputWrapper";
+import { useSelector } from 'react-redux';
 
-const Contactinfo = () => {
+const Contactinfo = ({ formikRef, onSubmit }) => {
   const intl = useIntl();
+
+  const contactInformation = useSelector((state) => state.musicLicensingForm.contactInformation) || {};
+
+  // ✅ Validation Schema Updated
   const validationSchema = Yup.object().shape({
     contactName: Yup.string().required("Contact Name is required"),
     agencyName: Yup.string().required("Agency Name is required"),
-    emailAddress: Yup.string().required("Email Address is required"),
+    emailAddress: Yup.string()
+        .trim()
+      .matches(
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    "Invalid email format"
+  )
+      .required("Email Address is required"),
+    phoneNumber: Yup.string()
+      .matches(/^[0-9]{10,10}$/, "Enter a valid phone number")
+      .nullable(),
     location: Yup.string().required("Location is required"),
   });
 
   return (
     <div className="contactInfoForm-container">
       <Formik
-        initialValues={{}}
+        innerRef={formikRef}
         validateOnMount
         validationSchema={validationSchema}
-        // onSubmit={handleFormSubmit}
+        onSubmit={onSubmit}
         enableReinitialize
+        initialValues={contactInformation}
       >
         {({
           values,
@@ -38,10 +53,10 @@ const Contactinfo = () => {
             <div className="page_title">
               <FormattedMessage id={"MusicLicensingReqest.contactInfoTitle"} />
             </div>
-            <SonicInputLabel htmlFor="projectTitle">
-              <FormattedMessage
-                id={"MusicLicensingReqest.primaryConatctName"}
-              />
+
+            {/* Contact Name */}
+            <SonicInputLabel htmlFor="contactName">
+              <FormattedMessage id={"MusicLicensingReqest.primaryConatctName"} />
             </SonicInputLabel>
             <Field
               id="contactName"
@@ -55,9 +70,12 @@ const Contactinfo = () => {
             {errors.contactName && touched.contactName && (
               <p className="report_form_error">{errors.contactName}</p>
             )}
+
             <br />
             <br />
-            <SonicInputLabel htmlFor="projectTitle">
+
+            {/* Agency Name */}
+            <SonicInputLabel htmlFor="agencyName">
               <FormattedMessage id={"MusicLicensingReqest.agencyName"} />
             </SonicInputLabel>
             <Field
@@ -72,11 +90,14 @@ const Contactinfo = () => {
             {errors.agencyName && touched.agencyName && (
               <p className="report_form_error">{errors.agencyName}</p>
             )}
+
             <br />
             <br />
+
+            {/* Email + Phone */}
             <div className="contact-filleds">
               <div className="email-filled">
-                <SonicInputLabel htmlFor="projectTitle">
+                <SonicInputLabel htmlFor="emailAddress">
                   <FormattedMessage id={"MusicLicensingReqest.emailAddress"} />
                 </SonicInputLabel>
                 <Field
@@ -92,8 +113,9 @@ const Contactinfo = () => {
                   <p className="report_form_error">{errors.emailAddress}</p>
                 )}
               </div>
+
               <div className="number-filled">
-                <SonicInputLabel htmlFor="projectTitle">
+                <SonicInputLabel htmlFor="phoneNumber">
                   <FormattedMessage id={"MusicLicensingReqest.phoneNumber"} />
                 </SonicInputLabel>
                 <Field
@@ -105,12 +127,17 @@ const Contactinfo = () => {
                   })}
                   component={InputWrapper}
                 />
-               
+                {errors.phoneNumber && touched.phoneNumber && (
+                  <p className="report_form_error">{errors.phoneNumber}</p>
+                )}
               </div>
             </div>
+
             <br />
             <br />
-            <SonicInputLabel htmlFor="projectTitle">
+
+            {/* Location */}
+            <SonicInputLabel htmlFor="location">
               <FormattedMessage id={"MusicLicensingReqest.location"} />
             </SonicInputLabel>
             <Field
@@ -125,6 +152,7 @@ const Contactinfo = () => {
             {errors.location && touched.location && (
               <p className="report_form_error">{errors.location}</p>
             )}
+
             <br />
             <br />
           </form>

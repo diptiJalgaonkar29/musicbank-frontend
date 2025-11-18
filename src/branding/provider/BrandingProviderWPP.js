@@ -10,6 +10,7 @@ import getWPPThemeJson from "../wpp/theme/getWPPThemeJson";
 import loadConfigJson from "../../common/utils/loadConfigJson";
 import { setConfigJson } from "../../redux/actions/configJsonActions/configJsonActions";
 import { brandConstants } from "../../common/utils/brandConstants";
+import { createTheme } from "@wppopen/components-library";
 import "@wppopen/components-library/dist/platform-ui-kit/wpp-theme.css";
 
 import { store } from "../../redux/stores/store";
@@ -30,10 +31,10 @@ const BrandingProviderWPP = ({ children }) => {
 
   let shouldUseOsContext =
     superBrandName === brandConstants.WPP &&
-    process.env.NODE_ENV === "production" &&
-    osContext !== null &&
-    osContext !== undefined &&
-    osToken !== null
+      process.env.NODE_ENV === "production" &&
+      osContext !== null &&
+      osContext !== undefined &&
+      osToken !== null
       ? true
       : false;
 
@@ -45,11 +46,40 @@ const BrandingProviderWPP = ({ children }) => {
       let configResult = result[0];
       let messagesResult = result[1];
       let themeResult;
+      let wppThemeOriginal;
 
       if (shouldUseOsContext) {
         let themeObj = getWPPThemeJson(osContext);
         console.log("BrandingProviderWPP::themeObj", themeObj);
-        themeResult = themeObj;
+          console.log("##WPP wppTheme osContext", osContext);
+
+        try {          
+          const wppTheme = createTheme(osContext?.theme);
+          console.log("##WPP wppTheme JSON", wppTheme);
+
+        } catch (error) {
+          console.log("##WPP wppTheme Catch ", error);
+        }
+
+         try {          
+          wppThemeOriginal = createTheme(osContext?.originalTheme);
+          console.log("##WPP wppThemeOriginal JSON", wppThemeOriginal);
+
+        } catch (error) {
+          console.log("##WPP wppThemeOriginal Catch ", error);
+        }
+
+        /* try {
+          const WPPThemeData = createTheme(osContext?.themeData);
+          console.log("##WPP WPPThemeData JSON", WPPThemeData);
+        } catch (error) {
+          console.log("##WPP WPPThemeData Catch ", error);
+        } */
+
+
+
+        //themeResult = themeObj;
+        themeResult = {... themeObj, ...wppThemeOriginal}
       } else {
         themeResult = result[0]?.theme;
         console.log("BrandingProviderWPP::themeObj else", themeResult);

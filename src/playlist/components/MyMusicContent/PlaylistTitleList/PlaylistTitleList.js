@@ -99,6 +99,8 @@ class PlaylistTitleList extends Component {
       brandType: null,
     };
   }
+  
+  static contextType = BrandingContext;
 
   handleChange = (panel) => () => {
     this.setState({
@@ -133,7 +135,7 @@ class PlaylistTitleList extends Component {
     let serverName = "";
     //console.log("Using Algolia index:", indexName, brandId);
     if (getSuperBrandName() === brandConstants.WPP) {
-      const { config } = React.useContext(BrandingContext);
+      const config = this.context.config;
       serverName = config.modules.ServerName;
     } else {
       serverName = window.globalConfig?.SERVER_NAME;

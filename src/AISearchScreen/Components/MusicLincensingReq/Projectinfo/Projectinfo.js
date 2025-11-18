@@ -6,10 +6,16 @@ import InputWrapper from "../../../../branding/componentWrapper/InputWrapper";
 import SonicInputLabel from "../../../../branding/sonicspace/components/InputLabel/SonicInputLabel";
 import { FormattedMessage, useIntl } from "react-intl";
 import TextAreaWrapper from "../../../../branding/componentWrapper/TextAreaWrapper";
+import { useSelector } from 'react-redux';
 
 const Projectinfo = ({ formikRef, onSubmit }) => {
   const intl = useIntl();
+  const key = "projectInformation";
 
+  
+  //const {projectInformation} = useSelector((state) => state.musicLicensingForm.projectInformation) || {};
+  const {projectInformation} = useSelector((state) => state.musicLicensingForm);
+  
   const validationSchema = Yup.object().shape({
     companyName: Yup.string().required("Company name is required"),
     projectName: Yup.string().required("Project name is required"),
@@ -18,16 +24,14 @@ const Projectinfo = ({ formikRef, onSubmit }) => {
     ),
   });
 
+
+  
+
   return (
     <div className="projectinfo-container">
       <Formik
         innerRef={formikRef}
-        initialValues={{
-          companyName: "",
-          projectName: "",
-          projectPurpose: "",
-          projectAssetList: "",
-        }}
+        initialValues={projectInformation}
         validateOnMount
         validationSchema={validationSchema}
         onSubmit={onSubmit}

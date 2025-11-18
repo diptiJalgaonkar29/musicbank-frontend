@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import Outlabels from "chartjs-plugin-outlabels3";
 import { Doughnut } from "react-chartjs-2";
 import { brandConstants } from "../../../common/utils/brandConstants";
 import getSuperBrandName from "./../../../common/utils/getSuperBrandName";
+import { BrandingContext } from "../../../branding/provider/BrandingContext";
 
 // ✅ Utility: resolve CSS variables or return plain color
 const resolveColor = (colorVar) => {
@@ -72,8 +73,12 @@ const DonutChart = ({
   values = [],
   centerText = "",
   centerTextColor = "var(--color-white)",
-  bgColor = "--color-card",
 }) => {
+  const { config } = useContext(BrandingContext);
+  const bgColor = config?.modules?.isEmiratesBrand
+    ? "--color-bg-light"
+    : "--color-card";
+
   const colorArr =
     getSuperBrandName() === brandConstants.WPP
       ? [

@@ -1,0 +1,262 @@
+.confirmandsub-container .confirmandsub-container-form{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.confirmandsub-container .edit{
+        position: absolute;
+    right: 0;
+    font-size: 14px;
+    font-weight: 400;
+    height: 5%;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.confirmandsub-container .budget-input-field{
+  font-size: 14px;
+  border: none;
+  color:  var(--color-gray) !important;
+}
+
+.confirmandsub-container .media-files-display {
+  margin-top: 3rem;
+  display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color:  var(--color-gray);
+    font-size: 14px;
+}
+
+.confirmandsub-container .media-files-display div{
+  border: 1px solid var(--color-gray);
+  
+  padding: 10px;
+  border-radius: 40px;
+}
+
+
+/* .confirmandsub-container .media-files-display ul li:last-child {
+  border-bottom: none; /* remove bottom border for last item */
+/* }
+
+.confirmandsub-container .media-files-display ul li.empty {
+  color: #999; /* styling for "No file uploaded" */
+/* } */
+
+
+
+
+/* Container for the context and use summary */
+.contextandUse-container {
+    /* padding: 16px; */
+   /* border :1px solid rgb(255, 255, 255); */
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin-bottom: 24px; */
+}
+
+/* Edit button in the corner */
+.contextandUse-container .edit {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Section labels */
+.contextandUse-container SonicInputLabel,
+.contextandUse-container .page_title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Radio wrapper items */
+.contextandUse-container .licenseTypeOptionsAll,
+.contextandUse-container .contextMusicOptionAll {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.contextandUse-container label {
+    /* margin-left: 8px; */
+    font-size: 14px;
+}
+
+/* Multi-select / selected values display */
+.contextandUse-container .multi_select_genres_filter.selectAll {
+    /* background-color: #000000; */
+    border-radius: 6px;
+    min-height: 38px;
+    /* padding: 6px 12px; */
+    font-size: 14px;
+}
+
+/* Date range display */
+.contextandUse-container .date-display {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    margin-top: 4px;
+
+}
+
+/* Usage duration display */
+.contextandUse-container .usage-duration-display {
+    border-radius: 6px;
+    /* padding: 8px 12px; */
+    font-size: 14px;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px solid; */
+
+}
+
+/* Media files list */
+.contextandUse-container .media-files-display ul {
+    list-style-type: disc;
+    /* padding-left: 20px; */
+    /* margin: 5px 0; */
+    /* border-bottom: 1px solid; */
+
+}
+
+.contextandUse-container .media-files-display ul li {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.contextandUse-container .media-files-display ul li.empty {
+    font-style: italic;
+}
+
+
+.confirmandsub-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: Arial, sans-serif;
+}
+
+/* Context and Use Container */
+.confirmandsub-container .contextandUse-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Title */
+.confirmandsub-container .contextandUse-container .page_title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Common Flex Layouts */
+.confirmandsub-container .contextandUse-container .licenseTypeOptions,
+.confirmandsub-container .contextandUse-container .contextMusicOption,
+.confirmandsub-container .contextandUse-container .usage-duration-display,
+.confirmandsub-container .contextandUse-container .region-dropdown,
+.confirmandsub-container .contextandUse-container .budgetandTimeline_date,
+.confirmandsub-container .contextandUse-container .media-files-display {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  align-items: center;
+  border-bottom: 1px solid var(--color-gray) !important;
+  border-radius: 0px;
+  border-width: 100%;
+}
+
+/* Radio / Checkbox Groups */
+.confirmandsub-container .contextandUse-container .licenseTypeOptions div,
+.confirmandsub-container .contextandUse-container .contextMusicOption div {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+/* Region & Media Layout */
+.confirmandsub-container .contextandUse-container .regionandMeadia-Section {
+  display: flex;
+  gap: 40px;
+}
+
+/* Dropdown */
+.confirmandsub-container .contextandUse-container .region-dropdown {
+  width: 300px;
+}
+
+/* Usage Duration */
+.confirmandsub-container .contextandUse-container .usage-duration-Section-dropdown {
+  display: flex;
+  gap: 40px;
+}
+
+/* Date Inputs */
+.confirmandsub-container .contextandUse-container .date-range-inputs {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.confirmandsub-container .contextandUse-container .date-input {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 5px 10px;
+  width: 100px;
+}
+
+/* Selected Values */
+.confirmandsub-container .contextandUse-container .selected-value {
+  font-weight: 400;
+  color: #acacac;
+  /* background-color: #222; */
+  /* border-bottom: 1px solid var(--color-gray) !important; */
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* Lists */
+.confirmandsub-container .contextandUse-container ul {
+  padding-left: 20px;
+}
+
+.confirmandsub-container .contextandUse-container li.empty {
+  color: #aaa;
+}
+
+.readonly-date {
+  /* border-bottom: 1px solid #ccc; */
+  padding: 6px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+
+
+.rmsc .dropdown-content {
+  max-height: 180px; /* optional: control visible list height */
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.rmsc .dropdown-content::-webkit-scrollbar {
+  display: none;
+}

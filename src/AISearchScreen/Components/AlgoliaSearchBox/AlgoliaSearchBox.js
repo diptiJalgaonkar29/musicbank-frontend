@@ -1,5 +1,11 @@
 // AlgoliaSearchBox.jsx
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+  useContext,
+} from "react";
 import { MultiSelect } from "react-multi-select-component";
 import { ReactComponent as FilterIcon } from "../../../static/filterIcon.svg";
 import { ReactComponent as CloseIcon } from "../../../static/closeIcon.svg";
@@ -90,7 +96,8 @@ const AlgoliaSearchBox = ({
   const [musicLibraryMaster, setMusicLibraryMaster] = useState([]);
   const { indexName, setIndexName } = useAlgoliaIndex();
   const { trackTypeIdAndLabelObj } = useSelector((state) => state.taxonomy);
-
+  const { trackDetails } =
+    useSelector((state) => state.musicLicensingForm) || {};
   useEffect(() => {
     if (Object.keys(trackTypeIdAndLabelObj || {}).length === 0) return;
     fetchMusicLibrary(trackTypeIdAndLabelObj);
@@ -197,6 +204,7 @@ const AlgoliaSearchBoxInner = ({
   const [creditRequest, setCreditRequest] = useState(null);
   const [brandType, setBrandType] = useState(null);
   const navigate = useNavigate();
+  const { config, jsonConfig } = useContext(BrandingContext);
   const [searchParams] = useSearchParams();
   const token = searchParams.get("token");
   const superBrandId = getSuperBrandId();
@@ -206,8 +214,7 @@ const AlgoliaSearchBoxInner = ({
   let serverName = "";
   //console.log("Using Algolia index:", indexName, brandId);
   if (getSuperBrandName() === brandConstants.WPP) {
-    const { config } = React.useContext(BrandingContext);
-    serverName = config.modules.ServerName;
+    serverName = config?.modules?.ServerName;
   } else {
     serverName = window.globalConfig?.SERVER_NAME;
   }
@@ -447,16 +454,25 @@ const AlgoliaSearchBoxInner = ({
         <td>
           {track?.spotifyTrack?.audioAnalysisV6?.result?.moodTags?.join(", ")}
         </td>
-        <td>
-          <div
-            className="request-license-button"
-            onClick={() => {
-              navigate("/MusicLincensingReq");
-            }}
-          >
-            Request License
-          </div>
-        </td>
+        {config?.modules?.showVendorLicensing && (
+          <td>
+            <div
+              className="request-license-button"
+              onClick={() => {
+                // console.log("track.spotifyTrack",track.spotifyTrack);
+
+                navigate("/MusicLincensingReq", {
+                  state: {
+                    trackId: track?.spotifyTrack?.id,
+                    requestTrack: trackDetails.requestTrack,
+                  },
+                });
+              }}
+            >
+              Request License
+            </div>
+          </td>
+        )}
       </tr>
     ) : (
       <tr>

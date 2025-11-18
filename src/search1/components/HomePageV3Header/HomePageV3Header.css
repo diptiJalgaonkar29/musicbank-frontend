@@ -106,7 +106,7 @@
 }
 
 .HomePageV3Header_top .linkIconbtn {
-  background-color: #1f1f1f;
+  background-color: var(--color-primary);
   border-radius: 40px;
   width: 49px;
   height: 49px;

@@ -86,4 +86,41 @@
   background: transparent;
   border: none;
   outline: none;
+  width: inherit;
 }
+
+.ss_editor_row .view_css_button{
+  color: var(--color-white);
+  border: none ;
+  background: var(--color-primary);
+  border-radius: 4px; 
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: clamp(12px, 0.8vw, 16px);
+
+}
+.ss_editor_row .css_pre_box{
+  background: #1e1e1e;
+  border: 1px solid var(--color-white);
+  border-radius: 6px;
+  padding: 10px;
+  color: var(--color-white);
+  max-height: 300px;
+  overflow-y: auto; 
+
+}
+
+.ss_editor_row .svg_img_area{
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  background: #fff;
+}
+.ss_editor_row .image_preview_area{
+  width: 50px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+} 

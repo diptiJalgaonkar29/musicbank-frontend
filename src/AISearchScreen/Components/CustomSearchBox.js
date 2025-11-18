@@ -3,7 +3,7 @@ import { ReactComponent as WhiteSearch } from "../../static/white-search.svg";
 import { ReactComponent as SearchIcon } from "../../static/search2.0.svg";
 import { ReactComponent as Spotify } from "../../static/spotify.svg";
 import { ReactComponent as CloseRed } from "../../static/CloseRed.svg";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import SmartInputBox from "../../common/components/SmartInputBox/SmartInputBox";
 import SmartSpotifyInputBox from "../../common/components/SmartSpotifyInputBox/SmartSpotifyInputBox";
 import { useRefinementHandlers } from "./useRefinementHandlers";
@@ -13,6 +13,8 @@ import { BrandingContext } from "../../branding/provider/BrandingContext";
 import { SET_SIMIL_QUERY } from "../../redux/constants/actionTypes";
 import getSuperBrandName from "./../../common/utils/getSuperBrandName";
 import { brandConstants } from "./../../common/utils/brandConstants";
+import getSuperBrandId from "../../common/utils/getSuperBrandId";
+import { filter } from "lodash";
 
 const displayMap = {
   track_name: "Track Name",
@@ -61,7 +63,7 @@ const CustomSearchBox = ({
   const similQuery = useSelector((state) => state.search.similQuery);
   const similQuery1 = similQuery?.trim();
   console.log("similQuery1", similQuery1);
-
+  const { config } = useContext(BrandingContext);
   const IconComponent =
     getSuperBrandName() === brandConstants.WPP ? SearchIcon : WhiteSearch;
   useEffect(() => {
@@ -195,7 +197,21 @@ const CustomSearchBox = ({
   };
 
   const fetchSuggestions = async (q) => {
-    console.log("fetchSuggestions for:", q);
+    let serverName = "";
+    let baseFilter;
+    const superBrandId = getSuperBrandId();
+    //console.log("Using Algolia index:", indexName, brandId);
+    if (getSuperBrandName() === brandConstants.WPP) {
+      serverName = config?.modules?.ServerName;
+    } else {
+      serverName = window.globalConfig?.SERVER_NAME;
+    }
+
+    if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+      baseFilter = `analysis_status=1 AND facet_brand_assigned:"${serverName}-${superBrandId}_${brandId}:true" AND facet_isTrackActive:"${serverName}-${superBrandId}_${brandId}:true" AND facet_trackStatus:"${serverName}-${superBrandId}_${brandId}:true"`;
+    } else {
+      baseFilter = `analysis_status=1 AND brands_assigned=${brandId} AND trackStatus:true AND sonichub_track_id>0`;
+    }
     try {
       const response = await fetch(
         `https://${ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/${ALGOLIA_INDEX_NAME}/query`,
@@ -212,8 +228,9 @@ const CustomSearchBox = ({
             highlightPostTag: "</em>",
             attributesToHighlight: Object.keys(displayMap),
             hitsPerPage: 50,
+            filters: baseFilter,
             //filters: `analysis_status = 1 AND brands_assigned = ${localStorage.getItem("brandId")}`,
-            filters: `analysis_status = 1 AND brands_assigned = ${brandId} AND trackStatus:true AND sonichub_track_id>0`,
+            //filters: `analysis_status = 1 AND brands_assigned = ${brandId} AND trackStatus:true AND sonichub_track_id>0`,
           }),
         }
       );

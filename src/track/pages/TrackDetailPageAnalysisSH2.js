@@ -96,7 +96,7 @@ const settingsToReceive = [
   "trackActive",
 ];
 
-const returnModifiedDataFromMount = (data, styleData) => {
+const returnModifiedDataFromMount = (data, styleData, context) => {
   console.log("returnModifiedDataFromMount", data);
   const superBrandId = getSuperBrandId();
   const brandId =
@@ -105,8 +105,8 @@ const returnModifiedDataFromMount = (data, styleData) => {
   let serverName = "";
   //console.log("Using Algolia index:", indexName, brandId);
   if (getSuperBrandName() === brandConstants.WPP) {
-    const { config } = React.useContext(BrandingContext);
-    serverName = config.modules.ServerName;
+    console.log("its wpp");
+    serverName = context?.config?.modules?.ServerName;
   } else {
     serverName = window.globalConfig?.SERVER_NAME;
   }
@@ -319,6 +319,7 @@ class TrackDetailPageAnalysisSH2 extends Component {
     super(props);
     this.state = { ...InitState };
   }
+  static contextType = BrandingContext; // 👈 attach context to the class
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     // Mount new Data when user cliked on trackdetail page
@@ -345,6 +346,8 @@ class TrackDetailPageAnalysisSH2 extends Component {
     const queryID = this.props.match.params.id;
     const isInternalUser = getUserType();
 
+    console.log("outside before mounts");
+
     this.mountData(queryID);
     this.setState({
       queryID,
@@ -353,6 +356,8 @@ class TrackDetailPageAnalysisSH2 extends Component {
   }
 
   mountData = (queryID) => {
+    console.log("inside before mounts", "queryID", queryID);
+
     this.fetchTrackDetailsFromAlgolia(queryID);
   };
 
@@ -364,7 +369,11 @@ class TrackDetailPageAnalysisSH2 extends Component {
       const styleData = await getTrackStyleData(queryID);
       console.log("fetchTrackDetailsFromAlgolia--styleData", styleData);
 
-      const tagsToUpdate = returnModifiedDataFromMount(res, styleData);
+      const tagsToUpdate = returnModifiedDataFromMount(
+        res,
+        styleData,
+        this.context
+      );
       console.log("fetchTrackDetailsFromAlgolia--tagsToUpdate", tagsToUpdate);
 
       if (JSON.stringify(tagsToUpdate) !== JSON.stringify(this.state)) {
@@ -426,8 +435,11 @@ class TrackDetailPageAnalysisSH2 extends Component {
       cyanite_status,
       track_lyrics,
       trackId,
+      wavefile,
+      source_id,
+      strotswar_track_id,
     } = this.state;
-    const { wavefile, source_id, strotswar_track_id } = this.props;
+    // const { wavefile, source_id, strotswar_track_id } = this.props;
     //console.log("this.props wavefile", wavefile);
     // console.log("this.state", this.state);
     // showMoodData = cyanite_status === "synced" ? true : false;
@@ -567,6 +579,7 @@ class TrackDetailPageAnalysisSH2 extends Component {
       trackdetails_objectID,
     } = this.state;
     console.log("trackdetailpageanalysissh2--", wavefile);
+    const { config } = this.context;
     return (
       <MainLayout>
         <TrackPageHoc key={this.props.match.params.id}>

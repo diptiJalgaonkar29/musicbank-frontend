@@ -20,12 +20,10 @@ const getSuperBrandName = () => {
   let ampDomains = process.env.REACT_APP_AMP_DOMAINS?.split(",");
   let sonicSpaceDomains = process.env.REACT_APP_SONICSPACE_DOMAINS?.split(",");
   let devDomains = process.env.REACT_APP_DEVELOPMENT_DOMAINS?.split(",");
-  let sonichub2DemoDomains =
-    process.env.REACT_APP_SONICHUB2_DEMO_DOMAINS?.split(",");
-  let sonichub2DevDomains =
-    process.env.REACT_APP_SONICHUB2_DEV_DOMAINS?.split(",");
-  let sonichub2WppDomains =
-    process.env.REACT_APP_SONICHUB2_WPP_DOMAINS?.split(",");
+  let sonichub2DemoDomains = process.env.REACT_APP_SONICHUB2_DEMO_DOMAINS?.split(",");
+  let sonichub2DevDomains = process.env.REACT_APP_SONICHUB2_DEV_DOMAINS?.split(",");
+  let sonichub2WppDomains = process.env.REACT_APP_SONICHUB2_WPP_DOMAINS?.split(",");
+  let sonichub2LiveDomains = process.env.REACT_APP_SONICHUB2_LIVE_DOMAINS?.split(",");
 
   function isDomainPresent(domainArray) {
     // console.log("isDomainPresent domarr", domainArray, domainArray.length);
@@ -66,6 +64,8 @@ const getSuperBrandName = () => {
     superBrandName = AMP;
   } else if (isDomainPresent(sonichub2WppDomains)) {
     superBrandName = WPP;
+  } else if (isDomainPresent(sonichub2LiveDomains)) {
+    superBrandName = AMP;
   } else if (isDomainPresent(googleDomains)) {
     superBrandName = GOOGLE;
   } else if (isDomainPresent(vodafoneDomains)) {
@@ -98,7 +98,7 @@ const getSuperBrandName = () => {
     superBrandName = SONIC_SPACE;
   }
   if (process.env.NODE_ENV === "development") {
-    superBrandName = WPP;
+    superBrandName = MASTERCARD;
   }
   localStorage.setItem("superBrandName", superBrandName);
   return superBrandName;

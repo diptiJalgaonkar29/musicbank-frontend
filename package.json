@@ -1,7 +1,7 @@
 {
   "name": "musicbank-frontend",
   "author": "",
-  "version": "12.0.0",
+  "version": "15.0.0",
   "private": true,
   "dependencies": {
     "@adobe/react-spectrum": "^3.33.0",

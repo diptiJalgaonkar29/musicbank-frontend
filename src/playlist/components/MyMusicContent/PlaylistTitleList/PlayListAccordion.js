@@ -39,6 +39,7 @@ export default function PlayListAccordion(props) {
   const [loading, setLoading] = useState(false);
   const playingIndexFromStore = props.playingIndex;
   const { jsonConfig: CONFIG } = useContext(BrandingContext);
+  const { config } = useContext(BrandingContext);
   const favTracksIds = useSelector((state) => state.favTracksIds);
   const { onRefine = () => {} } = props;
   //const isCsTrackForStability = window.globalConfig?.SHOW_TAKETOAI;
@@ -369,8 +370,7 @@ export default function PlayListAccordion(props) {
   let serverName = "";
   //console.log("Using Algolia index:", indexName, brandId);
   if (getSuperBrandName() === brandConstants.WPP) {
-    const { config } = React.useContext(BrandingContext);
-    serverName = config.modules.ServerName;
+    serverName = config?.modules?.ServerName;
   } else {
     serverName = window.globalConfig?.SERVER_NAME;
   }

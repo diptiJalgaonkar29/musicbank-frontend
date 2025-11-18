@@ -30,7 +30,7 @@ import AIMusicReducer from "../reducers/aiMusicReducer";
 import customTrackFormReducer from "./customTrackFormReducer";
 import trackReducer from "./trackReducer";
 import predictReducer from "./predictReducer";
-
+import musicLicensingFormReducer from "./musicLicensingFormReducer";
 const rootReducer = combineReducers({
   player: playerReducer,
   authentication,
@@ -63,6 +63,7 @@ const rootReducer = combineReducers({
   customTrackForm: customTrackFormReducer,
   trackData: trackReducer,
   predict: predictReducer,
+  musicLicensingForm: musicLicensingFormReducer,
 });
 
 export default rootReducer;

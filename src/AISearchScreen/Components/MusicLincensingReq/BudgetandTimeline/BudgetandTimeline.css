@@ -1,12 +1,24 @@
-.budgetandTimeline-container .budgetandTimeline-legalService {
+.budgetandTimeline-container .budgetandTimeline-form{
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 14px;
 }
 
-/* .budgetandTimeline-container .budgetandTimeline_date{
-    border: 1px solid white;
-} */
+.budgetandTimeline-container .budgetandTimeline-legalService {
+  display: flex;
+  gap: 14px;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+
+}
+
+.budgetandTimeline-container .leagal-heading{
+    /* border: 1px solid white; */
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
 
 .budgetandTimeline-container .budgetandTimeline_Bothdate {
   display: flex;
@@ -17,9 +29,13 @@
 }
 .budgetandTimeline-container .budgetandTimeline_musicOption {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 4px;
+}
+.budgetandTimeline-container .contextMedia-Options{
+      display: flex;
+    gap: 20px;
 }
 
 .budgetandTimeline-container
@@ -46,7 +62,7 @@
   font-size: 1.6rem;
   background-color: transparent;
   color: var(--color-white) !important;
-  width: 503px;
+ 
   box-sizing: border-box;
 }
 .budgetandTimeline-container .budgetandTimeline_startHead{
@@ -58,4 +74,83 @@
 }
 .budgetandTimeline-container .budgetandTimeline_startbox{
     position: relative;
+    /* width: 50%; */
+}
+
+.budgetandTimeline-container .budgetandTimeline_budget{
+  border: 1px solid wheat;
+}
+
+
+
+
+/* Ammount button filed */
+.budgetandTimeline-container .budget-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+
+.budgetandTimeline-container .budget-label {
+  font-weight: 400;
+
+  color: var(--color-white);
+  font-size: 14px;
+}
+
+.budgetandTimeline-container .required {
+  color: var(--color-white);
+  margin-left: 2px;
+
+}
+
+.budgetandTimeline-container .contextMusicOption{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.budgetandTimeline-container .budget-input-field {
+  display: flex;
+   justify-content: center;
+ /* align-items: center; */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* padding: 8px 12px; */
+  height: 25px; /* adjust as needed */
+  width: 112px;
+  border-radius: 40px;
+  background:var(--color-black);
+}
+
+.budgetandTimeline-container .currency-symbol {
+  font-size: 14px;
+  color: var(--color-white);
+  margin-right: 6px;
+}
+
+
+.budgetandTimeline-container .budget-input::-webkit-inner-spin-button,
+.budgetandTimeline-container .budget-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.budgetandTimeline-container .budget-input {
+  flex: 1;
+  /* padding-left: 70px; */
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  display: flex;
+width: 10px;
+font-size: 14px;
+color: var(--color-white);
+  justify-content: center;
+  align-items: center;
+  -moz-appearance: textfield;
 }

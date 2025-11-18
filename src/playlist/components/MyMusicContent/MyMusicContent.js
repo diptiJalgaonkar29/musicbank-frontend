@@ -1,6 +1,6 @@
 import { withStyles } from "@mui/styles";
 import CloseIcon from "@mui/icons-material/Close";
-import React, { Component, useCallback, useEffect, useState } from "react";
+import React, { Component, useCallback, useEffect, useState, useContext } from "react";
 import { isMobile } from "react-device-detect";
 import { FormattedMessage } from "react-intl";
 import { SpinnerDefault } from "../../../common/components/Spinner/Spinner";
@@ -56,7 +56,7 @@ const MyMusicContent = (props) => {
   const [project, setProject] = useState(false);
   let navigate = useNavigate();
 
-  const { config } = React.useContext(BrandingContext);
+  const { config } = useContext(BrandingContext);
 
   const {
     loadingProp,
@@ -77,7 +77,7 @@ const MyMusicContent = (props) => {
 
   // componentDidMount + componentWillUnmount
   useEffect(() => {
-    if (!props.config.modules.UpdateUItoV2) {
+    if (!props?.config?.modules?.UpdateUItoV2) {
       BREAKPOINT = 1915;
     } else {
       BREAKPOINT = 767;
@@ -255,8 +255,7 @@ const MyMusicContent = (props) => {
           let serverName = "";
           //console.log("Using Algolia index:", indexName, brandId);
           if (getSuperBrandName() === brandConstants.WPP) {
-            const { config } = React.useContext(BrandingContext);
-            serverName = config.modules.ServerName;
+            serverName = config?.modules?.ServerName;
           } else {
             serverName = window.globalConfig?.SERVER_NAME;
           }
@@ -326,7 +325,7 @@ const MyMusicContent = (props) => {
               curatorCover={coverImage !== null}
             />
             {!isUnRegistered &&
-              config.modules.DownloadPlaylistTracks &&
+              config?.modules?.DownloadPlaylistTracks &&
               TracksArray?.length !== 0 &&
               TracksToAddInBasket?.length > 0 && (
                 <div
@@ -398,7 +397,7 @@ const MyMusicContent = (props) => {
                 </div>
               )} */}
             {!isUnRegistered && renderWebMembers()}
-            {config.modules.UpdateUItoV2
+            {config?.modules?.UpdateUItoV2
               ? !isUnregistered && (
                   <div className="MyMusic__SideBar">
                     {/* <MyMusicSideBar /> */}

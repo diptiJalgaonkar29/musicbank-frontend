@@ -175,6 +175,8 @@ const getWPPThemeJson = (osContextDetails) => {
     "--wpp-tab-text-color": _.get(wppThemeData, "color.brand.default"),
     "--wpp-tab-text-color-selected": _.get(wppThemeData, "color.brand.default"),
     "--wpp-tab-text-color-hover": _.get(wppThemeData, "color.brand.default"),
+    "--color-text-light": _.get(wppThemeData, "text.color.default"),
+    "--color-text-dark": _.get(wppThemeData, "text.color.default"),
   };
   // console.log("themeObj:::::::", themeObj);
   return themeObj;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./RecentlyAddedTracksList.css";
 import { SpinnerDefault } from "../../../common/components/Spinner/Spinner";
 import SearchResultsCardV3 from "../../../cyanite/components/searchResultsCard/SearchResultsCardV3";
@@ -20,7 +20,7 @@ const RecentlyAddedTracksListV3 = () => {
   const [tracks, setTracks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [favTracksIds, setAllFavTrackIds] = useState([]);
-
+  const { config } = useContext(BrandingContext);
   const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
   const ALGOLIA_APP_ID = "UGELINWMHK"; // Your Algolia Application ID
@@ -39,8 +39,8 @@ const RecentlyAddedTracksListV3 = () => {
   const superBrandId = getSuperBrandId();
   //console.log("Using Algolia index:", indexName, brandId);
   if (getSuperBrandName() === brandConstants.WPP) {
-    const { config } = React.useContext(BrandingContext);
-    serverName = config.modules.ServerName;
+
+    serverName = config?.modules?.ServerName;
   } else {
     serverName = window.globalConfig?.SERVER_NAME;
   }

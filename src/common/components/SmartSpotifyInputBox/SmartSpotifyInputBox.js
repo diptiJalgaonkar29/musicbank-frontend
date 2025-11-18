@@ -4,6 +4,8 @@ import "./SmartSpotifyInputBox.css";
 import trackExternalAPICalls from "../../services/trackExternalAPICalls";
 import { LazyLoadComponent } from "../LazyLoadComponent/LazyLoadComponent";
 import SearchResultsCard from "../../../cyanite/components/searchResultsCard/SearchResultsCard";
+import { setMusicLicensingReq } from "../../../redux/actions/MusicLicensingReq/MusicLicensingReq";
+import { useDispatch, useSelector } from "react-redux";
 
 function SmartSpotifyInputBox({
   placeholder,
@@ -16,6 +18,11 @@ function SmartSpotifyInputBox({
   searchFieldFlag,
 }) {
   const [searchItems, setSearchItems] = useState([]);
+  const dispatch = useDispatch();
+  const musicLicensincgFormData = useSelector(
+    (state) => state.musicLicensingForm
+  );
+
   // const [searchTerm, setSearchTerm] = useState(value);
   const [refreshToken, setRefreshToken] = useState(
     process.env.REACT_APP_API_SPOTIFY_REFRESH_TOKEN
@@ -167,7 +174,22 @@ function SmartSpotifyInputBox({
                   >
                     <tr
                       className="sptactive autoTr"
-                      onClick={() => selectItem(item.id)}
+                      onClick={() => {
+                        console.log("itemCheck", item);
+
+                        // keep previous trackDetails values
+                        dispatch(
+                          setMusicLicensingReq({
+                            key: "trackDetails",
+                            values: {
+                              ...musicLicensincgFormData.trackDetails,
+                              requestTrack: item.name, // track name here
+                            },
+                          })
+                        );
+
+                        selectItem(item.id);
+                      }}
                     >
                       <td>
                         <SearchResultsCard

@@ -226,14 +226,6 @@ class BrandingService {
     let superBrandName = getSuperBrandName();
     console.log("superBrandName getWPP :: ", superBrandName);
 
-    // try {
-    //   loadBrandCSS(superBrandName);
-    //   let config = await import(`./${superBrandName}/config.js`);
-    //   //let messages = await import(`./${superBrandName}/messages/messages.js`);
-    //   let brandassetsFolderName = getSuperBrandId();
-    //   localStorage.setItem("brandassetsFolderName", brandassetsFolderName);
-    //   return [config.default, config.default.messages];
-    // }
     try {
       // 1️⃣ load static config
       loadBrandCSS(superBrandName);
@@ -254,7 +246,13 @@ class BrandingService {
       const jsonConfig = brandMetaResponse.data?.config || {};
 
       // 3️⃣ store assets folder name for later
-      const brandassetsFolderName = getSuperBrandId();
+      let superBrandId = getSuperBrandId();
+      const brandId = localStorage.getItem("brandId");
+
+      if (!!brandId) {
+        superBrandId = `${superBrandId}_${brandId}`;
+      }
+      let brandassetsFolderName = superBrandId;
       localStorage.setItem("brandassetsFolderName", brandassetsFolderName);
 
       // 4️⃣ merge dynamic data into config

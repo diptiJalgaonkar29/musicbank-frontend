@@ -8,6 +8,7 @@
   overflow-x: hidden;
   height: 82vh;
   position: relative;
+  top: -20px;
   overflow-y: hidden;
 }
 .project_loader {

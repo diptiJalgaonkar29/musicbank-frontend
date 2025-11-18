@@ -200,14 +200,23 @@ class KeycloakV3LoginV3 extends Component {
                   res?.response?.user_register_status
                 );
                 if (res && res?.response && res?.response?.status) {
-                  navigate("/requestforLogin", {
-                    state: {
-                      status: res?.data?.status,
-                      email: res?.data?.email,
-                      fullName: res?.response?.userName,
-                      contactEmail: res?.response?.contactEmail,
-                    },
-                  });
+                  //  navigate("/requestforLogin", {
+                  //                     state: {
+                  //                       status: res?.data?.status,
+                  //                       email: res?.data?.email,
+                  //                       fullName: res?.response?.userName,
+                  //                       contactEmail: res?.response?.contactEmail,
+                  //                     },
+                  //                   });
+
+                  localStorage.setItem("WPPstatus", res?.response?.status);
+                  localStorage.setItem("WPPemail", res?.response?.email);
+                  localStorage.setItem("WPPfullName", res?.response?.userName);
+                  localStorage.setItem(
+                    "WPPcontactEmail",
+                    res?.response?.contactEmail
+                  );
+                  navigate("/requestforLogin"); //, {
                 } else if (res?.response?.user_register_status) {
                   console.log(
                     "user_register_status:true called",
@@ -242,7 +251,9 @@ class KeycloakV3LoginV3 extends Component {
                       fullPath.includes("AISearchScreen") ||
                       fullPath.includes("track-download") ||
                       fullPath.includes("select-brand") ||
-                      fullPath.includes("predict")
+                      fullPath.includes("predict") ||
+                      fullPath.includes("playlist") ||
+                      fullPath.includes("projects")
                     ) {
                       navigate(fullPath);
                     } else {

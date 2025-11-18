@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback ,useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showError } from "../../../redux/actions/notificationActions";
 import "./DownloadWidgetWithCookiesV2Dialog.css";
@@ -45,10 +45,10 @@ function SimpleDialog({
   const [disabledState, setDisabledState] = useState([false, false, false]);
   const [initCheckedState, setInitCheckedState] = useState([]);
   let serverName = "";
+   const { config } = useContext(BrandingContext);
   //console.log("Using Algolia index:", indexName, brandId);
   if (getSuperBrandName() === brandConstants.WPP) {
-    const { config } = React.useContext(BrandingContext);
-    serverName = config.modules.ServerName;
+    serverName = config?.modules?.ServerName;
   } else {
     serverName = window.globalConfig?.SERVER_NAME;
   }
@@ -264,7 +264,7 @@ export default function DownloadWidgetWithCookiesV3Dialog({
   const [selectedTracks, setSelectedTracks] = useState([]);
   const isControlledExternally = typeof externalOpen !== "undefined";
   const isOpen = isControlledExternally ? externalOpen : open;
-
+  const { config } = useContext(BrandingContext);
   const handleClickOpen = () => setOpen(true);
   const handleClose = () => {
     if (isControlledExternally && onClose) {
@@ -276,8 +276,7 @@ export default function DownloadWidgetWithCookiesV3Dialog({
   let serverName = "";
   //console.log("Using Algolia index:", indexName, brandId);
   if (getSuperBrandName() === brandConstants.WPP) {
-    const { config } = React.useContext(BrandingContext);
-    serverName = config.modules.ServerName;
+    serverName = config?.modules?.ServerName;
   } else {
     serverName = window.globalConfig?.SERVER_NAME;
   }

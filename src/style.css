@@ -1,0 +1,514 @@
+/* .amp .V3AuthLayout .brand_logo {
+  width: auto !important;
+  height: auto !important;
+  max-height: 100% !important;
+}
+
+.amp .navbar__container img {
+  max-width: 50px !important;
+}
+
+.amp .sonic_icon_button .MuiSvgIcon-root,
+.sonicspace.amp .MuiSnackbarContent-root .MuiSvgIcon-root {
+  color: #000 !important;
+}
+
+.amp .Comment_Icon svg {
+  stroke: #000 !important;
+  fill: #000 !important;
+}
+
+.amp .SonicCheckbox_container:has(input:checked):after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}
+
+.amp .sonic-rangeslider-wrapper .slideCtrLbl {
+  color: #000 !important;
+}
+
+.amp .browseV2_container .submitInput svg path {
+  fill: #000 !important;
+}
+
+
+.amp #navitems .navitem .WebNavbar--anchor.activeNavlink, .navitem--active, #navitems .navitem .WebNavbar--anchor:hover {
+ color: #2765FF !important;
+
+} */
+
+/* For Emirates */
+
+.emiratesnbd .navitem .WebNavbar--anchor {
+color: var(--color-text-nav, var(--color-white));
+}
+
+.emiratesnbd .AISearchScreenContainer .AISearchButtons {
+  background-color: var(--color-primary);
+}
+
+.emiratesnbd .SearchSuggestionsDropdown {
+  background: var(--color-bg-light, var(--color-card));
+  color: var(--color-text-dark, var(--color-white));
+}
+
+.emiratesnbd .AlgoliaSearchContainer .algolia-chip {
+  background-color: var(--color-bg-dark, #222529);
+}
+
+.emiratesnbd .filter-sidebar {
+  position: relative;
+  color: var(--color-text-light, var(--color-white));
+  overflow-y: auto;
+}
+
+.emiratesnbd .filter-sidebar .accordion-header:has(.accordion-icon.open) {
+  color: var(--color-text-light, var(--color-primary));
+}
+
+.emiratesnbd .filter-sidebar .tempoChip {
+  color: var(--color-text-light, var(--color-white));
+}
+
+.emiratesnbd .TrackPage__container {
+  color: var(--color-text-light, var(--color-white)) !important;
+  background-color: var(--color-bg);
+}
+
+.emiratesnbd .project_list_item {
+  border-top: 1px solid var(--color-card);
+  border: 1px solid var(--color-card);
+  color: var(--color-text-light, var(--color-bg));
+
+}
+
+
+.emiratesnbd .project_list_item .projectattr {
+  color: var(--color-text-dark, var(--color-bg));
+  align-self: center;
+}
+
+.emiratesnbd .page_header_viewType_Add p {
+  color: var(--color-text-light, var(--color-bg));
+}
+
+.emiratesnbd .SmartInputBox .smart-textarea-contenteditable {
+  color: var(--color-text-dark, #fff);
+}
+
+.emiratesnbd .SmartSpotifyInputBox .smart-input-wrapper {
+  background-color: var(--color-bg-light, var(--color-primary));
+}
+
+.emiratesnbd .recent-tracksv3 .track-tag {
+  background: var(--color-card);
+}
+
+.emiratesnbd .TrackPageHeader_container_right
+  .DownloadWidgetWithCookiesV2Dialog_buttonText_container {
+  background-color: var(--color-primary);
+  color: var(--color-text-light, #000);
+}
+
+.emiratesnbd .TrackPageTrackCardV3 .tag_chip {
+  background-color: var(--color-card);
+  color: var(--color-text-light, var(--color-white));
+}
+
+.emiratesnbd .SearchSuggestionsDropdown {
+  background: var(--color-bg-light, var(--color-card)) !important;
+  color: var(--color-text-dark, var(--color-white));
+}
+
+.emiratesnbd .SmartSpotifyInputBox .smart-textarea-contenteditable {
+  color: var(--color-text-dark, #fff) !important;
+}
+
+.SmartSpotifyInputBox .sptactive {  
+  background-color: var(--color-bg-light, #444) !important;
+}
+
+.emiratesnbd .SmartSpotifyInputBox .spotifyTracksList td {
+  color: var(--color-text-dark, #fff) !important;
+}
+
+.emiratesnbd .smart-input-wrapper {
+  background-color: var(--color-bg-light, #222529) !important;
+}
+
+.emiratesnbd .HomePageV3Header_container .AISearchButtons {
+  background-color: var(--color-primary, #222529);
+}
+
+
+.emiratesnbd .SmartSpotifyInputBox .smart-textarea-contenteditable {
+  color: var(--color-text-dark, #fff);
+}
+
+.emiratesnbd .HomePageV3Header_container .SmartInputBox .smart-input-wrapper {
+   background-color: var(--color-bg-light, #222529) !important;
+}
+
+.emiratesnbd .TrackPageTrackCardV3 .tag_chip {
+  background-color: var(--color-card) !important;
+  color: var(--color-text-light, var(--color-white)) !important;
+}
+
+.emiratesnbd .TrackPageHeader_container_right
+  .DownloadWidgetWithCookiesV2Dialog_buttonText_container {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-light, #000) !important;
+}
+
+.emiratesnbd .TrackcardV3__item__tags .trackFilterLabel,
+ .emiratesnbd  .PlayListAccordion__item__tags_container .trackFilterLabel {
+  color: var(--color-texthighlight, var(--color-primary));
+}
+
+.emiratesnbd .TrackcardV3__item__tags .trackFilterOption {
+  color: var(--color-bg);
+}
+
+.emiratesnbd .TrackcardV3 .TrackcardV3__item__tags__expansion__panel {
+  background: var(--color-bg-light, var(--color-card));
+}
+
+.emiratesnbd .rmsc.multi_select_music_library_filter .dropdown-content .panel-content {
+background: var(--color-bg-light, var(--color-card));
+
+}
+
+.emiratesnbd .AlgoliaSearchContainer .genreWrapper .rmsc.multi_select_music_library_filter .dropdown-content .panel-content {
+background: var(--color-bg-light, var(--color-card));
+}
+
+.emiratesnbd .sonic_menu_container .MuiPaper-root.MuiMenu-paper {
+background: var(--color-bg-light, var(--color-card)) !important;
+}
+
+.emiratesnbd .homePageV3_content .Activepage_content {
+background: var(--color-bg-light, var(--color-card)) !important;
+}
+
+
+.emiratesnbd .filter-sidebar .accordion-header:hover {
+color: var(--color-texthighlight);
+}
+
+.emiratesnbd .filter-sidebar .showMoreBtn {
+color: var(--color-text-light) !important;
+}
+
+.emiratesnbd .actionMenuSet .SonicToolTip {
+  padding: 2px;
+  border-radius: 20px;
+}
+
+.emiratesnbd .sonic_search_container {
+background-color: var(--color-bg-light);
+}
+
+.emiratesnbd .waveformJs canvas, .emiratesnbd #waveImageProgressBar .waveImage.wavesurferimage {
+-webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.emiratesnbd .musicPlayerContainer button[icon="Play"] svg,
+.emiratesnbd .musicPlayerContainer button[icon="Pause"] svg,
+.emiratesnbd .musicPlayerContainer button[icon="Close"] svg {
+  filter: invert(1);
+}
+
+.emiratesnbd .playlist-header h1, .emiratesnbd .TrackPage__container .TrackPage_backBtn span {
+color: var(--color-text-dark);
+}
+
+
+.emiratesnbd .sonic_icon_button svg path {
+  stroke: var(--color-white);
+}
+
+.emiratesnbd .Similarity_search_icon svg path {
+  fill: var(--color-white);
+}
+
+.emiratesnbd .Comment_Icon .sonic_icon_button svg {
+  stroke: var(--color-bg-light) !important;
+  fill: var(--color-bg-light) !important ;
+}
+
+
+
+.emiratesnbd .projectattr_project_tokens {
+  text-align: center;
+}
+.emiratesnbd .projectattr_projecticons p span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.emiratesnbd .dropdown-heading .dropdown-heading-value {
+  text-align: center;
+}
+
+.emiratesnbd .react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+    background-color: var(--color-bg-light);
+}
+
+
+
+.emiratesnbd .outlined {
+  color: var(--color-text-dark);
+}
+.emiratesnbd .filled {
+  color: var(--color-text-light);
+} 
+.emiratesnbd .filled .download-btn {
+   color: var(--color-text-light);
+}
+
+.emiratesnbd .select_project_filter .dropdown-content .panel-content  {
+  background: var(--color-bg-light, var(--color-card)) !important;
+}
+
+
+
+.emiratesnbd .ProjectPage__content .groupCountry [class*="-menu"]{
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+.emiratesnbd .ProjectPage__content .groupCountry [class*="-menu"] [type="checkbox"] {
+  border-color: var(--color-text-light) ;
+  accent-color: var(--color-text-light) ;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+
+
+.emiratesnbd .sonic_icon_button .MuiSvgIcon-root, .sonicspace.amp .MuiSnackbarContent-root .MuiSvgIcon-root {
+  color: var(--color-bg-light)!important;
+
+}
+
+
+.emiratesnbd .card .card-icon svg{
+  stroke: var(--color-bg-light) ;
+  fill: var(--color-bg-light)  ;
+}
+.emiratesnbd .new-project svg path{
+  stroke: var(--color-bg-light) ;
+  fill: var(--color-bg-light)  ;
+}
+.emiratesnbd .new-project svg circle{
+  stroke: var(--color-bg-light) ;
+}
+.emiratesnbd  .card-title,
+.emiratesnbd  .card-assets,
+.emiratesnbd  .card-updated {
+  color: var(--color-text-light) !important;
+}
+
+
+.emiratesnbd 
+  .MuiSnackbar-root.MuiSnackbar-anchorOriginBottomRight 
+  .MuiPaper-root.MuiSnackbarContent-root,
+.emiratesnbd 
+  .MuiSnackbar-root.MuiSnackbar-anchorOriginBottomRight 
+  .MuiPaper-root.MuiSnackbarContent-root 
+  .MuiSnackbarContent-message,
+.emiratesnbd 
+  .MuiSnackbar-root.MuiSnackbar-anchorOriginBottomRight 
+  .MuiSnackbarContent-action .MuiSvgIcon-root {
+  background-color: var(--color-card);
+  color: var(--color-text-light) !important ;
+  fill: var(--color-text-light);
+}
+
+.emiratesnbd .TrackDownloadProgress_container {
+  background-color: var(--color-card);
+  color: var(--color-text-light) !important ;
+  fill: var(--color-text-light);
+}
+
+/* 1️⃣ First item (only stroke) */
+.emiratesnbd 
+  .MuiPaper-root.MuiPopover-paper.MuiMenu-paper 
+  .MuiMenuItem-root.sonic_menu_item:nth-child(1) svg path {
+      stroke: var(--color-text-dark) !important;
+  fill: var(--color-text-dark) !important;
+}
+
+/* 2️⃣ Second item (fill + stroke) */
+.emiratesnbd 
+  .MuiPaper-root.MuiPopover-paper.MuiMenu-paper 
+  .MuiMenuItem-root.sonic_menu_item:nth-child(2) svg path {
+
+  stroke: var(--color-text-dark) !important;
+  fill: none !important;
+}
+
+
+.emiratesnbd .footer .total-credits .download-btn .download-icon svg path{
+  fill: var(--color-bg-light) !important;
+}
+
+
+.emiratesnbd .predict_project_container .predict-project-cancelBtn  {
+  color: var(--color-text-dark);
+}
+
+
+
+
+
+/* client UI List */
+
+.emiratesnbd .recent-tracksv3 .search_results_card_container {
+  background-color: transparent;
+}
+
+.emiratesnbd .TrackPageHeader_container .sonic_icon_button svg path {
+  stroke: var(--color-bg-light);
+  fill: var(--color-bg-light);
+}
+.emiratesnbd .TrackPageHeader_container .Download_icon svg path{
+  stroke: var(--color-bg-light) !important;
+}
+
+.emiratesnbd .filter-sidebar .commision_button  {
+  background-color: var(--color-bg-light);
+  
+}
+.emiratesnbd .filter-sidebar .commision_button svg path {
+  stroke: var(--color-text-dark);
+}
+
+
+.emiratesnbd .voice_card_container .voice_card_icon_large, .voice_card_container .voice_card_icon_small {
+  stroke: var(--color-text-dark);
+}
+
+.emiratesnbd .customTrackForm .sonicButton.outlined.selected_btn.m {
+  background-color: var(--color-primary);
+  color: var(--color-text-light) !important;
+}
+
+.emiratesnbd .predictionReport-item {
+  color: var(--color-text-light);
+}
+
+.emiratesnbd .musicInspiration-container .st-filter-btn.active,
+.emiratesnbd .musicInspiration-container .st-filter-btn.active svg path {
+  color: var(--color-text-light) !important;
+  fill: var(--color-text-light);
+}
+
+.emiratesnbd .sonic_file_input_container.filled label[for="sonic_file_input"] {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+.emiratesnbd .AlgoliaSearchContainer .spotifyTrackDetails .table th {
+  color: var(--color-text-light);
+}
+
+.emiratesnbd .AlgoliaSearchContainer .spotifyTrackDetails .table-dark {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+.emiratesnbd .musicInspiration-container .st-similar-autosearch .autoTable {
+  background-color: var(--color-bg-light);
+  color: var(--color-bg-dark);
+  position: absolute;
+    top: 35px;
+}
+
+.emiratesnbd .TrackcardV3__item__title mark {
+  color: var(--color-text-light);
+}
+.emiratesnbd .sonic_tab_title.MuiTab-textColorPrimary.MuiTab-root.Mui-selected{
+  color: var(--color-text-light) !important;
+}
+
+.emiratesnbd .PlayListMembers__Avatar--li {
+  color: var(--color-text-light);
+}
+.emiratesnbd  .rmsc.multi_select_genres_filter label.select-item.selected::before {
+  background-color: transparent !important;
+}
+.emiratesnbd .filter-sidebar .accordion-icon.open {
+  fill: var(--color-text-light) !important;
+}
+.emiratesnbd .AISearchScreenContainer .fileInputContainer .sonic_chip{
+  background-color: transparent;
+}
+
+
+.emiratesnbd 
+  .CommentSections__messages 
+  .Comment_element--extra 
+  .Comment_element--Icon:nth-child(1) svg path {
+    fill: var(--color-primary) !important;
+}
+.emiratesnbd 
+  .CommentSections__messages 
+  .Comment_element--extra 
+  .Comment_element--Icon:nth-child(2) svg path {
+    stroke: var(--color-primary) !important;
+}
+
+.emiratesnbd .project_grid_item .card-icon svg path {
+  stroke: var(--color-text-light);
+}
+
+.emiratesnbd ::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+
+}
+.emiratesnbd .musicInspiration-container .link-search-btn {
+  color: var(--color-text-light);
+}
+
+
+
+
+
+.emiratesnbd .page_project_field {
+  height: calc(100vh -  640px);
+}
+
+.emiratesnbd .Comment_element {
+  background-color: var(--color-bg-light) !important;
+}
+
+.emiratesnbd .Comment_element--extra {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.emiratesnbd  .PlayListTitleList__container .Comment_Icon .sonic_icon_button {
+  background-color: var(--color-primary);
+ }
+.emiratesnbd  .PlayListTitleList__container .Comment_Icon .sonic_icon_button svg path {
+    stroke: var(--color-text-light);
+}
+.emiratesnbd .PlayListTitleList__container .Comment_Icon .sonic_icon_button {
+  height: 40px !important;
+  width: 40px !important;
+  padding: 8px !important;
+}
+
+.emiratesnbd .projectDownloadv1 .footer .total-credits .sonicButton.filled {
+  color: var(--color-text-light);
+}
+
+.emiratesnbd .rmsc.multi_select_music_library_filter label.select-item.selected::after {
+    border-color: white !important;
+}
+
+

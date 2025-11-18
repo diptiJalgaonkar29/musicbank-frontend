@@ -158,6 +158,8 @@ export default {
 
   "--color-register-cancel-btn": "#ed7fad",
   "--wpp-button-secondary-border-color": "transparent",
+  "--color-text-light": "#121619",
+  "--color-text-dark": "#121619",
   //'--opacity-bubbletag-tonality': '20',
   //'--opacity-bubbletag-feelings': '40',
   //'--opacity-bubbletag-genre': '60'

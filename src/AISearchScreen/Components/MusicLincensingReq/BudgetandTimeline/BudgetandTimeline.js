@@ -1,152 +1,160 @@
 import React from "react";
 import "./BudgetandTimeline.css";
-import { Field, Formik } from "formik";
+import { Field, Formik, Form } from "formik";
 import * as Yup from "yup";
 
 import { FormattedMessage, useIntl } from "react-intl";
 import SonicInputLabel from "../../../../branding/sonicspace/components/InputLabel/SonicInputLabel";
-import { MultiSelect } from "react-multi-select-component";
 import RadioWrapper from "../../../../branding/componentWrapper/RadioWrapper";
 import DatePickerField from "../../../../common/components/CustomDatePicker/CustomDatePicker";
-import AmountInput from '../../../../common/components/AmountInput/AmountInput';
+import { useSelector } from 'react-redux';
 
-const BudgetandTimeline = () => {
-  const today = new Date();
+const BudgetandTimeline = ({ formikRef, onSubmit }) => {
   const intl = useIntl();
+  const today = new Date();
+
+  const budgetAndTimeline = useSelector((state) => state.musicLicensingForm.budgetAndTimeline) || {};
+
   const validationSchema = Yup.object().shape({
-    companyName: Yup.string().required("Project title is required"),
-    projectName: Yup.string().required("Focus of your content is required"),
-    projectAssetList: Yup.string().required(
-      "Focus of your content is required"
-    ),
+    budget: Yup.number()
+      .typeError("Enter valid amount")
+      .required("Budget is required")
+      .min(0, "Budget cannot be negative"),
+
+    startDate: Yup.date().required("Start date is required"),
+
+    endDate: Yup.date()
+      .required("End date is required")
+      .min(Yup.ref("startDate"), "End date cannot be before Start Date"),
+
+    mediaPlanAvai: Yup.string().required("Please select an option"),
   });
 
   return (
     <div className="budgetandTimeline-container">
       <Formik
-        initialValues={
-          {
-            //  ...customTrackForm,
-          }
-        }
-        validateOnMount
+        innerRef={formikRef}
+        initialValues={budgetAndTimeline}
         validationSchema={validationSchema}
-        // onSubmit={handleFormSubmit}
+        validateOnMount
         enableReinitialize
+        onSubmit={onSubmit}
       >
-        {({
-          values,
-          errors,
-          touched,
-          dirty,
-          isValid,
-          isSubmitting,
-          handleSubmit,
-        }) => (
-          <form className="budgetandTimeline-form">
+        {({ errors, touched }) => (
+          <Form className="budgetandTimeline-form">
+            {/* Page Heading */}
             <div className="page_title">
-              <FormattedMessage
-                id={"MusicLicensingReqest.contextandUsageHeading"}
-              />
+              <FormattedMessage id="MusicLicensingReqest.budgetandTimelineHeading" />
             </div>
 
-            <div>
-              Reserve
-              {/* <AmountInput /> */}
-            </div>
+            {/* Budget Input */}
+            <div className="budget-input-wrapper-main">
+              <div className='budget-input-wrapper'><label htmlFor="musicBudget" className="budget-label">
+                <FormattedMessage id="MusicLicensingReqest.estimatedBudget" />
+              </label>
 
-            {/* Project TimeLine */}
-
-            <div className="budgetandTimeline_date">
-              <div>
-                <SonicInputLabel htmlFor="projectTitle">
-                  <FormattedMessage
-                    id={"MusicLicensingReqest.usageandLicenseHeading"}
-                  />
-                </SonicInputLabel>
-              </div>
-              <div className="budgetandTimeline_Bothdate">
-                <div className="budgetandTimeline-Datestart">
-                  <div className='budgetandTimeline_startbox'>
-                    <div className='budgetandTimeline_startHead'>Start Date</div>
-                    <DatePickerField
-                    placeholderText={intl.formatMessage({
-                      id: "CustomTrackForm.deadlinePlaceholder",
-                    })}
-                    name="deadline"
-                    minDate={today}
-                    showYearDropdown
-                  />
-                  </div>
-                  <div className='budgetandTimeline_startbox'>
-                    <div className='budgetandTimeline_startHead'>End Date</div>
-                    <DatePickerField
-                    placeholderText={intl.formatMessage({
-                      id: "CustomTrackForm.deadlinePlaceholder",
-                    })}
-                    name="deadline"
-                    minDate={today}
-                    showYearDropdown
-                  />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/*leagal Service*/}
-
-            <div>
-              <SonicInputLabel htmlFor="projectTitle">
-                <FormattedMessage
-                  id={"MusicLicensingReqest.usageandLicenseHeading"}
+              <div className="budget-input-field">
+                <span className="currency-symbol">€</span>
+                <Field
+                  type="number"
+                  id="budget"
+                  name="budget"
+                  placeholder="0"
+                  min="0"
+                  className="budget-input"
                 />
+              </div></div>
+              
+
+              {touched.budget && errors.budget && (
+                <p className="report_form_error">{errors.budget}</p>
+              )}
+            </div>
+
+            {/* Timeline */}
+            <div className="budgetandTimeline_date">
+              <SonicInputLabel>
+                <FormattedMessage id="MusicLicensingReqest.projectTimeline" />
               </SonicInputLabel>
 
-              <div>
-                <div className="budgetandTimeline-legalService">
-                  <SonicInputLabel htmlFor="projectTitle">
-                    <FormattedMessage
-                      id={"MusicLicensingReqest.mediaPlanAvaiHeading"}
-                    />
-                  </SonicInputLabel>
-                  <div className="contextMusicOption">
-                    <div className="budgetandTimeline_musicOption">
-                      <Field
-                        name="mediaPlanAvai"
-                        id="mediaPlanAvaiYes"
-                        type="radio"
-                        value="accept1"
-                        component={RadioWrapper}
-                      />
-                      <div>
-                        <label htmlFor="mediaPlanAvaiYes">
-                          <FormattedMessage
-                            id={"MusicLicensingReqest.mediaPlanAvaiYes"}
-                          />
-                        </label>
-                      </div>
-                    </div>
-                    <div className="budgetandTimeline_musicOption">
-                      <Field
-                        name="mediaPlanAvai"
-                        id="mediaPlanAvaiNo"
-                        type="radio"
-                        value="accept2"
-                        component={RadioWrapper}
-                      />
-                      <div>
-                        <label htmlFor="mediaPlanAvaiNo">
-                          <FormattedMessage
-                            id={"MusicLicensingReqest.mediaPlanAvaiNo"}
-                          />
-                        </label>
-                      </div>
-                    </div>
-                  </div>
+              <div className="budgetandTimeline_Bothdate">
+                {/* Start Date */}
+                <div className="budgetandTimeline_startbox">
+                  <div className="budgetandTimeline_startHead">Start Date</div>
+                  <DatePickerField
+                    name="startDate"
+                    minDate={today}
+                    placeholderText={intl.formatMessage({
+                      id: "MusicLicensingReqest.datePlaceholder",
+                    })}
+                  />
+                  {/* {touched.startDate && errors.startDate && (
+                    <p className="report_form_error">{errors.startDate}</p>
+                  )} */}
+                </div>
+
+                {/* End Date */}
+                <div className="budgetandTimeline_startbox">
+                  <div className="budgetandTimeline_startHead">End Date</div>
+                  <DatePickerField
+                    name="endDate"
+                    minDate={today}
+                    placeholderText={intl.formatMessage({
+                      id: "MusicLicensingReqest.datePlaceholder",
+                    })}
+                  />
+                  {/* {touched.endDate && errors.endDate && (
+                    <p className="report_form_error">{errors.endDate}</p>
+                  )} */}
                 </div>
               </div>
             </div>
-          </form>
+
+            {/* License Agreement Radio */}
+            <div className="leagal-heading">
+              <SonicInputLabel className="leagal-heading">
+                <FormattedMessage id="MusicLicensingReqest.legalServicesHeading" />
+              </SonicInputLabel>
+            </div>
+
+            <div className="contextMusicOption">
+              <SonicInputLabel>
+                <FormattedMessage id="MusicLicensingReqest.licenseAgreement" />
+              </SonicInputLabel>
+
+              <div className="contextMedia-Options">
+                <div className="budgetandTimeline_musicOption">
+                  <Field
+                    name="mediaPlanAvai"
+                    id="mediaPlanAvaiYes"
+                    type="radio"
+                    value="yes"
+                    component={RadioWrapper}
+                  />
+                  <label htmlFor="mediaPlanAvaiYes">
+                    <FormattedMessage id="MusicLicensingReqest.mediaPlanAvaiYes" />
+                  </label>
+                </div>
+
+                <div className="budgetandTimeline_musicOption">
+                  <Field
+                    name="mediaPlanAvai"
+                    id="mediaPlanAvaiNo"
+                    type="radio"
+                    value="no"
+                    component={RadioWrapper}
+                  />
+                  <label htmlFor="mediaPlanAvaiNo">
+                    <FormattedMessage id="MusicLicensingReqest.mediaPlanAvaiNo" />
+                  </label>
+                </div>
+              </div>
+
+              {touched.mediaPlanAvai && errors.mediaPlanAvai && (
+                <p className="report_form_error">{errors.mediaPlanAvai}</p>
+              )}
+            </div>
+          </Form>
         )}
       </Formik>
     </div>

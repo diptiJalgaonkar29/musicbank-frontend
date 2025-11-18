@@ -1,50 +1,59 @@
-import React, { Fragment, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./RequestLogin.css";
-import { FormattedMessage } from "react-intl";
 import ButtonWrapper from "../../../../branding/componentWrapper/ButtonWrapper";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import AsyncService from "../../../../networking/services/AsyncService";
 import V3AuthLayout from "../../Layout/V3AuthLayout";
-import BrandButton from "../../../pages/BrandButton/BrandButton";
 import { SpinnerDefault } from "../../../../common/components/Spinner/Spinner";
 import {
   showError,
-  showNotification,
   showSuccess,
 } from "../../../../redux/actions/notificationActions";
+import { FormattedMessage } from "react-intl";
 
 const RequestLogin = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [requestAcc, setRequestAcc] = useState(true);
-  const navigate = useNavigate();
+  const [requestAcc, setRequestAcc] = useState(true); // default true
   const location = useLocation();
-  const [userData, setUserData] = useState(null);
   const [constEmail2, setConstEmail2] = useState("");
-  
 
-  const { status, email, fullName, contactEmail } = location.state;
+  // const { status, email, contactEmail } = location.state || {};
 
+  const status = localStorage.getItem("WPPstatus");
+  const email = localStorage.getItem("WPPemail");
+  const contactEmail = localStorage.getItem("WPPcontactEmail");
+
+  // Load requestAcc from localStorage on mount
+  // useEffect(() => {
+  //   const storedRequestAcc = localStorage.getItem("requestAcc");
+  //   if (storedRequestAcc !== null) {
+  //     setRequestAcc(JSON.parse(storedRequestAcc));
+  //   }
+  // }, []);
+
+  // Save requestAcc to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("requestAcc", JSON.stringify(requestAcc));
+  }, [requestAcc]);
 
   const userRequest = () => {
-    AsyncService.postData("/authorised_users/requestAccess", {
-      // fullName: fullName,
-      email: email,
-    })
+    setIsLoading(true);
+    AsyncService.postData("/authorised_users/requestAccess", { email })
       .then((response) => {
-        console.log(response);
-        if (response?.data?.status == 1) {
-          // alert("click")
-          console.log("response?.data?.contactEmail",response?.data?.contactEmail);          
+        setIsLoading(false);
+        if (response?.data?.status === "not_whitelisted") {
           setConstEmail2(response?.data?.contactEmail);
-          showSuccess("user add succsesfully!");
+
+          showSuccess("User added successfully!");
+          localStorage.setItem("contactEmail", response?.data?.contactEmail);
         } else {
-          // alert("click")
-          showError("Error");
+          showError("Error adding user.");
         }
-        // setUserData(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        setIsLoading(false);
+        console.error(error);
+        showError("Something went wrong!");
       });
   };
 
@@ -59,64 +68,55 @@ const RequestLogin = () => {
           </div>
         ) : (
           <div className="requestforAccess-form">
-            {(status == "pending" &&requestAcc)? (
+            {status === "pending" ? (
               <div className="form-heading-pending">
-                <div className="pending-heading">Access to be approved</div>
+                <div className="pending-heading">
+                  <FormattedMessage id="WppWhitelisting.wppAccessHeading" />
+                </div>
                 <div className="pending-info">
-                  Please wait until the admin approves your user access request.
-                  You will be notified via an email. For urgent support, please
-                  contact: <span className="admin-email">{contactEmail}</span>
+                  <FormattedMessage id="WppWhitelisting.wppAccessInfo" />{" "}
+                  <span className="admin-email">{contactEmail}</span>
                 </div>
               </div>
-            ) : (status == "not_whitelisted"&&requestAcc )? (
+            ) : status === "not_whitelisted" ? (
               <div className="non-access-heading">
                 <div className="non-access-subheading">
-                  Unlock Your Workspace
+                  <FormattedMessage id="WppWhitelisting.wppUnlockHeading" />
                 </div>
                 <div className="non-access-info">
-                  You’re almost in!
+                  <FormattedMessage id="WppWhitelisting.wppUnlockSubInfo" />
                   <div style={{ marginTop: "5px" }}>
-                    Request access so we can verify your account and get you set
-                    up quickly.
+                    <FormattedMessage id="WppWhitelisting.wppUnlockInfo" />
                   </div>
                 </div>
               </div>
             ) : (
               <div className="form-heading-pending">
                 <div className="pending-heading">
-                  Thank you for submitting your request!
+                  <FormattedMessage id="WppWhitelisting.wppFinalMessageHeading" />
                 </div>
                 <div className="pending-info">
-                  Our team will review your request and get back to you in the
-                  next days. If you need any urgent assistance please contact:{" "}
-                  <span className="admin-email">{constEmail2}</span>
+                  <FormattedMessage id="WppWhitelisting.wppFinalMessageInfo" />{" "}
+                  <span className="admin-email">
+                    {contactEmail || localStorage.getItem("contactEmail")}
+                  </span>
                 </div>
               </div>
             )}
 
-            {status == "not_whitelisted" && requestAcc && (
+            {status === "not_whitelisted" && requestAcc && (
               <ButtonWrapper
                 type="submit"
                 style={{ height: "40px", width: "200px", marginTop: "10px" }}
                 className="request-button"
                 onClick={() => {
                   userRequest();
-                  setRequestAcc(false);
+                  setRequestAcc(false); // this will also update localStorage
+                  localStorage.setItem("WPPstatus", "pending");
                 }}
               >
-                Request Access
-                {/* <FormattedMessage id="project.createProject" /> */}
+                <FormattedMessage id="WppWhitelisting.wppUnlockButton" />
               </ButtonWrapper>
-            )}
-            {status == "not_whitelisted" && (
-              <div className="userResonseMsg">
-                {/* <FormattedMessage id="project.createProject" /> */}
-                {userData === 1
-                  ? "user add successfully"
-                  : userData === 0
-                  ? "error"
-                  : ""}
-              </div>
             )}
           </div>
         )}

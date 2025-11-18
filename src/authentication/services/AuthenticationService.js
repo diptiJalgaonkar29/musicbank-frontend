@@ -1,6 +1,5 @@
 import { NetworkingError } from "../../common/model/NetworkingError";
 import { ValidationError } from "../../common/model/ValidationError";
-
 import StringUtils from "../../common/utils/StringUtils";
 import AsyncService from "../../networking/services/AsyncService";
 import AuthorizationStorage from "./AuthorizationStorage";
@@ -159,7 +158,6 @@ class AuthenticationService {
   }
 
   SSOKeycloakLogin(token) {
-    // console.log("SSOKeycloakLogin::", token);
     return this.asyncService
       .postDataUnauthorized(
         "/users/auth/keycloak",
@@ -169,9 +167,18 @@ class AuthenticationService {
         LOGIN_OPTIONS
       )
       .then((response) => {
-        // console.log("response?.data", response?.data);
-        // console.log("response?.data?.token", response?.data?.access_token);
-        if (response?.data?.status) {
+        console.log("response", response);
+        if (response && response?.data && response?.data?.status) {
+          return { response: response.data };
+          // navigate("/requestforLogin", {
+          //   state: {
+          //     status: response?.data?.status,
+          //     email: response?.data?.email,
+          //     fullName: response?.response?.userName,
+          //     contactEmail: response?.response?.contactEmail,
+          //   },
+          // });
+        } else if (response?.data?.status) {
           throw new NetworkingError(JSON.stringify(response?.data));
         }
         if (!response?.data?.access_token) {

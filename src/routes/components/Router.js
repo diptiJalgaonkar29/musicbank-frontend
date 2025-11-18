@@ -143,8 +143,9 @@ const CustomTrackFormPage = lazy(() =>
   import("../../CustomTrack/CustomTrackForm/CustomTrackForm")
 );
 const WPPComponents = lazy(() => import("../../WPPComponents/WPPComponents"));
+
 const CustomTrackFormLayout = lazy(() =>
-  import("../../WPPComponents/WPPComponents")
+  import("../../CustomTrack/CustomTrackFormLayout/CustomTrackFormLayout")
 );
 const AISearchScreen = lazy(() =>
   import("../../AISearchScreen/AISearchScreen")
