@@ -7,7 +7,7 @@
   align-items: center;
   height: 60vh;
   font-size: 18px;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .PlaylistPageContainer .playlistV1_wrapper {
@@ -33,7 +33,7 @@
 .playlist-header h1 {
   font-size: 24px;
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .playlist-grid {
@@ -79,7 +79,7 @@
   text-align: center;
   text-decoration: none !important;
   outline: none !important;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .playlist-card .track-slide-show-item-playlist img {
@@ -91,7 +91,7 @@
 .playlist-name {
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-text-primary);
   margin-bottom: 4px;
   line-height: 1.3;
   width: 300px;
@@ -100,7 +100,7 @@
 
 .track-count {
   font-size: 12px;
-  color: #888;
+  color: var(--color-text-description);
 }
 
 @media (max-width: 768px) {
@@ -124,7 +124,7 @@
   text-align: center;
   text-decoration: none !important;
   outline: none !important;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .track-slide-show-item-playlist img {
@@ -181,6 +181,7 @@
   text-align: center;
   vertical-align: middle;
   text-transform: capitalize;
+  color: var(--color-text-description);
 }
 
 .PlaylistPageContainer .more_playlist_icon {
@@ -212,6 +213,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: var(--color-text-primary);
 }
 
 img[class^="PlaylistImage-"] {

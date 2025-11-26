@@ -5,7 +5,7 @@
   -ms-flex-direction: row;
   flex-direction: row;
   background-color: transparent;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.356); */
   box-shadow: none;
   width: 100%;
@@ -123,7 +123,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-weight: normal;
   flex: 1;
   width: 0px;
@@ -189,7 +189,7 @@
 
 .PlayListAccordion__duration {
   font-size: 1.6rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   width: 50%;
   display: flex;
   justify-content: space-between;
@@ -199,7 +199,7 @@
 .PlayListAccordion__tags__expandIcon {
   width: 20px;
   transform: rotate(0deg);
-  color: var(--color-white);
+  color: var(--color-text-primary);
   transition: all 0.3s;
   scale: 1.2;
   cursor: pointer;
@@ -436,7 +436,8 @@
 
 .PlayListAccordion__item__tags_container .sonic_chip.tag_amp_allmood_ids {
   border-radius: 10px;
-  background-color: var(--color-card) !important;
+  background-color: var(--color-hover-disable) !important;
+  color: var(--color-text-secondary) !important;
 }
 
 .PlayListAccordion__item__title mark {
@@ -461,4 +462,30 @@
 
 .PlayListAccordion__main .circular-reveal::after {
   display: none;
+}
+
+.PlayListAccordion__actionBtns button[icon="DownArrow"] svg path {
+  stroke: var(--color-text-primary) !important;
+}
+
+.PlayListAccordion__actionBtns [data-testid="DeleteOutlinedIcon"] path {
+  fill: var(--color-text-primary) !important;
+}
+
+.PlayListAccordion__download_menu svg path {
+  stroke: var(--color-text-primary)  !important;
+}
+.PlayListAccordion__actionBtns  button[icon="SimilaritySearchSH2"] svg path {
+  stroke: var(--color-text-primary) !important;
+
+}
+.PlayListAccordion__actionBtns button[icon="AITrackIconSH2"] svg path {
+  stroke: var(--color-text-primary) !important;
+
+}
+
+.PlayListAccordion__duration__icon svg path,
+.PlayListAccordion__duration__icon svg ellipse {
+  fill: var(--color-text-primary) !important;
+  stroke: var(--color-text-primary)  !important;
 }

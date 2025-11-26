@@ -45,6 +45,7 @@ import { SET_SIMIL_QUERY } from "../../../redux/constants/actionTypes";
 import getSuperBrandId from "../../../common/utils/getSuperBrandId";
 import getSuperBrandName from "../../../common/utils/getSuperBrandName";
 import { brandConstants } from "../../../common/utils/brandConstants";
+import { logEvent, ADD_TO_PLAYLIST } from "../../../common/utils/logEvent";
 
 const SORT_INDEX_MAP = {
   TrackNameAZ: "track_name_asc",
@@ -512,17 +513,38 @@ const AlgoliaSearchBoxInner = ({
   };
 
   // Helper function to get sonic track ID based on server
+  // const getSonicTrackId = (track) => {
+  //   if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+  //     if (Array.isArray(track?.facet_sonic_track_id)) {
+  //       const match = track.facet_sonic_track_id.find((id) =>
+  //         id.startsWith(serverName + ":")
+  //       );
+  //       return match ? match.split(":")[1] : "";
+  //     }
+  //     return "";
+  //   }
+  //   return track?.sonichub_track_id;
+  // };
+
   const getSonicTrackId = (track) => {
-    if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+    if (serverName === "sh2Demo") {
+      return track?.sonichub_track_id != null
+        ? String(track.sonichub_track_id)
+        : "";
+    } else {
       if (Array.isArray(track?.facet_sonic_track_id)) {
         const match = track.facet_sonic_track_id.find((id) =>
           id.startsWith(serverName + ":")
         );
-        return match ? match.split(":")[1] : "";
+        if (match) {
+          return String(match.split(":")[1]);
+        }
       }
-      return "";
+
+      return track?.sonichub_track_id != null
+        ? String(track.sonichub_track_id)
+        : "";
     }
-    return track?.sonichub_track_id;
   };
 
   // Get selected asset types
@@ -560,28 +582,46 @@ const AlgoliaSearchBoxInner = ({
   // Remaining limit (exclude already in API)
   const remainingSelectable = maxSelectable - apiTrackIds.length;
 
-  console.log("remainingSelectable", remainingSelectable);
-
   // Final condition
   const canSendToPredict =
     newSelectedIds.length > 0 && // must have at least 1 new
     newSelectedIds.length <= remainingSelectable && // within limit
     creditRequest > 0 &&
     allSelectedSameType;
+  // selectedTrackIds.length > 0;
 
   const cameFromPredict = (predictToken) => {
     // helper to get track ID based on current server
+    // const getSonicTrackId = (track) => {
+    //   if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+    //     if (Array.isArray(track?.facet_sonic_track_id)) {
+    //       const match = track.facet_sonic_track_id.find((id) =>
+    //         id.startsWith(serverName + ":")
+    //       );
+    //       return match ? match.split(":")[1] : "";
+    //     }
+    //     return "";
+    //   }
+    //   return track?.sonichub_track_id;
+    // };
     const getSonicTrackId = (track) => {
-      if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+      if (serverName === "sh2Demo") {
+        return track?.sonichub_track_id != null
+          ? String(track.sonichub_track_id)
+          : "";
+      } else {
         if (Array.isArray(track?.facet_sonic_track_id)) {
           const match = track.facet_sonic_track_id.find((id) =>
             id.startsWith(serverName + ":")
           );
-          return match ? match.split(":")[1] : "";
+          if (match) {
+            return String(match.split(":")[1]);
+          }
         }
-        return "";
+        return track?.sonichub_track_id != null
+          ? String(track.sonichub_track_id)
+          : "";
       }
-      return track?.sonichub_track_id;
     };
 
     // build track list based on selected IDs
@@ -643,17 +683,37 @@ const AlgoliaSearchBoxInner = ({
     const trackIds = selectedTrackIds;
 
     // 🔹 helper to get sonicTrackId based on current server
+    // const getSonicTrackId = (track) => {
+    //   if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+    //     if (Array.isArray(track?.facet_sonic_track_id)) {
+    //       const match = track.facet_sonic_track_id.find((id) =>
+    //         id.startsWith(serverName + ":")
+    //       );
+    //       return match ? match.split(":")[1] : "";
+    //     }
+    //     return "";
+    //   }
+    //   return track?.sonichub_track_id;
+    // };
+
     const getSonicTrackId = (track) => {
-      if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+      if (serverName === "sh2Demo") {
+        return track?.sonichub_track_id != null
+          ? String(track.sonichub_track_id)
+          : "";
+      } else {
         if (Array.isArray(track?.facet_sonic_track_id)) {
           const match = track.facet_sonic_track_id.find((id) =>
             id.startsWith(serverName + ":")
           );
-          return match ? match.split(":")[1] : "";
+          if (match) {
+            return String(match.split(":")[1]);
+          }
         }
-        return "";
+        return track?.sonichub_track_id != null
+          ? String(track.sonichub_track_id)
+          : "";
       }
-      return track?.sonichub_track_id;
     };
 
     if (trackIds.length > 0) {
@@ -697,17 +757,36 @@ const AlgoliaSearchBoxInner = ({
     setCreatePredictProject(true);
 
     // ✅ Reusable helper for consistent ID extraction
+    // const getSonicTrackId = (track) => {
+    //   if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+    //     if (Array.isArray(track?.facet_sonic_track_id)) {
+    //       const match = track.facet_sonic_track_id.find((id) =>
+    //         id.startsWith(serverName + ":")
+    //       );
+    //       return match ? match.split(":")[1] : "";
+    //     }
+    //     return "";
+    //   }
+    //   return track?.sonichub_track_id;
+    // };
     const getSonicTrackId = (track) => {
-      if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
+      if (serverName === "sh2Demo") {
+        return track?.sonichub_track_id != null
+          ? String(track.sonichub_track_id)
+          : "";
+      } else {
         if (Array.isArray(track?.facet_sonic_track_id)) {
           const match = track.facet_sonic_track_id.find((id) =>
             id.startsWith(serverName + ":")
           );
-          return match ? match.split(":")[1] : "";
+          if (match) {
+            return String(match.split(":")[1]);
+          }
         }
-        return "";
+        return track?.sonichub_track_id != null
+          ? String(track.sonichub_track_id)
+          : "";
       }
-      return track?.sonichub_track_id;
     };
 
     if (predictToken.length > 0) {
@@ -839,6 +918,7 @@ const AlgoliaSearchBoxInner = ({
             <button
               className="filter-toggle-btn"
               onClick={() => {
+                console.log("trackData:", track);
                 console.log("toggle clicked", isFilterOpen);
                 setIsFilterOpen(!isFilterOpen);
               }}
@@ -897,6 +977,17 @@ const AlgoliaSearchBoxInner = ({
                             index={similarityTrack.id}
                             waveformDataProp={similarityTrack.waveformData}
                             playFromPicture={similarityTrack.clickedOnImage}
+                            trackdetails_objectID={
+                              similarityTrack.trackdetails_objectID
+                            }
+                            moodTags={similarityTrack.ampMoodTags}
+                            moodValues={
+                              similarityTrack.amp_all_mood_tags?.tag_values
+                            }
+                            genreTags={similarityTrack.genreTags}
+                            genreValues={
+                              similarityTrack.amp_genre_tags?.tag_values
+                            }
                             type="Tc"
                             active={
                               playingIndexFromStore === similarityTrack.id
@@ -1138,7 +1229,8 @@ const AlgoliaSearchBoxInner = ({
                       <ButtonWrapper
                         variant="filledSecondary"
                         className="searchHeadBtn"
-                        onClick={() => {
+                        onClick={(e) => {
+                          console.log("Add to project");
                           setCreatePredictProject(false);
                           setAddToProjectOpen(true);
                         }}
@@ -1151,6 +1243,15 @@ const AlgoliaSearchBoxInner = ({
                         onClick={() => {
                           setCreatePredictProject(false);
                           setAddToPlaylistOpen(true);
+                          logEvent({
+                            eventType: ADD_TO_PLAYLIST, // or whatever your event type is
+                            moodName: null,
+                            moodValue: null,
+                            genreName: null,
+                            genreValue: null,
+                            pageName:
+                              window.location.hash.replace("#/", "") || "",
+                          });
                         }}
                       >
                         Add to Playlist

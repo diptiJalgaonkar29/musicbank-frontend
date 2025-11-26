@@ -162,5 +162,15 @@ export default {
   "--color-text-dark": "#121619",
   //'--opacity-bubbletag-tonality': '20',
   //'--opacity-bubbletag-feelings': '40',
-  //'--opacity-bubbletag-genre': '60'
+  //'--opacity-bubbletag-genre': '60',
+  "--color-default-card": wppThemeDataL.color.grey[300],
+  "--color-hover-disable": "#eff2f5",
+  "--color-hover-light": "#e0e5ea",
+  "--color-text-description": "#545c62",
+  "--color-scroller": "#afb5ba",
+  "--color-text-secondary": "#3f464c",
+  "--color-default-border": "#252c33",
+  "--color-text-primary": "#121619",
+  "--color-default-white": "#ffffff",
+  "--color-default-black": "#000000",
 };

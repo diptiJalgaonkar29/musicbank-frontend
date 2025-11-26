@@ -786,7 +786,9 @@ wpp-button-v3-1-1.selected_btn::part(button) {
   background-color: var(--color-primary);
   color: var(--color-bg);
 }
-.wpp .wpp-button::part(button) {
+.wpp .wpp-button::part(button),
+.wpp .page_header_viewType_Add .wpp-button p
+ {
   color: #fff;
   width: 100%;
 }
@@ -834,6 +836,7 @@ wpp-button-v3-1-1.selected_btn::part(button) {
   margin-right: 20px;
 }
 
+
 .wpp-add-plalist .wpp-button::part(button) {
   background-color: white;
   color: black;
@@ -874,4 +877,40 @@ wpp-button-v3-1-1.selected_btn::part(button) {
 }
 .wpp .predictReadyText {
   color: #fff;
+}
+
+.wpp .AlgoliaSearchContainer .AlgoliaSearchResults {
+  height: 400px !important;
+  overflow-x: hidden;
+}
+.wpp .TrackcardV3__item__tags_container .refined {
+  color: #fff !important;
+}
+
+
+
+
+
+.wpp .TrackcardV3__item__tags .TrackcardV3__item__tags_container .refined {
+  background-color: var(--color-primary) !important;
+}
+.wpp .AISearchScreenContainer .AISearchButtons,
+ .wpp .HomePage-Button-Link-Container .AISearchButtons {
+  background-color: var(--color-primary) !important;
+}
+.wpp .AISearchScreenContainer .linkIconbtn,
+ .wpp .HomePage-Button-Link-Container .linkIconbtn{
+  background-color: var(--color-primary);
+}
+.wpp .AISearchScreenContainer .toggleBtn,
+ .wpp .HomePage-Button-Link-Container .toggleBtn{
+  color: #fff !important;
+}
+.wpp .AISearchScreenContainer .selectedBtn,
+ .wpp .HomePage-Button-Link-Container .selectedBtn {
+    color: #000 !important;
+}
+.wpp .AISearchScreenContainer .linkIconbtn svg path,
+ .wpp .HomePage-Button-Link-Container .linkIconbtn  svg path{
+  stroke: #fff !important;;
 }

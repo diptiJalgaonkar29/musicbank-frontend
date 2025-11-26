@@ -381,6 +381,7 @@ import "./AudioPlayerMini.css";
 import MediaService from "../../services/MediaService";
 import IconButtonWrapper from "../../../branding/componentWrapper/IconButtonWrapper";
 import { SpinnerDefault } from "../Spinner/Spinner";
+import { logEvent, TRACK_PLAY } from "../../utils/logEvent";
 
 function getPosition(el) {
   return el.getBoundingClientRect().left;
@@ -528,6 +529,17 @@ class AudioTagMini extends Component {
     if (!music) return;
 
     if (music.paused) {
+      if (true) {
+        logEvent({
+          objectIdList: [this.props.trackdetails_objectID],
+          eventType: TRACK_PLAY,
+          moodName: this.props.moodTags?.[0],
+          moodValue: this.props.moodValues?.[0] || 0,
+          genreName: this.props.genreTags?.[0] || "",
+          genreValue: this.props.genreValues?.[0] || 0,
+          pageName: window.location.hash.replace("#/", "") || "",
+        });
+      }
       music
         .play()
         .then(() => {

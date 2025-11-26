@@ -5,7 +5,7 @@
   -ms-flex-direction: row;
   flex-direction: row;
   background-color: transparent;
-  color: var(--color-white);
+  color: var(--color-text-primary); 
   /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.356); */
   box-shadow: none;
   width: 100%;
@@ -54,7 +54,7 @@
 
 .TrackcardV3 .favBtn {
   position: relative;
-  fill: var(--color-white);
+  fill: var(--color-primary);
   cursor: pointer;
   font-size: 2.2rem;
   width: 2.2rem;
@@ -63,7 +63,7 @@
 }
 
 .TrackcardV3 .favBtn svg {
-  fill: var(--color-white);
+  fill: var(--color-primary);
 }
 .TrackcardV3 .TrackcardV3__cover {
   display: -webkit-box;
@@ -99,7 +99,7 @@
 
 .TrackcardV3 .inactiveColor {
   font-size: 1.4rem !important;
-  color: var(--color-white) !important;
+  color: var(--color-default-white) !important;
 }
 
 .TrackcardV3 .TrackcardV3__duration__icon {
@@ -109,6 +109,10 @@
   gap: 5px;
   white-space: nowrap;
 }
+.TrackcardV3 .TrackcardV3__duration__icon svg path,
+ .TrackcardV3 .TrackcardV3__duration__icon svg ellipse{
+  fill: var(--color-text-primary) !important;
+}
 
 .TrackcardV3__item__title {
   margin: 0rem !important;
@@ -116,7 +120,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-weight: normal;
   flex: 1;
   width: 0px;
@@ -180,7 +184,7 @@
 
 .TrackcardV3__duration {
   font-size: 1.6rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   width: 50%;
   min-width: 50%;
   display: flex;
@@ -191,7 +195,7 @@
 .TrackcardV3__tags__expandIcon {
   width: 20px;
   transform: rotate(0deg);
-  color: var(--color-white);
+  color: var(--color-default-white);
   transition: all 0.3s;
   scale: 1.2;
   cursor: pointer;
@@ -211,7 +215,7 @@
 
 .TrackcardV3 .TrackcardV3__item__tags__expansion__panel {
   width: calc(100% + 36px);
-  background: var(--color-bg-light, var(--color-card));
+  background: var(--color-default-card, var(--color-hover-disable)) !important;
   margin-left: -40px;
 }
 
@@ -244,7 +248,7 @@
 }
 
 .TrackcardV3__item__tags--divider h4 {
-  color: var(--color-white);
+  color: var(--color-default-white);
   font-size: 1.6rem;
   font-weight: 400;
   margin: 20px 0;
@@ -270,7 +274,7 @@
 
 .TrackcardV3__item__tags .taxonomy__tags_container .sonic_chip {
   text-transform: capitalize;
-  color: var(--color-white) !important;
+  color: var(--color-default-white) !important;
   border: none !important;
 }
 
@@ -309,13 +313,13 @@
 
 .TrackcardV3__toggleTagsBtn {
   background-color: var(--color-TrackcardV3-showall);
-  color: var(--color-white);
+  color: var(--color-default-white);
   border: none;
   cursor: pointer;
 }
 
 .TrackcardV3 .queueIcon {
-  color: var(--color-white) !important;
+  color: var(--color-default-white) !important;
 }
 
 .TrackcardV3 .cs_edit_btn {
@@ -335,10 +339,13 @@
   width: 30px !important;
   padding: 0 !important;
 }
+.TrackcardV3 .TrackcardV3__actionBtns .sonic_icon_button svg path {
+  stroke: var(--color-text-primary);
+}
 
 .TrackcardV3 .actionMenuSet {
   margin-left: auto; /* pushes it to far right inside flex */
-  gap: 15px;
+  gap: 9px;
   /* margin: 0 !important;
   padding: 0 !important; */
   min-width: 190px;
@@ -389,7 +396,7 @@
   padding-right: 5px;
   padding-bottom: 2px;
   padding-left: 5px;
-  color: var(--color-texthighlight, var(--color-primary));
+  color: var( --color-primary,var(--color-texthighlight));
   font-size: 1.6rem;
 }
 .TrackcardV3__item__tags .trackFilterOption {
@@ -400,14 +407,14 @@
   padding-right: 5px;
   padding-bottom: 2px;
   padding-left: 5px;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-size: 1.6rem;
   cursor: pointer;
 }
 .TrackcardV3__item__tags .verticalDevider {
   width: 1px;
   height: 2rem;
-  background-color: #fff;
+  background-color: var(--color-text-primary);
   display: inline-block;
   margin: 0px 2px -4px 2px;
 }
@@ -419,15 +426,16 @@
 }
 .TrackcardV3__item__tags_container .sonic_chip.tag_amp_allmood_ids {
   border-radius: 10px;
-  background-color: var(--color-card) !important;
+  background-color: var(--color-hover-disable) !important;
   min-width: 50px !important;
+  color: var(--color-text-secondary) !important;
 }
 .TrackcardV3__item__title mark {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-default-white);
 }
 .TrackcardV3__item__title span:hover {
-  color: var(--color-primary);
+  color: var(--color-texthighlight, var(--color-primary));
   cursor: pointer;
   /* text-decoration: underline; */
 }
@@ -443,4 +451,13 @@
 
 .TrackcardV3__main .circular-reveal::after {
   display: none;
+}
+
+.TrackcardV3__item__tags .TrackcardV3__item__tags_container .refined {
+  background-color: var(--color-hover-disable) !important;
+  color: var(--color-text-secondary);
+
+}
+.TrackcardV3__item__tags .TrackcardV3__item__tags_container .trackFilterOption {
+  background-color: transparent ;
 }

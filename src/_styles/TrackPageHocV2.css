@@ -2,11 +2,11 @@
   box-sizing: border-box;
   min-width: 100%;
   max-width: 100%;  
-  color: var(--color-text-light, var(--color-white)) !important;
+  color: var(--color-text-primary, var(--color-text-secondary)) !important;
   background-color: var(--color-bg);
   /* overflow: hidden; */
   height: 82vh;
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 .usedInTitle {
@@ -147,7 +147,7 @@
 
 .usedInPlaylistContainer .playlist_name {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -252,7 +252,7 @@
 .TrackPage__wrapper .TpTc__container_siderbar .accordian .MuiPaper-rounded {
   margin-bottom: 10px;
   background-color: transparent;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .TrackPage__wrapper .TpTc__tags .TrackCard__item__tags span {
@@ -315,11 +315,11 @@
 }
 .TrackPage__wrapper .addToPlaylistButton svg {
   padding-top: 2px !important;
-  fill: var(--color-white);
+  fill: var(--color-text-primary);
 }
 
 .TrackPage__wrapper .downloadButton svg {
-  stroke: var(--color-white);
+  stroke: var(--color-text-primary);
   width: 20px;
 }
 .TrackPage__wrapper .similarTracksButton svg {
@@ -346,7 +346,7 @@
   padding: 0px !important;
   border: none !important;
   font-size: 1.6rem !important;
-  color: var(--color-white) !important;
+  color: var(--color-text-primary) !important;
 }
 
 .TrackPage__wrapper .TpTc__descriptionHolder {
@@ -451,7 +451,7 @@
 .TrackPage__wrapper .TrackCard__player {
   padding: 30px 25px;
   border-radius: 25px;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-border);
   margin-bottom: 2rem !important;
 }
 
@@ -488,11 +488,11 @@
   width: 88vw;
   margin: auto !important;
   padding: 10px !important;
-  color: var(--color-footer);
+  color: var(--color-text-primary);
 }
 
 .TrackPage__container .TrackPage__footer--text a {
-  color: var(--color-footer);
+  color: var(--color-text-primary);
 }
 
 .TrackPage__wrapper .TrackTitle {
@@ -520,7 +520,7 @@
   width: calc(100% - 50px) !important;
   padding: 0px 10px !important;
   border-radius: 25px;
-  border: 1px solid var(--color-white) !important;
+  border: 1px solid var(--color-default-border) !important;
   background-color: transparent;
   box-shadow: none !important;
 }
@@ -581,7 +581,7 @@
   top: 0;
   width: 49%;
   display: inline-block;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-border);
   border-radius: 28px;
 }
 
@@ -619,7 +619,7 @@
   top: 0;
   width: 49%;
   display: inline-block;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-border);
   border-radius: 28px;
 }
 
@@ -668,7 +668,7 @@
   .TrackPage__wrapper--edits--content
   .EditTrackCard {
   position: relative !important;
-  background-color: var(--color-card);
+  background-color: var(--color-default-card);
 }
 
 .TrackPage__container
@@ -693,7 +693,7 @@
   .EditTrackCard--middle
   h3 {
   cursor: pointer;
-  color: var(--color-white) !important;
+  color: var(--color-text-primary) !important;
   z-index: 1;
   position: absolute !important;
   top: 0.5rem !important;
@@ -754,7 +754,7 @@
 .TrackPage__container .EditTrackCard .EditTrackCard--right {
   position: relative;
   left: 11rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .TrackPage__container .EditTrackCard .TrackCard__audio .TrackCard__time {
@@ -909,7 +909,7 @@
   box-sizing: border-box;
   border-radius: 25px !important;
   max-width: 100% !important;
-  border: 1px solid var(--color-white) !important;
+  border: 1px solid var(--color-default-border) !important;
   cursor: pointer;
 }
 
@@ -947,7 +947,7 @@ h4 {
   grid-template-columns:
     [full-start] 2.5rem [center-start] repeat(9, [col-start] 1fr [col-end])
     [center-end] 2.5rem [full-end];
-  color: var(--color-white) !important;
+  color: var(--color-text-primary) !important;
   background-color: var(--color-bg);
   overflow: hidden;
 }
@@ -1004,7 +1004,7 @@ h4 {
   -webkit-box-shadow: inset 0 0 0 2px var(--color-primary);
   box-shadow: inset 0 0 0 2px var(--color-primary);
   border-radius: var(--border-radius-sm);
-  color: var(--color-white);
+  color: var(--color-text-primary);
   border: none;
 
   font-family: inherit;
@@ -1018,7 +1018,7 @@ h4 {
 .TpTc__Mobile__tags {
   grid-column: 1 / 5;
   grid-row: 3 /4;
-  border-bottom: 2px solid #b3b3b3;
+  border-bottom: 2px solid var(--color-default-border);
 }
 
 /* .TpTc__Mobile__tags .TrackCard__item__tags {
@@ -1151,7 +1151,7 @@ h4 {
 .TrackPage__wrapper--headline {
   max-width: 270px;
   top: 0px;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   border: none;
   transform-origin: center left;
 }
@@ -1188,7 +1188,6 @@ h4 {
   min-height: 5rem;
   box-sizing: border-box;
   width: 100%;
-
   min-height: 5rem;
   background-color: transparent;
   color: #999;
@@ -1882,7 +1881,8 @@ h4 {
   }
   #audioplayer_tctp {
     align-items: center;
-    background-color: var(--color-bg) !important;
+    /* background-color: var(--color-bg) !important; */
+    background-color: transparent;
   }
   .TrackPage__wrapper .TpTc__container_siderbar .MuiAccordion-rounded {
     padding: 0px 16px !important;

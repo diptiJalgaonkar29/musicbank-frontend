@@ -1,6 +1,6 @@
 .Activeproject_table_header {
   display: flex;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-size: 15px;
   height: 50px;
   align-items: center;

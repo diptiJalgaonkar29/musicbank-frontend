@@ -1,5 +1,5 @@
 .RecentlyAddedTracksList {
-  background-color: #262529;
+  background-color: var(--color-bg);
   max-height: 480px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -17,14 +17,14 @@
   font-size: 1.6rem;
   font-weight: 400;
   margin-top: 0;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   margin-bottom: 15px;
 }
 
 .RecentlyAddedTracksList_container
   .search_results_card_info_container
   .search_results_card_title {
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-weight: normal;
 }
 
@@ -52,7 +52,7 @@
   align-items: center;
   border: none;
   border-radius: 48px;
-  color: var(--color-white);
+  color: var(--color-default-white);
   cursor: pointer;
   display: flex;
   height: 30px;

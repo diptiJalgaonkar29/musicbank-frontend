@@ -26,7 +26,7 @@
   right: -2px;
   bottom: 3px;
   border-radius: 24px 0px 24px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--color-default-border);
   padding: 18px;
 }
 
@@ -51,7 +51,7 @@
   border-radius: 25px;
   aspect-ratio: 1 / 1 !important;
   width: 100%;
-  background-color: var(--color-card);
+  background-color: var(--color-default-card);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +74,7 @@
 .TrackPageHeader_track_title {
   font-size: 3rem;
   font-weight: 400;
-  color: var(--color-white);
+  color: var(--color-text-primary, var(--color-text-secondary));
   white-space: nowrap;
   max-width: 70%;
   overflow: hidden;
@@ -85,7 +85,7 @@
 .TrackPageHeader_wave_header,
 .TrackPageHeader_duration {
   font-size: 1.4rem;
-  color: var(--color-white);
+  color: var(--color-text-primary, var(--color-text-secondary));
 }
 
 .TrackPageHeader_duration {
@@ -149,8 +149,8 @@
 
 .TrackPageHeader_container_right
   .DownloadWidgetWithCookiesV2Dialog_buttonText_container {
-  background-color: var(--color-primary);
-  color: var(--color-text-light, #000);
+  background-color: var(--color-default-card);
+  color: var(--color-text-primary, var(--color-text-secondary));
 }
 
 .TrackPageHeader_container_right
@@ -168,12 +168,6 @@
   pointer-events: none;
 }
 
-.TrackPageHeader_container_right
-  .DownloadWidgetWithCookiesV2Dialog_buttonText_container
-  svg
-  path {
-  stroke: #000;
-}
 
 .TrackPageHeader_img_play_btn {
   width: fit-content;
@@ -293,4 +287,17 @@
 .TrackPageHeader_container_left .audioPlayer_container {
   position: relative;
   z-index: 2;
+}
+.TrackPageHeader_container .AddItemToPlaylistMenuV2_buttonText_container button.sonic_icon_button svg path {
+  fill: var(--color-text-primary, var(--color-text-secondary)) !important;   
+}
+
+.TrackPageHeader_container_right
+  .DownloadWidgetWithCookiesV2Dialog_buttonText_container
+  svg
+  path {
+  stroke: var(--color-text-primary, var(--color-text-secondary));
+}
+.TrackPageHeader_container .SimilaritySearchMenu_buttonText_container svg path {
+  stroke: var(--color-text-primary, var(--color-text-secondary)) !important;
 }

@@ -155,7 +155,7 @@
     "extends": "react-app"
   },
   "proxy00": "http://localhost:3002/",
-  "proxy": "https://dev.sonic-hub.com/",
+  "proxy": "https://wpp.sonic-hub.com/",
   "browserslist": [
     "last 3 version",
     ">0.2%",

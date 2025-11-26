@@ -72,12 +72,13 @@ const DonutChart = ({
   labels = [],
   values = [],
   centerText = "",
-  centerTextColor = "var(--color-white)",
+  centerTextColor = "var(--color-text-primary)",
 }) => {
   const { config } = useContext(BrandingContext);
-  const bgColor = config?.modules?.isEmiratesBrand
-    ? "--color-bg-light"
-    : "--color-card";
+  // const bgColor = config?.modules?.isEmiratesBrand
+  //   ? "--color-bg-light"
+  //   : "--color-card";
+  const bgColor = "var(--color-default-card)";
 
   const colorArr =
     getSuperBrandName() === brandConstants.WPP

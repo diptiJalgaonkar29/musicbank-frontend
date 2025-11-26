@@ -1,10 +1,10 @@
-.SmartInputBox .smart-input-wrapper {
+.SmartInputBox .smart-input-wrapper  {
   position: relative;
   padding: 12px 16px;
-  border: 1px solid #444;
+  /* border: 1px solid #444; */
   border-radius: 40px;
-  background-color: var(--color-bg-light, var(--color-primary));
-  color: white;
+  background-color: var(--color-default-card, var(--color-hover-disable)) !important; 
+  color: var(--color-text-description);
   width: 100%;
   box-sizing: border-box;
   transition: border 0.3s ease;
@@ -12,10 +12,13 @@
   align-items: center;
   display: flex;
 }
+.SmartInputBox .smart-input-wrapper:focus-within {
+  border:  1px solid var(--color-default-border);
+}
 
 .SmartInputBox .smart-input-wrapper.drag-active {
-  border-color: #00bfff;
-  background-color: #2b2b2b;
+  border-color: var(--color-default-border);
+  background-color: var(--color-default-card);
 }
 
 .SmartInputBox .smart-input-inner {
@@ -46,7 +49,7 @@
   width: calc(100% - 90px);
   background: transparent;
   border: none;
-  color: var(--color-text-dark, #fff);
+  color: var(--color-text-primary, var(--color-default-border));
   font-size: 14px;
   outline: none;
   z-index: 2;
@@ -57,7 +60,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: #777;
+  color: var(--color-text-description, var(--color-text-secondary));;
   font-size: 14px;
   pointer-events: none;
   padding: 0;
@@ -67,7 +70,7 @@
 }
 
 .SmartInputBox .highlighted-text {
-  color: var(--color-primary, #e67300);
+  color: var(--color-texthighlight, var(--color-text-primary));
   /* fallback if CSS variable is missing */
   font-weight: bold;
 }
@@ -75,24 +78,26 @@
 .SmartInputBox .file-preview {
   margin-top: 10px;
   font-size: 13px;
-  background: #333;
+  background: var(--color-hover-light);
   padding: 6px 10px;
   border-radius: 6px;
   display: inline-block;
-  color: #ddd;
+  color: var(--color-text-secondary);
 }
 
 .SmartInputBox .right-buttons {
   position: absolute;
   top: 3px;
-  right: 16px;
+  /* right: 16px; */
+  right: 0px;
   display: flex;
   gap: 8px;
+
 }
 
 .SmartInputBox .right-btn {
   background: transparent;
-  color: white;
+  color: var(--color-text-primary) !important;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -102,15 +107,17 @@
   align-items: center;
   justify-content: center;
   transition: background 0.2s ease;
+  width: 50px;
 }
 
 .SmartInputBox .right-btn:hover {
-  background: #333;
+  background: var(--color-hover-disable);
+  border-radius: 50%;
 }
 
 .SmartInputBox .AISearchButtons {
   display: flex;
-  background-color: #222529;
+  background-color: var(--color-default-card);
   padding: 4px;
   border-radius: 40px;
   /* gap: 10px; */
@@ -131,7 +138,7 @@
   font-size: 14px;
   font-weight: 500;
   background-color: transparent;
-  color: white;
+  color: var(--color-text-primary);
   border: none;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
@@ -143,11 +150,15 @@
   height: 22px;
 }
 .SmartInputBox .selectedBtn {
-  background-color: white;
-  color: black;
+  background-color: var(--color-default-card);
+  color: var(--color-text-primary);
 }
 
 .SmartInputBox .added {
   position: relative;
-  top: 14px;
+  top: 0px;
 }
+.SmartInputBox .right-btn svg path {
+  stroke: var(--color-text-primary) !important;       
+}
+

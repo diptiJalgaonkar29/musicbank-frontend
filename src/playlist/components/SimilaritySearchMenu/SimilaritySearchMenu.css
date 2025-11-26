@@ -21,7 +21,7 @@
   justify-content: space-around;
   gap: 1rem;
   height: 50px;
-  background-color: var(--color-card);
+  background-color: var(--color-default-card);
   border-radius: 30px;
   cursor: pointer;
 }

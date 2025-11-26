@@ -16,9 +16,10 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: var(--color-bg);
-  width: 100%;
+  width: 94%;
   height: 80px !important;
   z-index: 1;
+  margin: auto;
 }
 
 .nav_logo_text {
@@ -71,13 +72,13 @@
 .navitem a:hover,
 .navitem a:active,
 .navitem a.navitem--active {
-  color: var(--color-primary);
+  color: var(--color-texthighlight, var(--color-primary));
 }
 
 .navitem a:hover .MuiBadge-badge,
 .navitem a:active .MuiBadge-badge,
 .navitem a.navitem--active .MuiBadge-badge {
-  color: var(--color-white);
+  color: var(--color-default-white);
 }
 
 .navbar__logo--star {
@@ -137,7 +138,7 @@
   position: absolute;
   height: 5px;
   width: 100%;
-  background: var(--color-white);
+  background: var(--color-default-white);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -193,7 +194,7 @@
 }
 /* Custom Code */
 .searchResuts__navbar__grid {
-  background-color: #000;
+  background-color: var(--color-default-black);
 }
 .MobileNavbar--anchor {
   padding: 0.75rem 1.5rem;
@@ -204,13 +205,15 @@
   max-width: 50px;
   width: 85%;
   padding: 0;
+  width: 7vw !important;
 }
 .navbar__logo__container {
   align-items: center;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  width: 7vw !important;
+  /* width: 7vw !important; */
+  margin-right: 2%;
 }
 .navitems__customHolder {
   width: 100%;

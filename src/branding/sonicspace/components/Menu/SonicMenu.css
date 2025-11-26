@@ -1,5 +1,5 @@
 .sonic_menu_container .MuiPaper-root.MuiMenu-paper {
-  background-color: var(--color-card) !important;
+  background-color: var(--color-default-card) !important;
   border-radius: 8px !important;
   transform: scale(0.9) translateY(10px) translateX(25px) !important;
 }

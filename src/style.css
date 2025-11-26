@@ -39,7 +39,7 @@
 
 /* For Emirates */
 
-.emiratesnbd .navitem .WebNavbar--anchor {
+/* .emiratesnbd .navitem .WebNavbar--anchor {
 color: var(--color-text-nav, var(--color-white));
 }
 
@@ -334,38 +334,38 @@ color: var(--color-text-dark);
   fill: var(--color-text-light);
 }
 
-/* 1️⃣ First item (only stroke) */
+
 .emiratesnbd 
   .MuiPaper-root.MuiPopover-paper.MuiMenu-paper 
   .MuiMenuItem-root.sonic_menu_item:nth-child(1) svg path {
       stroke: var(--color-text-dark) !important;
   fill: var(--color-text-dark) !important;
-}
+} 
 
-/* 2️⃣ Second item (fill + stroke) */
-.emiratesnbd 
+
+ .emiratesnbd 
   .MuiPaper-root.MuiPopover-paper.MuiMenu-paper 
   .MuiMenuItem-root.sonic_menu_item:nth-child(2) svg path {
 
   stroke: var(--color-text-dark) !important;
   fill: none !important;
-}
+} 
 
 
-.emiratesnbd .footer .total-credits .download-btn .download-icon svg path{
+ .emiratesnbd .footer .total-credits .download-btn .download-icon svg path{
   fill: var(--color-bg-light) !important;
 }
 
 
 .emiratesnbd .predict_project_container .predict-project-cancelBtn  {
   color: var(--color-text-dark);
-}
+} 
 
 
 
 
 
-/* client UI List */
+
 
 .emiratesnbd .recent-tracksv3 .search_results_card_container {
   background-color: transparent;
@@ -508,7 +508,7 @@ color: var(--color-text-dark);
 }
 
 .emiratesnbd .rmsc.multi_select_music_library_filter label.select-item.selected::after {
-    border-color: white !important;
-}
+    border-color: var(--color-bg) !important;
+}   */
 
-
+ 

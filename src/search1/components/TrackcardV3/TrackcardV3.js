@@ -31,6 +31,14 @@ import { setTrackData } from "../../../redux/actions/trackActions/trackActions";
 import ToolTipWrapper from "../../../branding/componentWrapper/ToolTipWrapper";
 import getMediaBucketPath from "../../../common/utils/getMediaBucketPath";
 import { boolean } from "yup";
+import {
+  logEvent,
+  TRACK_LIKE,
+  TRACK_TITLE_CLICK,
+  SIMILARITY_SEARCH,
+  TAKE_TO_AI,
+  DOWNLOAD_PREVIEW,
+} from "../../../common/utils/logEvent";
 
 export default function TrackcardV3(props) {
   // console.log("TrackcardV3 - favTracksIds", props.favTracksIds);
@@ -78,6 +86,47 @@ export default function TrackcardV3(props) {
   useEffect(() => {
     loadImages();
   }, []);
+
+  // const trackTitleClick = (propsData, eventTypeKey) => {
+  //   const eventType = EVENT_TYPES[eventTypeKey];
+  //   const eventTypeId = EVENT_TYPE_IDS[eventTypeKey];
+
+  //   trackEvent({
+  //     algoliaId: props.trackdetails_objectID,
+
+  //     mood_name: props.ampMoodTags?.[0] || "",
+
+  //     mood_value: props.amp_all_mood_tags?.tag_values?.[0] || 0,
+
+  //     genre_name: props.genreTags?.[0] || "",
+
+  //     genre_value: props.amp_genre_tags?.tag_values?.[0] || 0,
+
+  //     // projectId: props.strotswar_track_id || "NA",
+
+  //     searchType: window?.globalConfig?.SEARCH_TYPE || "",
+
+  //     eventType,
+
+  //     eventTypeId,
+
+  //     tempo: props.bpm,
+
+  //     pageName: window.location.hash.replace("#/", "") || "",
+
+  //     // serachType: "TagType",
+  //     // objectIds: ["algoliaId"],
+  //     // eventType: "TrackNameclick",
+  //     // eventTypeId: "1",
+  //     // moodName: "asdfg",
+  //     // moodValue: "63598",
+  //     // tempoName: "fast",
+  //     // tempoValue: "654239",
+  //     // generName: "qwerty",
+  //     // generValue: "9632145",
+  //     // pageName: "AISearchScreen",
+  //   });
+  // };
 
   const redirect = (id) => {
     // Get hidden tags in lowercase
@@ -254,33 +303,79 @@ export default function TrackcardV3(props) {
                     domain.items.slice(0, 10).map((item, itemIndex) => (
                       <span
                         key={itemIndex}
-                        className="trackFilterOption"
-                        style={{
-                          backgroundColor: props.isTagRefined?.(
-                            domain.className,
-                            item
-                          )
-                            ? "#444444"
-                            : "transparent",
-                        }}
+                        className={`trackFilterOption ${
+                          props.isTagRefined?.(domain.className, item)
+                            ? "refined"
+                            : ""
+                        }`}
+                        // style={{
+                        //   backgroundColor: props.isTagRefined?.(
+                        //     domain.className,
+                        //     item
+                        //   )
+                        //     ? "#444444"
+                        //     : "transparent",
+                        // }}
                         onClick={
                           domain.refine ? () => domain.refine(item) : undefined
                         }
+                        // onClick={() => {
+                        //   if (domain.refine) domain.refine(item);
+
+                        //   const isMood = domain.label === "Emotions";
+                        //   const isGenre = domain.label === "Genres";
+
+                        //   const moodIndex = isMood
+                        //     ? props?.amp_all_mood_tags?.tag_names?.indexOf(item)
+                        //     : -1;
+
+                        //   const genreIndex = isGenre
+                        //     ? props?.amp_genre_tags?.tag_names?.indexOf(item)
+                        //     : -1;
+
+                        //   logEvent({
+                        //     eventType: "AI_SEARCH_SIDE_FILTER",
+                        //     searchType: domain.label.toLowerCase(),
+                        //     pageName:
+                        //       window.location.hash.replace("#/", "") || "",
+                        //     // Mood
+                        //     moodName: isMood ? item : null,
+                        //     moodValue:
+                        //       isMood && moodIndex >= 0
+                        //         ? props?.amp_all_mood_tags?.tag_values?.[
+                        //             moodIndex
+                        //           ]
+                        //         : null,
+
+                        //     // Genre
+                        //     genreName: isGenre ? item : null,
+                        //     genreValue:
+                        //       isGenre && genreIndex >= 0
+                        //         ? props?.amp_genre_tags?.tag_values?.[
+                        //             genreIndex
+                        //           ]
+                        //         : null,
+                        //   });
+                        // }}
                       >
                         {item?.toString()}
                       </span>
                     ))
                   ) : (
                     <span
-                      className="trackFilterOption"
-                      style={{
-                        backgroundColor: props.isTagRefined?.(
-                          domain.className,
-                          domain.items
-                        )
-                          ? "#444444"
-                          : "transparent",
-                      }}
+                      className={`trackFilterOption ${
+                        props.isTagRefined?.(domain.className, domain.items)
+                          ? "refined"
+                          : ""
+                      }`}
+                      // style={{
+                      //   backgroundColor: props.isTagRefined?.(
+                      //     domain.className,
+                      //     domain.items
+                      //   )
+                      //     ? "#444444"
+                      //     : "transparent",
+                      // }}
                       onClick={
                         domain.refine
                           ? () => domain.refine(domain.items)
@@ -296,15 +391,19 @@ export default function TrackcardV3(props) {
               ) : (
                 <>
                   <span
-                    className="trackFilterOption"
-                    style={{
-                      backgroundColor: props.isTagRefined?.(
-                        domain.className,
-                        domain.items
-                      )
-                        ? "#444444"
-                        : "transparent",
-                    }}
+                    className={`trackFilterOption ${
+                      props.isTagRefined?.(domain.className, domain.items)
+                        ? "refined"
+                        : ""
+                    }`}
+                    // style={{
+                    //   backgroundColor: props.isTagRefined?.(
+                    //     domain.className,
+                    //     domain.items
+                    //   )
+                    //     ? "#444444"
+                    //     : "transparent",
+                    // }}
                     onClick={
                       domain.refine
                         ? () => domain.refine(domain.items)
@@ -411,6 +510,7 @@ export default function TrackcardV3(props) {
                           index={props.indexProp}
                         />
                         <AudioPlayerSH2
+                          {...props}
                           imgSrc={props.preview_image_url}
                           isImgLoading={props.loading}
                           trackName={props.track_name}
@@ -453,7 +553,25 @@ export default function TrackcardV3(props) {
                       >
                         <p
                           className="TrackcardV3__item__title"
-                          onClick={() => redirect(props.trackdetails_objectID)}
+                          onClick={(e) => {
+                            console.log("props", props);
+                            logEvent({
+                              objectIdList: [props.trackdetails_objectID],
+                              eventType: TRACK_TITLE_CLICK,
+                              moodName: props.ampMoodTags?.[0],
+                              moodValue:
+                                props.amp_all_mood_tags?.tag_values?.[0] || 0,
+                              genreName: props.genreTags?.[0] || "",
+                              genreValue:
+                                props.amp_genre_tags?.tag_values?.[0] || 0,
+                              tempoName: props.tag_tempo?.[0] || "",
+                              tempoValue:
+                                props.tag_tempo?.[0]?.value || props.bpm || 0,
+                              pageName:
+                                window.location.hash.replace("#/", "") || "",
+                            });
+                            redirect(props.trackdetails_objectID);
+                          }}
                           data-paid={props.paid || 0}
                           data-unpaid={props.unpaid || 0}
                           data-radio={props.radio || 0}
@@ -479,7 +597,31 @@ export default function TrackcardV3(props) {
                                 <IconButtonWrapper
                                   icon="LikeOn"
                                   className="favBtn"
-                                  onClick={() => {
+                                  onClick={(e) => {
+                                    logEvent({
+                                      objectIdList: [
+                                        props.trackdetails_objectID,
+                                      ],
+                                      eventType: TRACK_LIKE,
+                                      moodName: props.ampMoodTags?.[0],
+                                      moodValue:
+                                        props.amp_all_mood_tags
+                                          ?.tag_values?.[0] || 0,
+                                      genreName: props.genreTags?.[0] || "",
+                                      genreValue:
+                                        props.amp_genre_tags?.tag_values?.[0] ||
+                                        0,
+                                      tempoName: props.tag_tempo?.[0] || "",
+                                      tempoValue:
+                                        props.tag_tempo?.[0]?.value ||
+                                        props.bpm ||
+                                        0,
+                                      pageName:
+                                        window.location.hash.replace(
+                                          "#/",
+                                          ""
+                                        ) || "",
+                                    });
                                     likeUnlikeTrack(props.indexProp);
                                   }}
                                 />
@@ -489,7 +631,31 @@ export default function TrackcardV3(props) {
                                 <IconButtonWrapper
                                   icon="LikeOff"
                                   className="favBtn"
-                                  onClick={() => {
+                                  onClick={(e) => {
+                                    logEvent({
+                                      objectIdList: [
+                                        props.trackdetails_objectID,
+                                      ],
+                                      eventType: TRACK_LIKE,
+                                      moodName: props.ampMoodTags?.[0],
+                                      moodValue:
+                                        props.amp_all_mood_tags
+                                          ?.tag_values?.[0] || 0,
+                                      genreName: props.genreTags?.[0] || "",
+                                      genreValue:
+                                        props.amp_genre_tags?.tag_values?.[0] ||
+                                        0,
+                                      tempoName: props.tag_tempo?.[0] || "",
+                                      tempoValue:
+                                        props.tag_tempo?.[0]?.value ||
+                                        props.bpm ||
+                                        0,
+                                      pageName:
+                                        window.location.hash.replace(
+                                          "#/",
+                                          ""
+                                        ) || "",
+                                    });
                                     likeUnlikeTrack(props.indexProp);
                                   }}
                                 />
@@ -542,7 +708,26 @@ export default function TrackcardV3(props) {
                           <ToolTipWrapper title="Similarity Search">
                             <IconButtonWrapper
                               icon="SimilaritySearchSH2"
-                              onClick={() =>
+                              onClick={() => {
+                                logEvent({
+                                  objectIdList: [props.trackdetails_objectID],
+                                  eventType: SIMILARITY_SEARCH,
+                                  moodName: props.ampMoodTags?.[0],
+                                  moodValue:
+                                    props.amp_all_mood_tags?.tag_values?.[0] ||
+                                    0,
+                                  genreName: props.genreTags?.[0] || "",
+                                  genreValue:
+                                    props.amp_genre_tags?.tag_values?.[0] || 0,
+                                  tempoName: props.tag_tempo?.[0] || "",
+                                  tempoValue:
+                                    props.tag_tempo?.[0]?.value ||
+                                    props.bpm ||
+                                    0,
+                                  pageName:
+                                    window.location.hash.replace("#/", "") ||
+                                    "",
+                                });
                                 onSimilaritySearch({
                                   id: props.id,
                                   track_name: props.track_name,
@@ -556,8 +741,8 @@ export default function TrackcardV3(props) {
                                   track_mediatypes: props.track_mediatypes,
                                   track_type_id: props.track_type_id,
                                   cyanite_id: props.cyanite_id,
-                                })
-                              }
+                                });
+                              }}
                             />
                           </ToolTipWrapper>
 
@@ -588,6 +773,27 @@ export default function TrackcardV3(props) {
                               <IconButtonWrapper
                                 icon="AITrackIconSH2"
                                 onClick={() => {
+                                  logEvent({
+                                    objectIdList: [props.trackdetails_objectID],
+                                    eventType: TAKE_TO_AI,
+                                    moodName: props.ampMoodTags?.[0],
+                                    moodValue:
+                                      props.amp_all_mood_tags
+                                        ?.tag_values?.[0] || 0,
+                                    genreName: props.genreTags?.[0] || "",
+                                    genreValue:
+                                      props.amp_genre_tags?.tag_values?.[0] ||
+                                      0,
+                                    tempoName: props.tag_tempo?.[0] || "",
+                                    tempoValue:
+                                      props.tag_tempo?.[0]?.value ||
+                                      props.bpm ||
+                                      0,
+                                    pageName:
+                                      window.location.hash.replace("#/", "") ||
+                                      "",
+                                  });
+
                                   if (aimusicprovider === "stability") {
                                     let getFilePath = getMediaBucketPath(
                                       props?.mp3_track,
@@ -666,6 +872,7 @@ export default function TrackcardV3(props) {
                           {props.config.modules.showBasketDownload && (
                             <DownloadWidgetWithCookiesV2Dialog
                               className="TrackcardV3__download_menu"
+                              {...props}
                               config={props.config}
                               idProp={props.indexProp}
                               track_type_id={props.trackType}
@@ -692,6 +899,14 @@ export default function TrackcardV3(props) {
                                 : "DownArrow"
                             }
                             onClick={handleChange(`panel${props.indexProp}`)}
+                            // onClick={() => {
+                            //   console.log("this are all the props: ", props);
+                            //   console.log(
+                            //     "This is the asset type id: ",
+                            //     props.asset_type_id
+                            //   );
+                            //   handleChange(`panel${props.indexProp}`);
+                            // }}
                           />
                         </div>
                       </div>

@@ -16,6 +16,7 @@ import getSuperBrandName from "../../common/utils/getSuperBrandName";
 import { brandConstants } from "../../common/utils/brandConstants";
 import getSuperBrandId from "../../common/utils/getSuperBrandId";
 import { ConsoleView } from "react-device-detect";
+import { isPlainObject } from "lodash";
 
 // ✅ Helper function to get server-wise sonicTrackId
 const getSonicTrackId = (hit, serverName) => {
@@ -57,7 +58,6 @@ export function CustomInfiniteHits({
   const { config } = useContext(BrandingContext);
   const { items: currentRefinementItems } = useCurrentRefinements();
   const dispatch = useDispatch();
-
   const [loading, setLoading] = useState(true);
   const [hasFirstResponse, setHasFirstResponse] = useState(false);
   const superBrandId = getSuperBrandId();
@@ -154,6 +154,7 @@ export function CustomInfiniteHits({
             let previewImageUrl = "";
             const sonicTrackId = getSonicTrackId(hit, serverName);
             try {
+              console.log("This is the hit", hit);
               ampMainMoodTags = hit?.amp_all_mood_tags.tag_names || [];
               ampMoodTags = hit?.amp_all_mood_tags.tag_names || [];
               sonicLogoMainMoodTags = hit?.tag_soniclogo_mainmood_ids || [];
@@ -171,6 +172,57 @@ export function CustomInfiniteHits({
                 hit?.source_id,
                 "image"
               );
+              console.log(isPlainObject(hit), "is hit an obj");
+              const AllHits = hits.map((hit, index) => {
+                return <HitComponent hit={hit} isFirst={index == 0} />;
+              });
+              console.log("all hits", AllHits);
+
+              const firstHit = hits[0];
+
+              console.log("first hit", firstHit);
+              console.log(
+                `first hit data track id: ${firstHit.trackdetails_objectID} \n amp mood ${firstHit.amp_all_mood_tags.tag_names[0]} \n value: ${firstHit.amp_all_mood_tags.tag_values[0]} \n
+                track genre: ${firstHit.amp_genre_tags.tag_names[0]}\n values: ${firstHit.amp_genre_tags.tag_values[0]}\n
+                temp: ${firstHit.bpm}\n tempo name: ${firstHit.tag_tempo}`
+              );
+              const userAgent = navigator.userAgent;
+              console.log("UserAgent", userAgent);
+              console.log("User Device Information", userAgent);
+              const deviceType = /Mobi|Android/i.test(userAgent)
+                ? "Mobile"
+                : /Tablet|iPad/i.test(userAgent)
+                ? "Tablet"
+                : "Desktop";
+
+              console.log("Device Type", deviceType);
+              const browserType = /Edg/i.test(userAgent)
+                ? "Edge"
+                : /OPR/i.test(userAgent)
+                ? "Opera"
+                : /Firefox/i.test(userAgent)
+                ? "firefox"
+                : /Chrome/i.test(userAgent) &&
+                  !/Edg/i.test(userAgent) &&
+                  !/OPR/i.test(userAgent)
+                ? "chrome"
+                : /Safari/i.test(userAgent)
+                ? "safari"
+                : "Unknown Browser";
+              console.log("Browser Type", browserType);
+
+              const osType = /Windows NT/i.test(userAgent)
+                ? "Windows"
+                : /Macintosh|Mac OS X/i.test(userAgent)
+                ? "macOS"
+                : /iPhone|iPad|iPod/i.test(userAgent)
+                ? "iOS"
+                : /Android/i.test(userAgent)
+                ? "Android"
+                : /Linux/i.test(userAgent)
+                ? "Linux"
+                : "Unknown OS";
+              console.log("OSType", osType);
             } catch (error) {}
 
             const isMatch = Boolean(
@@ -249,7 +301,7 @@ export function CustomInfiniteHits({
                           name="selectedTracks"
                           value={sonicTrackId}
                           checked={selectedTrackIds.some(
-                            (item) => item.trackId === sonicTrackId
+                            (item) => item.trackId === String(sonicTrackId)
                           )}
                           disabled={isMatch}
                           onChange={(e) => {
@@ -257,19 +309,21 @@ export function CustomInfiniteHits({
                             setSelectedTrackIds((prev) => {
                               if (isChecked) {
                                 const exists = prev.some(
-                                  (item) => item.trackId === sonicTrackId
+                                  (item) =>
+                                    item.trackId === String(sonicTrackId)
                                 );
                                 if (exists) return prev;
                                 return [
                                   ...prev,
                                   {
-                                    trackId: sonicTrackId,
+                                    trackId: String(sonicTrackId),
                                     algoliaId: hit.objectID,
                                   },
                                 ];
                               } else {
                                 return prev.filter(
-                                  (item) => item.trackId !== sonicTrackId
+                                  (item) =>
+                                    item.trackId !== String(sonicTrackId)
                                 );
                               }
                             });

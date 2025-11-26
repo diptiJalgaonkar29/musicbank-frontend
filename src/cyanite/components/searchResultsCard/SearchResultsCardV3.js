@@ -12,6 +12,11 @@ import {
   removeFavTrackId,
   setFavTrackId,
 } from "../../../redux/actions/searchActions";
+import {
+  logEvent,
+  TRACK_TITLE_CLICK,
+  TRACK_LIKE,
+} from "../../../common/utils/logEvent";
 
 const SearchResultsCardV3 = ({
   id,
@@ -213,6 +218,12 @@ const SearchResultsCardV3 = ({
           track_mediatypes={track_mediatypes}
           track_type_id={track_type_id}
           source_id={source_id}
+          genreTags={genreTags}
+          ampMoodTags={ampMoodTags}
+          instrumentTags={instrumentTags}
+          eventTags={eventTags}
+          movementTags={movementTags}
+          bpm={bpm}
         />
       </div>
 
@@ -220,7 +231,18 @@ const SearchResultsCardV3 = ({
       <div className="search_results_card_info_container">
         <span
           className="search_results_card_title"
-          onClick={() => redirect(objectID)}
+          onClick={(e) => {
+            logEvent({
+              objectIdList: [objectID],
+              eventType: TRACK_TITLE_CLICK,
+              moodName: ampMoodTags?.tag_names?.[0] || "",
+              moodValue: ampMoodTags?.tag_values?.[0] || 0,
+              genreName: genreTags?.tag_names?.[0] || "",
+              genreValue: genreTags?.tag_values?.[0] || 0,
+              pageName: window.location.hash.replace("#/", "") || "",
+            });
+            redirect(objectID);
+          }}
         >
           {track_name}
         </span>
@@ -246,13 +268,35 @@ const SearchResultsCardV3 = ({
           <IconButtonWrapper
             icon="LikeOn"
             className="favBtn"
-            onClick={() => likeUnlikeTrack(sonichub_track_id)}
+            onClick={(e) => {
+              logEvent({
+                objectIdList: [objectID],
+                eventType: TRACK_LIKE,
+                moodName: ampMoodTags?.tag_names?.[0] || "",
+                moodValue: ampMoodTags?.tag_values?.[0] || 0,
+                genreName: genreTags?.tag_names?.[0] || "",
+                genreValue: genreTags?.tag_values?.[0] || 0,
+                pageName: window.location.hash.replace("#/", "") || "",
+              });
+              likeUnlikeTrack(sonichub_track_id);
+            }}
           />
         ) : (
           <IconButtonWrapper
             icon="LikeOff"
             className="favBtn"
-            onClick={() => likeUnlikeTrack(sonichub_track_id)}
+            onClick={(e) => {
+              logEvent({
+                objectIdList: [objectID],
+                eventType: TRACK_LIKE,
+                moodName: ampMoodTags?.tag_names?.[0] || "",
+                moodValue: ampMoodTags?.tag_values?.[0] || 0,
+                genreName: genreTags?.tag_names?.[0] || "",
+                genreValue: genreTags?.tag_values?.[0] || 0,
+                pageName: window.location.hash.replace("#/", "") || "",
+              });
+              likeUnlikeTrack(sonichub_track_id);
+            }}
           />
         )}
       </div>

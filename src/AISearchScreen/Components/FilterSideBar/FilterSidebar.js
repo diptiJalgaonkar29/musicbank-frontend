@@ -12,6 +12,10 @@ import CheckboxWrapper from "../../../branding/componentWrapper/CheckboxWrapper"
 import AudienceSelect from "../AudienceSelect/AudienceSelect";
 import { useRefinementHandlers } from "../useRefinementHandlers";
 import { useRefinementList } from "react-instantsearch";
+import {
+  logEvent,
+  AI_SEARCH_TRACK_FILTER,
+} from "../../../common/utils/logEvent";
 
 const locations = [
   { label: "India", value: "india" },
@@ -96,6 +100,13 @@ const FilterSidebar = ({
     }
 
     setSelectedFilters(updatedFilters);
+    // logEvent({
+    //   eventType: "FilterApplied",
+    //   filterName: attribute,
+    //   filterValue: value,
+    //   filterState: updatedFilters,
+    // });
+    console.log("filter is selected", attribute, value, updatedFilters);
 
     // Build the string and pass it up to the parent
     const filterString = buildAlgoliaAndFilters(updatedFilters);
@@ -191,10 +202,32 @@ const FilterSidebar = ({
               name="selectedTracks"
               checked={item.isRefined}
               onChange={() => {
-                //handleFilterChange(attribute, item.value);
+                // handleFilterChange(attribute, item.value);
                 refine(item.value);
                 console.log("refine item.value", item.value);
                 // dispatch(setTrackFilters({[attribute]: item.value }));
+                logEvent({
+                  eventType: AI_SEARCH_TRACK_FILTER,
+                  searchType: attribute,
+                  moodName:
+                    attribute === "amp_all_mood_tags.tag_names"
+                      ? item.value
+                      : null,
+                  moodValue:
+                    attribute === "amp_all_mood_tags.tag_names"
+                      ? item.count || null
+                      : null,
+
+                  // genre only
+                  genreName:
+                    attribute === "amp_genre_tags.tag_names"
+                      ? item.value
+                      : null,
+                  genreValue:
+                    attribute === "amp_genre_tags.tag_names"
+                      ? item.count || null
+                      : null,
+                });
               }}
               label={`${labelGetter(item.value)} (${item.count})`}
             />

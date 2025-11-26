@@ -1,7 +1,7 @@
 .SonicCheckbox_container {
   font-size: 1.6rem;
   margin: 0.2rem 0rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   cursor: pointer;
   display: flex;
   gap: 1rem;
@@ -21,7 +21,7 @@
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 0.2rem;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-border);
 }
 
 .SonicCheckbox_container:has(input:checked):before {
@@ -30,8 +30,8 @@
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 0.2rem;
-  background-color: var(--color-card);
-  border: 1px solid var(--color-primary);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-primary) !important;
 }
 
 .SonicCheckbox_container:has(input:checked):after {
@@ -43,8 +43,8 @@
   top: 0.2rem;
   width: 0.5rem;
   height: 1rem;
-  border: solid var(--color-bg);
-  border-width: 0 2px 2px 0;
+  border: solid var(--color-primary) !important;
+  border-width: 0 2px 2px 0 !important;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);

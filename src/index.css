@@ -11,7 +11,7 @@ html {
 }
 
 #legalnformation {
-  color: black;
+  color: var(--color-default-black);
   font-size: 1.8rem;
   z-index: 99999999;
   position: absolute;
@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-primary);
-  color: var(--color-white);
+  color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden !important;
@@ -78,13 +78,14 @@ input {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  /* background-color: #D9D9D9; */
+    background-color: var(--color-scroller, var(--color-text-description));
   border-radius: 18px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #D9D9D9;
+  background: var(--color-scroller, var(--color-text-description));
 }
 
 #Login__Container {
@@ -126,7 +127,8 @@ input {
 }
 
 .MuiSnackbarContent-message {
-  color: var(--color-white) !important;
+  /* color: var(--color-white) !important; */
+  color: var(--color-text-primary) !important;
 }
 
 .MuiSvgIcon-root {
@@ -140,8 +142,8 @@ input {
 .MuiAutocomplete-paper {
   background-color: var(--color-bg) !important;
   border-radius: 10px !important;
-  border: 1px solid var(--color-white) !important;
-  color: var(--color-white) !important;
+  border: 1px solid var(--color-default-border) !important;
+  color: var(--color-text-primary) !important;
   margin: 0 !important;
 }
 
@@ -152,7 +154,7 @@ input {
 
 textarea,
 input {
-  caret-color: var(--color-white);
+  caret-color: var(--color-default-white);
 }
 
 .highlight_text {

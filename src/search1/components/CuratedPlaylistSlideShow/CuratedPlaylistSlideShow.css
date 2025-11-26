@@ -18,7 +18,7 @@
   font-size: 1.6rem;
   font-weight: 400;
   margin-top: 0;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .CuratedPlaylistSlideShow_container .slider-playlist {
@@ -81,6 +81,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
+  color: var(--color-text-primary);
 }
 
 .CuratedPlaylistSlideShow_container

@@ -12,6 +12,7 @@ import { SpinnerDefault } from "../../../common/components/Spinner/Spinner";
 import WaveSurferImage from "../../../AISearchScreen/Components/GetWaveForm/WaveSurferImage";
 import getMediaBucketPath from "../../utils/getMediaBucketPath";
 import WaveSurferForm from "../../../AISearchScreen/Components/GetWaveForm/WaveSurferForm";
+import { logEvent, TRACK_PLAY } from "../../utils/logEvent";
 
 const UISetV1 = React.lazy(() => import("./UISetV1"));
 const UISetV2 = React.lazy(() => import("./UISetV2"));
@@ -34,6 +35,7 @@ function getPosition(el) {
 class AudioTag extends Component {
   constructor(props) {
     super(props);
+    console.log("ALL PROPS RECEIVED:", props);
     this.music = React.createRef();
     this.timeline = React.createRef();
     this.pButton = React.createRef();
@@ -526,6 +528,22 @@ class AudioTag extends Component {
 
   clickPlayButton = (index, config) => {
     console.log("clickPlayButton", index, config);
+    logEvent({
+      objectIdList: [this.props.trackdetails_objectID],
+      eventType: TRACK_PLAY,
+      // moodName: this.props.ampMoodTags?.[0],
+      // moodValue: this.props.amp_all_mood_tags?.tag_values?.[0] || 0,
+      // genreName: this.props.genreTags?.[0] || "",
+      // genreValue: this.props.amp_genre_tags?.tag_values?.[0] || 0,
+      moodName: this.props.ampMoodTags?.[0],
+      moodValue: this.props.amp_all_mood_tags?.tag_values?.[0] || 0,
+      genreName: this.props.genreTags?.[0] || "",
+      genreValue: this.props.amp_genre_tags?.tag_values?.[0] || 0,
+      tempoName: this.props.tag_tempo?.[0] || "",
+      tempoValue: this.props.tag_tempo?.[0]?.value || this.props.bpm || 0,
+      pageName: window.location.hash.replace("#/", "") || "",
+    });
+
     this.loadData(index, config);
   };
 

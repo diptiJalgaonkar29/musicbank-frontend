@@ -10,6 +10,7 @@
   padding-top: 15px;
   height: calc(100vh - 250px); /* full viewport height minus padding */
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .homePageV3_content_left {
   width: 50%;

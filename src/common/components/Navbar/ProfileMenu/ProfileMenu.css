@@ -5,9 +5,9 @@
 }
 
 .sonic_icon_button[icon="Profile"] svg {
-  stroke: var(--color-white);
+  stroke: var(--color-text-primary);
 }
 
 .WebNavbar--anchor.activeNavlink .sonic_icon_button[icon="Profile"] svg {
-  stroke: var(--color-primary);
+  stroke: var(--color-text-primary);
 }

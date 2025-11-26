@@ -22,16 +22,19 @@
 .recent-tracksv3 .search_results_card_container {
   display: flex;
   align-items: center;
-  /* background: #111; */
+  background: var(--color-bg) !important;
   padding: 10px 0;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
   transition: all 0.2s ease-in-out;
   margin: 10px 0;
 }
 
 .recent-tracksv3 .search_results_card_container:hover {
   transform: translateY(-2px);
+}
+.recent-tracksv3 .search_results_card_container:hover .search_results_card_title {
+  color: var(--color-texthighlight, var(--color-primary));   /* or any color you want */
 }
 
 /* Left Image */
@@ -63,12 +66,12 @@
 .recent-tracksv3 .search_results_card_title {
   font-size: 16px;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-text-primary);
   margin-bottom: 6px;
 }
 
 .recent-tracksv3 .search_results_card_title:hover {
-  color: var(--color-primary);
+  color: var(--color-hover-disable);
   cursor: pointer;
   /* text-decoration: underline; */
 }
@@ -81,8 +84,8 @@
 }
 
 .recent-tracksv3 .track-tag {
-  background: var(--color-card);
-  color: #fff;
+  background: var(--color-hover-disable) !important;
+  color: var(--color-text-secondary, var(--color-default-border));
   font-size: 12px;
   padding: 5px 8px;
   border-radius: 3px;
@@ -109,8 +112,12 @@
   margin-bottom: 6px;
 }
 
+.recent-tracksv3 .favBtn svg path {
+  stroke: var(--color-border-default) !important;
+  fill: var(--color-primary);
+}
 .recent-tracksv3 .search_results_card_duration {
   font-size: 14px;
   font-weight: 500;
-  color: #bbb;
+  color: var(--color-border-default);
 }

@@ -5,12 +5,11 @@
   height: 20rem;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: azure;
-
+  background-color: var(--color-default-card);
   background: var(--color-white);
   background-clip: padding-box;
   background-size: cover;
-  border: 1px solid rgba(46, 62, 72, 0.12);
+  border: 1px solid var(--color-default-border);
   border-radius: 8px;
   box-sizing: border-box;
   display: block;
@@ -81,7 +80,7 @@
 .PlayListMembers__Avatar--li {
   margin-right: -0.8rem;
   /* border: 2px solid black; */
-  background-color: var(--color-card);
+  background-color: var(--color-default-card);
   width: 4.5rem;
   height: 4.5rem;
   display: flex;
@@ -115,7 +114,7 @@
   padding-bottom: 0.11577em;
   margin-top: 0.33077em;
   text-transform: none;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .showAll {
@@ -137,7 +136,6 @@
 }
 .MemberOverview__li {
   list-style: none;
-
   color: rgba(0, 0, 0, 0.87);
   height: 3.2rem;
   cursor: default;
@@ -146,22 +144,18 @@
   outline: none;
   padding: 0 1.4rem;
   font-size: 1.6rem;
-
   box-sizing: border-box;
-
   align-items: center;
   white-space: nowrap;
-
   vertical-align: middle;
   justify-content: space-between;
-
   text-align: left;
   margin: 5px;
-  background-color: #e0e0e0;
+  background-color:var(--color-default-card);
 }
 
 .MemberOverview__li .SonicCheckbox_container:has(input):before {
-  border: 1px solid rgba(0, 0, 0, 0.87);
+  border: 1px solid var(--color-default-border);
 }
 
 .MemberOverview__delete:hover {
@@ -184,7 +178,7 @@
   outline: none;
   padding: 0 3.4rem;
   font-size: 1.6rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   box-sizing: border-box;
   align-items: center;
   white-space: nowrap;
@@ -194,4 +188,14 @@
   margin-bottom: 5px;
   text-align: right;
   background-color: transparent;
+}
+
+.PlaylistDescription__Name .ss_textarea_container {
+  align-items: center;
+}
+.PlaylistDescription__Name .PlaylistDescription__Name--approveNewName .sonic_icon_button {
+  background-color: var(--color-default-card);
+}
+.PlaylistDescription__Name .PlaylistDescription__Name--approveNewName .sonic_icon_button svg  {
+  stroke: var(--color-text-primary);
 }

@@ -1,5 +1,5 @@
 .sonic_menu_item {
   font-size: 1.6rem !important;
-  color: var(--color-white) !important;
+  color: var(--color-text-primary) !important;
   padding: 8px 15px !important;
 }

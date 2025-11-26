@@ -1,6 +1,6 @@
 .sonic_icon_button {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text-primary) !important;
   border: none;
   cursor: pointer;
   display: flex;
@@ -18,7 +18,7 @@
 } */
 
 .sonic_icon_button:disabled {
-  background-color: var(--color-gray);
+  background-color: var(--color-hover-disable);
   cursor: not-allowed;
 }
 
@@ -28,6 +28,6 @@
 }
 
 .sonic_icon_button {
-  fill: var(--color-white);
+  fill: var(--color-text-primary) !important;
   /* stroke: var(--color-white); */
 }

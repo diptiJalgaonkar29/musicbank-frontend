@@ -9,6 +9,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+  color: var(--color-text-primary);
 }
 
 .customTrackForm .custom_track_form_subTitle {
@@ -19,7 +20,7 @@
   text-align: center;
   margin-top: 10px;
   margin-bottom: 15px;
-  color: #9e9e9e;
+  color: var(--color-text-description);
 }
 
 .customTrackForm .creative_brief_row {
@@ -74,8 +75,8 @@
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
-  background-color: var(--color-white) !important;
-  color: var(--color-bg) !important;
+  background-color: var(--color-hover-disable) !important;
+  color: var(--color-text-secondary) !important;
 }
 
 .customTrackForm .sonicButton.filled.ctk_btn {
@@ -93,8 +94,9 @@
 }
 
 .customTrackForm .sonicButton.outlined.selected_btn.m {
-  color: var(--color-primary) !important;
+  color: var(--color-bg) !important;
   border-color: var(--color-primary) !important;
+  background-color: var(--color-primary) !important;
 }
 
 .customTrackForm .custom-datepicker {

@@ -21,7 +21,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
-  color: #000000;
+  color: var(--color-default-black);
 }
 
 .statistics_header {
@@ -48,6 +48,6 @@
 .chart_layout_container canvas {
   height: 300px;
   width: 300px;
-  background-color: #222529;
+  background-color: var(--color-default-card, var(--color-hover-disable));
   border-radius: 20px;
 }

@@ -45,6 +45,7 @@ import { withRouterCompat } from "./common/utils/withRouterCompat.js";
 import { AlgoliaIndexProvider } from "./AISearchScreen/Components/AlgoliaIndexContext.js";
 import AlgoliaWrapperV2 from "./AISearchScreen/Components/AlgoliaWrapperV2.js";
 import SearchParamsWrapper from "./common/components/SearchParamsWrapper/SearchParamsWrapper.js";
+// import "./style.css";
 
 const _ = require("lodash");
 const updateAfter = 300;
@@ -117,28 +118,30 @@ class App extends Component {
   };
 
   setPredictNavPathToken = () => {
-    console.log("setPredictNavPathToken")
+    console.log("setPredictNavPathToken");
     fromPredictNavPath = window.location.href;
     const hash = window.location.hash;
     const qs = hash.includes("?") ? hash.split("?")[1] : "";
-    const params = new URLSearchParams(qs);    
+    const params = new URLSearchParams(qs);
     predictPramToken = params.get("token");
     console.log("url data", window.location, document.location, params);
-    console.log("setPredictNavPathToken",fromPredictNavPath,predictPramToken)
+    console.log("setPredictNavPathToken", fromPredictNavPath, predictPramToken);
     window.APP_FROM_PREDICT_NAVPATH = fromPredictNavPath;
     window.APP_PREDICT_PARAM_TOKEN = predictPramToken;
     window.APP_FROM_PREDICT_HASHPATH = window.location.hash;
-    console.log("window vars",window.APP_FROM_PREDICT_NAVPATH, window.APP_PREDICT_PARAM_TOKEN,window.APP_FROM_PREDICT_HASHPATH)
-
-  }
+    console.log(
+      "window vars",
+      window.APP_FROM_PREDICT_NAVPATH,
+      window.APP_PREDICT_PARAM_TOKEN,
+      window.APP_FROM_PREDICT_HASHPATH
+    );
+  };
 
   componentDidMount() {
     console.log("STARTING APP");
-    
+
     this.setPredictNavPathToken();
-  window.addEventListener("hashchange", this.setPredictNavPathToken);
-    
-    
+    window.addEventListener("hashchange", this.setPredictNavPathToken);
 
     localStorage.removeItem("superBrandName");
     localStorage.removeItem("superBrandId");

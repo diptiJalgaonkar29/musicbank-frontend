@@ -23,7 +23,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   position: relative;
   padding-top: 2px;
 }
@@ -56,7 +56,7 @@
 
 .CommentSection__container {
   width: 100% !important;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-border);
   border-radius: 20px 0px 0px 20px;
   /* height: calc(100vh - 24rem) !important; */
 }
@@ -122,7 +122,7 @@
 .MyMusic__Wrapper .download_zip_button {
   /* background-color: var(--color-primary); */
   /* padding: 5px 12px; */
-  color: var(--color-white);
+  color: var(--color-text-primary);
   /* font-size: 18px; */
   border: none;
   /* border-radius: 15px; */
@@ -145,7 +145,7 @@
   padding: 5.5px 10px;
   border-radius: 30px;
   font-size: 14px;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   letter-spacing: 0;
   margin: 0 auto;
   cursor: pointer;
@@ -228,7 +228,7 @@
 }
 
 .Comment_Icon svg {
-  stroke: var(--color-white);
+  stroke: var(--color-text-primary);
 }
 .Comment_Icon {
   position: absolute;
@@ -239,14 +239,14 @@
 
 .Comment_Icon .closeBtnsize {
   width: 15px !important;
-  fill: var(--color-white);
-  stroke: var(--color-white);
+  fill: var(--color-text-primary);
+  stroke: var(--color-text-primary);
 }
 
 .Comment_Icon .chatIcon {
   width: 19px !important;
-  fill: var(--color-white);
-  stroke: var(--color-white);
+  fill: var(--color-text-primary);
+  stroke: var(--color-text-primary);
 }
 
 .PlayListTitleList__container #Close_Comment_Section {
@@ -284,7 +284,7 @@
   .Comments__ul
   li
   .Comment__messageRborder {
-  border-right: 10px solid var(--color-secondary) !important;
+  border-right: 10px solid var(--color-default-border) !important;
   display: inline-block !important;
   width: 97% !important;
 }
@@ -294,7 +294,7 @@
   .Comments__ul
   li
   .Comment__messageLborder {
-  border-left: 10px solid var(--color-secondary) !important;
+  border-left: 10px solid var(--color-default-border) !important;
   display: inline-block !important;
   width: 100% !important;
 }
@@ -334,7 +334,7 @@
   button
   svg {
   width: 10px !important;
-  fill: var(--color-white);
+  fill: var(--color-text-primary);
 }
 
 .CommentSections__newComment--wrapper .ss_input_container {
@@ -455,6 +455,7 @@
   /* border-radius: 23px; */
   overflow: auto;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .MyMusic__Wrapper .PlayListTitleList__container .MuiExpansionPanel-rounded {
@@ -493,7 +494,7 @@
   .PlaylistDescription__Extra
   .DescriptionFont {
   opacity: 1 !important;
-  color: var(--color-white) !important;
+  color: var(--color-text-description) !important;
   letter-spacing: 0px !important;
   align-self: flex-start !important;
   font-size: 1.5rem !important;
@@ -503,9 +504,9 @@
   top: 2px; */
 }
 .MyMusic__container .MyMusic__Wrapper #RegisteredPlayListMembers__wrapper {
-  border-top: 1px solid var(--color-white);
-  border-left: 1px solid var(--color-white);
-  border-right: 1px solid var(--color-white);
+  border-top: 1px solid var(--color-default-border);
+  border-left: 1px solid var(--color-default-border);
+  border-right: 1px solid var(--color-default-border);
   border-radius: 28px 28px 0px 0px;
 
   margin: 0px 60px;
@@ -513,9 +514,9 @@
 }
 
 .MyMusic__container .MyMusic__Wrapper #ExternalPlayListMembers__wrapper {
-  border-bottom: 1px solid var(--color-white);
-  border-left: 1px solid var(--color-white);
-  border-right: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-default-border);
+  border-left: 1px solid var(--color-default-border);
+  border-right: 1px solid var(--color-default-border);
   border-radius: 0px 0px 28px 28px;
   margin: 0px;
 }
@@ -539,19 +540,19 @@
 }
 .MyMusic__SideBar .MyMusicSideBar__Wrapper .MyMusicSideBar__Item h4 {
   border-radius: 20px;
-  border: 1px solid var(--color-white) !important;
+  border: 1px solid var(--color-default-border) !important;
   margin: 0px !important;
   padding: 10px 15px !important;
   font-weight: 400 !important;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .MyMusic__SideBar .MyMusicSideBar__Wrapper .MyMusicSideBar__Item:nth-child(1) {
-  border-top: 0px dotted grey !important;
+  border-top: 0px dotted var(--color-default-border) !important;
 }
 
 .MyMusic__SideBar .AddPlaylist {
-  border-top: 1px solid var(--color-white) !important;
+  border-top: 1px solid var(--color-default-border) !important;
   position: absolute !important;
   top: 0px !important;
   justify-content: flex-start;
@@ -569,7 +570,7 @@
   width: 100%;
   padding: 15px 0 5px;
   margin-top: 25px;
-  border-top: 1px solid var(--color-white);
+  border-top: 1px solid var(--color-default-border);
 }
 
 .MyMusic__container
@@ -634,7 +635,7 @@
   padding: 16px 0px 5px 14px;
   position: relative;
   bottom: 14px;
-  background-color: #e0e0e0;
+  background-color: var(--color-bg);
 }
 
 .MuiDialog-container .MuiDialog-paperWidthSm .MuiTypography-body1 {
@@ -649,10 +650,10 @@
   .TextAreaWithWordCounter__container
   textarea {
   border-radius: 20px !important;
-  border: 0px solid #999 !important;
+  border: 0px solid var(--color-default-border) !important;
 }
 .MuiDialog-container .MuiDialog-paperWidthSm .MuiButton-text {
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-size: 1.6rem !important;
   line-height: 20px !important;
   font-family: var(--font-primary);
@@ -663,12 +664,12 @@
 }
 
 .MuiDialog-container .MuiDialog-paperWidthSm .MuiButton-text.Mui-disabled {
-  background-color: var(--color-gray) !important;
+  background-color: var(--color-hover-disable) !important;
   border: 1px solid transparent !important;
 }
 
 .MuiDialog-container .MuiDialog-paperWidthSm .MuiButton-text span {
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .MuiDialog-container .MuiDialog-paperWidthSm .activeColor {
@@ -677,8 +678,8 @@
 }
 
 .MuiDialog-container .MuiDialog-paperWidthSm .deactiveColor {
-  background-color: var(--color-gray) !important;
-  border: 1px solid var(--color-gray) !important;
+  background-color: var(--color-hover-disable)!important;
+  border: 1px solid var(--color-default-border) !important;
 }
 
 .MuiDialog-container .MuiDialog-paperWidthSm .copyLinkBtnBlock .copyLinkBtn {
@@ -711,7 +712,7 @@
   .MuiAutocomplete-root
   .MuiInputBase-root.MuiAutocomplete-inputRoot
   input {
-  color: var(--color-white) !important;
+  color: var(--color-tex) !important;
 }
 .MuiDialog-container .MuiDialog-paperWidthSm .combinedUserTextBlock {
   border-radius: 30px !important;
@@ -748,7 +749,7 @@
 
 .MyMusic__SideBar {
   box-sizing: border-box;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   background-color: var(--color-bg) !important;
   word-wrap: break-word;
   position: relative;
@@ -821,7 +822,7 @@
 
 .PlayListMembers__container {
   margin-bottom: auto;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   display: flex;
   justify-content: center;
 }
@@ -847,12 +848,11 @@
   top: 10rem;
   font-size: 1.6rem;
   padding: 2rem;
-
   z-index: 200;
-  background-color: var(--color-primary);
+  background-color: var(--color-default-card);
   transform: rotate(-90deg);
   transform-origin: center right;
-  border: 1px solid var(--color-bg);
+  border: 1px solid var(--color-default-border);
   box-sizing: border-box;
 }
 
@@ -865,7 +865,7 @@
 }
 
 #Close_Comment_Section {
-  color: var(--color-white);
+  color: var(--color-text-primary);
   float: right;
   position: absolute;
   right: 0px;
@@ -873,7 +873,7 @@
   width: 4rem;
   height: 4rem;
   box-sizing: border-box;
-  background-color: var(--color-primary);
+  background-color: var(--color-default-card);
 }
 
 /* END MY MUSIC CONTENT */
@@ -883,7 +883,7 @@
   grid-column: center-start / full-end;
   grid-row: 2 / 3;
 
-  color: var(--color-white);
+  color: var(--color-text-primary);
   display: grid;
   padding-left: 2.5rem;
   padding-right: 2.5rem;

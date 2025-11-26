@@ -8,7 +8,7 @@
 
 .ss_textarea_label {
   margin-bottom: 0px;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -19,16 +19,16 @@
 
 .ss_textarea {
   border-radius: 10px;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-border);
   padding: 10px 20px;
   font-size: clamp(12px, 0.8vw, 18px);
   background-color: transparent;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .ss_textarea.filled {
-  background-color: var(--color-white);
-  color: #000;
+  background-color: var(--color-default-white);
+  color: var(--color-text-primary);
   border: 1px solid transparent;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .ss_config_file_box {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-text-primary);
   border-radius: 6px;
   padding: 6px 10px;
 }
@@ -82,7 +82,7 @@
 }
 .ss_file_name_display_input {
   font-size: 13px;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   background: transparent;
   border: none;
   outline: none;
@@ -101,10 +101,10 @@
 }
 .ss_editor_row .css_pre_box{
   background: #1e1e1e;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-text-primary);
   border-radius: 6px;
   padding: 10px;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   max-height: 300px;
   overflow-y: auto; 
 

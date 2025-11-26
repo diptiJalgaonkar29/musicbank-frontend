@@ -1,6 +1,8 @@
 .AlgoliaSearchContainer .AlgoliaSearchResults {
-  height: 510px;
+  /* height:calc(100vh - 380px); */
+  height: 68vh;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 8px;
   display: flex;
   flex-direction: column;
@@ -18,7 +20,7 @@
   flex-direction: row;
   gap: 16px;
   align-items: center;
-  border-bottom: 1px solid #54565a;
+  border-bottom: 1px solid var(--color-default-border);
 }
 
 .AlgoliaSearchContainer .track-card .MuiAccordionSummary-content {
@@ -44,10 +46,10 @@
 .AlgoliaSearchContainer .filter-panel {
   width: 88px;
   transition: width 0.3s ease;
-  background: var(--color-card);
+  background: var(--color-default-card);
   padding: 0px;
   overflow: hidden;
-  border-right: 1px solid var(--color-card);
+  /* border-right: 1px solid var(--color-default-border); */
   border-top-right-radius: 30px;
   position: relative;
   height: 70vh; /* full height viewport */
@@ -78,7 +80,9 @@
   border: none;
   cursor: pointer;
   padding: 6px;
-  color: var(--color-white);
+}
+.AlgoliaSearchContainer .filter-toggle-btn svg path {
+  fill: var(--color-text-primary);
 }
 
 .AlgoliaSearchContainer .filter-close-btn {
@@ -88,13 +92,13 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   padding: 8px;
   z-index: 9;
 }
 
 .AlgoliaSearchContainer .filter-content {
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-size: 14px;
   padding-top: 15px; /* To avoid overlap with close button */
   overflow-y: auto;
@@ -119,7 +123,7 @@
   font-weight: 400;
   font-size: 14px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid var(--color-default-border);
   /* min-height: 35px; */
 }
 
@@ -164,7 +168,7 @@
   position: absolute;
   top: 33px; /* appears just below the 49px button */
   right: 0;
-  background-color: #1f1f1f;
+  background-color: var(--color-hover-disable);
   border-radius: 12px;
   padding: 0.75rem 0;
   display: flex;
@@ -185,7 +189,7 @@
 }
 .AlgoliaSearchContainer .library-label {
   margin: 0.2rem 0rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   cursor: pointer;
   display: flex;
   gap: 1rem;
@@ -199,7 +203,7 @@
   position: absolute;
   top: 33px; /* appears just below the 49px button */
   right: 0;
-  background-color: var(--color-card);
+  background-color: var(--color-default-card);
   border-radius: 12px;
   padding: 0.75rem 0;
   display: flex;
@@ -219,7 +223,7 @@
 }
 .AlgoliaSearchContainer .genre-label {
   margin: 0.2rem 0rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   cursor: pointer;
   display: flex;
   gap: 1rem;
@@ -249,18 +253,21 @@
 }
 
 .AlgoliaSearchContainer .algolia-chip {
-  background-color: var(--color-bg-dark, #222529);
+  background-color: var(--color-hover-disable, var(--color-hover-light));
   border-radius: 16px;
   padding: 6px 12px;
   font-size: 14px;
   display: flex;
   align-items: center;
-  color: var(--color-white);
+  color: var(--color-text-secondary);
 }
 
 .AlgoliaSearchContainer .chip-close {
   margin-left: 8px;
   cursor: pointer;
+}
+.AlgoliaSearchContainer .chip-close svg {
+  stroke: var(--color-text-secondary) !important;
 }
 
 .AlgoliaSearchContainer .filter-chips-wrapper {
@@ -273,7 +280,7 @@
 .AlgoliaSearchContainer .ClearFilterBtn {
   font-size: 14px;
   font-weight: 500;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -289,7 +296,7 @@
   height: 18px;
   /* background-color: var(--color-bg); */
   border-radius: 2px;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-border);
   display: none;
 }
 .AlgoliaSearchContainer
@@ -304,7 +311,7 @@
   top: 10px;
   width: 5px;
   height: 10px;
-  border: solid var(--color-white);
+  border: solid var(--color-default-white);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -321,20 +328,21 @@
   border-radius: 20px;
   /* border: 1px solid var(--color-white); */
   font-size: 16px;
-  background: var(--color-card);
+  background: var(--color-default-card);
   margin-left: 20px;
+  color: var(--color-text-primary);
 }
 .AlgoliaSearchContainer .autoTable.spotifyTracksList {
   z-index: 1;
 }
 .AlgoliaSearchContainer .custom-input.form-control.st-input-search {
   font-size: 1.4rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   width: 100%;
   box-sizing: border-box;
   padding: 7px 10px 7px 50px !important;
   height: 42px;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-white);
   outline: 0px;
   border-radius: 40px;
 }
@@ -342,7 +350,7 @@
 .AlgoliaSearchContainer .st-similar-autosearch .autoTable {
   padding: 10px;
   position: absolute;
-  background-color: var(--color-card);
+  background-color: var(--color-default-card);
   margin: 5px 0 0px 0;
   display: block;
   width: 100%;
@@ -357,7 +365,7 @@
   border-style: solid;
   border-width: 0 0 1px 0;
   padding: 5px;
-  border-color: var(--color-gray);
+  border-color: var(--color-hover-light);
   cursor: pointer;
   min-height: 50px;
   position: relative;
@@ -435,13 +443,14 @@
   border-radius: 20px;
   /* border: 1px solid var(--color-white); */
   font-size: 16px;
-  background: var(--color-card);
+  background: var(--color-default-card);
+  color: var(--color-text-primary);
 }
 
 .rmsc.multi_select_music_library_filter .search input {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-border);
   background-color: var(--color-bg);
-  color: var(--color-white);
+  color: var(--color-text-primary);
   border-radius: 10px;
   padding: 4px 45px 4px 8px;
   height: 25px;
@@ -450,7 +459,7 @@
 
 .rmsc.multi_select_music_library_filter .search input:focus {
   background-color: var(--color-bg);
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .rmsc.multi_select_music_library_filter .search::after {
@@ -505,7 +514,7 @@
   background-color: var(--color-primary);
   border-radius: 2px;
   position: absolute;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-white);
 }
 
 .rmsc.multi_select_music_library_filter.selectAll
@@ -547,7 +556,7 @@
 
 .rmsc.multi_select_music_library_filter .select-item:hover span,
 .rmsc.multi_select_music_library_filter .select-item.selected span {
-  color: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
 .rmsc.multi_select_music_library_filter .clear-selected-button {
@@ -559,7 +568,7 @@
 }
 
 .rmsc.multi_select_music_library_filter svg {
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .rmsc.multi_select_music_library_filter .item-renderer input {
@@ -584,12 +593,12 @@
 }
 
 .rmsc.multi_select_music_library_filter .dropdown-heading-value span {
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-size: 1.4rem;
   text-transform: capitalize;
 }
 .rmsc.multi_select_music_library_filter .dropdown-heading-value span {
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-size: 1.4rem;
   text-transform: capitalize;
 }
@@ -601,7 +610,7 @@
   height: 18px;
   /* background-color: var(--color-bg); */
   border-radius: 2px;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-border);
 }
 
 /* css for all checked checkboxes */
@@ -610,7 +619,8 @@
   display: block;
   width: 18px;
   height: 18px;
-  background-color: var(--color-card);
+  /* background-color: var(--color-card); */
+  background-color: transparent;
   border-radius: 2px;
   border: 1px solid var(--color-primary);
 }
@@ -624,7 +634,7 @@
   top: 10px;
   width: 5px;
   height: 10px;
-  border: solid var(--color-white);
+  border: solid var(--color-primary);
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -666,7 +676,7 @@
 .rmsc.multi_select_music_library_filter
   .dropdown-heading:has(.clear-selected-button)
   .dropdown-heading-dropdown-arrow {
-  color: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
 .SearchSuggestionsDropdown {
@@ -692,7 +702,7 @@
 }
 
 .SearchSuggestionsDropdown li:hover {
-  background-color: #bebebe;
+  background-color: var(--color-hover-disable);
 }
 
 .AlgoliaSearchContainer .spotifyTrackDetails table {
@@ -705,12 +715,12 @@
   overflow: hidden;
 }
 .AlgoliaSearchContainer .spotifyTrackDetails .table-dark {
-  color: var(--color-white);
-  background-color: var(--color-card);
+  color: var(--color-text-primary);
+  background-color: var(--color-default-card);
 }
 .AlgoliaSearchContainer .spotifyTrackDetails .table-dark th {
   font-family: var(--font-primary);
-  background-color: var(--color-card);
+  background-color: var(--color-default-card);
 }
 
 .AlgoliaSearchContainer .spotifyTrackDetails .table td,
@@ -791,9 +801,9 @@
   gap: 10px;
 }
 .AlgoliaSearchContainer .TrackCard__audioMini {
-  border: 1px solid var(--color-gray);
+  border: 1px solid var(--color-hover-disable);
   box-sizing: border-box;
-  color: var(--color-white);
+  color: var(--color-default-white);
   display: block;
   height: 50px;
   left: 0;
@@ -803,7 +813,7 @@
 }
 
 .AlgoliaSearchContainer .request-license-button {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-text-primary);
   padding: 7px;
   border-radius: 20px;
 }

@@ -35,7 +35,7 @@
 .MuiAccordionSummary-content,
 .EditMasterAccordion_title {
   font-size: 2rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .TrackPage__container
@@ -66,7 +66,7 @@
 
 .EditMasterAccordion_message {
   font-size: 1.6rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
   margin: 2.5rem 2rem;
 }
 

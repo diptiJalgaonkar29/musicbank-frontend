@@ -41,6 +41,14 @@ import SonicLogoAssetAnalysisAccordion from "../SonicLogoAssetAnalysisAccordion/
 import SonicLogoVariationAccordion from "../SonicLogoVariationAccordion/SonicLogoVariationAccordion";
 import IconButtonWrapper from "../../../branding/componentWrapper/IconButtonWrapper";
 import getMediaBucketPath from "../../../common/utils/getMediaBucketPath";
+import {
+  logEvent,
+  TRACK_PLAY,
+  TAKE_TO_AI,
+  SIMILARITY_SEARCH,
+  DOWNLOAD_PREVIEW,
+} from "../../../common/utils/logEvent";
+
 const classNamesWeb = {
   wrapper: "TpTc__wrapper",
   container: "TpTc__container",
@@ -316,7 +324,19 @@ function TrackPageTrackCardV3(props) {
         )}
         <div
           className="SimilaritySearchMenu_buttonText_container boldFamily"
-          onClick={() =>
+          onClick={() => {
+            console.log("i want the valuesss", topTags, genreTags, tempo);
+            logEvent({
+              objectIdList: [props.trackdetails_objectID],
+              eventType: SIMILARITY_SEARCH,
+              moodName: topTags?.[0] || "",
+              moodValue: props.amp_all_mood_tags?.tag_values?.[0] || 0,
+              genreName: genreTags?.[0] || "",
+              genreValue: props.amp_genre_tags?.tag_values?.[0] || 0,
+              tempoName: props.tag_tempo?.[0] || "",
+              tempoValue: tempo || props.bpm || 0,
+              pageName: window.location.hash.replace("#/", "") || "",
+            });
             onSimilaritySearch({
               id: sonichub_track_id,
               track_name: trackName,
@@ -330,8 +350,8 @@ function TrackPageTrackCardV3(props) {
               track_mediatypes: track_mediatypes,
               track_type_id: track_type_id,
               cyanite_id: cyanite_id,
-            })
-          }
+            });
+          }}
         >
           <p className="SimilaritySearchMenu_buttonText">Search Similar</p>
           <IconButtonWrapper

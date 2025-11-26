@@ -10,7 +10,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   vertical-align: middle;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 .musicstyle-container .SonicInputLabel {
   margin-bottom: 10px;

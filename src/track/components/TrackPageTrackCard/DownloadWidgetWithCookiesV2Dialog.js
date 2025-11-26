@@ -20,6 +20,11 @@ import Picture from "../../../search1/components/AnimatedPicture/AnimatedPicture
 import TrackTypeBadge from "../../../search1/components/TrackTypeBadge/TrackTypeBadge";
 import AsyncService from "../../../networking/services/AsyncService";
 import { SpinnerDefault } from "../../../common/components/Spinner/Spinner";
+import {
+  logEvent,
+  DOWNLOAD_PREVIEW,
+  ADD_TO_PROJECT,
+} from "../../../common/utils/logEvent";
 
 function SimpleDialog(props) {
   const {
@@ -108,6 +113,27 @@ function SimpleDialog(props) {
   };
 
   const downloadPreview = (id) => {
+    // logEvent({
+    //   objectIdList: [trackdetails_objectID], // sent from props into SimpleDialog
+    //   eventType: DOWNLOAD_PREVIEW, // or "TRACK_DOWNLOAD_PREVIEW"
+    //   moodName: props.ampMoodTags?.[0],
+    //   moodValue: props.amp_all_mood_tags?.tag_values?.[0] || 0,
+    //   genreName: props.genreTags?.[0] || "",
+    //   genreValue: props.amp_genre_tags?.tag_values?.[0] || 0,
+    //   pageName: window.location.hash.replace("#/", "") || "",
+    // });
+
+    logEvent({
+      objectIdList: [props.trackdetails_objectID],
+      eventType: DOWNLOAD_PREVIEW,
+      moodName: props.ampMoodTags?.[0],
+      moodValue: props.amp_all_mood_tags?.tag_values?.[0] || 0,
+      genreName: props.genreTags?.[0] || "",
+      genreValue: props.amp_genre_tags?.tag_values?.[0] || 0,
+      tempoName: props.tag_tempo?.[0] || "",
+      tempoValue: props.tag_tempo?.[0]?.value || props.bpm || 0,
+      pageName: window.location.hash.replace("#/", "") || "",
+    });
     setLoading(true);
     let payload = {
       strotSwarIDs: id,
@@ -299,7 +325,9 @@ function SimpleDialog(props) {
                       </ButtonWrapper>
                     ))}
                   <ButtonWrapper
-                    onClick={() => openProjectModal(values?.mediaTypes)}
+                    onClick={(e) => {
+                      openProjectModal(values?.mediaTypes);
+                    }}
                     disabled={!dirty || !isValid}
                     variant="filled"
                   >

@@ -50,7 +50,7 @@
   z-index: 1010;
   border-bottom-left-radius: 25px;
   border-top-left-radius: 25px;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-default-white);
   border-right: none;
   transition: all 0.5s;
 }

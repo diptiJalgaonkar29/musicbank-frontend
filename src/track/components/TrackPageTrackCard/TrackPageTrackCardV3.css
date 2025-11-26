@@ -96,13 +96,13 @@
 }
 
 .TrackPageTrackCardV3 .TrackPageHeader_img_holder > img {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--color-default-border);
 }
 
 .TrackPageTrackCardV3 .trackDetailSectionTitle {
   font-weight: 700;
   font-size: 1.6rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .TrackPageTrackCardV3 .trackDetailHighlightedTitle {
@@ -116,7 +116,7 @@
   font-weight: 600;
   font-size: 1.6rem;
   margin-top: 5px;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .TrackPageTrackCardV3 .tag_chip_container {
@@ -127,8 +127,8 @@
 
 .TrackPageTrackCardV3 .tag_chip {
   display: inline-block;
-  background-color: var(--color-card);
-  color: var(--color-text-light, var(--color-white));
+  background-color: var(--color-hover-disable);
+  color: var(--color-text-secondary, var(--color-text-description));
   width: 100%;
   padding: 0.7rem 2rem;
   border-radius: 30px;
@@ -152,6 +152,10 @@
 
 .TrackPageTrackCardV3 .MuiAccordionDetails-root {
   padding: 10px 40px 30px !important;
+}
+
+.TrackPageTrackCardV3 .MuiAccordionSummary-expandIconWrapper svg path {
+  stroke: var(--color-text-primary) !important;
 }
 
 @media screen and (max-width: 1024px) {
