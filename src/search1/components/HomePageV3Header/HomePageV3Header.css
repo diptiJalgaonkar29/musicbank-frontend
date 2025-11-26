@@ -48,7 +48,10 @@
   padding: 0px 4px 0px 15px;
   /* border: 1px solid var(--color-default-border, var(--color-text-secondary) ); */
   border-radius: 40px;
-  background-color: var(--color-default-card, var(--color-hover-disable)) !important;
+  background-color: var(
+    --color-default-card,
+    var(--color-hover-disable)
+  ) !important;
   color: var(--color-text-primary, var(--color-default-white));
   width: 100%;
   box-sizing: border-box;
@@ -62,7 +65,10 @@
 .HomePageV3Header_container .AISearchButtons {
   display: flex;
   flex: 1 1;
-  background-color: var(--color-default-card,var(--color-hover-disable)) !important;
+  background-color: var(
+    --color-default-card,
+    var(--color-hover-disable)
+  ) !important;
   padding: 4px;
   border-radius: 40px;
   /* gap: 10px; */
@@ -138,7 +144,7 @@
   position: absolute;
   top: 54px; /* appears just below the 49px button */
   left: 0;
-  background-color: var(--color-default-card,  var(--color-hover-disable));
+  background-color: var(--color-default-card, var(--color-hover-disable));
   border-radius: 12px;
   padding: 0.75rem 0;
   display: flex;

@@ -30,6 +30,11 @@ import { format } from "date-fns";
 import { FormattedMessage } from "react-intl";
 import getSuperBrandName from "../../../common/utils/getSuperBrandName";
 import { brandConstants } from "../../../common/utils/brandConstants";
+// import { formatRegionCountryOptions } from "../../../common/utils/countryFormatter";
+import ReactSelectWapper from "../../../branding/componentWrapper/reactSelectWapper";
+import countryData from "../../../../src/addtobucket/countryRegionData.json";
+import { components } from "react-select";
+import { useFormikContext } from "formik";
 
 function RequestAccessModal({
   open,
@@ -37,13 +42,119 @@ function RequestAccessModal({
   selectedBrandData,
   setSelectedBrandData,
   getUsersBrands,
+  managers,
 }) {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = () => {
+  const CustomOption = (props) => {
+    const { data, isSelected } = props;
+
+    return (
+      <components.Option {...props}>
+        <div
+          style={{
+            paddingLeft: data.isRegion ? 0 : 16,
+            display: "flex",
+            alignItems: "center",
+            gap: "15px",
+            fontSize: "14px",
+            color: "var(--color-var(--color-white))",
+          }}
+        >
+          <CheckboxWrapper
+            type="checkbox"
+            checked={isSelected}
+            readOnly
+            style={{ marginRight: 8 }}
+          />
+          {data.label}
+        </div>
+      </components.Option>
+    );
+  };
+
+  const customStyles = {
+    control: (base) => ({
+      ...base,
+      backgroundColor: "var(--color-bg)",
+      borderColor: "var(--color-white)",
+      borderRadius: "23px",
+      padding: "6px",
+      minHeight: "50px",
+      color: "var(--color-white)",
+      width: "100%",
+      // marginTop: "15px",
+    }),
+    menu: (base) => ({
+      ...base,
+      backgroundColor: "var(--color-bg)",
+      border: "1px solid var(--color-white)",
+      borderRadius: "10px",
+      // marginTop: "4px",
+      zIndex: 100,
+    }),
+    menuList: (base) => ({
+      ...base,
+      maxHeight: "150px",
+      padding: "0",
+      overflowY: "auto",
+      color: "#C4C4C4",
+    }),
+    option: (base, state) => ({
+      ...base,
+      backgroundColor: state.isSelected
+        ? "#1e1e1e"
+        : state.isFocused
+        ? "#333"
+        : "var(--color-bg)",
+      color: "var(--color-white)",
+      padding: "10px 12px",
+      cursor: "pointer",
+      // borderRadius: '0px 0px 0px 10px'
+      transition: "background-color 0.2s ease",
+      "&:hover": {
+        color: "var(--wpp-grey-color-100)",
+      },
+    }),
+    input: (base) => ({
+      ...base,
+      color: "var(--color-white)",
+      fontSize: "18px",
+      padding: "0 12px",
+    }),
+    singleValue: (base) => ({
+      ...base,
+      fontSize: "14px",
+      color: "var(--color-white)",
+    }),
+    groupHeading: (base) => ({
+      ...base,
+      color: "var(--color-white)",
+      fontWeight: "bold",
+      padding: "8px 12px",
+    }),
+    placeholder: (base) => ({
+      ...base,
+      color: "var(--color-white)",
+      opacity: 0.7,
+      fontSize: "14px",
+    }),
+  };
+
+  const handleSubmit = (values) => {
     setLoading(true);
-    AxiosInstance.get(`users/addNewBrandRequest/${selectedBrandData?.brandId}`)
+    const payload = {
+      // airingCountry: values.country?.value,
+      managerId: values.manager?.value,
+    };
+    console.log(payload, "payload");
+
+    // return;
+    AxiosInstance.post(
+      `users/addNewBrandRequest/${selectedBrandData?.brandId}`,
+      payload
+    )
       .then((res) => {
         // console.log(res);
         dispatch(
@@ -66,6 +177,12 @@ function RequestAccessModal({
     setSelectedBrandData([]);
   };
 
+  const managerList = [
+    { label: "John Doe", value: "john" },
+    { label: "Priya Singh", value: "priya" },
+    { label: "Amit Shah", value: "amit" },
+  ];
+
   return (
     <ModalWrapper
       isOpen={open}
@@ -73,24 +190,94 @@ function RequestAccessModal({
       onClose={closeModal}
       className="download-confirmation-dialog"
     >
-      <div
-        style={{
-          color: "var(--color-white)",
+      <Formik
+        initialValues={{
+          manager: null,
         }}
+        onSubmit={(values) => handleSubmit(values)}
       >
-        <p style={{ fontSize: "16px", lineHeight: "22px", fontWeight: 400 }}>
-          <FormattedMessage id="selectBrand.requestBrand" />
-        </p>
+        {({ handleSubmit, values, setFieldValue }) => (
+          <Form onSubmit={(values) => handleSubmit(values)}>
+            <div style={{ color: "var(--color-white)" }}>
+              <p
+                style={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  fontWeight: 400,
+                }}
+              >
+                <FormattedMessage id="selectBrand.requestBrand" />
+              </p>
 
-        <div className="SelectCompany_btnContainer">
-          <ButtonWrapper onClick={closeModal} variant="outlined">
-            Cancel
-          </ButtonWrapper>
-          <ButtonWrapper onClick={handleSubmit}>
-            {loading ? "Loading..." : "Send Request"}
-          </ButtonWrapper>
-        </div>
-      </div>
+              <div
+                className="form-group"
+                style={{
+                  // display: "flex",
+                  justifyContent: "around",
+                  gap: "10px",
+                }}
+              >
+                {/* COUNTRY DROPDOWN */}
+                {/* <div className="groupDate" style={{ width: "100%" }}>
+                  <SonicInputLabel htmlFor="country">Country *</SonicInputLabel>
+
+                  <ReactSelectWapper
+                    name="country"
+                    options={formatRegionCountryOptions(countryData)}
+                    components={{
+                      Option: CustomOption,
+                      DropdownIndicator: () => null,
+                      IndicatorSeparator: () => null,
+                    }}
+                    placeholder="Select country or region"
+                    styles={customStyles}
+                    isSearchable
+                    isClearable
+                    value={values.country}
+                    onChange={(selected) => setFieldValue("country", selected ?? null)}
+                  />
+                </div> */}
+
+                {/* MANAGER DROPDOWN */}
+                <div className="groupDate" style={{ width: "100%" }}>
+                  <SonicInputLabel htmlFor="manager">Manager</SonicInputLabel>
+
+                    <ReactSelectWapper
+                      name="manager"
+                      options={(managers ?? [] )?.map((m) => ({
+                        value: m.id,
+                        label: m.email,
+                      }))}
+                      components={{
+                        Option: CustomOption,
+                        DropdownIndicator: () => null,
+                        IndicatorSeparator: () => null,
+                      }}
+                      placeholder="Select Manager"
+                      styles={customStyles}
+                      isSearchable
+                      isClearable
+                      onChange={(selected) => setFieldValue("manager", selected ?? null)}
+                      value={values.manager}
+                    />
+                  </div>
+
+
+              </div>
+
+              <div className="SelectCompany_btnContainer">
+                <ButtonWrapper onClick={closeModal} variant="outlined">
+                  Cancel
+                </ButtonWrapper>
+
+                <ButtonWrapper type="submit">
+                  {loading ? "Loading..." : "Send Request"}
+                </ButtonWrapper>
+              </div>
+            </div>
+          </Form>
+        )}
+      </Formik>
     </ModalWrapper>
   );
 }
@@ -104,7 +291,7 @@ export default function SelectBrandPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [open, setOpen] = useState(false);
   const [selectedBrandData, setSelectedBrandData] = useState([]);
-
+  const [managers, setManagers] = useState();
   const { updateBrandThemeConfig } = useContext(BrandingContext);
   const { brandName: prevBrandName } = useSelector((state) => state.userMeta);
   const superBrandName = getSuperBrandName();
@@ -119,64 +306,76 @@ export default function SelectBrandPage() {
     } catch (error) {}
   };
 
-  const handleSelectBrand = async (brand) => {
-    if (brand?.status !== "active") {
-      setOpen(true);
-      setSelectedBrandData(brand);
-    } else {
-      let pathnameToRedirectAfterLogin = localStorage.getItem("pathname");
-      console.log("pathnameToRedirectAfterLogin", pathnameToRedirectAfterLogin);
-      dispatch(resetDownloadBasketMeta());
-      dispatch(resetAllTrackFilters());
-      // dispatch(resetUserMeta());
-      try {
-        document.body.classList.remove(
-          prevBrandName?.replaceAll(" ", "")?.toLowerCase()
-        );
-      } catch (error) {}
-      localStorage.setItem("brandId", brand?.brandId);
-      addBrandNameClassToBodyElement(
-        brand?.brandName?.replaceAll(" ", "")?.toLowerCase()
-      );
-      const brandAccessResponse = await AsyncService.loadData(
-        "/brand/brandAccess"
-      );
-      const brandAccess = brandAccessResponse?.data;
-      dispatch(
-        setUserMeta({
-          brandId: brand?.brandId,
-          brandName: brand?.brandName,
-          ssAccess: brandAccess?.ss_access,
-          isCSUser: brandAccess?.cs_login,
-          predictAccess: brandAccess?.predict,
-          monitorAccess: brandAccess?.monitor,
-          aimusicprovider: brandAccess?.aimusicprovider,
-        })
-      );
+const handleSelectBrand = async (brand) => {
+  if (brand?.status !== "active") {
+    setOpen(true);
+    setSelectedBrandData(brand);
+  } else {
 
-      updateBrandThemeConfig()
-        .then(() => {
-          console.log("theme loaded");
-        })
-        .catch((error) => console.log("error", error))
-        .finally(() => {
-          if (superBrandName !== brandConstants.WPP) {
-            let pathnameToRedirectAfterLogin = localStorage.getItem("pathname");
-            if (!!pathnameToRedirectAfterLogin) {
-              localStorage.removeItem("pathname");
-              // navigate(pathnameToRedirectAfterLogin);
-              navigate(pathnameToRedirectAfterLogin + "?reload=1");
+    let pathnameToRedirectAfterLogin = localStorage.getItem("pathname");
+    console.log("pathnameToRedirectAfterLogin", pathnameToRedirectAfterLogin);
+
+    dispatch(resetDownloadBasketMeta());
+    dispatch(resetAllTrackFilters());
+
+    try {
+      document.body.classList.remove(
+        prevBrandName?.replaceAll(" ", "")?.toLowerCase()
+      );
+    } catch (error) {}
+
+    localStorage.setItem("brandId", brand?.brandId);
+
+    addBrandNameClassToBodyElement(
+      brand?.brandName?.replaceAll(" ", "")?.toLowerCase()
+    );
+
+    const brandAccessResponse = await AsyncService.loadData("/brand/brandAccess");
+    const brandAccess = brandAccessResponse?.data;
+
+    dispatch(
+      setUserMeta({
+        brandId: brand?.brandId,
+        brandName: brand?.brandName,
+        ssAccess: brandAccess?.ss_access,
+        isCSUser: brandAccess?.cs_login,
+        predictAccess: brandAccess?.predict,
+        monitorAccess: brandAccess?.monitor,
+        aimusicprovider: brandAccess?.aimusicprovider,
+      })
+    );
+
+    updateBrandThemeConfig()
+      .then(() => {})
+      .catch((error) => console.log("error", error))
+      .finally(() => {
+
+        if (superBrandName !== brandConstants.WPP) {
+
+          let pathnameToRedirectAfterLogin = localStorage.getItem("pathname");
+
+          if (!!pathnameToRedirectAfterLogin) {
+            localStorage.removeItem("pathname");
+
+            // ⬇️ preserve requestId & query params
+            if (pathnameToRedirectAfterLogin.includes("?")) {
+              navigate(pathnameToRedirectAfterLogin + "&reload=1");
             } else {
-              // navigate("/");
-              navigate("/?reload=1");
-              // window.open("?reload=1", "_self");
+              navigate(pathnameToRedirectAfterLogin + "?reload=1");
             }
+
           } else {
-            navigate("/");
+            navigate("/?reload=1");
           }
-        });
-    }
-  };
+
+        } else {
+          navigate("/");
+        }
+
+      });
+  }
+};
+
 
   const getUsersBrands = () => {
     //console.log("SelectBrandPage::getUsersBrands", isAuthenticated());
@@ -229,6 +428,16 @@ export default function SelectBrandPage() {
     }, []);
   }
 
+  function getManagerDetails(brandId) {
+    AsyncService?.loadData(`brandMaster/activeManagerList?brandId=${brandId}`)
+      .then((response) => {
+        console.log(response, "response managers");
+
+        setManagers(response.data.data);
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
     <V3AuthLayout>
       <div className="select_company_page">
@@ -271,6 +480,12 @@ export default function SelectBrandPage() {
                   }}
                 >
                   {branding?.map((brand) => {
+                    const onSelect = (brand) => {
+                      console.log('select 2');
+                      handleSelectBrand(brand);
+                      getManagerDetails(brand?.brandId);
+                    };
+
                     return (
                       <Fragment key={brand?.brandId}>
                         {["active", "pending"]?.includes(brand?.status) && (
@@ -281,7 +496,7 @@ export default function SelectBrandPage() {
                                 : ""
                             }
                             brand={brand}
-                            handleSelectBrand={() => handleSelectBrand(brand)}
+                            handleSelectBrand={() => onSelect(brand)}
                           />
                         )}
                       </Fragment>
@@ -313,11 +528,21 @@ function RequestNewBrandModal({
   const [selectedBrandData, setSelectedBrandData] = useState([]);
   const [open, setOpen] = useState(false);
   const [requestOpen, setRequestOpen] = useState(false);
+  const [managers, setManagers] = useState();
 
   const handleSelectBrand = (brand) => {
     setSelectedBrandData(brand);
     setRequestOpen(true);
   };
+
+  function getManagerDetails(brandId) {
+    return AsyncService?.loadData(`brandMaster/activeManagerList?brandId=${brandId}`)
+      .then((response) => {
+        setManagers(response.data.data);
+      })
+      .catch((err) => console.log(err));
+  }
+
 
   return (
     <div className="requestNewBrandContainer">
@@ -349,6 +574,12 @@ function RequestNewBrandModal({
           }}
         >
           {existingBrands?.map((brand) => {
+            const onSelect = async (brand) => {
+              console.log('select 1');
+              await getManagerDetails(brand?.brandId);
+              handleSelectBrand(brand); 
+            };
+
             return (
               <Fragment key={brand?.brandId}>
                 {["notexits"]?.includes(brand?.status) && (
@@ -359,7 +590,7 @@ function RequestNewBrandModal({
                         : ""
                     }
                     brand={brand}
-                    handleSelectBrand={() => handleSelectBrand(brand)}
+                    handleSelectBrand={() => onSelect(brand)}
                   />
                 )}
               </Fragment>
@@ -373,6 +604,7 @@ function RequestNewBrandModal({
           getUsersBrands={getUsersBrands}
           open={requestOpen}
           setOpen={setRequestOpen}
+          managers={managers ?? [] }
         />
       </ModalWrapper>
     </div>

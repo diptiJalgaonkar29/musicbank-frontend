@@ -276,7 +276,7 @@
   background-color: var(--color-hover-light);
   border: none;
   padding: 5px 10px 5px 10px;
-  color: var(--color-text-primary, var(--color-default-white));;
+  color: var(--color-text-primary, var(--color-default-white));
   cursor: pointer;
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -302,7 +302,7 @@
   margin-left: 12px;
 }
 
-.filter-sidebar .commision_button  {
+.filter-sidebar .commision_button {
   background-color: var(--color-primary) !important;
   color: var(--color-default-white) !important;
 }

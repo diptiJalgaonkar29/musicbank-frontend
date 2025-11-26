@@ -3,7 +3,10 @@
   padding: 0px 12px 0px 16px;
   /* border: 1px solid #444; */
   border-radius: 40px;
-  background-color: var(--color-default-card, var(--color-hover-disable)) !important;
+  background-color: var(
+    --color-default-card,
+    var(--color-hover-disable)
+  ) !important;
   color: var(--color-text-description);
   width: 100%;
   box-sizing: border-box;
@@ -12,8 +15,8 @@
   align-items: center;
   display: flex;
 }
-.SmartSpotifyInputBox  .smart-input-wrapper:focus-within {
-  border:  1px solid var(--color-default-border);
+.SmartSpotifyInputBox .smart-input-wrapper:focus-within {
+  border: 1px solid var(--color-default-border);
 }
 
 .SmartSpotifyInputBox .smart-input-wrapper.drag-active {
@@ -133,7 +136,7 @@
   background-color: var(--color-hover-disable);
 }
 
-.SmartSpotifyInputBox .sptactive {  
+.SmartSpotifyInputBox .sptactive {
   background-color: var(--color-text-description, var(--color-hover-light));
 }
 

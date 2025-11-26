@@ -1,0 +1,52 @@
+.ra-container {
+  background: var(--color-black);
+  min-height: 100vh;
+  padding: 32px;
+  color: var(--color-white);
+}
+
+.ra-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.ra-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--color-secondary);
+  width: 40%;
+}
+.ra-card-container{
+  display: flex;
+  justify-content: center;
+}
+.ra-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.label {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ra-button-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.ra-loader {
+  color: white;
+  padding: 20px;
+}

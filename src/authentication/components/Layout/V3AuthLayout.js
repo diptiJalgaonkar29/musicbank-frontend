@@ -97,6 +97,7 @@ const styles = () => ({
   },
   login_right_img: {
     width: "360px",
+    marginBottom: "10%",
     ["@media (max-width: 1600px)"]: {
       width: "300px",
     },
@@ -128,7 +129,7 @@ const styles = () => ({
     width: "135px",
     borderRadius: "50%",
     marginLeft: "auto",
-    display:'none',
+    display: "none",
     ["@media (max-width: 820px)"]: {
       height: "100px",
       width: "100px",
@@ -139,7 +140,7 @@ const styles = () => ({
     width: "100%",
     height: "50%",
     borderTopLeftRadius: "135px",
-    display:'none'
+    display: "none",
   },
   header: {
     color: "var(--color-white)",
@@ -224,7 +225,6 @@ class V3AuthLayout extends Component {
             </main>
           </div>
           <div className={`${classes.login_right} V3AuthLayout_right`}>
-
             <div
               className={`${classes.logo_container} login_right_img_logo_container`}
               style={{
@@ -234,13 +234,17 @@ class V3AuthLayout extends Component {
               }}
             >
               <Tooltip
-                title={getSuperBrandName() === "shell" ? "Imagined with AI. Young Asian woman in yellow jumper wearing headphones and speaking into a microphone." : null}
+                title={
+                  getSuperBrandName() === "shell"
+                    ? "Imagined with AI. Young Asian woman in yellow jumper wearing headphones and speaking into a microphone."
+                    : null
+                }
                 arrow
                 // open
                 componentsProps={{
                   tooltip: {
                     sx: {
-                      fontSize: '14px',
+                      fontSize: "14px",
                     },
                   },
                 }}
@@ -278,7 +282,7 @@ class V3AuthLayout extends Component {
                   this.showFooter();
                 }}
               /> */}
-      </div >
+      </div>
     );
   }
 }

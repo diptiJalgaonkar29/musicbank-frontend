@@ -86,7 +86,7 @@ class AppTitleProvider extends Component {
         pageTitle = "Download Form";
         break;
       case "#/credit-request/":
-        pageTitle = "Credit Request";
+        pageTitle = "Token Request";
         break;
       default:
         pageTitle = "";

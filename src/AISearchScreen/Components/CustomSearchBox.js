@@ -482,10 +482,17 @@ const CustomSearchBox = ({
                 setBaseFilter();
               },
             },
-            (AIquery?.length > 10 || selectedFiles.length > 0) && {
+            (AIquery?.length >= 0 || selectedFiles.length > 0) && {
               label: "Send",
               icon: <IconComponent />,
-              onClick: () => {
+              disabled: AIquery?.length === 0,
+              onClick: (e) => {
+                if (AIquery?.length === 0) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  return;
+                }
+
                 setSuggestions([]);
                 handleUploadVideoBriefToTXt();
               },

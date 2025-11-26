@@ -49,6 +49,7 @@ import { ReactComponent as OnDemandTrackIcon } from "../../../../static/OnDemand
 import { ReactComponent as SimilaritySearch } from "../../../../static/SimilaritySearch.svg";
 import { ReactComponent as SonicPauseIcon } from "../../../../static/bordered-pause.svg";
 import { ReactComponent as SonicPlayIcon } from "../../../../static/bordered-play.svg";
+import { ReactComponent as CoinIcon } from "../../../../static/CoinFlattenWpp.svg";
 const WPPUpArrowIcon = () => {
   return <WppIconChevron direction="up"></WppIconChevron>;
 };
@@ -123,4 +124,5 @@ export default {
   LibraryTrack: LibraryTrackIcon,
   OnDemandTrack: OnDemandTrackIcon,
   MusicIcon: WppIconMusic,
+  CoinIcon:CoinIcon
 };

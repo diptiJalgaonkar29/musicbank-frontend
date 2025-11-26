@@ -1,0 +1,44 @@
+
+.dashboardContainer {
+  padding: 30px;
+  background-color: #0d1117; /* Dark background */
+  min-height: 100vh;
+  color: #c9d1d9; /* Light text color */
+}
+
+/* --- Grid Layout --- */
+
+/* --- Individual Card Styling --- */
+.monitoring-report-card {
+  background-color: var(--color-bg-light);
+  padding: clamp(15px, 3vw, 30px);
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  min-height: 100px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid transparent;
+  position: relative;
+  cursor: pointer;
+}
+.monitoring-report-card:hover{
+  border-color: var(--color-primary);
+}
+
+.monitoring-report-card:hover {
+  /* background-color: var(--color-canvas-light) Slightly lighter on hover */
+}
+
+.monitoring-report-card-title {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.monitoring-report-card-last-opened {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  color: #8b949e; /* Muted text color */
+  margin-bottom: 0;
+}

@@ -124,6 +124,7 @@ const DonutChart = ({
           padding: 14,
           boxWidth: 10,
         },
+        onClick: (e) => e.stopPropagation(),
       },
       tooltip: {
         callbacks: {

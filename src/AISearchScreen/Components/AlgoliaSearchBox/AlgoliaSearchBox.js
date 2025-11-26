@@ -45,7 +45,6 @@ import { SET_SIMIL_QUERY } from "../../../redux/constants/actionTypes";
 import getSuperBrandId from "../../../common/utils/getSuperBrandId";
 import getSuperBrandName from "../../../common/utils/getSuperBrandName";
 import { brandConstants } from "../../../common/utils/brandConstants";
-import { logEvent, ADD_TO_PLAYLIST } from "../../../common/utils/logEvent";
 
 const SORT_INDEX_MAP = {
   TrackNameAZ: "track_name_asc",
@@ -540,10 +539,6 @@ const AlgoliaSearchBoxInner = ({
           return String(match.split(":")[1]);
         }
       }
-
-      return track?.sonichub_track_id != null
-        ? String(track.sonichub_track_id)
-        : "";
     }
   };
 
@@ -618,9 +613,6 @@ const AlgoliaSearchBoxInner = ({
             return String(match.split(":")[1]);
           }
         }
-        return track?.sonichub_track_id != null
-          ? String(track.sonichub_track_id)
-          : "";
       }
     };
 
@@ -710,9 +702,6 @@ const AlgoliaSearchBoxInner = ({
             return String(match.split(":")[1]);
           }
         }
-        return track?.sonichub_track_id != null
-          ? String(track.sonichub_track_id)
-          : "";
       }
     };
 
@@ -783,9 +772,6 @@ const AlgoliaSearchBoxInner = ({
             return String(match.split(":")[1]);
           }
         }
-        return track?.sonichub_track_id != null
-          ? String(track.sonichub_track_id)
-          : "";
       }
     };
 
@@ -918,7 +904,6 @@ const AlgoliaSearchBoxInner = ({
             <button
               className="filter-toggle-btn"
               onClick={() => {
-                console.log("trackData:", track);
                 console.log("toggle clicked", isFilterOpen);
                 setIsFilterOpen(!isFilterOpen);
               }}
@@ -977,17 +962,6 @@ const AlgoliaSearchBoxInner = ({
                             index={similarityTrack.id}
                             waveformDataProp={similarityTrack.waveformData}
                             playFromPicture={similarityTrack.clickedOnImage}
-                            trackdetails_objectID={
-                              similarityTrack.trackdetails_objectID
-                            }
-                            moodTags={similarityTrack.ampMoodTags}
-                            moodValues={
-                              similarityTrack.amp_all_mood_tags?.tag_values
-                            }
-                            genreTags={similarityTrack.genreTags}
-                            genreValues={
-                              similarityTrack.amp_genre_tags?.tag_values
-                            }
                             type="Tc"
                             active={
                               playingIndexFromStore === similarityTrack.id
@@ -1229,8 +1203,7 @@ const AlgoliaSearchBoxInner = ({
                       <ButtonWrapper
                         variant="filledSecondary"
                         className="searchHeadBtn"
-                        onClick={(e) => {
-                          console.log("Add to project");
+                        onClick={() => {
                           setCreatePredictProject(false);
                           setAddToProjectOpen(true);
                         }}
@@ -1243,15 +1216,6 @@ const AlgoliaSearchBoxInner = ({
                         onClick={() => {
                           setCreatePredictProject(false);
                           setAddToPlaylistOpen(true);
-                          logEvent({
-                            eventType: ADD_TO_PLAYLIST, // or whatever your event type is
-                            moodName: null,
-                            moodValue: null,
-                            genreName: null,
-                            genreValue: null,
-                            pageName:
-                              window.location.hash.replace("#/", "") || "",
-                          });
                         }}
                       >
                         Add to Playlist

@@ -1,7 +1,7 @@
 .navitems__menu_container {
   display: flex;
   justify-content: space-between;
-  padding: 0 calc(3vw + 7px) 0 0px;
+  /* padding: 0 calc(3vw + 7px) 0 0px; */
   height: 80px;
 }
 
@@ -27,7 +27,6 @@
 #navitems .navitem:last-child .WebNavbar--anchor {
   padding-right: 0 !important;
 }
-
 
 .sonic-profile-dialog .sonic-profile-wrapper {
   width: 1200px !important;

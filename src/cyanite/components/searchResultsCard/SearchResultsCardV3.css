@@ -33,8 +33,13 @@
 .recent-tracksv3 .search_results_card_container:hover {
   transform: translateY(-2px);
 }
-.recent-tracksv3 .search_results_card_container:hover .search_results_card_title {
-  color: var(--color-texthighlight, var(--color-primary));   /* or any color you want */
+.recent-tracksv3
+  .search_results_card_container:hover
+  .search_results_card_title {
+  color: var(
+    --color-texthighlight,
+    var(--color-primary)
+  ); /* or any color you want */
 }
 
 /* Left Image */

@@ -19,42 +19,42 @@ export default function CreditRequest() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [creditRequest, setCreditRequest] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [internalUserList, setInternalUserList] = useState([]);
   const [brandType, setBrandType] = useState(null);
 
-  const handleSubmit = useCallback((details, inbultProps) => {
-    const data = {
-      creditRequested: details?.credits || null,
-      creditRequestedProject: details?.project || null,
-      description: details?.description || null,
-      requestingUser: details?.requestor?.value || null,
-    };
+  // const handleSubmit = useCallback((details, inbultProps) => {
+  //   const data = {
+  //     creditRequested: details?.credits || null,
+  //     creditRequestedProject: details?.project || null,
+  //     description: details?.description || null,
+  //     requestingUser: details?.requestor?.value || null,
+  //   };
 
-    AsyncService.postData("/creditRequest/sendRequestForCredit", data)
-      .then((response) => {
-        inbultProps?.resetForm();
-        dispatch(showSuccess("Request sent successfully!"));
-      })
-      .catch((error) => {
-        console.log(error);
-        dispatch(showError("Something went wrong!"));
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
+  //   AsyncService.postData("/creditRequest/sendRequestForCredit", data)
+  //     .then((response) => {
+  //       inbultProps?.resetForm();
+  //       dispatch(showSuccess("Request sent successfully!"));
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       dispatch(showError("Something went wrong!"));
+  //     })
+  //     .finally(() => {
+  //       setLoading(false);
+  //     });
+  // }, []);
 
   const validationSchema = Yup.object().shape({
-    requestor: Yup.object()?.when([], {
-      is: () => brandType !== 1,
-      then: () => Yup.object().required("Requestor is required"),
-      otherwise: () => Yup.object().notRequired(),
-    }),
+    // requestor: Yup.object()?.when([], {
+    //   is: () => brandType !== 1,
+    //   then: () => Yup.object().required("Requestor is required"),
+    //   otherwise: () => Yup.object().notRequired(),
+    // }),
     credits: Yup.number()
       .min(0, "Tokens must be at least 0")
       .required("Token is required"),
-    project: Yup.string().trim().required("Project is required"),
+    // project: Yup.string().trim().required("Project is required"),
   });
 
   const handleGoBack = useCallback(() => {
@@ -113,6 +113,34 @@ export default function CreditRequest() {
     getCreditInfoByCompanyOrBrand();
   }, []);
 
+
+  const handleSubmit = useCallback((details, inbultProps) => {
+    const data = {
+      creditRequest: details?.credits || null,
+      creditRequestedProject: details?.project || null,
+      description: details?.description || null,
+      requestingUser: details?.requestor?.value || null,
+    };
+
+    console.log(data,'data');
+    
+
+    AsyncService.postData("/credit/userCreditRequest", data)
+      .then((response) => {
+        console.log(response,'response');
+        
+        inbultProps?.resetForm();
+        dispatch(showSuccess("Request sent successfully!"));
+      })
+      .catch((error) => {
+        console.log(error);
+        dispatch(showError("Something went wrong!"));
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+  
   return (
     <MainLayout>
       {loading ? (
@@ -124,7 +152,7 @@ export default function CreditRequest() {
           <div className="credit-request-container">
             <div className="credits-header">
               <h1>
-                Your Tokens:{" "}
+                Brand Tokens:{" "}
                 <span className="credits-value">{creditRequest || 0}</span>
               </h1>
             </div>
@@ -140,10 +168,11 @@ export default function CreditRequest() {
               validationSchema={validationSchema}
             >
               {(props) => {
-                const { dirty, isValid, handleSubmit, isSubmitting } = props;
+                const {values, dirty, isValid, handleSubmit, isSubmitting } = props;
+                  const requestedCredits = Number(values.credits || 0);
                 return (
                   <form onSubmit={handleSubmit}>
-                    {brandType !== 1 && (
+                    {/* {brandType !== 1 && (
                       <div className="form-group">
                         <label>Credit Requestor:</label>
                         <Field
@@ -160,7 +189,7 @@ export default function CreditRequest() {
                           className="credit-request-error"
                         />
                       </div>
-                    )}
+                    )} */}
                     <div className="form-group">
                       <label>Tokens to request:</label>
                       <Field
@@ -218,7 +247,12 @@ export default function CreditRequest() {
                       </ButtonWrapper>
                       <ButtonWrapper
                         type="submit"
-                        disabled={isSubmitting || !isValid || !dirty}
+                        disabled={
+                        isSubmitting || 
+                        !isValid || 
+                        !dirty || 
+                        requestedCredits > creditRequest
+                      }
                       >
                         {loading ? "Submitting" : "Request Tokens"}
                       </ButtonWrapper>

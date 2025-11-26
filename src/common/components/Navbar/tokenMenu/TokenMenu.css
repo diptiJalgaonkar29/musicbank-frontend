@@ -1,0 +1,82 @@
+.token_popup_container {
+  background: var(--color-black);
+  /* backdrop-filter: blur(200px); */
+  padding: 16px;
+  width: 230px;
+  border-radius: 14px;
+  color: var(--color-white);
+  box-shadow: var(--Paper-shadow);
+  opacity: 1;
+}
+
+.token_header {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  gap: 6px;
+}
+
+.token_row {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.token_value {
+  font-weight: 600;
+}
+
+.token_progress_bar {
+  height: 6px;
+  width: 100%;
+  background: grey;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.token_progress_fill {
+  height: 100%;
+}
+
+.token_refill_btn {
+  text-align: right;
+  margin-top: 12px;
+  color: var(--color-primary);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: clamp(12px, 1vw, 18px);
+
+}
+
+#token_menu div ,#token_menu .MuiList-root.MuiMenu-list{
+    border-color: transparent !important;
+}
+.token-button-wrapper{   
+    gap: 8px;
+    border: 1px solid var(--color-white);
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    color: var(--color-white);
+    font-size: 1.6rem;
+    padding: 0 2.5rem;
+    height: 4rem;
+    cursor: pointer;
+    font-family: var(--font-primary) !important;
+    text-transform: capitalize;
+}
+#token_menu .MuiPaper-root {
+    background: transparent !important;
+    box-shadow: none;
+}
+.token_popup_container .token_header svg, .token-button-wrapper svg{
+    width: 20px;
+    height: 20px;
+}

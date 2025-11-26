@@ -79,7 +79,7 @@ input {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   /* background-color: #D9D9D9; */
-    background-color: var(--color-scroller, var(--color-text-description));
+  background-color: var(--color-scroller, var(--color-text-description));
   border-radius: 18px;
 }
 
@@ -161,6 +161,6 @@ input {
   color: var(--color-primary);
 }
 
-body>iframe[style*="z-index: 2147483647"] {
+body > iframe[style*="z-index: 2147483647"] {
   display: none;
 }

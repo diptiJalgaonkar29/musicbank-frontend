@@ -1,0 +1,204 @@
+
+
+/* --- Main Header Structure --- */
+.statistics-header {
+    color: white !important;
+    /* border-bottom: 1px solid ; */
+}
+
+/* --- Left Section Styles --- */
+.header-left {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* max-width: 60%; */
+}
+
+.back-link {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.back-link .back-button-text{
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    margin: 0;
+}
+.title-group {
+    display: flex;
+    flex-direction: column;
+}
+.title-group .title-sub-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;  
+}
+
+.title-group .title-sub-group .main-title {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.title-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.description-text {
+    font-size: clamp(0.9rem, 1.3vw, 1.3rem);
+    /* color: var(--secondary-text); */
+    margin: 5px 0 0 0;
+}
+
+/* --- Right Section Styles (Utility & Date Pickers) --- */
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+    margin-top: 10px; /* Aligns with the title group */
+}
+
+.utility-icons {
+    display: flex;
+    gap: 15px;
+    color: var(--secondary-text);
+}
+
+.utility-icons span {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.utility-icons span:hover {
+    /* color: var(--accent-color); */
+}
+
+.date-picker-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Date Range Button (Custom Dropdown) */
+.date-range-button {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Date Input Styling */
+.date-input-wrapper {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid var(--border-color); */
+    border-radius: 4px;
+    padding: 0 10px;
+    height: 38px;
+}
+
+.date-input-wrapper label {
+    font-size: 0.8rem;
+    color: white;
+    margin-right: 5px;
+}
+
+.date-input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    width: 120px; /* Ensure date field fits content */
+}
+
+/* Remove default date picker icon/calendar button styles for cross-browser consistency */
+.date-input::-webkit-calendar-picker-indicator {
+    /* filter: invert(1); */
+}
+
+.statistics-header .icon-download{
+    fill: #a0a0a0;
+}
+.statistics-header .utility-icons svg{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--color-bg-light);
+    height: 20px;
+    width: 20px;
+}
+.statistics-header .utility-icons svg:hover {
+    background-color: var(--secondary-text);
+}
+.date-input-container {
+    display: flex;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.date-input-wrapper .react-datepicker__input-container input{
+    border: none;
+    outline: 0;
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+
+
+.menu-divider {
+  height: 1px;
+  width: 100%;
+  background: #2a2a2a;
+  margin: 8px 0;
+}
+
+.menu-date-range {
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.menu-date-range:hover {
+  background: #1f1f1f;
+}
+
+.menu-date-label {
+  color: #bfbfbf;
+}
+
+.menu-date-value {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+
+.date-picker-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.open-menu-btn {
+  padding: 8px 12px;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}

@@ -11,7 +11,7 @@ import loadConfigJson from "../../common/utils/loadConfigJson";
 import { setConfigJson } from "../../redux/actions/configJsonActions/configJsonActions";
 import { brandConstants } from "../../common/utils/brandConstants";
 import { createTheme } from "@wppopen/components-library";
-import "@wppopen/components-library/dist/platform-ui-kit/wpp-theme.css";
+//import "@wppopen/components-library/dist/platform-ui-kit/wpp-theme.css";
 
 import { store } from "../../redux/stores/store";
 //import { setConfigJson } from "../../redux/actions/configJsonActions/configJsonActions";
@@ -31,10 +31,10 @@ const BrandingProviderWPP = ({ children }) => {
 
   let shouldUseOsContext =
     superBrandName === brandConstants.WPP &&
-      process.env.NODE_ENV === "production" &&
-      osContext !== null &&
-      osContext !== undefined &&
-      osToken !== null
+    process.env.NODE_ENV === "production" &&
+    osContext !== null &&
+    osContext !== undefined &&
+    osToken !== null
       ? true
       : false;
 
@@ -51,35 +51,23 @@ const BrandingProviderWPP = ({ children }) => {
       if (shouldUseOsContext) {
         let themeObj = getWPPThemeJson(osContext);
         console.log("BrandingProviderWPP::themeObj", themeObj);
-          console.log("##WPP wppTheme osContext", osContext);
+        console.log("##WPP wppTheme osContext", osContext);
 
-        try {          
+        try {
           const wppTheme = createTheme(osContext?.theme);
           console.log("##WPP wppTheme JSON", wppTheme);
-
         } catch (error) {
           console.log("##WPP wppTheme Catch ", error);
         }
 
-         try {          
+        try {
           wppThemeOriginal = createTheme(osContext?.originalTheme);
           console.log("##WPP wppThemeOriginal JSON", wppThemeOriginal);
-
         } catch (error) {
           console.log("##WPP wppThemeOriginal Catch ", error);
         }
 
-        /* try {
-          const WPPThemeData = createTheme(osContext?.themeData);
-          console.log("##WPP WPPThemeData JSON", WPPThemeData);
-        } catch (error) {
-          console.log("##WPP WPPThemeData Catch ", error);
-        } */
-
-
-
-        //themeResult = themeObj;
-        themeResult = {... themeObj, ...wppThemeOriginal}
+        themeResult = { ...themeObj, ...wppThemeOriginal };
       } else {
         themeResult = result[0]?.theme;
         console.log("BrandingProviderWPP::themeObj else", themeResult);
@@ -102,7 +90,7 @@ const BrandingProviderWPP = ({ children }) => {
         jsonConfig
       );
     });
-  }, []); // Empty dependency array means this effect runs once on mount
+  }, [shouldUseOsContext]); // Empty dependency array means this effect runs once on mount
 
   const updateBrandThemeConfig = async () => {
     setIsLoading(true);
@@ -114,11 +102,28 @@ const BrandingProviderWPP = ({ children }) => {
       const configResult = result[0];
       const messagesResult = result[1];
       let themeResult;
+      let wppThemeOriginal;
 
       if (shouldUseOsContext) {
         let themeObj = getWPPThemeJson(osContext);
         console.log("BrandingProviderWPP::themeObj", themeObj);
         themeResult = themeObj;
+        try {
+          const wppTheme = createTheme(osContext?.theme);
+          console.log("##WPP wppTheme JSON", wppTheme);
+        } catch (error) {
+          console.log("##WPP wppTheme Catch ", error);
+        }
+
+        try {
+          wppThemeOriginal = createTheme(osContext?.originalTheme);
+          console.log("##WPP wppThemeOriginal JSON", wppThemeOriginal);
+        } catch (error) {
+          console.log("##WPP wppThemeOriginal Catch ", error);
+        }
+        themeResult = { ...themeObj, ...wppThemeOriginal };
+
+        console.log("##themeResult", themeResult);
       } else {
         themeResult = result[0]?.theme;
         console.log("BrandingProviderWPP::themeObj else", themeResult);

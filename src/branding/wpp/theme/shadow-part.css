@@ -1,24 +1,24 @@
-:root {
+/* :root {
   --wpp-button-secondary-icon-color-disabled: var(--color-alternative);
   --wpp-button-secondary-bg-color-active: var(--color-primary-600);
-}
+} */
 
-.wpp-button::part(button) {
+/* .wpp-button::part(button) {
   background-color: var(--color-primary);
-}
+} */
 
-.WPPButton-theme .wpp-button::part(button),
+/* .WPPButton-theme .wpp-button::part(button),
 .WPPButton-Normal .wpp-button::part(button) {
   background-color: var(--color-primary);
 }
 
 .WPPButton-Normal .wpp-button::part(button):hover {
   background-color: #0765f4;
-}
-.wpp-icon::part(icon) {
+} */
+/* .wpp-icon::part(icon) {
   color: var(--color-primary);
 }
 
 .wpp-action-button::part(wpp-icon) {
   color: var(--color-primary);
-}
+} */

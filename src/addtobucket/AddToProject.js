@@ -91,7 +91,7 @@ const customStyles = {
     ...base,
     backgroundColor: "var(--color-bg)",
     borderColor: "var(--color-white)",
-    borderRadius: "23px",
+    borderRadius: "8px",
     padding: "6px",
     minHeight: "44px",
     color: "var(--color-white)",

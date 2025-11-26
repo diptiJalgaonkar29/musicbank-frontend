@@ -17,7 +17,10 @@
 }
 .AISearchScreenContainer .AISearchButtons {
   display: flex;
-  background-color: var(--color-default-card, var(--color-hover-disable)) !important;
+  background-color: var(
+    --color-default-card,
+    var(--color-hover-disable)
+  ) !important;
   padding: 4px;
   border-radius: 40px;
   /* gap: 10px; */

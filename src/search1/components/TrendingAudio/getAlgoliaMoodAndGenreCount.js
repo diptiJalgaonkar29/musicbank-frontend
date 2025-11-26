@@ -5,13 +5,8 @@ import { brandConstants } from "../../../common/utils/brandConstants";
 import AsyncService from "../../../networking/services/AsyncService";
 
 const getAlgoliaMoodAndGenreCount = async (config) => {
-  // config must be passed from component where BrandingContext is available
-
   const hideMoodTags = window.globalConfig?.HIDE_MOOD_TAGS || [];
   const hideGenreTags = window.globalConfig?.HIDE_GENRE_TAGS || [];
-
-  console.log("hideMoodTags", hideMoodTags);
-  console.log("hideGenreTags", hideGenreTags);
 
   try {
     const client = algoliasearch(
@@ -21,70 +16,146 @@ const getAlgoliaMoodAndGenreCount = async (config) => {
 
     const index = client.initIndex("tracksData_Search");
 
-    const brandId = config?.brandId || localStorage.getItem("brandId");
+    // Fetch top downloaded IDs
+    const topAlgoliaIdsRes = await AsyncService.loadData(
+      "/project/getTopDownloadedTracks"
+    );
 
-    let serverName = "";
-    let baseFilter;
-    const superBrandId = getSuperBrandId();
-    //console.log("Using Algolia index:", indexName, brandId);
-    if (getSuperBrandName() === brandConstants.WPP) {
-      serverName = config?.modules?.ServerName;
-    } else {
-      serverName = window.globalConfig?.SERVER_NAME;
+    const topAlgoliaIds = topAlgoliaIdsRes?.data
+      ?.flatMap((item) => item?.objectId || [])
+      ?.filter(Boolean);
+
+    if (!topAlgoliaIds.length) {
+      return { tag_amp_mainmood_ids: {}, tag_genre: {}, isLoading: false };
     }
 
-    if (serverName === "sh2Dev" || serverName === "sh2Wpp") {
-      baseFilter = `analysis_status=1 AND facet_brand_assigned:"${serverName}-${superBrandId}_${brandId}:true" AND facet_isTrackActive:"${serverName}-${superBrandId}_${brandId}:true" AND facet_trackStatus:"${serverName}-${superBrandId}_${brandId}:true"`;
-    } else {
-      baseFilter = `analysis_status=1 AND brands_assigned=${brandId} AND trackStatus:true AND sonichub_track_id>0`;
-    }
+    // Build OR filter string
+    const filterString = topAlgoliaIds
+      .map((id) => `objectID:${id}`)
+      .join(" OR ");
+
     const { hits } = await index.search("", {
-      hitsPerPage: 50,
-      filters: baseFilter,
+      filters: filterString,
+      hitsPerPage: topAlgoliaIds.length,
     });
-
-    console.log("Algolia hits:", hits);
 
     if (!hits.length) {
       return { tag_amp_mainmood_ids: {}, tag_genre: {}, isLoading: false };
     }
 
-    const moodCounts = {};
-    const genreCounts = {};
+    // ---------- SEPARATE MOOD & GENRE LOGIC ----------
+    const moodTagCounts = {};
+    const genreTagCounts = {};
 
     hits.forEach((track) => {
       const moods = track?.amp_all_mood_tags;
       const genres = track?.amp_genre_tags;
 
+      // mood tags
       if (moods?.tag_names && moods?.tag_values) {
         moods.tag_names.forEach((name, i) => {
+          const val = moods.tag_values[i] || 0;
           if (!hideMoodTags.includes(name)) {
-            moodCounts[name] =
-              (moodCounts[name] || 0) + (moods.tag_values[i] || 0);
+            if (!moodTagCounts[name]) {
+              moodTagCounts[name] = { value: 0, count: 0 };
+            }
+            moodTagCounts[name].value += val;
+            moodTagCounts[name].count += 1;
           }
         });
       }
 
+      // genre tags
       if (genres?.tag_names && genres?.tag_values) {
         genres.tag_names.forEach((name, i) => {
+          const val = genres.tag_values[i] || 0;
           if (!hideGenreTags.includes(name)) {
-            genreCounts[name] =
-              (genreCounts[name] || 0) + (genres.tag_values[i] || 0);
+            if (!genreTagCounts[name]) {
+              genreTagCounts[name] = { value: 0, count: 0 };
+            }
+            genreTagCounts[name].value += val;
+            genreTagCounts[name].count += 1;
           }
         });
       }
     });
 
-    const processTop5 = (counts) =>
-      Object.fromEntries(
-        Object.entries(counts)
-          .sort((a, b) => b[1] - a[1])
-          .slice(0, 5)
-      );
+    // Convert objects → sorted arrays
+    const finalSummedMoodTags = Object.entries(moodTagCounts)
+      .map(([name, { value, count }]) => ({ name, value, count }))
+      .sort((a, b) => b.value - a.value);
+
+    const finalSummedGenreTags = Object.entries(genreTagCounts)
+      .map(([name, { value, count }]) => ({ name, value, count }))
+      .sort((a, b) => b.value - a.value);
+
+    // --- SUM VALUES ---
+    const moodTotalValue = finalSummedMoodTags.reduce(
+      (sum, item) => sum + item.value,
+      0
+    );
+    const genreTotalValue = finalSummedGenreTags.reduce(
+      (sum, item) => sum + item.value,
+      0
+    );
+
+    const extractTop3Tags = (hits) => {
+      return hits.map((hit) => {
+        const genre = hit.amp_genre_tags || {};
+        const Mood = hit.amp_all_mood_tags || {};
+
+        // convert into array of objects: [{name, value}, ...]
+        const genreList = (genre.tag_names || []).map((name, i) => ({
+          name,
+          value: Number(genre.tag_values[i]) || 0,
+        }));
+
+        const instrumentList = (Mood.tag_names || []).map((name, i) => ({
+          name,
+          value: Mood.tag_values[i] || 0,
+        }));
+
+        // sort + slice top 3
+        const topGenre = genreList
+          .sort((a, b) => b.value - a.value)
+          .slice(0, 3);
+        const topMood = instrumentList
+          .sort((a, b) => b.value - a.value)
+          .slice(0, 3);
+
+        return {
+          objectID: hit.objectID,
+          topGenre,
+          topMood,
+        };
+      });
+    };
+    console.log(extractTop3Tags(hits), "extractTop3Tags");
+
+    console.log("Mood Tags Total Value:", moodTotalValue);
+    console.log("Genre Tags Total Value:", genreTotalValue);
+
+    console.log("#finalSummedMoodTags", finalSummedMoodTags);
+    console.log("#finalSummedGenreTags", finalSummedGenreTags);
+
+    // ---------- TOP 4 + OTHER ----------
+    const processTop4WithOther = (tagArray) => {
+      const sorted = tagArray.sort((a, b) => b.value - a.value);
+
+      const top4 = sorted.slice(0, 4);
+      const remaining = sorted.slice(4);
+
+      const otherTotal = remaining.reduce((sum, t) => sum + t.value, 0);
+
+      const result = Object.fromEntries(top4.map((t) => [t.name, t.value]));
+      if (otherTotal > 0) result["Other"] = otherTotal;
+
+      return result;
+    };
 
     return {
-      tag_amp_mainmood_ids: processTop5(moodCounts),
-      tag_genre: processTop5(genreCounts),
+      tag_amp_mainmood_ids: processTop4WithOther(finalSummedMoodTags),
+      tag_genre: processTop4WithOther(finalSummedGenreTags),
       isLoading: false,
     };
   } catch (error) {

@@ -1,0 +1,33 @@
+.monitor-header h1 {
+  font-size: clamp(25px, 2.8vw, 45px);
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.monitor-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 20px;
+}
+
+/* Mobile: stack into one column */
+@media (max-width: 768px) {
+  .monitor-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.monitor-content .top-10-genre-grid,
+.monitor-content .top-10-moods-grid {
+  background:  var(--color-bg-light);
+  /* border-radius: 14px; */
+  /* min-height: 200px; adjustable */
+}
+
+.monitoring-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+  gap: clamp(20px,3vw,40px); /* Space between cards */
+  margin-bottom: 10rem;
+}
+

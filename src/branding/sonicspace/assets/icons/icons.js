@@ -44,7 +44,19 @@ import { ReactComponent as OnDemandTrackIcon } from "../../../../static/OnDemand
 import { ReactComponent as AITrackIconSH2 } from "../../../../static/ai_track_icon.svg";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
-
+import { ReactComponent as CustomIcon } from "../../../../static/CustomTracks.svg";
+// import { ReactComponent as OnRequestIcon } from "../../../../static/on_request_icon.svg";
+import { ReactComponent as EventIcon } from "../../../../static/eventSounds.svg";
+import { ReactComponent as SoundscapeIcon } from "../../../../static/SoundScapes.svg";
+import { ReactComponent as UxUiIcon } from "../../../../static/UXUISounds.svg";
+import { ReactComponent as SonicIcon } from "../../../../static/SonicLogoes.svg";
+import { ReactComponent as SoundEffectsIcon } from "../../../../static/soundEffects.svg";
+import { ReactComponent as PodcastIcon } from "../../../../static/PodcastSounds.svg";
+import { ReactComponent as LibraryMonitorIcon } from "../../../../static/LibraryTracks.svg";
+import { ReactComponent as BrandedTrackMonitorIcon } from "../../../../static/BrandedTracks.svg";
+import { ReactComponent as OnDemandTrackMonitorIcon } from "../../../../static/onDemandMonitor.svg";
+import { ReactComponent as AIMonitorIcon } from "../../../../static/AIMonitorIcon.svg";
+import { ReactComponent as CoinIcon } from "../../../../static/CoinFlattenSonic.svg";
 import Add from "@mui/icons-material/Add";
 import { MdQueue } from "react-icons/md";
 import { BsSuitHeartFill, BsSuitHeart } from "react-icons/bs";
@@ -152,4 +164,17 @@ export default {
   AiTrack: AITrackIcon,
   LibraryTrack: LibraryTrackIcon,
   OnDemandTrack: OnDemandTrackIcon,
+  CustomIcon: CustomIcon,
+  // OnRequestIcon: OnRequestIcon,
+  EventIcon: EventIcon, 
+  SoundscapeIcon: SoundscapeIcon, 
+  UxUiIcon: UxUiIcon,
+  SonicIcon: SonicIcon,
+  SoundEffectsIcon: SoundEffectsIcon,
+  PodcastIcon: PodcastIcon,
+  LibraryMonitorIcon: LibraryMonitorIcon,
+  BrandedTrackMonitorIcon: BrandedTrackMonitorIcon,
+  OnDemandTrackMonitorIcon: OnDemandTrackMonitorIcon,
+  AIMonitorIcon: AIMonitorIcon,
+  CoinIcon:CoinIcon
 };

@@ -29,6 +29,7 @@ import {
 } from "../../../redux/actions/notificationActions";
 import AsyncService from '../../../networking/services/AsyncService';
 import SonicProfile from '../SonicProfile/SonicProfile';
+import TokenMenu from './tokenMenu/TokenMenu';
 
 let dummy = {
   msg: "0",
@@ -401,7 +402,9 @@ class NavItemsV2 extends Component {
               <FormattedMessage id="navbar.navItems.Predict"></FormattedMessage>
             </NavItem>
           )}
-          {monitorAccess && (
+
+          
+          {/* {monitorAccess && (
             <div
               style={{
                 cursor: !!window.globalConfig?.MONITOR_BASE_URL
@@ -420,13 +423,21 @@ class NavItemsV2 extends Component {
             >
               <FormattedMessage id="navbar.navItems.Monitor"></FormattedMessage>
             </div>
+          )} */}
+          
+          {monitorAccess && (
+            <NavItem link="/monitor/" dontActivate={false}>
+              <FormattedMessage id="navbar.navItems.Monitor"></FormattedMessage>
+            </NavItem>
           )}
+
           {/* <NavItem link="/ai_search" dontActivate={false}>
             <FormattedMessage id="navbar.navItems.AISearch"></FormattedMessage>
           </NavItem> */}
 
         </ul>
         <ul id="navitems" className="navitems__menu_right">
+          <TokenMenu />
           {
             showSonicProfileMenu && (
               <li className="navitem">

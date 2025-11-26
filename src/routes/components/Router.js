@@ -162,6 +162,15 @@ const WppLoginTest = lazy(() =>
   import("../../authentication/components/Login/RequestLogin/WppLoginTest")
 );
 const Editor = lazy(() => import("../../JsonEditor/Editor"));
+
+const Monitor = lazy(() => import("../../Monitor/MonitorMainPage"));
+
+const GeneralAssets = lazy(() => import("../../Monitor/MonitorReportPages/GeneralAssets/GeneralAssets"));
+
+const RequestTokenActionPage = lazy(() =>
+  import("../../common/components/Navbar/tokenMenu/RequestTokenActionPage")
+);
+
 class Router extends Component {
   componentDidMount() {
     const removeAlgolia = this.props.config?.modules?.removeAlgolia;
@@ -338,6 +347,14 @@ class Router extends Component {
             path="/editor/:type"
             element={<ProtectedRoute config={config} element={<Editor />} />}
           />
+          <Route
+            path="/monitor"
+            element={<ProtectedRoute config={config} element={<Monitor />} />}
+          />
+          <Route
+            path="/GeneralAssets"
+            element={<ProtectedRoute config={config} element={<GeneralAssets />} />}
+          />
 
           <Route
             path="/CustomTrackFormLayout"
@@ -427,6 +444,12 @@ class Router extends Component {
             path="/profile"
             element={
               <ProtectedRoute config={config} element={<ProfileForm />} />
+            }
+          />
+          <Route
+            path="/requestTokenAction"
+            element={
+              <ProtectedRoute config={config} element={<RequestTokenActionPage />} />
             }
           />
 

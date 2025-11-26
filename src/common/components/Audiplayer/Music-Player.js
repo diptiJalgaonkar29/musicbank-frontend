@@ -106,7 +106,6 @@ const MusicPlayer = ({ timeJump }) => {
   };
 
   const togglePlayPause = () => {
-    console.log("This is the footer toggle play, pause");
     const prevValue = playingAudio?.isPlaying;
     if (!prevValue) {
       play();

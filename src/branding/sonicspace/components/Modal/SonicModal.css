@@ -27,6 +27,7 @@
   padding: 20px 50px;
   width: fit-content;
   min-width: 500px;
+  min-height: 300px;
 }
 
 .SonicModal_dialog .SonicModal_title {

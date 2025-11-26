@@ -1,6 +1,6 @@
 import WPPButton from "../branding/wpp/components/Button/WPPButton";
 import { WppButton, WppIconDownload } from "@wppopen/components-library-react";
-import "@wppopen/components-library/dist/platform-ui-kit/wpp-theme.css";
+//import "@wppopen/components-library/dist/platform-ui-kit/wpp-theme.css";
 import WPPChip from "../branding/wpp/components/Chip/WPPChip";
 import WPPToggle from "../branding/wpp/components/Toggle/WPPToggle";
 import WPPModal from "../branding/wpp/components/Modal/WPPModal";
@@ -19,7 +19,7 @@ const WPPComponents = () => {
     <div className="wpp-container">
       <h1>WPP Components Demo</h1>
 
-     {/*  <div className="wpp-section">
+      {/*  <div className="wpp-section">
         <h3>WPP Raw Button</h3>
         <WppButton>WPPButton</WppButton>
       </div> */}

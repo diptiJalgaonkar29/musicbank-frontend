@@ -1,0 +1,59 @@
+.monitor-heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bg-light);
+    color: var(--text-color);
+    padding: 0px 17px;
+    border-radius: 50px;
+    margin: 20px 0px;
+    min-height: 40px;
+
+}
+
+/* --- Left Text (Title) --- */
+.heading-left-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    white-space: nowrap; /* Prevents wrapping if space is tight */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1; /* Allows it to shrink more than the date */
+}
+
+/* --- Right Text (Date/Custom Text) --- */
+.heading-right-text {
+    font-size: 0.9rem;
+    color: #b0b0b0; /* Slightly lighter color for secondary info */
+    text-align: right;
+    flex-shrink: 0; /* Prevents it from shrinking */
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+/* --- Responsiveness (Handles smaller screens) --- */
+@media (max-width: 600px) {
+    .monitor-heading-container {
+        /* Stack the content vertically on small screens */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        /* Increase height to accommodate stacking */
+        min-height: 70px; 
+    }
+
+    .heading-left-text {
+        font-size: 1.0rem;
+        margin-bottom: 5px; /* Space between stacked elements */
+        width: 100%; /* Take full width when stacked */
+        white-space: normal; /* Allow wrapping */
+        overflow: visible;
+    }
+
+    .heading-right-text {
+        font-size: 0.85rem;
+        margin-left: 0;
+        text-align: left;
+        width: 100%; /* Take full width when stacked */
+    }
+}

@@ -25,6 +25,8 @@ const ProtectedRoute = ({ element }) => {
     return isAuthenticatedFunc();
   };
 
+  console.log('ProtectedRoute','ProtectedRoute');
+  
   if (!isAuthenticated()) {
     if (getSuperBrandName() === brandConstants.WPP) {
       const fullHashPath = location.hash?.startsWith("#")
@@ -33,7 +35,18 @@ const ProtectedRoute = ({ element }) => {
 
       localStorage.setItem("pathname", fullHashPath || "/");
     } else {
-      localStorage.setItem("pathname", location?.pathname || "/");
+      if (location.pathname === "/requestTokenAction") {
+        localStorage.setItem(
+          "pathname",
+          location.pathname + location.search
+        );
+      } else {
+        localStorage.setItem(
+          "pathname",
+          location.pathname
+        );
+      }
+
     }
 
     return <Navigate to="/login" replace state={{ from: location }} />;

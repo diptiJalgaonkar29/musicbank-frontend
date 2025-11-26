@@ -160,9 +160,6 @@ export default {
   "--wpp-button-secondary-border-color": "transparent",
   "--color-text-light": "#121619",
   "--color-text-dark": "#121619",
-  //'--opacity-bubbletag-tonality': '20',
-  //'--opacity-bubbletag-feelings': '40',
-  //'--opacity-bubbletag-genre': '60',
   "--color-default-card": wppThemeDataL.color.grey[300],
   "--color-hover-disable": "#eff2f5",
   "--color-hover-light": "#e0e5ea",
@@ -173,4 +170,7 @@ export default {
   "--color-text-primary": "#121619",
   "--color-default-white": "#ffffff",
   "--color-default-black": "#000000",
+  //'--opacity-bubbletag-tonality': '20',
+  //'--opacity-bubbletag-feelings': '40',
+  //'--opacity-bubbletag-genre': '60'
 };

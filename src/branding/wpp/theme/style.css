@@ -211,10 +211,10 @@
   width: 100% !important;
 }
 
-.wpp-action-button::part(button) {
+/* .wpp-action-button::part(button) {
   height: 28px;
   border-color: var(--color-secondary);
-}
+} */
 
 .wpp-datepicker::part(datepicker-container) {
   width: 100%;
@@ -786,12 +786,11 @@ wpp-button-v3-1-1.selected_btn::part(button) {
   background-color: var(--color-primary);
   color: var(--color-bg);
 }
-.wpp .wpp-button::part(button),
-.wpp .page_header_viewType_Add .wpp-button p
- {
+/* .wpp .wpp-button::part(button),
+.wpp .page_header_viewType_Add .wpp-button p {
   color: #fff;
   width: 100%;
-}
+} */
 .wpp .filter-sidebar .checkbox-item {
   margin-top: 4px;
 }
@@ -835,7 +834,6 @@ wpp-button-v3-1-1.selected_btn::part(button) {
 .wpp .navbar__container .navbar__logo__container {
   margin-right: 20px;
 }
-
 
 .wpp-add-plalist .wpp-button::part(button) {
   background-color: white;
@@ -886,31 +884,36 @@ wpp-button-v3-1-1.selected_btn::part(button) {
 .wpp .TrackcardV3__item__tags_container .refined {
   color: #fff !important;
 }
-
-
-
-
-
+.token_popup_container .token_header svg,
+.token-button-wrapper svg {
+  /* fill:var(--color-primary) !important; */
+}
+.token_popup_container .token_progress_bar {
+  background: grey;
+}
+.token_popup_container {
+  background: white !important;
+}
 .wpp .TrackcardV3__item__tags .TrackcardV3__item__tags_container .refined {
   background-color: var(--color-primary) !important;
 }
 .wpp .AISearchScreenContainer .AISearchButtons,
- .wpp .HomePage-Button-Link-Container .AISearchButtons {
+.wpp .HomePage-Button-Link-Container .AISearchButtons {
   background-color: var(--color-primary) !important;
 }
 .wpp .AISearchScreenContainer .linkIconbtn,
- .wpp .HomePage-Button-Link-Container .linkIconbtn{
+.wpp .HomePage-Button-Link-Container .linkIconbtn {
   background-color: var(--color-primary);
 }
 .wpp .AISearchScreenContainer .toggleBtn,
- .wpp .HomePage-Button-Link-Container .toggleBtn{
+.wpp .HomePage-Button-Link-Container .toggleBtn {
   color: #fff !important;
 }
 .wpp .AISearchScreenContainer .selectedBtn,
- .wpp .HomePage-Button-Link-Container .selectedBtn {
-    color: #000 !important;
+.wpp .HomePage-Button-Link-Container .selectedBtn {
+  color: #000 !important;
 }
 .wpp .AISearchScreenContainer .linkIconbtn svg path,
- .wpp .HomePage-Button-Link-Container .linkIconbtn  svg path{
-  stroke: #fff !important;;
+.wpp .HomePage-Button-Link-Container .linkIconbtn svg path {
+  stroke: #fff !important;
 }

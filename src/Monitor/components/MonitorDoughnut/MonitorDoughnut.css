@@ -1,0 +1,7 @@
+.piechart-Div {
+    height: -webkit-fill-available;
+    background: var(--color-bg-light);
+}
+.monitor-content .left-section .piechart-Div .MuiGrid-root ,.monitor-content .left-section .piechart-Div canvas, .monitor-content .left-section .piechart-Div{
+        border-radius: 5px;
+}

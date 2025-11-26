@@ -1,0 +1,136 @@
+/* Existing Global Grid Styles (Kept as provided) */
+.stats-grid,.reports-dashboard-stat-container-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(15px, 1.5vw, 30px);
+}
+@media (min-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.reports-dashboard-stat-container-grid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* Base Card Styling (Your original vertical/detailed layout) */
+.stat-card ,.reports-dashboard-stat-container-grid .stat-card{
+    background: var(--color-bg-light);
+    padding: clamp(12px, 1vw, 18px);
+    border-radius: 14px;
+    display: flex;
+    align-items: center; /* Aligns icon and text box vertically */
+    gap: 14px;
+    border: 1px solid #2a2a2a;
+}
+/* IMPORTANT: New wrapper for icon in the component */
+.stat-icon-wrapper {
+    /* Keep this wrapper small for the default layout */
+    width: auto; 
+    height: auto;
+}
+
+/* Icon Styles (Kept as provided) */
+.stat-card svg{
+    height: clamp(22px, 3vw, 35px) !important;
+    width: clamp(22px, 3vw, 35px) !important;
+    /* stroke: var(--color-primary); */
+}
+
+/* Label Styles (Kept as provided) */
+.stat-label {
+    color: #b7b7b7;
+    font-size: clamp(12px, 1.05vw, 14px);
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+/* Value Styles (Kept as provided) */
+.stat-value {
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 2px;
+    font-size: clamp(16px, 2.5vw, 23px);
+    margin-bottom: 0;
+}
+
+/* Dashboard Specific Styles (Kept as provided) */
+.reports-dashboard-stat-container-grid .stat-label{
+    font-size: clamp(11px, .8vw, 14px);
+}
+.reports-dashboard-stat-container-grid .arrow-up {
+    color: #4CAF50; /* green */
+}
+.reports-dashboard-stat-container-grid .arrow-down {
+    color: #E53935; /* red */
+}
+.reports-dashboard-stat-container-grid .stat-change {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+}
+
+/* --- ONE-LINE LAYOUT SPECIFIC STYLES --- */
+
+/* 1. Main Container: Horizontal Flexbox */
+.stat-card-one-line {
+    display: flex !important; 
+    flex-direction: column;
+    justify-content: center; /* Spread items across the width */
+    align-items: center;
+    padding: 10px 15px; /* Adjust padding for compact view */
+    height: 70px; /* Set a fixed height for visual consistency */
+    gap: 0 !important;
+     border: none !important;
+}
+
+/* 2. Group Icon and Label */
+.stat-card-one-line .stat-icon-label-group {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Small space between icon and label */
+    flex-shrink: 1; /* Allows this group to shrink */
+    min-width: 0;
+}
+
+/* 3. Group Value and Change */
+.stat-card-one-line .stat-value-group {
+        /* display: flex; */
+    /* align-items: baseline; */
+    gap: 10px;
+    /* flex-shrink: 0; */
+    width: 100%;
+    text-align: center;
+}
+
+/* 4. Icon size adjustment for compact view */
+.stat-card-one-line .stat-icon-wrapper svg {
+    height: 20px !important; /* Smaller icon */
+    width: 20px !important; 
+}
+
+/* 5. Font size and alignment adjustments */
+.stat-card-one-line .stat-label {
+    /* Reset margin and use white-space to prevent title wrap */
+    margin: 0;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stat-card-one-line .stat-value {
+    /* Larger, prominent text */
+    font-size: clamp(16px, 2.5vw, 23px);
+    font-weight: 700;
+    margin: 0;
+}
+
+.stat-card-one-line .stat-change {
+    /* Change indicator (percentage/arrow) */
+    font-size: 0.9rem;
+    /* margin-top: 0; */
+    justify-content: center;
+}
